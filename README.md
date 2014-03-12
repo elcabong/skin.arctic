@@ -7,11 +7,14 @@ modified again by el_cabong to utilize the xbmb3c addon to use MediaBrowser3 as 
 
 
 Required:
+
 xbmc:
 skin.widgets
 MediaBrowser.XBMC >>  xbmb3c addon @:   https://github.com/MediaBrowser/MediaBrowser.XBMC
+
      Set up XBMB3C addon to point to the Media Browser 3 Server
 
 network:
+
 Mediabrowser3 server
 
