@@ -1549,6 +1549,7 @@
 			<property name="custom">1</property>
 			<visible>Container(525).HasFocus(1) + [!IsEmpty(Skin.String(Home.Movies.Tile.9.Path)) | !IsEmpty(Skin.String(Home.Movies.Tile.10.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
+
 		<!--TVSHOW ITEMS-->
 		<item id="0">
 			<label>$INFO[Window(home).Property(xbmb3c.1.title)]</label>
