@@ -2,6 +2,7 @@
     <defaultcontrol always="true">525</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
     <backgroundcolor>0</backgroundcolor>
+	<onload condition="System.HasAddon(plugin.video.xbmb3c)">RunScript(plugin.video.xbmb3c,skin)</onload>
     <onload>Dialog.Close(movieinformation,true)</onload>
     <onload>Dialog.Close(musicinformation,true)</onload>
     <onload>Dialog.Close(addoninformation,true)</onload>

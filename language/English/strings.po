@@ -1364,3 +1364,6 @@ msgctxt "#42481"
 msgid "Audio info tag"
 msgstr ""
 
+msgctxt "#42482"
+msgid "Box Sets"
+msgstr ""
