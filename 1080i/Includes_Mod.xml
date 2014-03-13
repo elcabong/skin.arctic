@@ -31,7 +31,6 @@
     </include>
     <include name="HomeProfileInfo-Content">
     	<control type="group">
-		<posy condition="!StringCompare(Skin.String(homescreen.style),simple)">893</posy>
 			<visible>!Skin.HasSetting(HideHomeProfileInfo)</visible>
 			<control type="image">
 				<posx>25</posx>
@@ -102,7 +101,7 @@
         <control type="group">
             <visible>!Window.IsActive(favourites) + !Window.IsActive(script-globalsearch-main.xml) + !Window.IsActive(script-globalsearch-infodialog.xml) + !Window.IsActive(script-globalsearch-contextmenu.xml) + ![Window.IsVisible(virtualkeyboard) + !IsEmpty(Window.Property(HomeSearch))] + !StringCompare(Skin.String(homescreen.style),simple)</visible>
             <posx>75</posx>
-            <posy>24</posy>
+            <posy>918</posy>
             <include condition="!StringCompare(Skin.String(homescreen.style),simple)">BannerListInfoAnimation</include>
             <include>HomeProfileInfo-Content</include>
         </control>
