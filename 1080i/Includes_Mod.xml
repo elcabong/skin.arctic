@@ -31,17 +31,18 @@
     </include>
     <include name="HomeProfileInfo-Content">
     	<control type="group">
+		<posy condition="!StringCompare(Skin.String(homescreen.style),simple)">893</posy>
 			<visible>!Skin.HasSetting(HideHomeProfileInfo)</visible>
 			<control type="image">
 				<posx>25</posx>
-				<posy>46</posy>
+				<posy>52</posy>
 				<width>60</width>
 				<height>60</height>
 				<texture>$INFO[System.ProfileThumb]</texture>
 			</control>
 			<control type="image">
 				<posx>13</posx>
-				<posy>34</posy>
+				<posy>40</posy>
 				<width>84</width>
 				<height>84</height>
 				<texture>windows/home/ava-overlay.png</texture>
@@ -58,32 +59,38 @@
 				<label>$INFO[System.ProfileName]</label>
 			</control>
 			<control type="label">
+				<posy>70</posy>
 				<include>HomeProfileInfoLabel</include>
 				<label>$INFO[Window.Property(MB3TotalMovies),, $LOCALIZE[342]]$INFO[Window(Home).Property(MB3TotalBoxSets), - , $LOCALIZE[42482]]</label>
 				<visible>Container(525).HasFocus(1)</visible>
 			</control>
 			<control type="label">
+				<posy>70</posy>			
 				<include>HomeProfileInfoLabel</include>
 				<label>$INFO[Window(Home).Property(MB3TotalTvShows),, $LOCALIZE[20343]]$INFO[Window(Home).Property(MB3TotalEpisodes), - , $LOCALIZE[20360]]</label>
 				<visible>Container(525).HasFocus(2)</visible>
 			</control>
 			<control type="label">
+				<posy>70</posy>
 				<include>HomeProfileInfoLabel</include>
 				<label>$INFO[Window(Home).Property(MB3TotalMusicAlbums),, $LOCALIZE[132]]$INFO[Window(Home).Property(MB3TotalMusicSongs), - , $LOCALIZE[134]]</label>
 				<visible>Container(525).HasFocus(3)</visible>
 			</control>
 			<control type="label">
+				<posy>70</posy>
 				<include>HomeProfileInfoLabel</include>
 				<label>$INFO[Pvr.BackendChannels,, $LOCALIZE[19019]]</label>
 				<visible>Container(525).HasFocus(4)</visible>
 			</control>
 			<control type="label">
+				<posy>70</posy>
 				<include>HomeProfileInfoLabel</include>
 				<label>$INFO[Container(525).ListItem.Label]</label>
 				<visible>!Container(525).HasFocus(1) + !Container(525).HasFocus(2) + !Container(525).HasFocus(3) + !Container(525).HasFocus(4)</visible>
 				<visible>!Weather.IsFetched</visible>
 			</control>
 			<control type="label">
+				<posy>70</posy>
 				<include>HomeProfileInfoLabel</include>
 				<label>$INFO[Container(525).ListItem.Label] • $INFO[Window(Weather).Property(Current.Condition)]$INFO[Window(Weather).Property(Current.Temperature), ,]$INFO[System.TemperatureUnits]</label>
 				<visible>!Container(525).HasFocus(1) + !Container(525).HasFocus(2) + !Container(525).HasFocus(3) + !Container(525).HasFocus(4)</visible>
@@ -526,19 +533,6 @@
 					<width>1010</width>
 					<height>140</height>
 					<autoscroll delay="13000" time="3000" repeat="13000" />
-					<visible>system.getbool(videolibrary.showunPercentPlayedplots) | [!system.getbool(videolibrary.showunPercentPlayedplots) + Container(82).ListItem.Property(Overlay)]</visible>
-				</control>
-				<control type="textbox">
-					<posx>448</posx>
-					<posy>86</posy>
-					<label>$LOCALIZE[20370]</label>
-					<align>justify</align>
-					<font>Font-Condensed-S28</font>
-					<textcolor>eebbbbbb</textcolor>
-					<width>1010</width>
-					<height>140</height>
-					<autoscroll delay="13000" time="3000" repeat="13000" />
-					<visible>!Container(82).ListItem.Property(Overlay) + !system.getbool(videolibrary.showunPercentPlayedplots)</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -3765,124 +3759,124 @@
 		</item>		-->
 		<!-- recommended movies -->
 		<item id="1">
-			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.1.Path)])</onclick>
-			<icon>$INFO[Window.Property(RandomMovieMB3.1.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.1.Art(poster))]</property>
-			<property name="Overlay">$INFO[Window.Property(RandomMovieMB3.1.PercentPlayed)]</property>
-			<property name="Rating">$INFO[Window.Property(RandomMovieMB3.1.Rating)]</property>
-			<property name="Plot">$INFO[Window.Property(RandomMovieMB3.1.Plot)]</property>
-			<property name="Logo">$INFO[Window.Property(RandomMovieMB3.1.Art(clearlogo))]</property>
-			<label>$INFO[Window.Property(RandomMovieMB3.1.Title)]</label>
-			<label2>$INFO[Window.Property(RandomMovieMB3.1.Year),, • ]$INFO[Window.Property(RandomMovieMB3.1.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.1.Rating),   ● ,]</label2>
-			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(RandomMovieMB3.1.Title))</visible>
+			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.1.Path)])</onclick>
+			<icon>$INFO[Window.Property(InProgressMovieMB3.1.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.1.Art(poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(InProgressMovieMB3.1.PercentPlayed)]</property>
+			<property name="Rating">$INFO[Window.Property(InProgressMovieMB3.1.Rating)]</property>
+			<property name="Plot">$INFO[Window.Property(InProgressMovieMB3.1.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(InProgressMovieMB3.1.Art(clearlogo))]</property>
+			<label>$INFO[Window.Property(InProgressMovieMB3.1.Title)]</label>
+			<label2>$INFO[Window.Property(InProgressMovieMB3.1.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.1.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.1.Rating),   ● ,]</label2>
+			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(InProgressMovieMB3.1.Title))</visible>
 		</item>
 		<item id="2">
-			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.2.Path)])</onclick>
-			<icon>$INFO[Window.Property(RandomMovieMB3.2.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.2.Art(poster))]</property>
-			<property name="Overlay">$INFO[Window.Property(RandomMovieMB3.2.PercentPlayed)]</property>
-			<property name="Plot">$INFO[Window.Property(RandomMovieMB3.2.Plot)]</property>
-			<property name="Logo">$INFO[Window.Property(RandomMovieMB3.2.Art(clearlogo))]</property>
-			<property name="Rating">$INFO[Window.Property(RandomMovieMB3.2.Rating)]</property>
-			<label>$INFO[Window.Property(RandomMovieMB3.2.Title)]</label>
-			<label2>$INFO[Window.Property(RandomMovieMB3.2.Year),, • ]$INFO[Window.Property(RandomMovieMB3.2.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.2.Rating),   ● ,]</label2>
-			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(RandomMovieMB3.2.Title))</visible>
+			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.2.Path)])</onclick>
+			<icon>$INFO[Window.Property(InProgressMovieMB3.2.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.2.Art(poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(InProgressMovieMB3.2.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(InProgressMovieMB3.2.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(InProgressMovieMB3.2.Art(clearlogo))]</property>
+			<property name="Rating">$INFO[Window.Property(InProgressMovieMB3.2.Rating)]</property>
+			<label>$INFO[Window.Property(InProgressMovieMB3.2.Title)]</label>
+			<label2>$INFO[Window.Property(InProgressMovieMB3.2.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.2.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.2.Rating),   ● ,]</label2>
+			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(InProgressMovieMB3.2.Title))</visible>
 		</item>
 		<item id="3">
-			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.3.Path)])</onclick>
-			<icon>$INFO[Window.Property(RandomMovieMB3.3.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.3.Art(poster))]</property>
-			<property name="Overlay">$INFO[Window.Property(RandomMovieMB3.3.PercentPlayed)]</property>
-			<property name="Plot">$INFO[Window.Property(RandomMovieMB3.3.Plot)]</property>
-			<property name="Logo">$INFO[Window.Property(RandomMovieMB3.3.Art(clearlogo))]</property>
-			<property name="Rating">$INFO[Window.Property(RandomMovieMB3.3.Rating)]</property>
-			<label>$INFO[Window.Property(RandomMovieMB3.3.Title)]</label>
-			<label2>$INFO[Window.Property(RandomMovieMB3.3.Year),, • ]$INFO[Window.Property(RandomMovieMB3.3.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.3.Rating),   ● ,]</label2>
-			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(RandomMovieMB3.3.Title))</visible>
+			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.3.Path)])</onclick>
+			<icon>$INFO[Window.Property(InProgressMovieMB3.3.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.3.Art(poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(InProgressMovieMB3.3.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(InProgressMovieMB3.3.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(InProgressMovieMB3.3.Art(clearlogo))]</property>
+			<property name="Rating">$INFO[Window.Property(InProgressMovieMB3.3.Rating)]</property>
+			<label>$INFO[Window.Property(InProgressMovieMB3.3.Title)]</label>
+			<label2>$INFO[Window.Property(InProgressMovieMB3.3.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.3.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.3.Rating),   ● ,]</label2>
+			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(InProgressMovieMB3.3.Title))</visible>
 		</item>
 		<item id="4">
-			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.4.Path)])</onclick>
-			<icon>$INFO[Window.Property(RandomMovieMB3.4.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.4.Art(poster))]</property>
-			<property name="Overlay">$INFO[Window.Property(RandomMovieMB3.4.PercentPlayed)]</property>
-			<property name="Plot">$INFO[Window.Property(RandomMovieMB3.4.Plot)]</property>
-			<property name="Logo">$INFO[Window.Property(RandomMovieMB3.4.Art(clearlogo))]</property>
-			<property name="Rating">$INFO[Window.Property(RandomMovieMB3.4.Rating)]</property>
-			<label>$INFO[Window.Property(RandomMovieMB3.4.Title)]</label>
-			<label2>$INFO[Window.Property(RandomMovieMB3.4.Year),, • ]$INFO[Window.Property(RandomMovieMB3.4.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.4.Rating),   ● ,]</label2>
-			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(RandomMovieMB3.4.Title))</visible>
+			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.4.Path)])</onclick>
+			<icon>$INFO[Window.Property(InProgressMovieMB3.4.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.4.Art(poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(InProgressMovieMB3.4.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(InProgressMovieMB3.4.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(InProgressMovieMB3.4.Art(clearlogo))]</property>
+			<property name="Rating">$INFO[Window.Property(InProgressMovieMB3.4.Rating)]</property>
+			<label>$INFO[Window.Property(InProgressMovieMB3.4.Title)]</label>
+			<label2>$INFO[Window.Property(InProgressMovieMB3.4.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.4.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.4.Rating),   ● ,]</label2>
+			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(InProgressMovieMB3.4.Title))</visible>
 		</item>
 		<item id="5">
-			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.5.Path)])</onclick>
-			<icon>$INFO[Window.Property(RandomMovieMB3.5.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.5.Art(poster))]</property>
-			<property name="Overlay">$INFO[Window.Property(RandomMovieMB3.5.PercentPlayed)]</property>
-			<property name="Plot">$INFO[Window.Property(RandomMovieMB3.5.Plot)]</property>
-			<property name="Logo">$INFO[Window.Property(RandomMovieMB3.5.Art(clearlogo))]</property>
-			<property name="Rating">$INFO[Window.Property(RandomMovieMB3.5.Rating)]</property>
-			<label>$INFO[Window.Property(RandomMovieMB3.5.Title)]</label>
-			<label2>$INFO[Window.Property(RandomMovieMB3.5.Year),, • ]$INFO[Window.Property(RandomMovieMB3.5.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.5.Rating),   ● ,]</label2>
-			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(RandomMovieMB3.5.Title))</visible>
+			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.5.Path)])</onclick>
+			<icon>$INFO[Window.Property(InProgressMovieMB3.5.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.5.Art(poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(InProgressMovieMB3.5.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(InProgressMovieMB3.5.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(InProgressMovieMB3.5.Art(clearlogo))]</property>
+			<property name="Rating">$INFO[Window.Property(InProgressMovieMB3.5.Rating)]</property>
+			<label>$INFO[Window.Property(InProgressMovieMB3.5.Title)]</label>
+			<label2>$INFO[Window.Property(InProgressMovieMB3.5.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.5.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.5.Rating),   ● ,]</label2>
+			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(InProgressMovieMB3.5.Title))</visible>
 		</item>
 		<item id="6">
-			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.6.Path)])</onclick>
-			<icon>$INFO[Window.Property(RandomMovieMB3.6.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.6.Art(poster))]</property>
-			<property name="Overlay">$INFO[Window.Property(RandomMovieMB3.6.PercentPlayed)]</property>
-			<property name="Plot">$INFO[Window.Property(RandomMovieMB3.6.Plot)]</property>
-			<property name="Logo">$INFO[Window.Property(RandomMovieMB3.6.Art(clearlogo))]</property>
-			<property name="Rating">$INFO[Window.Property(RandomMovieMB3.6.Rating)]</property>
-			<label>$INFO[Window.Property(RandomMovieMB3.6.Title)]</label>
-			<label2>$INFO[Window.Property(RandomMovieMB3.6.Year),, • ]$INFO[Window.Property(RandomMovieMB3.6.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.6.Rating),   ● ,]</label2>
-			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(RandomMovieMB3.6.Title))</visible>
+			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.6.Path)])</onclick>
+			<icon>$INFO[Window.Property(InProgressMovieMB3.6.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.6.Art(poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(InProgressMovieMB3.6.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(InProgressMovieMB3.6.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(InProgressMovieMB3.6.Art(clearlogo))]</property>
+			<property name="Rating">$INFO[Window.Property(InProgressMovieMB3.6.Rating)]</property>
+			<label>$INFO[Window.Property(InProgressMovieMB3.6.Title)]</label>
+			<label2>$INFO[Window.Property(InProgressMovieMB3.6.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.6.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.6.Rating),   ● ,]</label2>
+			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(InProgressMovieMB3.6.Title))</visible>
 		</item>
 		<item id="7">
-			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.7.Path)])</onclick>
-			<icon>$INFO[Window.Property(RandomMovieMB3.7.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.7.Art(poster))]</property>
-			<property name="Overlay">$INFO[Window.Property(RandomMovieMB3.7.PercentPlayed)]</property>
-			<property name="Plot">$INFO[Window.Property(RandomMovieMB3.7.Plot)]</property>
-			<property name="Logo">$INFO[Window.Property(RandomMovieMB3.7.Art(clearlogo))]</property>
-			<property name="Rating">$INFO[Window.Property(RandomMovieMB3.7.Rating)]</property>
-			<label>$INFO[Window.Property(RandomMovieMB3.7.Title)]</label>
-			<label2>$INFO[Window.Property(RandomMovieMB3.7.Year),, • ]$INFO[Window.Property(RandomMovieMB3.7.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.7.Rating),   ● ,]</label2>
-			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(RandomMovieMB3.7.Title))</visible>
+			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.7.Path)])</onclick>
+			<icon>$INFO[Window.Property(InProgressMovieMB3.7.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.7.Art(poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(InProgressMovieMB3.7.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(InProgressMovieMB3.7.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(InProgressMovieMB3.7.Art(clearlogo))]</property>
+			<property name="Rating">$INFO[Window.Property(InProgressMovieMB3.7.Rating)]</property>
+			<label>$INFO[Window.Property(InProgressMovieMB3.7.Title)]</label>
+			<label2>$INFO[Window.Property(InProgressMovieMB3.7.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.7.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.7.Rating),   ● ,]</label2>
+			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(InProgressMovieMB3.7.Title))</visible>
 		</item>
 		<item id="8">
-			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.8.Path)])</onclick>
-			<icon>$INFO[Window.Property(RandomMovieMB3.8.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.8.Art(poster))]</property>
-			<property name="Overlay">$INFO[Window.Property(RandomMovieMB3.8.PercentPlayed)]</property>
-			<property name="Plot">$INFO[Window.Property(RandomMovieMB3.8.Plot)]</property>
-			<property name="Logo">$INFO[Window.Property(RandomMovieMB3.8.Art(clearlogo))]</property>
-			<property name="Rating">$INFO[Window.Property(RandomMovieMB3.8.Rating)]</property>
-			<label>$INFO[Window.Property(RandomMovieMB3.8.Title)]</label>
-			<label2>$INFO[Window.Property(RandomMovieMB3.8.Year),, • ]$INFO[Window.Property(RandomMovieMB3.8.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.8.Rating),   ● ,]</label2>
-			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(RandomMovieMB3.8.Title))</visible>
+			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.8.Path)])</onclick>
+			<icon>$INFO[Window.Property(InProgressMovieMB3.8.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.8.Art(poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(InProgressMovieMB3.8.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(InProgressMovieMB3.8.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(InProgressMovieMB3.8.Art(clearlogo))]</property>
+			<property name="Rating">$INFO[Window.Property(InProgressMovieMB3.8.Rating)]</property>
+			<label>$INFO[Window.Property(InProgressMovieMB3.8.Title)]</label>
+			<label2>$INFO[Window.Property(InProgressMovieMB3.8.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.8.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.8.Rating),   ● ,]</label2>
+			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(InProgressMovieMB3.8.Title))</visible>
 		</item>
 		<item id="9">
-			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.9.Path)])</onclick>
-			<icon>$INFO[Window.Property(RandomMovieMB3.9.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.9.Art(poster))]</property>
-			<property name="Overlay">$INFO[Window.Property(RandomMovieMB3.9.PercentPlayed)]</property>
-			<property name="Plot">$INFO[Window.Property(RandomMovieMB3.9.Plot)]</property>
-			<property name="Logo">$INFO[Window.Property(RandomMovieMB3.9.Art(clearlogo))]</property>
-			<property name="Rating">$INFO[Window.Property(RandomMovieMB3.9.Rating)]</property>
-			<label>$INFO[Window.Property(RandomMovieMB3.9.Title)]</label>
-			<label2>$INFO[Window.Property(RandomMovieMB3.9.Year),, • ]$INFO[Window.Property(RandomMovieMB3.9.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.9.Rating),   ● ,]</label2>
-			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(RandomMovieMB3.9.Title))</visible>
+			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.9.Path)])</onclick>
+			<icon>$INFO[Window.Property(InProgressMovieMB3.9.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.9.Art(poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(InProgressMovieMB3.9.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(InProgressMovieMB3.9.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(InProgressMovieMB3.9.Art(clearlogo))]</property>
+			<property name="Rating">$INFO[Window.Property(InProgressMovieMB3.9.Rating)]</property>
+			<label>$INFO[Window.Property(InProgressMovieMB3.9.Title)]</label>
+			<label2>$INFO[Window.Property(InProgressMovieMB3.9.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.9.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.9.Rating),   ● ,]</label2>
+			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(InProgressMovieMB3.9.Title))</visible>
 		</item>
 		<item id="10">
-			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.10.Path)])</onclick>
-			<icon>$INFO[Window.Property(RandomMovieMB3.10.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.10.Art(poster))]</property>
-			<property name="Overlay">$INFO[Window.Property(RandomMovieMB3.10.PercentPlayed)]</property>
-			<property name="Plot">$INFO[Window.Property(RandomMovieMB3.10.Plot)]</property>
-			<property name="Logo">$INFO[Window.Property(RandomMovieMB3.10.Art(clearlogo))]</property>
-			<property name="Rating">$INFO[Window.Property(RandomMovieMB3.10.Rating)]</property>
-			<label>$INFO[Window.Property(RandomMovieMB3.10.Title)]</label>
-			<label2>$INFO[Window.Property(RandomMovieMB3.10.Year),, • ]$INFO[Window.Property(RandomMovieMB3.10.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.10.Rating),   ● ,]</label2>
-			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(RandomMovieMB3.10.Title))</visible>
+			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.10.Path)])</onclick>
+			<icon>$INFO[Window.Property(InProgressMovieMB3.10.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.10.Art(poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(InProgressMovieMB3.10.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(InProgressMovieMB3.10.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(InProgressMovieMB3.10.Art(clearlogo))]</property>
+			<property name="Rating">$INFO[Window.Property(InProgressMovieMB3.10.Rating)]</property>
+			<label>$INFO[Window.Property(InProgressMovieMB3.10.Title)]</label>
+			<label2>$INFO[Window.Property(InProgressMovieMB3.10.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.10.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.10.Rating),   ● ,]</label2>
+			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(InProgressMovieMB3.10.Title))</visible>
 		</item>
 		<!-- Random movies -->
 		<item id="1">
@@ -5637,144 +5631,144 @@
 	<include name="Mod_87Content">
 		<!-- Random movies -->
 		<item id="1">
-			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.1.Path)])</onclick>
-			<property name="Play">PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.1.Path)])</property>
-			<icon>$INFO[Window.Property(RandomMovieMB3.1.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.1.Art(poster))]</property>
-			<property name="EpThumb">$INFO[Window.Property(RandomMovieMB3.1.Art(thumb))]</property>
-			<property name="Overlay">$INFO[Window.Property(RandomMovieMB3.1.PercentPlayed)]</property>
-			<property name="Rating">$INFO[Window.Property(RandomMovieMB3.1.Rating)]</property>
-			<property name="Plot">$INFO[Window.Property(RandomMovieMB3.1.Plot)]</property>
-			<property name="Logo">$INFO[Window.Property(RandomMovieMB3.1.Art(clearlogo))]</property>
-			<label>$INFO[Window.Property(RandomMovieMB3.1.Title)]</label>
-			<label2>$INFO[Window.Property(RandomMovieMB3.1.Year),, • ]$INFO[Window.Property(RandomMovieMB3.1.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.1.Rating),   ● ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(RandomMovieMB3.1.Title))</visible>
+			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.1.Path)])</onclick>
+			<property name="Play">PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.1.Path)])</property>
+			<icon>$INFO[Window.Property(InProgressMovieMB3.1.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.1.Art(poster))]</property>
+			<property name="EpThumb">$INFO[Window.Property(InProgressMovieMB3.1.Art(thumb))]</property>
+			<property name="Overlay">$INFO[Window.Property(InProgressMovieMB3.1.PercentPlayed)]</property>
+			<property name="Rating">$INFO[Window.Property(InProgressMovieMB3.1.Rating)]</property>
+			<property name="Plot">$INFO[Window.Property(InProgressMovieMB3.1.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(InProgressMovieMB3.1.Art(clearlogo))]</property>
+			<label>$INFO[Window.Property(InProgressMovieMB3.1.Title)]</label>
+			<label2>$INFO[Window.Property(InProgressMovieMB3.1.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.1.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.1.Rating),   ● ,]</label2>
+			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(InProgressMovieMB3.1.Title))</visible>
 		</item>
 		<item id="2">
-			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.2.Path)])</onclick>
-			<property name="Play">PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.2.Path)])</property>
-			<icon>$INFO[Window.Property(RandomMovieMB3.2.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.2.Art(poster))]</property>
-			<property name="EpThumb">$INFO[Window.Property(RandomMovieMB3.2.Art(thumb))]</property>
-			<property name="Overlay">$INFO[Window.Property(RandomMovieMB3.2.PercentPlayed)]</property>
-			<property name="Plot">$INFO[Window.Property(RandomMovieMB3.2.Plot)]</property>
-			<property name="Logo">$INFO[Window.Property(RandomMovieMB3.2.Art(clearlogo))]</property>
-			<property name="Rating">$INFO[Window.Property(RandomMovieMB3.2.Rating)]</property>
-			<label>$INFO[Window.Property(RandomMovieMB3.2.Title)]</label>
-			<label2>$INFO[Window.Property(RandomMovieMB3.2.Year),, • ]$INFO[Window.Property(RandomMovieMB3.2.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.2.Rating),   ● ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(RandomMovieMB3.2.Title))</visible>
+			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.2.Path)])</onclick>
+			<property name="Play">PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.2.Path)])</property>
+			<icon>$INFO[Window.Property(InProgressMovieMB3.2.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.2.Art(poster))]</property>
+			<property name="EpThumb">$INFO[Window.Property(InProgressMovieMB3.2.Art(thumb))]</property>
+			<property name="Overlay">$INFO[Window.Property(InProgressMovieMB3.2.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(InProgressMovieMB3.2.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(InProgressMovieMB3.2.Art(clearlogo))]</property>
+			<property name="Rating">$INFO[Window.Property(InProgressMovieMB3.2.Rating)]</property>
+			<label>$INFO[Window.Property(InProgressMovieMB3.2.Title)]</label>
+			<label2>$INFO[Window.Property(InProgressMovieMB3.2.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.2.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.2.Rating),   ● ,]</label2>
+			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(InProgressMovieMB3.2.Title))</visible>
 		</item>
 		<item id="3">
-			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.3.Path)])</onclick>
-			<property name="Play">PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.3.Path)])</property>
-			<icon>$INFO[Window.Property(RandomMovieMB3.3.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.3.Art(poster))]</property>
-			<property name="EpThumb">$INFO[Window.Property(RandomMovieMB3.3.Art(thumb))]</property>
-			<property name="Overlay">$INFO[Window.Property(RandomMovieMB3.3.PercentPlayed)]</property>
-			<property name="Plot">$INFO[Window.Property(RandomMovieMB3.3.Plot)]</property>
-			<property name="Logo">$INFO[Window.Property(RandomMovieMB3.3.Art(clearlogo))]</property>
-			<property name="Rating">$INFO[Window.Property(RandomMovieMB3.3.Rating)]</property>
-			<label>$INFO[Window.Property(RandomMovieMB3.3.Title)]</label>
-			<label2>$INFO[Window.Property(RandomMovieMB3.3.Year),, • ]$INFO[Window.Property(RandomMovieMB3.3.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.3.Rating),   ● ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(RandomMovieMB3.3.Title))</visible>
+			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.3.Path)])</onclick>
+			<property name="Play">PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.3.Path)])</property>
+			<icon>$INFO[Window.Property(InProgressMovieMB3.3.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.3.Art(poster))]</property>
+			<property name="EpThumb">$INFO[Window.Property(InProgressMovieMB3.3.Art(thumb))]</property>
+			<property name="Overlay">$INFO[Window.Property(InProgressMovieMB3.3.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(InProgressMovieMB3.3.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(InProgressMovieMB3.3.Art(clearlogo))]</property>
+			<property name="Rating">$INFO[Window.Property(InProgressMovieMB3.3.Rating)]</property>
+			<label>$INFO[Window.Property(InProgressMovieMB3.3.Title)]</label>
+			<label2>$INFO[Window.Property(InProgressMovieMB3.3.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.3.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.3.Rating),   ● ,]</label2>
+			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(InProgressMovieMB3.3.Title))</visible>
 		</item>
 		<item id="4">
-			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.4.Path)])</onclick>
-			<property name="Play">PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.4.Path)])</property>
-			<icon>$INFO[Window.Property(RandomMovieMB3.4.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.4.Art(poster))]</property>
-			<property name="EpThumb">$INFO[Window.Property(RandomMovieMB3.4.Art(thumb))]</property>
-			<property name="Overlay">$INFO[Window.Property(RandomMovieMB3.4.PercentPlayed)]</property>
-			<property name="Plot">$INFO[Window.Property(RandomMovieMB3.4.Plot)]</property>
-			<property name="Logo">$INFO[Window.Property(RandomMovieMB3.4.Art(clearlogo))]</property>
-			<property name="Rating">$INFO[Window.Property(RandomMovieMB3.4.Rating)]</property>
-			<label>$INFO[Window.Property(RandomMovieMB3.4.Title)]</label>
-			<label2>$INFO[Window.Property(RandomMovieMB3.4.Year),, • ]$INFO[Window.Property(RandomMovieMB3.4.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.4.Rating),   ● ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(RandomMovieMB3.4.Title))</visible>
+			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.4.Path)])</onclick>
+			<property name="Play">PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.4.Path)])</property>
+			<icon>$INFO[Window.Property(InProgressMovieMB3.4.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.4.Art(poster))]</property>
+			<property name="EpThumb">$INFO[Window.Property(InProgressMovieMB3.4.Art(thumb))]</property>
+			<property name="Overlay">$INFO[Window.Property(InProgressMovieMB3.4.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(InProgressMovieMB3.4.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(InProgressMovieMB3.4.Art(clearlogo))]</property>
+			<property name="Rating">$INFO[Window.Property(InProgressMovieMB3.4.Rating)]</property>
+			<label>$INFO[Window.Property(InProgressMovieMB3.4.Title)]</label>
+			<label2>$INFO[Window.Property(InProgressMovieMB3.4.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.4.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.4.Rating),   ● ,]</label2>
+			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(InProgressMovieMB3.4.Title))</visible>
 		</item>
 		<item id="5">
-			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.5.Path)])</onclick>
-			<property name="Play">PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.5.Path)])</property>
-			<icon>$INFO[Window.Property(RandomMovieMB3.5.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.5.Art(poster))]</property>
-			<property name="EpThumb">$INFO[Window.Property(RandomMovieMB3.5.Art(thumb))]</property>
-			<property name="Overlay">$INFO[Window.Property(RandomMovieMB3.5.PercentPlayed)]</property>
-			<property name="Plot">$INFO[Window.Property(RandomMovieMB3.5.Plot)]</property>
-			<property name="Logo">$INFO[Window.Property(RandomMovieMB3.5.Art(clearlogo))]</property>
-			<property name="Rating">$INFO[Window.Property(RandomMovieMB3.5.Rating)]</property>
-			<label>$INFO[Window.Property(RandomMovieMB3.5.Title)]</label>
-			<label2>$INFO[Window.Property(RandomMovieMB3.5.Year),, • ]$INFO[Window.Property(RandomMovieMB3.5.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.5.Rating),   ● ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(RandomMovieMB3.5.Title))</visible>
+			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.5.Path)])</onclick>
+			<property name="Play">PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.5.Path)])</property>
+			<icon>$INFO[Window.Property(InProgressMovieMB3.5.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.5.Art(poster))]</property>
+			<property name="EpThumb">$INFO[Window.Property(InProgressMovieMB3.5.Art(thumb))]</property>
+			<property name="Overlay">$INFO[Window.Property(InProgressMovieMB3.5.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(InProgressMovieMB3.5.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(InProgressMovieMB3.5.Art(clearlogo))]</property>
+			<property name="Rating">$INFO[Window.Property(InProgressMovieMB3.5.Rating)]</property>
+			<label>$INFO[Window.Property(InProgressMovieMB3.5.Title)]</label>
+			<label2>$INFO[Window.Property(InProgressMovieMB3.5.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.5.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.5.Rating),   ● ,]</label2>
+			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(InProgressMovieMB3.5.Title))</visible>
 		</item>
 		<item id="6">
-			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.6.Path)])</onclick>
-			<property name="Play">PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.6.Path)])</property>
-			<icon>$INFO[Window.Property(RandomMovieMB3.6.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.6.Art(poster))]</property>
-			<property name="EpThumb">$INFO[Window.Property(RandomMovieMB3.6.Art(thumb))]</property>
-			<property name="Overlay">$INFO[Window.Property(RandomMovieMB3.6.PercentPlayed)]</property>
-			<property name="Plot">$INFO[Window.Property(RandomMovieMB3.6.Plot)]</property>
-			<property name="Logo">$INFO[Window.Property(RandomMovieMB3.6.Art(clearlogo))]</property>
-			<property name="Rating">$INFO[Window.Property(RandomMovieMB3.6.Rating)]</property>
-			<label>$INFO[Window.Property(RandomMovieMB3.6.Title)]</label>
-			<label2>$INFO[Window.Property(RandomMovieMB3.6.Year),, • ]$INFO[Window.Property(RandomMovieMB3.6.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.6.Rating),   ● ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(RandomMovieMB3.6.Title))</visible>
+			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.6.Path)])</onclick>
+			<property name="Play">PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.6.Path)])</property>
+			<icon>$INFO[Window.Property(InProgressMovieMB3.6.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.6.Art(poster))]</property>
+			<property name="EpThumb">$INFO[Window.Property(InProgressMovieMB3.6.Art(thumb))]</property>
+			<property name="Overlay">$INFO[Window.Property(InProgressMovieMB3.6.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(InProgressMovieMB3.6.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(InProgressMovieMB3.6.Art(clearlogo))]</property>
+			<property name="Rating">$INFO[Window.Property(InProgressMovieMB3.6.Rating)]</property>
+			<label>$INFO[Window.Property(InProgressMovieMB3.6.Title)]</label>
+			<label2>$INFO[Window.Property(InProgressMovieMB3.6.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.6.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.6.Rating),   ● ,]</label2>
+			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(InProgressMovieMB3.6.Title))</visible>
 		</item>
 		<item id="7">
-			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.7.Path)])</onclick>
-			<property name="Play">PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.7.Path)])</property>
-			<icon>$INFO[Window.Property(RandomMovieMB3.7.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.7.Art(poster))]</property>
-			<property name="EpThumb">$INFO[Window.Property(RandomMovieMB3.7.Art(thumb))]</property>
-			<property name="Overlay">$INFO[Window.Property(RandomMovieMB3.7.PercentPlayed)]</property>
-			<property name="Plot">$INFO[Window.Property(RandomMovieMB3.7.Plot)]</property>
-			<property name="Logo">$INFO[Window.Property(RandomMovieMB3.7.Art(clearlogo))]</property>
-			<property name="Rating">$INFO[Window.Property(RandomMovieMB3.7.Rating)]</property>
-			<label>$INFO[Window.Property(RandomMovieMB3.7.Title)]</label>
-			<label2>$INFO[Window.Property(RandomMovieMB3.7.Year),, • ]$INFO[Window.Property(RandomMovieMB3.7.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.7.Rating),   ● ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(RandomMovieMB3.7.Title))</visible>
+			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.7.Path)])</onclick>
+			<property name="Play">PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.7.Path)])</property>
+			<icon>$INFO[Window.Property(InProgressMovieMB3.7.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.7.Art(poster))]</property>
+			<property name="EpThumb">$INFO[Window.Property(InProgressMovieMB3.7.Art(thumb))]</property>
+			<property name="Overlay">$INFO[Window.Property(InProgressMovieMB3.7.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(InProgressMovieMB3.7.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(InProgressMovieMB3.7.Art(clearlogo))]</property>
+			<property name="Rating">$INFO[Window.Property(InProgressMovieMB3.7.Rating)]</property>
+			<label>$INFO[Window.Property(InProgressMovieMB3.7.Title)]</label>
+			<label2>$INFO[Window.Property(InProgressMovieMB3.7.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.7.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.7.Rating),   ● ,]</label2>
+			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(InProgressMovieMB3.7.Title))</visible>
 		</item>
 		<item id="8">
-			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.8.Path)])</onclick>
-			<property name="Play">PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.8.Path)])</property>
-			<icon>$INFO[Window.Property(RandomMovieMB3.8.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.8.Art(poster))]</property>
-			<property name="EpThumb">$INFO[Window.Property(RandomMovieMB3.8.Art(thumb))]</property>
-			<property name="Overlay">$INFO[Window.Property(RandomMovieMB3.8.PercentPlayed)]</property>
-			<property name="Plot">$INFO[Window.Property(RandomMovieMB3.8.Plot)]</property>
-			<property name="Logo">$INFO[Window.Property(RandomMovieMB3.8.Art(clearlogo))]</property>
-			<property name="Rating">$INFO[Window.Property(RandomMovieMB3.8.Rating)]</property>
-			<label>$INFO[Window.Property(RandomMovieMB3.8.Title)]</label>
-			<label2>$INFO[Window.Property(RandomMovieMB3.8.Year),, • ]$INFO[Window.Property(RandomMovieMB3.8.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.8.Rating),   ● ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(RandomMovieMB3.8.Title))</visible>
+			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.8.Path)])</onclick>
+			<property name="Play">PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.8.Path)])</property>
+			<icon>$INFO[Window.Property(InProgressMovieMB3.8.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.8.Art(poster))]</property>
+			<property name="EpThumb">$INFO[Window.Property(InProgressMovieMB3.8.Art(thumb))]</property>
+			<property name="Overlay">$INFO[Window.Property(InProgressMovieMB3.8.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(InProgressMovieMB3.8.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(InProgressMovieMB3.8.Art(clearlogo))]</property>
+			<property name="Rating">$INFO[Window.Property(InProgressMovieMB3.8.Rating)]</property>
+			<label>$INFO[Window.Property(InProgressMovieMB3.8.Title)]</label>
+			<label2>$INFO[Window.Property(InProgressMovieMB3.8.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.8.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.8.Rating),   ● ,]</label2>
+			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(InProgressMovieMB3.8.Title))</visible>
 		</item>
 		<item id="9">
-			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.9.Path)])</onclick>
-			<property name="Play">PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.9.Path)])</property>
-			<icon>$INFO[Window.Property(RandomMovieMB3.9.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.9.Art(poster))]</property>
-			<property name="EpThumb">$INFO[Window.Property(RandomMovieMB3.9.Art(thumb))]</property>
-			<property name="Overlay">$INFO[Window.Property(RandomMovieMB3.9.PercentPlayed)]</property>
-			<property name="Plot">$INFO[Window.Property(RandomMovieMB3.9.Plot)]</property>
-			<property name="Logo">$INFO[Window.Property(RandomMovieMB3.9.Art(clearlogo))]</property>
-			<property name="Rating">$INFO[Window.Property(RandomMovieMB3.9.Rating)]</property>
-			<label>$INFO[Window.Property(RandomMovieMB3.9.Title)]</label>
-			<label2>$INFO[Window.Property(RandomMovieMB3.9.Year),, • ]$INFO[Window.Property(RandomMovieMB3.9.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.9.Rating),   ● ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(RandomMovieMB3.9.Title))</visible>
+			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.9.Path)])</onclick>
+			<property name="Play">PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.9.Path)])</property>
+			<icon>$INFO[Window.Property(InProgressMovieMB3.9.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.9.Art(poster))]</property>
+			<property name="EpThumb">$INFO[Window.Property(InProgressMovieMB3.9.Art(thumb))]</property>
+			<property name="Overlay">$INFO[Window.Property(InProgressMovieMB3.9.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(InProgressMovieMB3.9.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(InProgressMovieMB3.9.Art(clearlogo))]</property>
+			<property name="Rating">$INFO[Window.Property(InProgressMovieMB3.9.Rating)]</property>
+			<label>$INFO[Window.Property(InProgressMovieMB3.9.Title)]</label>
+			<label2>$INFO[Window.Property(InProgressMovieMB3.9.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.9.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.9.Rating),   ● ,]</label2>
+			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(InProgressMovieMB3.9.Title))</visible>
 		</item>
 		<item id="10">
-			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.10.Path)])</onclick>
-			<property name="Play">PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.10.Path)])</property>
-			<icon>$INFO[Window.Property(RandomMovieMB3.10.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.10.Art(poster))]</property>
-			<property name="EpThumb">$INFO[Window.Property(RandomMovieMB3.10.Art(thumb))]</property>
-			<property name="Overlay">$INFO[Window.Property(RandomMovieMB3.10.PercentPlayed)]</property>
-			<property name="Plot">$INFO[Window.Property(RandomMovieMB3.10.Plot)]</property>
-			<property name="Logo">$INFO[Window.Property(RandomMovieMB3.10.Art(clearlogo))]</property>
-			<property name="Rating">$INFO[Window.Property(RandomMovieMB3.10.Rating)]</property>
-			<label>$INFO[Window.Property(RandomMovieMB3.10.Title)]</label>
-			<label2>$INFO[Window.Property(RandomMovieMB3.10.Year),, • ]$INFO[Window.Property(RandomMovieMB3.10.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.10.Rating),   ● ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(RandomMovieMB3.10.Title))</visible>
+			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.10.Path)])</onclick>
+			<property name="Play">PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.10.Path)])</property>
+			<icon>$INFO[Window.Property(InProgressMovieMB3.10.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.10.Art(poster))]</property>
+			<property name="EpThumb">$INFO[Window.Property(InProgressMovieMB3.10.Art(thumb))]</property>
+			<property name="Overlay">$INFO[Window.Property(InProgressMovieMB3.10.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(InProgressMovieMB3.10.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(InProgressMovieMB3.10.Art(clearlogo))]</property>
+			<property name="Rating">$INFO[Window.Property(InProgressMovieMB3.10.Rating)]</property>
+			<label>$INFO[Window.Property(InProgressMovieMB3.10.Title)]</label>
+			<label2>$INFO[Window.Property(InProgressMovieMB3.10.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.10.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.10.Rating),   ● ,]</label2>
+			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(InProgressMovieMB3.10.Title))</visible>
 		</item>
 		<!-- random tv -->
 		<item id="1">

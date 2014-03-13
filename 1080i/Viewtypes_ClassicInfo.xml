@@ -190,7 +190,7 @@
             <include>OptionsShutdownAnimation</include>
             <include>BannerListAnimations</include>
             <visible>!Window.IsActive(movieinformation) + Control.IsVisible(59)</visible>  
-            <posy>30</posy>
+            <posy>-20</posy>
 			<include condition="!Skin.HasSetting(viewtype.classicposterinfo.wrap)">Viewtype-ClassicInfo-Fixed</include>
             <include condition="Skin.HasSetting(viewtype.classicposterinfo.wrap)">Viewtype-ClassicInfo-Wrap</include>
             <control type="group">
@@ -226,7 +226,7 @@
 						<posx>24</posx>
 						<posy>70</posy>
 						<width>1140</width>
-						<height>100</height>
+						<height>110</height>
 						<label>$VAR[ExtendedInfo.Plot]</label>
 						<font>Font-Alaska-S25-NC</font>
 						<textcolor>Mod_Tags</textcolor>
