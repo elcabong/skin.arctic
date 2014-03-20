@@ -139,8 +139,8 @@
 					<texture background="true">$INFO[ListItem.Art(discart)]</texture>
 					<aspectratio align="center">keep</aspectratio>
 					<visible>Container.Content(movies) + Skin.HasSetting(showdiscart)</visible>
-					<animation effect="slide" start="0" end="0,-250" time="600" delay="450" condition="Container.Content(movies) + Skin.HasSetting(showdiscart)">Focus</animation>
-					<animation effect="slide" end="0" start="0,-250" time="600" delay="0" condition="Container.Content(movies) + Skin.HasSetting(showdiscart)">UnFocus</animation>
+					<animation effect="slide" start="0" end="0,-375" time="600" delay="450" condition="Container.Content(movies) + Skin.HasSetting(showdiscart)">Focus</animation>
+					<animation effect="slide" end="0" start="0,-375" time="600" delay="0" condition="Container.Content(movies) + Skin.HasSetting(showdiscart)">UnFocus</animation>
 					<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="20000" loop="true" condition="Skin.HasSetting(RotateDiscArt) + Container.Content(movies) + Skin.HasSetting(showdiscart)">Conditional</animation>
 				</control>
 				
@@ -190,7 +190,7 @@
             <include>OptionsShutdownAnimation</include>
             <include>BannerListAnimations</include>
             <visible>!Window.IsActive(movieinformation) + Control.IsVisible(59)</visible>  
-            <posy>-20</posy>
+            <posy>40</posy>
 			<include condition="!Skin.HasSetting(viewtype.classicposterinfo.wrap)">Viewtype-ClassicInfo-Fixed</include>
             <include condition="Skin.HasSetting(viewtype.classicposterinfo.wrap)">Viewtype-ClassicInfo-Wrap</include>
             <control type="group">
