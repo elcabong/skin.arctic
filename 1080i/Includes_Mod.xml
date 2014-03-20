@@ -3517,6 +3517,18 @@
 		
 		<!-- recent movies -->
 		<item id="1">
+			<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.0.Path)])</onclick>
+			<icon>$INFO[Window.Property(LatestMovieMB3.0.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(LatestMovieMB3.0.Art(poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(LatestMovieMB3.0.PercentPlayed)]</property>
+			<property name="Rating">$INFO[Window.Property(LatestMovieMB3.0.Rating)]</property>
+			<property name="Plot">$INFO[Window.Property(LatestMovieMB3.0.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(LatestMovieMB3.0.Art(clearlogo))]</property>
+			<label>$INFO[Window.Property(LatestMovieMB3.0.Title)]</label>
+			<label2>$INFO[Window.Property(LatestMovieMB3.0.Year),, • ]$INFO[Window.Property(LatestMovieMB3.0.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(LatestMovieMB3.0.Rating),   ● ,]</label2>
+			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recent) + !IsEmpty(Window.Property(LatestMovieMB3.0.Title))</visible>
+		</item>
+		<item id="2">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.1.Path)])</onclick>
 			<icon>$INFO[Window.Property(LatestMovieMB3.1.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(LatestMovieMB3.1.Art(poster))]</property>
@@ -3528,7 +3540,7 @@
 			<label2>$INFO[Window.Property(LatestMovieMB3.1.Year),, • ]$INFO[Window.Property(LatestMovieMB3.1.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(LatestMovieMB3.1.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recent) + !IsEmpty(Window.Property(LatestMovieMB3.1.Title))</visible>
 		</item>
-		<item id="2">
+		<item id="3">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.2.Path)])</onclick>
 			<icon>$INFO[Window.Property(LatestMovieMB3.2.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(LatestMovieMB3.2.Art(poster))]</property>
@@ -3540,7 +3552,7 @@
 			<label2>$INFO[Window.Property(LatestMovieMB3.2.Year),, • ]$INFO[Window.Property(LatestMovieMB3.2.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(LatestMovieMB3.2.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recent) + !IsEmpty(Window.Property(LatestMovieMB3.2.Title))</visible>
 		</item>
-		<item id="3">
+		<item id="4">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.3.Path)])</onclick>
 			<icon>$INFO[Window.Property(LatestMovieMB3.3.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(LatestMovieMB3.3.Art(poster))]</property>
@@ -3552,7 +3564,7 @@
 			<label2>$INFO[Window.Property(LatestMovieMB3.3.Year),, • ]$INFO[Window.Property(LatestMovieMB3.3.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(LatestMovieMB3.3.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recent) + !IsEmpty(Window.Property(LatestMovieMB3.3.Title))</visible>
 		</item>
-		<item id="4">
+		<item id="5">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.4.Path)])</onclick>
 			<icon>$INFO[Window.Property(LatestMovieMB3.4.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(LatestMovieMB3.4.Art(poster))]</property>
@@ -3564,7 +3576,7 @@
 			<label2>$INFO[Window.Property(LatestMovieMB3.4.Year),, • ]$INFO[Window.Property(LatestMovieMB3.4.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(LatestMovieMB3.4.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recent) + !IsEmpty(Window.Property(LatestMovieMB3.4.Title))</visible>
 		</item>
-		<item id="5">
+		<item id="6">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.5.Path)])</onclick>
 			<icon>$INFO[Window.Property(LatestMovieMB3.5.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(LatestMovieMB3.5.Art(poster))]</property>
@@ -3576,7 +3588,7 @@
 			<label2>$INFO[Window.Property(LatestMovieMB3.5.Year),, • ]$INFO[Window.Property(LatestMovieMB3.5.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(LatestMovieMB3.5.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recent) + !IsEmpty(Window.Property(LatestMovieMB3.5.Title))</visible>
 		</item>
-		<item id="6">
+		<item id="7">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.6.Path)])</onclick>
 			<icon>$INFO[Window.Property(LatestMovieMB3.6.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(LatestMovieMB3.6.Art(poster))]</property>
@@ -3588,7 +3600,7 @@
 			<label2>$INFO[Window.Property(LatestMovieMB3.6.Year),, • ]$INFO[Window.Property(LatestMovieMB3.6.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(LatestMovieMB3.6.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recent) + !IsEmpty(Window.Property(LatestMovieMB3.6.Title))</visible>
 		</item>
-		<item id="7">
+		<item id="8">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.7.Path)])</onclick>
 			<icon>$INFO[Window.Property(LatestMovieMB3.7.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(LatestMovieMB3.7.Art(poster))]</property>
@@ -3600,7 +3612,7 @@
 			<label2>$INFO[Window.Property(LatestMovieMB3.7.Year),, • ]$INFO[Window.Property(LatestMovieMB3.7.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(LatestMovieMB3.7.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recent) + !IsEmpty(Window.Property(LatestMovieMB3.7.Title))</visible>
 		</item>
-		<item id="8">
+		<item id="9">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.8.Path)])</onclick>
 			<icon>$INFO[Window.Property(LatestMovieMB3.8.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(LatestMovieMB3.8.Art(poster))]</property>
@@ -3612,7 +3624,7 @@
 			<label2>$INFO[Window.Property(LatestMovieMB3.8.Year),, • ]$INFO[Window.Property(LatestMovieMB3.8.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(LatestMovieMB3.8.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recent) + !IsEmpty(Window.Property(LatestMovieMB3.8.Title))</visible>
 		</item>
-		<item id="9">
+		<item id="10">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.9.Path)])</onclick>
 			<icon>$INFO[Window.Property(LatestMovieMB3.9.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(LatestMovieMB3.9.Art(poster))]</property>
@@ -3624,7 +3636,7 @@
 			<label2>$INFO[Window.Property(LatestMovieMB3.9.Year),, • ]$INFO[Window.Property(LatestMovieMB3.9.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(LatestMovieMB3.9.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recent) + !IsEmpty(Window.Property(LatestMovieMB3.9.Title))</visible>
 		</item>
-		<item id="10">
+		<item id="11">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.10.Path)])</onclick>
 			<icon>$INFO[Window.Property(LatestMovieMB3.10.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(LatestMovieMB3.10.Art(poster))]</property>
@@ -3636,7 +3648,7 @@
 			<label2>$INFO[Window.Property(LatestMovieMB3.10.Year),, • ]$INFO[Window.Property(LatestMovieMB3.10.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(LatestMovieMB3.10.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recent) + !IsEmpty(Window.Property(LatestMovieMB3.10.Title))</visible>
 		</item>
-		<item id="11">
+		<item id="12">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.11.Path)])</onclick>
 			<icon>$INFO[Window.Property(LatestMovieMB3.11.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(LatestMovieMB3.11.Art(poster))]</property>
@@ -3758,6 +3770,18 @@
 		</item>		-->
 		<!-- recommended movies -->
 		<item id="1">
+			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.0.Path)])</onclick>
+			<icon>$INFO[Window.Property(InProgressMovieMB3.0.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.0.Art(poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(InProgressMovieMB3.0.PercentPlayed)]</property>
+			<property name="Rating">$INFO[Window.Property(InProgressMovieMB3.0.Rating)]</property>
+			<property name="Plot">$INFO[Window.Property(InProgressMovieMB3.0.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(InProgressMovieMB3.0.Art(clearlogo))]</property>
+			<label>$INFO[Window.Property(InProgressMovieMB3.0.Title)]</label>
+			<label2>$INFO[Window.Property(InProgressMovieMB3.0.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.0.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.0.Rating),   ● ,]</label2>
+			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(InProgressMovieMB3.0.Title))</visible>
+		</item>
+		<item id="2">
 			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.1.Path)])</onclick>
 			<icon>$INFO[Window.Property(InProgressMovieMB3.1.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.1.Art(poster))]</property>
@@ -3769,7 +3793,7 @@
 			<label2>$INFO[Window.Property(InProgressMovieMB3.1.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.1.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.1.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(InProgressMovieMB3.1.Title))</visible>
 		</item>
-		<item id="2">
+		<item id="3">
 			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.2.Path)])</onclick>
 			<icon>$INFO[Window.Property(InProgressMovieMB3.2.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.2.Art(poster))]</property>
@@ -3781,7 +3805,7 @@
 			<label2>$INFO[Window.Property(InProgressMovieMB3.2.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.2.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.2.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(InProgressMovieMB3.2.Title))</visible>
 		</item>
-		<item id="3">
+		<item id="4">
 			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.3.Path)])</onclick>
 			<icon>$INFO[Window.Property(InProgressMovieMB3.3.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.3.Art(poster))]</property>
@@ -3793,7 +3817,7 @@
 			<label2>$INFO[Window.Property(InProgressMovieMB3.3.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.3.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.3.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(InProgressMovieMB3.3.Title))</visible>
 		</item>
-		<item id="4">
+		<item id="5">
 			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.4.Path)])</onclick>
 			<icon>$INFO[Window.Property(InProgressMovieMB3.4.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.4.Art(poster))]</property>
@@ -3805,7 +3829,7 @@
 			<label2>$INFO[Window.Property(InProgressMovieMB3.4.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.4.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.4.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(InProgressMovieMB3.4.Title))</visible>
 		</item>
-		<item id="5">
+		<item id="6">
 			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.5.Path)])</onclick>
 			<icon>$INFO[Window.Property(InProgressMovieMB3.5.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.5.Art(poster))]</property>
@@ -3817,7 +3841,7 @@
 			<label2>$INFO[Window.Property(InProgressMovieMB3.5.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.5.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.5.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(InProgressMovieMB3.5.Title))</visible>
 		</item>
-		<item id="6">
+		<item id="7">
 			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.6.Path)])</onclick>
 			<icon>$INFO[Window.Property(InProgressMovieMB3.6.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.6.Art(poster))]</property>
@@ -3829,7 +3853,7 @@
 			<label2>$INFO[Window.Property(InProgressMovieMB3.6.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.6.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.6.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(InProgressMovieMB3.6.Title))</visible>
 		</item>
-		<item id="7">
+		<item id="8">
 			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.7.Path)])</onclick>
 			<icon>$INFO[Window.Property(InProgressMovieMB3.7.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.7.Art(poster))]</property>
@@ -3841,7 +3865,7 @@
 			<label2>$INFO[Window.Property(InProgressMovieMB3.7.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.7.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.7.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(InProgressMovieMB3.7.Title))</visible>
 		</item>
-		<item id="8">
+		<item id="9">
 			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.8.Path)])</onclick>
 			<icon>$INFO[Window.Property(InProgressMovieMB3.8.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.8.Art(poster))]</property>
@@ -3853,7 +3877,7 @@
 			<label2>$INFO[Window.Property(InProgressMovieMB3.8.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.8.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.8.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(InProgressMovieMB3.8.Title))</visible>
 		</item>
-		<item id="9">
+		<item id="10">
 			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.9.Path)])</onclick>
 			<icon>$INFO[Window.Property(InProgressMovieMB3.9.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.9.Art(poster))]</property>
@@ -3865,7 +3889,7 @@
 			<label2>$INFO[Window.Property(InProgressMovieMB3.9.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.9.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.9.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(InProgressMovieMB3.9.Title))</visible>
 		</item>
-		<item id="10">
+		<item id="11">
 			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.10.Path)])</onclick>
 			<icon>$INFO[Window.Property(InProgressMovieMB3.10.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.10.Art(poster))]</property>
@@ -3879,6 +3903,18 @@
 		</item>
 		<!-- Random movies -->
 		<item id="1">
+			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.0.Path)])</onclick>
+			<icon>$INFO[Window.Property(RandomMovieMB3.0.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.0.Art(poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(RandomMovieMB3.0.PercentPlayed)]</property>
+			<property name="Rating">$INFO[Window.Property(RandomMovieMB3.0.Rating)]</property>
+			<property name="Plot">$INFO[Window.Property(RandomMovieMB3.0.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(RandomMovieMB3.0.Art(clearlogo))]</property>
+			<label>$INFO[Window.Property(RandomMovieMB3.0.Title)]</label>
+			<label2>$INFO[Window.Property(RandomMovieMB3.0.Year),, • ]$INFO[Window.Property(RandomMovieMB3.0.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.0.Rating),   ● ,]</label2>
+			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.random) + !IsEmpty(Window.Property(RandomMovieMB3.0.Title))</visible>
+		</item>
+		<item id="2">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.1.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomMovieMB3.1.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.1.Art(poster))]</property>
@@ -3890,7 +3926,7 @@
 			<label2>$INFO[Window.Property(RandomMovieMB3.1.Year),, • ]$INFO[Window.Property(RandomMovieMB3.1.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.1.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.random) + !IsEmpty(Window.Property(RandomMovieMB3.1.Title))</visible>
 		</item>
-		<item id="2">
+		<item id="3">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.2.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomMovieMB3.2.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.2.Art(poster))]</property>
@@ -3902,7 +3938,7 @@
 			<label2>$INFO[Window.Property(RandomMovieMB3.2.Year),, • ]$INFO[Window.Property(RandomMovieMB3.2.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.2.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.random) + !IsEmpty(Window.Property(RandomMovieMB3.2.Title))</visible>
 		</item>
-		<item id="3">
+		<item id="4">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.3.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomMovieMB3.3.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.3.Art(poster))]</property>
@@ -3914,7 +3950,7 @@
 			<label2>$INFO[Window.Property(RandomMovieMB3.3.Year),, • ]$INFO[Window.Property(RandomMovieMB3.3.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.3.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.random) + !IsEmpty(Window.Property(RandomMovieMB3.3.Title))</visible>
 		</item>
-		<item id="4">
+		<item id="5">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.4.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomMovieMB3.4.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.4.Art(poster))]</property>
@@ -3926,7 +3962,7 @@
 			<label2>$INFO[Window.Property(RandomMovieMB3.4.Year),, • ]$INFO[Window.Property(RandomMovieMB3.4.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.4.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.random) + !IsEmpty(Window.Property(RandomMovieMB3.4.Title))</visible>
 		</item>
-		<item id="5">
+		<item id="6">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.5.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomMovieMB3.5.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.5.Art(poster))]</property>
@@ -3938,7 +3974,7 @@
 			<label2>$INFO[Window.Property(RandomMovieMB3.5.Year),, • ]$INFO[Window.Property(RandomMovieMB3.5.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.5.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.random) + !IsEmpty(Window.Property(RandomMovieMB3.5.Title))</visible>
 		</item>
-		<item id="6">
+		<item id="7">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.6.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomMovieMB3.6.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.6.Art(poster))]</property>
@@ -3950,7 +3986,7 @@
 			<label2>$INFO[Window.Property(RandomMovieMB3.6.Year),, • ]$INFO[Window.Property(RandomMovieMB3.6.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.6.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.random) + !IsEmpty(Window.Property(RandomMovieMB3.6.Title))</visible>
 		</item>
-		<item id="7">
+		<item id="8">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.7.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomMovieMB3.7.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.7.Art(poster))]</property>
@@ -3962,7 +3998,7 @@
 			<label2>$INFO[Window.Property(RandomMovieMB3.7.Year),, • ]$INFO[Window.Property(RandomMovieMB3.7.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.7.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.random) + !IsEmpty(Window.Property(RandomMovieMB3.7.Title))</visible>
 		</item>
-		<item id="8">
+		<item id="9">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.8.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomMovieMB3.8.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.8.Art(poster))]</property>
@@ -3974,7 +4010,7 @@
 			<label2>$INFO[Window.Property(RandomMovieMB3.8.Year),, • ]$INFO[Window.Property(RandomMovieMB3.8.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.8.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.random) + !IsEmpty(Window.Property(RandomMovieMB3.8.Title))</visible>
 		</item>
-		<item id="9">
+		<item id="10">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.9.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomMovieMB3.9.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.9.Art(poster))]</property>
@@ -3986,7 +4022,7 @@
 			<label2>$INFO[Window.Property(RandomMovieMB3.9.Year),, • ]$INFO[Window.Property(RandomMovieMB3.9.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.9.Rating),   ● ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),movie.random) + !IsEmpty(Window.Property(RandomMovieMB3.9.Title))</visible>
 		</item>
-		<item id="10">
+		<item id="11">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.10.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomMovieMB3.10.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.10.Art(poster))]</property>
@@ -4000,6 +4036,17 @@
 		</item>
 		<!-- recent tv -->
 		<item id="1">
+			<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.0.Path)])</onclick>
+			<icon>$INFO[Window.Property(LatestEpisodeMB3.0.Thumb)]</icon>
+			<property name="Poster">$INFO[Window.Property(LatestEpisodeMB3.0.Art(tvshow.poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(LatestEpisodeMB3.0.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(LatestEpisodeMB3.0.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(LatestEpisodeMB3.0.Art(tvshow.clearlogo))]</property>
+			<label>$INFO[Window.Property(LatestEpisodeMB3.0.ShowTitle)]</label>
+			<label2>$INFO[Window.Property(LatestEpisodeMB3.0.EpisodeTitle),, • ]$INFO[Window.Property(LatestEpisodeMB3.0.SeasonNo),S,]$INFO[Window.Property(LatestEpisodeMB3.0.EpisodeNo),E,]</label2>
+			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recent) + !IsEmpty(Window.Property(LatestEpisodeMB3.0.ShowTitle))</visible>
+		</item>
+		<item id="2">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.1.Path)])</onclick>
 			<icon>$INFO[Window.Property(LatestEpisodeMB3.1.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(LatestEpisodeMB3.1.Art(tvshow.poster))]</property>
@@ -4010,7 +4057,7 @@
 			<label2>$INFO[Window.Property(LatestEpisodeMB3.1.EpisodeTitle),, • ]$INFO[Window.Property(LatestEpisodeMB3.1.SeasonNo),S,]$INFO[Window.Property(LatestEpisodeMB3.1.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recent) + !IsEmpty(Window.Property(LatestEpisodeMB3.1.ShowTitle))</visible>
 		</item>
-		<item id="2">
+		<item id="3">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.2.Path)])</onclick>
 			<icon>$INFO[Window.Property(LatestEpisodeMB3.2.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(LatestEpisodeMB3.2.Art(tvshow.poster))]</property>
@@ -4021,7 +4068,7 @@
 			<label2>$INFO[Window.Property(LatestEpisodeMB3.2.EpisodeTitle),, • ]$INFO[Window.Property(LatestEpisodeMB3.2.SeasonNo),S,]$INFO[Window.Property(LatestEpisodeMB3.2.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recent) + !IsEmpty(Window.Property(LatestEpisodeMB3.2.ShowTitle))</visible>
 		</item>
-		<item id="3">
+		<item id="4">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.3.Path)])</onclick>
 			<icon>$INFO[Window.Property(LatestEpisodeMB3.3.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(LatestEpisodeMB3.3.Art(tvshow.poster))]</property>
@@ -4032,7 +4079,7 @@
 			<label2>$INFO[Window.Property(LatestEpisodeMB3.3.EpisodeTitle),, • ]$INFO[Window.Property(LatestEpisodeMB3.3.SeasonNo),S,]$INFO[Window.Property(LatestEpisodeMB3.3.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recent) + !IsEmpty(Window.Property(LatestEpisodeMB3.3.ShowTitle))</visible>
 		</item>
-		<item id="4">
+		<item id="5">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.4.Path)])</onclick>
 			<icon>$INFO[Window.Property(LatestEpisodeMB3.4.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(LatestEpisodeMB3.4.Art(tvshow.poster))]</property>
@@ -4043,7 +4090,7 @@
 			<label2>$INFO[Window.Property(LatestEpisodeMB3.4.EpisodeTitle),, • ]$INFO[Window.Property(LatestEpisodeMB3.4.SeasonNo),S,]$INFO[Window.Property(LatestEpisodeMB3.4.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recent) + !IsEmpty(Window.Property(LatestEpisodeMB3.4.ShowTitle))</visible>
 		</item>
-		<item id="5">
+		<item id="6">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.5.Path)])</onclick>
 			<icon>$INFO[Window.Property(LatestEpisodeMB3.5.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(LatestEpisodeMB3.5.Art(tvshow.poster))]</property>
@@ -4054,7 +4101,7 @@
 			<label2>$INFO[Window.Property(LatestEpisodeMB3.5.EpisodeTitle),, • ]$INFO[Window.Property(LatestEpisodeMB3.5.SeasonNo),S,]$INFO[Window.Property(LatestEpisodeMB3.5.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recent) + !IsEmpty(Window.Property(LatestEpisodeMB3.5.ShowTitle))</visible>
 		</item>
-		<item id="6">
+		<item id="7">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.6.Path)])</onclick>
 			<icon>$INFO[Window.Property(LatestEpisodeMB3.6.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(LatestEpisodeMB3.6.Art(tvshow.poster))]</property>
@@ -4065,7 +4112,7 @@
 			<label2>$INFO[Window.Property(LatestEpisodeMB3.6.EpisodeTitle),, • ]$INFO[Window.Property(LatestEpisodeMB3.6.SeasonNo),S,]$INFO[Window.Property(LatestEpisodeMB3.6.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recent) + !IsEmpty(Window.Property(LatestEpisodeMB3.6.ShowTitle))</visible>
 		</item>
-		<item id="7">
+		<item id="8">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.7.Path)])</onclick>
 			<icon>$INFO[Window.Property(LatestEpisodeMB3.7.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(LatestEpisodeMB3.7.Art(tvshow.poster))]</property>
@@ -4076,7 +4123,7 @@
 			<label2>$INFO[Window.Property(LatestEpisodeMB3.7.EpisodeTitle),, • ]$INFO[Window.Property(LatestEpisodeMB3.7.SeasonNo),S,]$INFO[Window.Property(LatestEpisodeMB3.7.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recent) + !IsEmpty(Window.Property(LatestEpisodeMB3.7.ShowTitle))</visible>
 		</item>
-		<item id="8">
+		<item id="9">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.8.Path)])</onclick>
 			<icon>$INFO[Window.Property(LatestEpisodeMB3.8.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(LatestEpisodeMB3.8.Art(tvshow.poster))]</property>
@@ -4087,7 +4134,7 @@
 			<label2>$INFO[Window.Property(LatestEpisodeMB3.8.EpisodeTitle),, • ]$INFO[Window.Property(LatestEpisodeMB3.8.SeasonNo),S,]$INFO[Window.Property(LatestEpisodeMB3.8.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recent) + !IsEmpty(Window.Property(LatestEpisodeMB3.8.ShowTitle))</visible>
 		</item>
-		<item id="9">
+		<item id="10">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.9.Path)])</onclick>
 			<icon>$INFO[Window.Property(LatestEpisodeMB3.9.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(LatestEpisodeMB3.9.Art(tvshow.poster))]</property>
@@ -4098,7 +4145,7 @@
 			<label2>$INFO[Window.Property(LatestEpisodeMB3.9.EpisodeTitle),, • ]$INFO[Window.Property(LatestEpisodeMB3.9.SeasonNo),S,]$INFO[Window.Property(LatestEpisodeMB3.9.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recent) + !IsEmpty(Window.Property(LatestEpisodeMB3.9.ShowTitle))</visible>
 		</item>
-		<item id="10">
+		<item id="11">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.10.Path)])</onclick>
 			<icon>$INFO[Window.Property(LatestEpisodeMB3.10.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(LatestEpisodeMB3.10.Art(tvshow.poster))]</property>
@@ -4109,7 +4156,7 @@
 			<label2>$INFO[Window.Property(LatestEpisodeMB3.10.EpisodeTitle),, • ]$INFO[Window.Property(LatestEpisodeMB3.10.SeasonNo),S,]$INFO[Window.Property(LatestEpisodeMB3.10.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recent) + !IsEmpty(Window.Property(LatestEpisodeMB3.10.ShowTitle))</visible>
 		</item>
-		<item id="11">
+		<item id="12">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.11.Path)])</onclick>
 			<icon>$INFO[Window.Property(LatestEpisodeMB3.11.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(LatestEpisodeMB3.11.Art(tvshow.poster))]</property>
@@ -4122,6 +4169,17 @@
 		</item>
 		<!-- recommended tv -->
 		<item id="1">
+			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.0.Path)])</onclick>
+			<icon>$INFO[Window.Property(NextUpEpisodeMB3.0.Thumb)]</icon>
+			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.0.Art(tvshow.poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(NextUpEpisodeMB3.0.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(NextUpEpisodeMB3.0.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(NextUpEpisodeMB3.0.Art(tvshow.clearlogo))]</property>
+			<label>$INFO[Window.Property(NextUpEpisodeMB3.0.ShowTitle)]</label>
+			<label2>$INFO[Window.Property(NextUpEpisodeMB3.0.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.0.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.0.EpisodeNo),E,]</label2>
+			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.0.ShowTitle))</visible>
+		</item>		
+		<item id="2">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.1.Path)])</onclick>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.1.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.1.Art(tvshow.poster))]</property>
@@ -4132,7 +4190,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.1.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.1.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.1.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.1.ShowTitle))</visible>
 		</item>
-		<item id="2">
+		<item id="3">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.2.Path)])</onclick>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.2.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.2.Art(tvshow.poster))]</property>
@@ -4143,7 +4201,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.2.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.2.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.2.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.2.ShowTitle))</visible>
 		</item>
-		<item id="3">
+		<item id="4">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.3.Path)])</onclick>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.3.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.3.Art(tvshow.poster))]</property>
@@ -4154,7 +4212,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.3.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.3.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.3.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.3.ShowTitle))</visible>
 		</item>
-		<item id="4">
+		<item id="5">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.4.Path)])</onclick>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.4.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.4.Art(tvshow.poster))]</property>
@@ -4165,7 +4223,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.4.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.4.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.4.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.4.ShowTitle))</visible>
 		</item>
-		<item id="5">
+		<item id="6">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.5.Path)])</onclick>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.5.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.5.Art(tvshow.poster))]</property>
@@ -4176,7 +4234,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.5.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.5.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.5.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.5.ShowTitle))</visible>
 		</item>
-		<item id="6">
+		<item id="7">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.6.Path)])</onclick>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.6.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.6.Art(tvshow.poster))]</property>
@@ -4187,7 +4245,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.6.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.6.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.6.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.6.ShowTitle))</visible>
 		</item>
-		<item id="7">
+		<item id="8">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.7.Path)])</onclick>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.7.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.7.Art(tvshow.poster))]</property>
@@ -4198,7 +4256,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.7.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.7.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.7.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.7.ShowTitle))</visible>
 		</item>
-		<item id="8">
+		<item id="9">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.8.Path)])</onclick>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.8.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.8.Art(tvshow.poster))]</property>
@@ -4209,7 +4267,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.8.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.8.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.8.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.8.ShowTitle))</visible>
 		</item>
-		<item id="9">
+		<item id="10">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.9.Path)])</onclick>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.9.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.9.Art(tvshow.poster))]</property>
@@ -4220,7 +4278,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.9.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.9.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.9.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.9.ShowTitle))</visible>
 		</item>
-		<item id="10">
+		<item id="11">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.10.Path)])</onclick>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.10.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.10.Art(tvshow.poster))]</property>
@@ -4231,7 +4289,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.10.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.10.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.10.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.10.ShowTitle))</visible>
 		</item>
-		<item id="11">
+		<item id="12">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.11.Path)])</onclick>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.11.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.11.Art(tvshow.poster))]</property>
@@ -4242,7 +4300,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.11.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.11.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.11.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.11.ShowTitle))</visible>
 		</item>
-		<item id="12">
+		<item id="13">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.12.Path)])</onclick>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.12.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.12.Art(tvshow.poster))]</property>
@@ -4253,7 +4311,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.12.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.12.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.12.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.12.ShowTitle))</visible>
 		</item>	
-		<item id="13">
+		<item id="14">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.13.Path)])</onclick>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.13.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.13.Art(tvshow.poster))]</property>
@@ -4264,7 +4322,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.13.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.13.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.13.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.13.ShowTitle))</visible>
 		</item>
-		<item id="14">
+		<item id="15">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.14.Path)])</onclick>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.14.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.14.Art(tvshow.poster))]</property>
@@ -4275,7 +4333,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.14.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.14.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.14.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.14.ShowTitle))</visible>
 		</item>
-		<item id="15">
+		<item id="16">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.15.Path)])</onclick>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.15.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.15.Art(tvshow.poster))]</property>
@@ -4286,7 +4344,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.15.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.15.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.15.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.15.ShowTitle))</visible>
 		</item>	
-		<item id="16">
+		<item id="17">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.16.Path)])</onclick>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.16.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.16.Art(tvshow.poster))]</property>
@@ -4297,7 +4355,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.16.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.16.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.16.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.16.ShowTitle))</visible>
 		</item>
-		<item id="17">
+		<item id="18">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.17.Path)])</onclick>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.17.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.17.Art(tvshow.poster))]</property>
@@ -4308,7 +4366,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.17.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.17.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.17.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.17.ShowTitle))</visible>
 		</item>	
-		<item id="18">
+		<item id="19">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.18.Path)])</onclick>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.18.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.18.Art(tvshow.poster))]</property>
@@ -4319,7 +4377,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.18.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.18.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.18.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.18.ShowTitle))</visible>
 		</item>	
-		<item id="19">
+		<item id="20">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.19.Path)])</onclick>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.19.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.19.Art(tvshow.poster))]</property>
@@ -4329,20 +4387,20 @@
 			<label>$INFO[Window.Property(NextUpEpisodeMB3.19.ShowTitle)]</label>
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.19.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.19.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.19.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.19.ShowTitle))</visible>
-		</item>
-		<item id="20">
-			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.20.Path)])</onclick>
-			<icon>$INFO[Window.Property(NextUpEpisodeMB3.20.Thumb)]</icon>
-			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.20.Art(tvshow.poster))]</property>
-			<property name="Overlay">$INFO[Window.Property(NextUpEpisodeMB3.20.PercentPlayed)]</property>
-			<property name="Plot">$INFO[Window.Property(NextUpEpisodeMB3.20.Plot)]</property>
-			<property name="Logo">$INFO[Window.Property(NextUpEpisodeMB3.20.Art(tvshow.clearlogo))]</property>
-			<label>$INFO[Window.Property(NextUpEpisodeMB3.20.ShowTitle)]</label>
-			<label2>$INFO[Window.Property(NextUpEpisodeMB3.20.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.20.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.20.EpisodeNo),E,]</label2>
-			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.20.ShowTitle))</visible>
-		</item>			
+		</item>		
 		<!-- random tv -->
 		<item id="1">
+			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisodeMB3.0.Path)])</onclick>
+			<icon>$INFO[Window.Property(RandomEpisodeMB3.0.Thumb)]</icon>
+			<property name="Poster">$INFO[Window.Property(RandomEpisodeMB3.0.Art(tvshow.poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(RandomEpisodeMB3.0.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(RandomEpisodeMB3.0.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(RandomEpisodeMB3.0.Art(tvshow.clearlogo))]</property>
+			<label>$INFO[Window.Property(RandomEpisodeMB3.0.ShowTitle)]</label>
+			<label2>$INFO[Window.Property(RandomEpisodeMB3.0.EpisodeTitle),, • ]$INFO[Window.Property(RandomEpisodeMB3.0.SeasonNo),S,]$INFO[Window.Property(RandomEpisodeMB3.0.EpisodeNo),E,]</label2>
+			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.random) + !IsEmpty(Window.Property(RandomEpisodeMB3.0.ShowTitle))</visible>
+		</item>
+		<item id="2">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisodeMB3.1.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomEpisodeMB3.1.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisodeMB3.1.Art(tvshow.poster))]</property>
@@ -4353,7 +4411,7 @@
 			<label2>$INFO[Window.Property(RandomEpisodeMB3.1.EpisodeTitle),, • ]$INFO[Window.Property(RandomEpisodeMB3.1.SeasonNo),S,]$INFO[Window.Property(RandomEpisodeMB3.1.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.random) + !IsEmpty(Window.Property(RandomEpisodeMB3.1.ShowTitle))</visible>
 		</item>
-		<item id="2">
+		<item id="3">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisodeMB3.2.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomEpisodeMB3.2.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisodeMB3.2.Art(tvshow.poster))]</property>
@@ -4364,7 +4422,7 @@
 			<label2>$INFO[Window.Property(RandomEpisodeMB3.2.EpisodeTitle),, • ]$INFO[Window.Property(RandomEpisodeMB3.2.SeasonNo),S,]$INFO[Window.Property(RandomEpisodeMB3.2.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.random) + !IsEmpty(Window.Property(RandomEpisodeMB3.2.ShowTitle))</visible>
 		</item>
-		<item id="3">
+		<item id="4">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisodeMB3.3.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomEpisodeMB3.3.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisodeMB3.3.Art(tvshow.poster))]</property>
@@ -4375,7 +4433,7 @@
 			<label2>$INFO[Window.Property(RandomEpisodeMB3.3.EpisodeTitle),, • ]$INFO[Window.Property(RandomEpisodeMB3.3.SeasonNo),S,]$INFO[Window.Property(RandomEpisodeMB3.3.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.random) + !IsEmpty(Window.Property(RandomEpisodeMB3.3.ShowTitle))</visible>
 		</item>
-		<item id="4">
+		<item id="5">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisodeMB3.4.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomEpisodeMB3.4.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisodeMB3.4.Art(tvshow.poster))]</property>
@@ -4386,7 +4444,7 @@
 			<label2>$INFO[Window.Property(RandomEpisodeMB3.4.EpisodeTitle),, • ]$INFO[Window.Property(RandomEpisodeMB3.4.SeasonNo),S,]$INFO[Window.Property(RandomEpisodeMB3.4.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.random) + !IsEmpty(Window.Property(RandomEpisodeMB3.4.ShowTitle))</visible>
 		</item>
-		<item id="5">
+		<item id="6">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisodeMB3.5.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomEpisodeMB3.5.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisodeMB3.5.Art(tvshow.poster))]</property>
@@ -4397,7 +4455,7 @@
 			<label2>$INFO[Window.Property(RandomEpisodeMB3.5.EpisodeTitle),, • ]$INFO[Window.Property(RandomEpisodeMB3.5.SeasonNo),S,]$INFO[Window.Property(RandomEpisodeMB3.5.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.random) + !IsEmpty(Window.Property(RandomEpisodeMB3.5.ShowTitle))</visible>
 		</item>
-		<item id="6">
+		<item id="7">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisodeMB3.6.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomEpisodeMB3.6.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisodeMB3.6.Art(tvshow.poster))]</property>
@@ -4408,7 +4466,7 @@
 			<label2>$INFO[Window.Property(RandomEpisodeMB3.6.EpisodeTitle),, • ]$INFO[Window.Property(RandomEpisodeMB3.6.SeasonNo),S,]$INFO[Window.Property(RandomEpisodeMB3.6.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.random) + !IsEmpty(Window.Property(RandomEpisodeMB3.6.ShowTitle))</visible>
 		</item>
-		<item id="7">
+		<item id="8">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisodeMB3.7.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomEpisodeMB3.7.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisodeMB3.7.Art(tvshow.poster))]</property>
@@ -4419,7 +4477,7 @@
 			<label2>$INFO[Window.Property(RandomEpisodeMB3.7.EpisodeTitle),, • ]$INFO[Window.Property(RandomEpisodeMB3.7.SeasonNo),S,]$INFO[Window.Property(RandomEpisodeMB3.7.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.random) + !IsEmpty(Window.Property(RandomEpisodeMB3.7.ShowTitle))</visible>
 		</item>
-		<item id="8">
+		<item id="9">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisodeMB3.8.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomEpisodeMB3.8.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisodeMB3.8.Art(tvshow.poster))]</property>
@@ -4430,7 +4488,7 @@
 			<label2>$INFO[Window.Property(RandomEpisodeMB3.8.EpisodeTitle),, • ]$INFO[Window.Property(RandomEpisodeMB3.8.SeasonNo),S,]$INFO[Window.Property(RandomEpisodeMB3.8.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.random) + !IsEmpty(Window.Property(RandomEpisodeMB3.8.ShowTitle))</visible>
 		</item>
-		<item id="9">
+		<item id="10">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisodeMB3.9.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomEpisodeMB3.9.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisodeMB3.9.Art(tvshow.poster))]</property>
@@ -4441,7 +4499,7 @@
 			<label2>$INFO[Window.Property(RandomEpisodeMB3.9.EpisodeTitle),, • ]$INFO[Window.Property(RandomEpisodeMB3.9.SeasonNo),S,]$INFO[Window.Property(RandomEpisodeMB3.9.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.random) + !IsEmpty(Window.Property(RandomEpisodeMB3.9.ShowTitle))</visible>
 		</item>
-		<item id="10">
+		<item id="11">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisodeMB3.10.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomEpisodeMB3.10.Thumb)]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisodeMB3.10.Art(tvshow.poster))]</property>
@@ -4452,8 +4510,18 @@
 			<label2>$INFO[Window.Property(RandomEpisodeMB3.10.EpisodeTitle),, • ]$INFO[Window.Property(RandomEpisodeMB3.10.SeasonNo),S,]$INFO[Window.Property(RandomEpisodeMB3.10.EpisodeNo),E,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),tvshow.random) + !IsEmpty(Window.Property(RandomEpisodeMB3.10.ShowTitle))</visible>
 		</item>
-		<!-- recent album -->
+		<!-- recommended album -->
 		<item id="1">
+			<onclick>SetFocus(525)</onclick>
+			<onclick>$INFO[Window.Property(LatestAlbumMB3.0.Path)]</onclick>
+			<icon>$INFO[Window.Property(LatestAlbumMB3.0.Art(thumb))]</icon>
+			<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.0.Art(poster))]</property>
+			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.0.Description)]</property>
+			<label>$INFO[Window.Property(LatestAlbumMB3.0.Artist)]</label>
+			<label2>$INFO[Window.Property(LatestAlbumMB3.0.Title)]$INFO[Window.Property(LatestAlbumMB3.0.Year), • ,]</label2>
+			<visible>StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(LatestAlbumMB3.0.Title))</visible>
+		</item>
+		<item id="2">
 			<onclick>SetFocus(525)</onclick>
 			<onclick>$INFO[Window.Property(LatestAlbumMB3.1.Path)]</onclick>
 			<icon>$INFO[Window.Property(LatestAlbumMB3.1.Art(thumb))]</icon>
@@ -4463,7 +4531,7 @@
 			<label2>$INFO[Window.Property(LatestAlbumMB3.1.Title)]$INFO[Window.Property(LatestAlbumMB3.1.Year), • ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(LatestAlbumMB3.1.Title))</visible>
 		</item>
-		<item id="2">
+		<item id="3">
 			<onclick>SetFocus(525)</onclick>
 			<onclick>$INFO[Window.Property(LatestAlbumMB3.2.Path)]</onclick>
 			<icon>$INFO[Window.Property(LatestAlbumMB3.2.Art(thumb))]</icon>
@@ -4473,7 +4541,7 @@
 			<label2>$INFO[Window.Property(LatestAlbumMB3.2.Title)]$INFO[Window.Property(LatestAlbumMB3.2.Year), • ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(LatestAlbumMB3.2.Title))</visible>
 		</item>
-		<item id="3">
+		<item id="4">
 			<onclick>SetFocus(525)</onclick>
 			<onclick>$INFO[Window.Property(LatestAlbumMB3.3.Path)]</onclick>
 			<icon>$INFO[Window.Property(LatestAlbumMB3.3.Art(thumb))]</icon>
@@ -4483,7 +4551,7 @@
 			<label2>$INFO[Window.Property(LatestAlbumMB3.3.Title)]$INFO[Window.Property(LatestAlbumMB3.3.Year), • ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(LatestAlbumMB3.3.Title))</visible>
 		</item>
-		<item id="4">
+		<item id="5">
 			<onclick>SetFocus(525)</onclick>
 			<onclick>$INFO[Window.Property(LatestAlbumMB3.4.Path)]</onclick>
 			<icon>$INFO[Window.Property(LatestAlbumMB3.4.Art(thumb))]</icon>
@@ -4493,7 +4561,7 @@
 			<label2>$INFO[Window.Property(LatestAlbumMB3.4.Title)]$INFO[Window.Property(LatestAlbumMB3.4.Year), • ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(LatestAlbumMB3.4.Title))</visible>
 		</item>
-		<item id="5">
+		<item id="6">
 			<onclick>SetFocus(525)</onclick>
 			<onclick>$INFO[Window.Property(LatestAlbumMB3.5.Path)]</onclick>
 			<icon>$INFO[Window.Property(LatestAlbumMB3.5.Art(thumb))]</icon>
@@ -4503,7 +4571,7 @@
 			<label2>$INFO[Window.Property(LatestAlbumMB3.5.Title)]$INFO[Window.Property(LatestAlbumMB3.5.Year), • ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(LatestAlbumMB3.5.Title))</visible>
 		</item>
-		<item id="6">
+		<item id="7">
 			<onclick>SetFocus(525)</onclick>
 			<onclick>$INFO[Window.Property(LatestAlbumMB3.6.Path)]</onclick>
 			<icon>$INFO[Window.Property(LatestAlbumMB3.6.Art(thumb))]</icon>
@@ -4513,7 +4581,7 @@
 			<label2>$INFO[Window.Property(LatestAlbumMB3.6.Title)]$INFO[Window.Property(LatestAlbumMB3.6.Year), • ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(LatestAlbumMB3.6.Title))</visible>
 		</item>
-		<item id="7">
+		<item id="8">
 			<onclick>SetFocus(525)</onclick>
 			<onclick>$INFO[Window.Property(LatestAlbumMB3.7.Path)]</onclick>
 			<icon>$INFO[Window.Property(LatestAlbumMB3.7.Art(thumb))]</icon>
@@ -4526,6 +4594,16 @@
 		<!-- recent album -->
 		<item id="1">
 			<onclick>SetFocus(525)</onclick>
+			<onclick>$INFO[Window.Property(LatestAlbumMB3.0.Play)]</onclick>
+			<icon>$INFO[Window.Property(LatestAlbumMB3.0.Art(thumb))]</icon>
+			<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.0.Art(poster))]</property>
+			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.0.Description)]</property>
+			<label>$INFO[Window.Property(LatestAlbumMB3.0.Artist)]</label>
+			<label2>$INFO[Window.Property(LatestAlbumMB3.0.Title)]$INFO[Window.Property(LatestAlbumMB3.0.Year), • ,]</label2>
+			<visible>StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(LatestAlbumMB3.0.Title))</visible>
+		</item>
+		<item id="2">
+			<onclick>SetFocus(525)</onclick>
 			<onclick>$INFO[Window.Property(LatestAlbumMB3.1.Play)]</onclick>
 			<icon>$INFO[Window.Property(LatestAlbumMB3.1.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.1.Art(poster))]</property>
@@ -4534,7 +4612,7 @@
 			<label2>$INFO[Window.Property(LatestAlbumMB3.1.Title)]$INFO[Window.Property(LatestAlbumMB3.1.Year), • ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(LatestAlbumMB3.1.Title))</visible>
 		</item>
-		<item id="2">
+		<item id="3">
 			<onclick>SetFocus(525)</onclick>
 			<onclick>$INFO[Window.Property(LatestAlbumMB3.2.Play)]</onclick>
 			<icon>$INFO[Window.Property(LatestAlbumMB3.2.Art(thumb))]</icon>
@@ -4544,7 +4622,7 @@
 			<label2>$INFO[Window.Property(LatestAlbumMB3.2.Title)]$INFO[Window.Property(LatestAlbumMB3.2.Year), • ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(LatestAlbumMB3.2.Title))</visible>
 		</item>
-		<item id="3">
+		<item id="4">
 			<onclick>SetFocus(525)</onclick>
 			<onclick>$INFO[Window.Property(LatestAlbumMB3.3.Play)]</onclick>
 			<icon>$INFO[Window.Property(LatestAlbumMB3.3.Art(thumb))]</icon>
@@ -4554,7 +4632,7 @@
 			<label2>$INFO[Window.Property(LatestAlbumMB3.3.Title)]$INFO[Window.Property(LatestAlbumMB3.3.Year), • ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(LatestAlbumMB3.3.Title))</visible>
 		</item>
-		<item id="4">
+		<item id="5">
 			<onclick>SetFocus(525)</onclick>
 			<onclick>$INFO[Window.Property(LatestAlbumMB3.4.Play)]</onclick>
 			<icon>$INFO[Window.Property(LatestAlbumMB3.4.Art(thumb))]</icon>
@@ -4564,7 +4642,7 @@
 			<label2>$INFO[Window.Property(LatestAlbumMB3.4.Title)]$INFO[Window.Property(LatestAlbumMB3.4.Year), • ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(LatestAlbumMB3.4.Title))</visible>
 		</item>
-		<item id="5">
+		<item id="6">
 			<onclick>SetFocus(525)</onclick>
 			<onclick>$INFO[Window.Property(LatestAlbumMB3.5.Play)]</onclick>
 			<icon>$INFO[Window.Property(LatestAlbumMB3.5.Art(thumb))]</icon>
@@ -4574,7 +4652,7 @@
 			<label2>$INFO[Window.Property(LatestAlbumMB3.5.Title)]$INFO[Window.Property(LatestAlbumMB3.5.Year), • ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(LatestAlbumMB3.5.Title))</visible>
 		</item>
-		<item id="6">
+		<item id="7">
 			<onclick>SetFocus(525)</onclick>
 			<onclick>$INFO[Window.Property(LatestAlbumMB3.6.Play)]</onclick>
 			<icon>$INFO[Window.Property(LatestAlbumMB3.6.Art(thumb))]</icon>
@@ -4584,7 +4662,7 @@
 			<label2>$INFO[Window.Property(LatestAlbumMB3.6.Title)]$INFO[Window.Property(LatestAlbumMB3.6.Year), • ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(LatestAlbumMB3.6.Title))</visible>
 		</item>
-		<item id="7">
+		<item id="8">
 			<onclick>SetFocus(525)</onclick>
 			<onclick>$INFO[Window.Property(LatestAlbumMB3.7.Play)]</onclick>
 			<icon>$INFO[Window.Property(LatestAlbumMB3.7.Art(thumb))]</icon>
@@ -4594,8 +4672,18 @@
 			<label2>$INFO[Window.Property(LatestAlbumMB3.7.Title)]$INFO[Window.Property(LatestAlbumMB3.7.Year), • ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(LatestAlbumMB3.7.Title))</visible>
 		</item>
-		<!-- recent album -->
+		<!-- random album -->
 		<item id="1">
+			<onclick>SetFocus(525)</onclick>
+			<onclick>$INFO[Window.Property(RandomAlbumMB3.0.Play)]</onclick>
+			<icon>$INFO[Window.Property(RandomAlbumMB3.0.Art(thumb))]</icon>
+			<property name="Poster">$INFO[Window.Property(RandomAlbumMB3.0.Art(poster))]</property>
+			<property name="Plot">$INFO[Window.Property(RandomAlbumMB3.0.Description)]</property>
+			<label>$INFO[Window.Property(RandomAlbumMB3.0.Artist)]</label>
+			<label2>$INFO[Window.Property(RandomAlbumMB3.0.Title)]$INFO[Window.Property(RandomAlbumMB3.0.Year), • ,]</label2>
+			<visible>StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbumMB3.0.Title))</visible>
+		</item>
+		<item id="2">
 			<onclick>SetFocus(525)</onclick>
 			<onclick>$INFO[Window.Property(RandomAlbumMB3.1.Play)]</onclick>
 			<icon>$INFO[Window.Property(RandomAlbumMB3.1.Art(thumb))]</icon>
@@ -4605,7 +4693,7 @@
 			<label2>$INFO[Window.Property(RandomAlbumMB3.1.Title)]$INFO[Window.Property(RandomAlbumMB3.1.Year), • ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbumMB3.1.Title))</visible>
 		</item>
-		<item id="2">
+		<item id="3">
 			<onclick>SetFocus(525)</onclick>
 			<onclick>$INFO[Window.Property(RandomAlbumMB3.2.Play)]</onclick>
 			<icon>$INFO[Window.Property(RandomAlbumMB3.2.Art(thumb))]</icon>
@@ -4615,7 +4703,7 @@
 			<label2>$INFO[Window.Property(RandomAlbumMB3.2.Title)]$INFO[Window.Property(RandomAlbumMB3.2.Year), • ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbumMB3.2.Title))</visible>
 		</item>
-		<item id="3">
+		<item id="4">
 			<onclick>SetFocus(525)</onclick>
 			<onclick>$INFO[Window.Property(RandomAlbumMB3.3.Play)]</onclick>
 			<icon>$INFO[Window.Property(RandomAlbumMB3.3.Art(thumb))]</icon>
@@ -4625,7 +4713,7 @@
 			<label2>$INFO[Window.Property(RandomAlbumMB3.3.Title)]$INFO[Window.Property(RandomAlbumMB3.3.Year), • ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbumMB3.3.Title))</visible>
 		</item>
-		<item id="4">
+		<item id="5">
 			<onclick>SetFocus(525)</onclick>
 			<onclick>$INFO[Window.Property(RandomAlbumMB3.4.Play)]</onclick>
 			<icon>$INFO[Window.Property(RandomAlbumMB3.4.Art(thumb))]</icon>
@@ -4635,7 +4723,7 @@
 			<label2>$INFO[Window.Property(RandomAlbumMB3.4.Title)]$INFO[Window.Property(RandomAlbumMB3.4.Year), • ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbumMB3.4.Title))</visible>
 		</item>
-		<item id="5">
+		<item id="6">
 			<onclick>SetFocus(525)</onclick>
 			<onclick>$INFO[Window.Property(RandomAlbumMB3.5.Play)]</onclick>
 			<icon>$INFO[Window.Property(RandomAlbumMB3.5.Art(thumb))]</icon>
@@ -4645,7 +4733,7 @@
 			<label2>$INFO[Window.Property(RandomAlbumMB3.5.Title)]$INFO[Window.Property(RandomAlbumMB3.5.Year), • ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbumMB3.5.Title))</visible>
 		</item>
-		<item id="6">
+		<item id="7">
 			<onclick>SetFocus(525)</onclick>
 			<onclick>$INFO[Window.Property(RandomAlbumMB3.6.Play)]</onclick>
 			<icon>$INFO[Window.Property(RandomAlbumMB3.6.Art(thumb))]</icon>
@@ -4655,7 +4743,7 @@
 			<label2>$INFO[Window.Property(RandomAlbumMB3.6.Title)]$INFO[Window.Property(RandomAlbumMB3.6.Year), • ,]</label2>
 			<visible>StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbumMB3.6.Title))</visible>
 		</item>
-		<item id="7">
+		<item id="8">
 			<onclick>SetFocus(525)</onclick>
 			<onclick>$INFO[Window.Property(RandomAlbumMB3.7.Play)]</onclick>
 			<icon>$INFO[Window.Property(RandomAlbumMB3.7.Art(thumb))]</icon>
@@ -5630,6 +5718,20 @@
 	<include name="Mod_87Content">
 		<!-- Random movies -->
 		<item id="1">
+			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.0.Path)])</onclick>
+			<property name="Play">PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.0.Path)])</property>
+			<icon>$INFO[Window.Property(InProgressMovieMB3.0.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.0.Art(poster))]</property>
+			<property name="EpThumb">$INFO[Window.Property(InProgressMovieMB3.0.Art(thumb))]</property>
+			<property name="Overlay">$INFO[Window.Property(InProgressMovieMB3.0.PercentPlayed)]</property>
+			<property name="Rating">$INFO[Window.Property(InProgressMovieMB3.0.Rating)]</property>
+			<property name="Plot">$INFO[Window.Property(InProgressMovieMB3.0.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(InProgressMovieMB3.0.Art(clearlogo))]</property>
+			<label>$INFO[Window.Property(InProgressMovieMB3.0.Title)]</label>
+			<label2>$INFO[Window.Property(InProgressMovieMB3.0.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.0.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.0.Rating),   ● ,]</label2>
+			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(InProgressMovieMB3.0.Title))</visible>
+		</item>
+		<item id="2">
 			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.1.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.1.Path)])</property>
 			<icon>$INFO[Window.Property(InProgressMovieMB3.1.Art(fanart))]</icon>
@@ -5643,7 +5745,7 @@
 			<label2>$INFO[Window.Property(InProgressMovieMB3.1.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.1.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.1.Rating),   ● ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(InProgressMovieMB3.1.Title))</visible>
 		</item>
-		<item id="2">
+		<item id="3">
 			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.2.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.2.Path)])</property>
 			<icon>$INFO[Window.Property(InProgressMovieMB3.2.Art(fanart))]</icon>
@@ -5657,7 +5759,7 @@
 			<label2>$INFO[Window.Property(InProgressMovieMB3.2.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.2.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.2.Rating),   ● ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(InProgressMovieMB3.2.Title))</visible>
 		</item>
-		<item id="3">
+		<item id="4">
 			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.3.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.3.Path)])</property>
 			<icon>$INFO[Window.Property(InProgressMovieMB3.3.Art(fanart))]</icon>
@@ -5671,7 +5773,7 @@
 			<label2>$INFO[Window.Property(InProgressMovieMB3.3.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.3.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.3.Rating),   ● ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(InProgressMovieMB3.3.Title))</visible>
 		</item>
-		<item id="4">
+		<item id="5">
 			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.4.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.4.Path)])</property>
 			<icon>$INFO[Window.Property(InProgressMovieMB3.4.Art(fanart))]</icon>
@@ -5685,7 +5787,7 @@
 			<label2>$INFO[Window.Property(InProgressMovieMB3.4.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.4.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.4.Rating),   ● ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(InProgressMovieMB3.4.Title))</visible>
 		</item>
-		<item id="5">
+		<item id="6">
 			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.5.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.5.Path)])</property>
 			<icon>$INFO[Window.Property(InProgressMovieMB3.5.Art(fanart))]</icon>
@@ -5699,7 +5801,7 @@
 			<label2>$INFO[Window.Property(InProgressMovieMB3.5.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.5.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.5.Rating),   ● ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(InProgressMovieMB3.5.Title))</visible>
 		</item>
-		<item id="6">
+		<item id="7">
 			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.6.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.6.Path)])</property>
 			<icon>$INFO[Window.Property(InProgressMovieMB3.6.Art(fanart))]</icon>
@@ -5713,7 +5815,7 @@
 			<label2>$INFO[Window.Property(InProgressMovieMB3.6.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.6.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.6.Rating),   ● ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(InProgressMovieMB3.6.Title))</visible>
 		</item>
-		<item id="7">
+		<item id="8">
 			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.7.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.7.Path)])</property>
 			<icon>$INFO[Window.Property(InProgressMovieMB3.7.Art(fanart))]</icon>
@@ -5727,7 +5829,7 @@
 			<label2>$INFO[Window.Property(InProgressMovieMB3.7.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.7.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.7.Rating),   ● ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(InProgressMovieMB3.7.Title))</visible>
 		</item>
-		<item id="8">
+		<item id="9">
 			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.8.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.8.Path)])</property>
 			<icon>$INFO[Window.Property(InProgressMovieMB3.8.Art(fanart))]</icon>
@@ -5741,7 +5843,7 @@
 			<label2>$INFO[Window.Property(InProgressMovieMB3.8.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.8.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.8.Rating),   ● ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(InProgressMovieMB3.8.Title))</visible>
 		</item>
-		<item id="9">
+		<item id="10">
 			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.9.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.9.Path)])</property>
 			<icon>$INFO[Window.Property(InProgressMovieMB3.9.Art(fanart))]</icon>
@@ -5755,7 +5857,7 @@
 			<label2>$INFO[Window.Property(InProgressMovieMB3.9.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.9.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.9.Rating),   ● ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(InProgressMovieMB3.9.Title))</visible>
 		</item>
-		<item id="10">
+		<item id="11">
 			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.10.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.10.Path)])</property>
 			<icon>$INFO[Window.Property(InProgressMovieMB3.10.Art(fanart))]</icon>
@@ -5769,8 +5871,21 @@
 			<label2>$INFO[Window.Property(InProgressMovieMB3.10.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.10.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.10.Rating),   ● ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(InProgressMovieMB3.10.Title))</visible>
 		</item>
-		<!-- random tv -->
+		<!-- in progress tv -->
 		<item id="1">
+			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.0.Path)])</onclick>
+			<property name="Play">PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.0.Path)])</property>
+			<icon>$INFO[Window.Property(NextUpEpisodeMB3.0.Art(tvshow.fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.0.Art(tvshow.poster))]</property>
+			<property name="EpThumb">$INFO[Window.Property(NextUpEpisodeMB3.0.Art(thumb))]</property>
+			<property name="Overlay">$INFO[Window.Property(NextUpEpisodeMB3.0.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(NextUpEpisodeMB3.0.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(NextUpEpisodeMB3.0.Art(tvshow.clearlogo))]</property>
+			<label>$INFO[Window.Property(NextUpEpisodeMB3.0.ShowTitle)]</label>
+			<label2>$INFO[Window.Property(NextUpEpisodeMB3.0.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.0.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.0.EpisodeNo),E,]</label2>
+			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(NextUpEpisodeMB3.0.EpisodeTitle))</visible>
+		</item>
+		<item id="2">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.1.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.1.Path)])</property>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.1.Art(tvshow.fanart))]</icon>
@@ -5783,7 +5898,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.1.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.1.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.1.EpisodeNo),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(NextUpEpisodeMB3.1.EpisodeTitle))</visible>
 		</item>
-		<item id="2">
+		<item id="3">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.2.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.2.Path)])</property>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.2.Art(tvshow.fanart))]</icon>
@@ -5796,7 +5911,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.2.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.2.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.2.EpisodeNo),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(NextUpEpisodeMB3.2.EpisodeTitle))</visible>
 		</item>
-		<item id="3">
+		<item id="4">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.3.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.3.Path)])</property>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.3.Art(tvshow.fanart))]</icon>
@@ -5809,7 +5924,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.3.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.3.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.3.EpisodeNo),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(NextUpEpisodeMB3.3.EpisodeTitle))</visible>
 		</item>
-		<item id="4">
+		<item id="5">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.4.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.4.Path)])</property>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.4.Art(tvshow.fanart))]</icon>
@@ -5822,7 +5937,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.4.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.4.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.4.EpisodeNo),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(NextUpEpisodeMB3.4.EpisodeTitle))</visible>
 		</item>
-		<item id="5">
+		<item id="6">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.5.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.5.Path)])</property>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.5.Art(tvshow.fanart))]</icon>
@@ -5835,7 +5950,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.5.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.5.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.5.EpisodeNo),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(NextUpEpisodeMB3.5.EpisodeTitle))</visible>
 		</item>
-		<item id="6">
+		<item id="7">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.6.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.6.Path)])</property>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.6.Art(tvshow.fanart))]</icon>
@@ -5848,7 +5963,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.6.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.6.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.6.EpisodeNo),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(NextUpEpisodeMB3.6.EpisodeTitle))</visible>
 		</item>
-		<item id="7">
+		<item id="8">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.7.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.7.Path)])</property>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.7.Art(tvshow.fanart))]</icon>
@@ -5861,7 +5976,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.7.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.7.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.7.EpisodeNo),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(NextUpEpisodeMB3.7.EpisodeTitle))</visible>
 		</item>
-		<item id="8">
+		<item id="9">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.8.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.8.Path)])</property>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.8.Art(tvshow.fanart))]</icon>
@@ -5874,7 +5989,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.8.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.8.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.8.EpisodeNo),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(NextUpEpisodeMB3.8.EpisodeTitle))</visible>
 		</item>
-		<item id="9">
+		<item id="10">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.9.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.9.Path)])</property>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.9.Art(tvshow.fanart))]</icon>
@@ -5887,7 +6002,7 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.9.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.9.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.9.EpisodeNo),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(NextUpEpisodeMB3.9.EpisodeTitle))</visible>
 		</item>
-		<item id="10">
+		<item id="11">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.10.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.10.Path)])</property>
 			<icon>$INFO[Window.Property(NextUpEpisodeMB3.10.Art(tvshow.fanart))]</icon>
@@ -5903,6 +6018,16 @@
 		<!-- recent album -->
 		<item id="1">
 			<onclick>noop</onclick>
+			<property name="Play">$INFO[Window.Property(LatestAlbumMB3.0.Play)]</property>
+			<icon>$INFO[Window.Property(LatestAlbumMB3.0.Art(poster))]</icon>
+			<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.0.Art(poster))]</property>
+			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.0.Description)]</property>
+			<label>$INFO[Window.Property(LatestAlbumMB3.0.Artist)]</label>
+			<label2>$INFO[Window.Property(LatestAlbumMB3.0.Title)]$INFO[Window.Property(LatestAlbumMB3.0.Year), • ,]</label2>
+			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.0.Title))</visible>
+		</item>
+		<item id="2">
+			<onclick>noop</onclick>
 			<property name="Play">$INFO[Window.Property(LatestAlbumMB3.1.Play)]</property>
 			<icon>$INFO[Window.Property(LatestAlbumMB3.1.Art(poster))]</icon>
 			<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.1.Art(poster))]</property>
@@ -5911,7 +6036,7 @@
 			<label2>$INFO[Window.Property(LatestAlbumMB3.1.Title)]$INFO[Window.Property(LatestAlbumMB3.1.Year), • ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.1.Title))</visible>
 		</item>
-		<item id="2">
+		<item id="3">
 			<onclick>noop</onclick>
 			<property name="Play">$INFO[Window.Property(LatestAlbumMB3.2.Play)]</property>
 			<icon>$INFO[Window.Property(LatestAlbumMB3.2.Art(poster))]</icon>
@@ -5921,7 +6046,7 @@
 			<label2>$INFO[Window.Property(LatestAlbumMB3.2.Title)]$INFO[Window.Property(LatestAlbumMB3.2.Year), • ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.2.Title))</visible>
 		</item>
-		<item id="3">
+		<item id="4">
 			<onclick>noop</onclick>
 			<property name="Play">$INFO[Window.Property(LatestAlbumMB3.3.Play)]</property>
 			<icon>$INFO[Window.Property(LatestAlbumMB3.3.Art(poster))]</icon>
@@ -5931,7 +6056,7 @@
 			<label2>$INFO[Window.Property(LatestAlbumMB3.3.Title)]$INFO[Window.Property(LatestAlbumMB3.3.Year), • ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.3.Title))</visible>
 		</item>
-		<item id="4">
+		<item id="5">
 			<onclick>noop</onclick>
 			<property name="Play">$INFO[Window.Property(LatestAlbumMB3.4.Play)]</property>
 			<icon>$INFO[Window.Property(LatestAlbumMB3.4.Art(poster))]</icon>
@@ -5941,7 +6066,7 @@
 			<label2>$INFO[Window.Property(LatestAlbumMB3.4.Title)]$INFO[Window.Property(LatestAlbumMB3.4.Year), • ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.4.Title))</visible>
 		</item>
-		<item id="5">
+		<item id="6">
 			<onclick>noop</onclick>
 			<property name="Play">$INFO[Window.Property(LatestAlbumMB3.5.Play)]</property>
 			<icon>$INFO[Window.Property(LatestAlbumMB3.5.Art(poster))]</icon>
@@ -5951,7 +6076,7 @@
 			<label2>$INFO[Window.Property(LatestAlbumMB3.5.Title)]$INFO[Window.Property(LatestAlbumMB3.5.Year), • ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.5.Title))</visible>
 		</item>
-		<item id="6">
+		<item id="7">
 			<onclick>noop</onclick>
 			<property name="Play">$INFO[Window.Property(LatestAlbumMB3.6.Play)]</property>
 			<icon>$INFO[Window.Property(LatestAlbumMB3.6.Art(poster))]</icon>
@@ -5961,7 +6086,7 @@
 			<label2>$INFO[Window.Property(LatestAlbumMB3.6.Title)]$INFO[Window.Property(LatestAlbumMB3.6.Year), • ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.6.Title))</visible>
 		</item>
-		<item id="7">
+		<item id="8">
 			<onclick>noop</onclick>
 			<property name="Play">$INFO[Window.Property(LatestAlbumMB3.7.Play)]</property>
 			<icon>$INFO[Window.Property(LatestAlbumMB3.7.Art(poster))]</icon>
@@ -5975,6 +6100,20 @@
 	<include name="Mod_86Content">
 		<!-- Recent movies -->
 		<item id="1">
+			<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.0.Path)])</onclick>
+			<property name="Play">PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.0.Path)])</property>
+			<icon>$INFO[Window.Property(LatestMovieMB3.0.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(LatestMovieMB3.0.Art(poster))]</property>
+			<property name="EpThumb">$INFO[Window.Property(LatestMovieMB3.0.Art(thumb))]</property>
+			<property name="Overlay">$INFO[Window.Property(LatestMovieMB3.0.PercentPlayed)]</property>
+			<property name="Rating">$INFO[Window.Property(LatestMovieMB3.0.Rating)]</property>
+			<property name="Plot">$INFO[Window.Property(LatestMovieMB3.0.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(LatestMovieMB3.0.Art(clearlogo))]</property>
+			<label>$INFO[Window.Property(LatestMovieMB3.0.Title)]</label>
+			<label2>$INFO[Window.Property(LatestMovieMB3.0.Year),, • ]$INFO[Window.Property(LatestMovieMB3.0.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(LatestMovieMB3.0.Rating),   ● ,]</label2>
+			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(LatestMovieMB3.0.Title))</visible>
+		</item>
+		<item id="2">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.1.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.1.Path)])</property>
 			<icon>$INFO[Window.Property(LatestMovieMB3.1.Art(fanart))]</icon>
@@ -5988,7 +6127,7 @@
 			<label2>$INFO[Window.Property(LatestMovieMB3.1.Year),, • ]$INFO[Window.Property(LatestMovieMB3.1.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(LatestMovieMB3.1.Rating),   ● ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(LatestMovieMB3.1.Title))</visible>
 		</item>
-		<item id="2">
+		<item id="3">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.2.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.2.Path)])</property>
 			<icon>$INFO[Window.Property(LatestMovieMB3.2.Art(fanart))]</icon>
@@ -6002,7 +6141,7 @@
 			<label2>$INFO[Window.Property(LatestMovieMB3.2.Year),, • ]$INFO[Window.Property(LatestMovieMB3.2.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(LatestMovieMB3.2.Rating),   ● ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(LatestMovieMB3.2.Title))</visible>
 		</item>
-		<item id="3">
+		<item id="4">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.3.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.3.Path)])</property>
 			<icon>$INFO[Window.Property(LatestMovieMB3.3.Art(fanart))]</icon>
@@ -6016,7 +6155,7 @@
 			<label2>$INFO[Window.Property(LatestMovieMB3.3.Year),, • ]$INFO[Window.Property(LatestMovieMB3.3.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(LatestMovieMB3.3.Rating),   ● ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(LatestMovieMB3.3.Title))</visible>
 		</item>
-		<item id="4">
+		<item id="5">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.4.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.4.Path)])</property>
 			<icon>$INFO[Window.Property(LatestMovieMB3.4.Art(fanart))]</icon>
@@ -6030,7 +6169,7 @@
 			<label2>$INFO[Window.Property(LatestMovieMB3.4.Year),, • ]$INFO[Window.Property(LatestMovieMB3.4.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(LatestMovieMB3.4.Rating),   ● ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(LatestMovieMB3.4.Title))</visible>
 		</item>
-		<item id="5">
+		<item id="6">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.5.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.5.Path)])</property>
 			<icon>$INFO[Window.Property(LatestMovieMB3.5.Art(fanart))]</icon>
@@ -6044,7 +6183,7 @@
 			<label2>$INFO[Window.Property(LatestMovieMB3.5.Year),, • ]$INFO[Window.Property(LatestMovieMB3.5.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(LatestMovieMB3.5.Rating),   ● ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(LatestMovieMB3.5.Title))</visible>
 		</item>
-		<item id="6">
+		<item id="7">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.6.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.6.Path)])</property>
 			<icon>$INFO[Window.Property(LatestMovieMB3.6.Art(fanart))]</icon>
@@ -6058,7 +6197,7 @@
 			<label2>$INFO[Window.Property(LatestMovieMB3.6.Year),, • ]$INFO[Window.Property(LatestMovieMB3.6.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(LatestMovieMB3.6.Rating),   ● ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(LatestMovieMB3.6.Title))</visible>
 		</item>
-		<item id="7">
+		<item id="8">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.7.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.7.Path)])</property>
 			<icon>$INFO[Window.Property(LatestMovieMB3.7.Art(fanart))]</icon>
@@ -6072,7 +6211,7 @@
 			<label2>$INFO[Window.Property(LatestMovieMB3.7.Year),, • ]$INFO[Window.Property(LatestMovieMB3.7.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(LatestMovieMB3.7.Rating),   ● ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(LatestMovieMB3.7.Title))</visible>
 		</item>
-		<item id="8">
+		<item id="9">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.8.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.8.Path)])</property>
 			<icon>$INFO[Window.Property(LatestMovieMB3.8.Art(fanart))]</icon>
@@ -6086,7 +6225,7 @@
 			<label2>$INFO[Window.Property(LatestMovieMB3.8.Year),, • ]$INFO[Window.Property(LatestMovieMB3.8.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(LatestMovieMB3.8.Rating),   ● ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(LatestMovieMB3.8.Title))</visible>
 		</item>
-		<item id="9">
+		<item id="10">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.9.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.9.Path)])</property>
 			<icon>$INFO[Window.Property(LatestMovieMB3.9.Art(fanart))]</icon>
@@ -6100,7 +6239,7 @@
 			<label2>$INFO[Window.Property(LatestMovieMB3.9.Year),, • ]$INFO[Window.Property(LatestMovieMB3.9.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(LatestMovieMB3.9.Rating),   ● ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(LatestMovieMB3.9.Title))</visible>
 		</item>
-		<item id="10">
+		<item id="11">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.10.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(LatestMovieMB3.10.Path)])</property>
 			<icon>$INFO[Window.Property(LatestMovieMB3.10.Art(fanart))]</icon>
@@ -6116,6 +6255,19 @@
 		</item>
 		<!-- Recent tv -->
 		<item id="1">
+			<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.0.Path)])</onclick>
+			<property name="Play">PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.0.Path)])</property>
+			<icon>$INFO[Window.Property(LatestEpisodeMB3.0.Art(tvshow.fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(LatestEpisodeMB3.0.Art(tvshow.poster))]</property>
+			<property name="EpThumb">$INFO[Window.Property(LatestEpisodeMB3.0.Art(thumb))]</property>
+			<property name="Overlay">$INFO[Window.Property(LatestEpisodeMB3.0.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(LatestEpisodeMB3.0.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(LatestEpisodeMB3.0.Art(tvshow.clearlogo))]</property>
+			<label>$INFO[Window.Property(LatestEpisodeMB3.0.ShowTitle)]</label>
+			<label2>$INFO[Window.Property(LatestEpisodeMB3.0.EpisodeTitle),, • ]$INFO[Window.Property(LatestEpisodeMB3.0.SeasonNo),S,]$INFO[Window.Property(LatestEpisodeMB3.0.EpisodeNo),E,]</label2>
+			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(LatestEpisodeMB3.0.EpisodeTitle))</visible>
+		</item>
+		<item id="2">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.1.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.1.Path)])</property>
 			<icon>$INFO[Window.Property(LatestEpisodeMB3.1.Art(tvshow.fanart))]</icon>
@@ -6128,7 +6280,7 @@
 			<label2>$INFO[Window.Property(LatestEpisodeMB3.1.EpisodeTitle),, • ]$INFO[Window.Property(LatestEpisodeMB3.1.SeasonNo),S,]$INFO[Window.Property(LatestEpisodeMB3.1.EpisodeNo),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(LatestEpisodeMB3.1.EpisodeTitle))</visible>
 		</item>
-		<item id="2">
+		<item id="3">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.2.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.2.Path)])</property>
 			<icon>$INFO[Window.Property(LatestEpisodeMB3.2.Art(tvshow.fanart))]</icon>
@@ -6141,7 +6293,7 @@
 			<label2>$INFO[Window.Property(LatestEpisodeMB3.2.EpisodeTitle),, • ]$INFO[Window.Property(LatestEpisodeMB3.2.SeasonNo),S,]$INFO[Window.Property(LatestEpisodeMB3.2.EpisodeNo),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(LatestEpisodeMB3.2.EpisodeTitle))</visible>
 		</item>
-		<item id="3">
+		<item id="4">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.3.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.3.Path)])</property>
 			<icon>$INFO[Window.Property(LatestEpisodeMB3.3.Art(tvshow.fanart))]</icon>
@@ -6154,7 +6306,7 @@
 			<label2>$INFO[Window.Property(LatestEpisodeMB3.3.EpisodeTitle),, • ]$INFO[Window.Property(LatestEpisodeMB3.3.SeasonNo),S,]$INFO[Window.Property(LatestEpisodeMB3.3.EpisodeNo),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(LatestEpisodeMB3.3.EpisodeTitle))</visible>
 		</item>
-		<item id="4">
+		<item id="5">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.4.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.4.Path)])</property>
 			<icon>$INFO[Window.Property(LatestEpisodeMB3.4.Art(tvshow.fanart))]</icon>
@@ -6167,7 +6319,7 @@
 			<label2>$INFO[Window.Property(LatestEpisodeMB3.4.EpisodeTitle),, • ]$INFO[Window.Property(LatestEpisodeMB3.4.SeasonNo),S,]$INFO[Window.Property(LatestEpisodeMB3.4.EpisodeNo),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(LatestEpisodeMB3.4.EpisodeTitle))</visible>
 		</item>
-		<item id="5">
+		<item id="6">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.5.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.5.Path)])</property>
 			<icon>$INFO[Window.Property(LatestEpisodeMB3.5.Art(tvshow.fanart))]</icon>
@@ -6180,7 +6332,7 @@
 			<label2>$INFO[Window.Property(LatestEpisodeMB3.5.EpisodeTitle),, • ]$INFO[Window.Property(LatestEpisodeMB3.5.SeasonNo),S,]$INFO[Window.Property(LatestEpisodeMB3.5.EpisodeNo),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(LatestEpisodeMB3.5.EpisodeTitle))</visible>
 		</item>
-		<item id="6">
+		<item id="7">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.6.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.6.Path)])</property>
 			<icon>$INFO[Window.Property(LatestEpisodeMB3.6.Art(tvshow.fanart))]</icon>
@@ -6193,7 +6345,7 @@
 			<label2>$INFO[Window.Property(LatestEpisodeMB3.6.EpisodeTitle),, • ]$INFO[Window.Property(LatestEpisodeMB3.6.SeasonNo),S,]$INFO[Window.Property(LatestEpisodeMB3.6.EpisodeNo),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(LatestEpisodeMB3.6.EpisodeTitle))</visible>
 		</item>
-		<item id="7">
+		<item id="8">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.7.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.7.Path)])</property>
 			<icon>$INFO[Window.Property(LatestEpisodeMB3.7.Art(tvshow.fanart))]</icon>
@@ -6206,7 +6358,7 @@
 			<label2>$INFO[Window.Property(LatestEpisodeMB3.7.EpisodeTitle),, • ]$INFO[Window.Property(LatestEpisodeMB3.7.SeasonNo),S,]$INFO[Window.Property(LatestEpisodeMB3.7.EpisodeNo),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(LatestEpisodeMB3.7.EpisodeTitle))</visible>
 		</item>
-		<item id="8">
+		<item id="9">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.8.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.8.Path)])</property>
 			<icon>$INFO[Window.Property(LatestEpisodeMB3.8.Art(tvshow.fanart))]</icon>
@@ -6219,7 +6371,7 @@
 			<label2>$INFO[Window.Property(LatestEpisodeMB3.8.EpisodeTitle),, • ]$INFO[Window.Property(LatestEpisodeMB3.8.SeasonNo),S,]$INFO[Window.Property(LatestEpisodeMB3.8.EpisodeNo),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(LatestEpisodeMB3.8.EpisodeTitle))</visible>
 		</item>
-		<item id="9">
+		<item id="10">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.9.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.9.Path)])</property>
 			<icon>$INFO[Window.Property(LatestEpisodeMB3.9.Art(tvshow.fanart))]</icon>
@@ -6232,7 +6384,7 @@
 			<label2>$INFO[Window.Property(LatestEpisodeMB3.9.EpisodeTitle),, • ]$INFO[Window.Property(LatestEpisodeMB3.9.SeasonNo),S,]$INFO[Window.Property(LatestEpisodeMB3.9.EpisodeNo),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(LatestEpisodeMB3.9.EpisodeTitle))</visible>
 		</item>
-		<item id="10">
+		<item id="11">
 			<onclick>PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.10.Path)])</onclick>
 			<property name="Play">PlayMedia($ESCINFO[Window.Property(LatestEpisodeMB3.10.Path)])</property>
 			<icon>$INFO[Window.Property(LatestEpisodeMB3.10.Art(tvshow.fanart))]</icon>
@@ -6248,6 +6400,16 @@
 		<!-- Random Album -->
 		<item id="1">
 			<onclick>noop</onclick>
+			<property name="Play">$INFO[Window.Property(RandomAlbumMB3.0.Play)]</property>
+			<icon>$INFO[Window.Property(RandomAlbumMB3.0.Art(poster))]</icon>
+			<property name="Poster">$INFO[Window.Property(RandomAlbumMB3.0.Art(poster))]</property>
+			<property name="Plot">$INFO[Window.Property(RandomAlbumMB3.0.Description)]</property>
+			<label>$INFO[Window.Property(RandomAlbumMB3.0.Artist)]</label>
+			<label2>$INFO[Window.Property(RandomAlbumMB3.0.Title)]$INFO[Window.Property(RandomAlbumMB3.0.Year), • ,]</label2>
+			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbumMB3.0.Title))</visible>
+		</item>
+		<item id="2">
+			<onclick>noop</onclick>
 			<property name="Play">$INFO[Window.Property(RandomAlbumMB3.1.Play)]</property>
 			<icon>$INFO[Window.Property(RandomAlbumMB3.1.Art(poster))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomAlbumMB3.1.Art(poster))]</property>
@@ -6256,7 +6418,7 @@
 			<label2>$INFO[Window.Property(RandomAlbumMB3.1.Title)]$INFO[Window.Property(RandomAlbumMB3.1.Year), • ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbumMB3.1.Title))</visible>
 		</item>
-		<item id="2">
+		<item id="3">
 			<onclick>noop</onclick>
 			<property name="Play">$INFO[Window.Property(RandomAlbumMB3.2.Play)]</property>
 			<icon>$INFO[Window.Property(RandomAlbumMB3.2.Art(poster))]</icon>
@@ -6266,7 +6428,7 @@
 			<label2>$INFO[Window.Property(RandomAlbumMB3.2.Title)]$INFO[Window.Property(RandomAlbumMB3.2.Year), • ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbumMB3.2.Title))</visible>
 		</item>
-		<item id="3">
+		<item id="4">
 			<onclick>noop</onclick>
 			<property name="Play">$INFO[Window.Property(RandomAlbumMB3.3.Play)]</property>
 			<icon>$INFO[Window.Property(RandomAlbumMB3.3.Art(poster))]</icon>
@@ -6276,7 +6438,7 @@
 			<label2>$INFO[Window.Property(RandomAlbumMB3.3.Title)]$INFO[Window.Property(RandomAlbumMB3.3.Year), • ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbumMB3.3.Title))</visible>
 		</item>
-		<item id="4">
+		<item id="5">
 			<onclick>noop</onclick>
 			<property name="Play">$INFO[Window.Property(RandomAlbumMB3.4.Play)]</property>
 			<icon>$INFO[Window.Property(RandomAlbumMB3.4.Art(poster))]</icon>
@@ -6286,7 +6448,7 @@
 			<label2>$INFO[Window.Property(RandomAlbumMB3.4.Title)]$INFO[Window.Property(RandomAlbumMB3.4.Year), • ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbumMB3.4.Title))</visible>
 		</item>
-		<item id="5">
+		<item id="6">
 			<onclick>noop</onclick>
 			<property name="Play">$INFO[Window.Property(RandomAlbumMB3.5.Play)]</property>
 			<icon>$INFO[Window.Property(RandomAlbumMB3.5.Art(poster))]</icon>
@@ -6296,7 +6458,7 @@
 			<label2>$INFO[Window.Property(RandomAlbumMB3.5.Title)]$INFO[Window.Property(RandomAlbumMB3.5.Year), • ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbumMB3.5.Title))</visible>
 		</item>
-		<item id="6">
+		<item id="7">
 			<onclick>noop</onclick>
 			<property name="Play">$INFO[Window.Property(RandomAlbumMB3.6.Play)]</property>
 			<icon>$INFO[Window.Property(RandomAlbumMB3.6.Art(poster))]</icon>
@@ -6306,7 +6468,7 @@
 			<label2>$INFO[Window.Property(RandomAlbumMB3.6.Title)]$INFO[Window.Property(RandomAlbumMB3.6.Year), • ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbumMB3.6.Title))</visible>
 		</item>
-		<item id="7">
+		<item id="8">
 			<onclick>noop</onclick>
 			<property name="Play">$INFO[Window.Property(RandomAlbumMB3.7.Play)]</property>
 			<icon>$INFO[Window.Property(RandomAlbumMB3.7.Art(poster))]</icon>
@@ -6320,6 +6482,18 @@
 	<include name="Mod_90Content">
 		<!-- Recommended movies -->
 		<item id="1">
+			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.0.Path)])</onclick>
+			<icon>$INFO[Window.Property(RandomMovieMB3.0.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.0.Art(poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(RandomMovieMB3.0.PercentPlayed)]</property>
+			<property name="Rating">$INFO[Window.Property(RandomMovieMB3.0.Rating)]</property>
+			<property name="Plot">$INFO[Window.Property(RandomMovieMB3.0.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(RandomMovieMB3.0.Art(clearlogo))]</property>
+			<label>$INFO[Window.Property(RandomMovieMB3.0.Title)]</label>
+			<label2>$INFO[Window.Property(RandomMovieMB3.0.Year),, • ]$INFO[Window.Property(RandomMovieMB3.0.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.0.Rating),   ● ,]</label2>
+			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(RandomMovieMB3.0.Title))</visible>
+		</item>
+		<item id="2">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.1.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomMovieMB3.1.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.1.Art(poster))]</property>
@@ -6331,7 +6505,7 @@
 			<label2>$INFO[Window.Property(RandomMovieMB3.1.Year),, • ]$INFO[Window.Property(RandomMovieMB3.1.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.1.Rating),   ● ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(RandomMovieMB3.1.Title))</visible>
 		</item>
-		<item id="2">
+		<item id="3">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.2.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomMovieMB3.2.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.2.Art(poster))]</property>
@@ -6343,7 +6517,7 @@
 			<label2>$INFO[Window.Property(RandomMovieMB3.2.Year),, • ]$INFO[Window.Property(RandomMovieMB3.2.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.2.Rating),   ● ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(RandomMovieMB3.2.Title))</visible>
 		</item>
-		<item id="3">
+		<item id="4">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.3.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomMovieMB3.3.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.3.Art(poster))]</property>
@@ -6355,7 +6529,7 @@
 			<label2>$INFO[Window.Property(RandomMovieMB3.3.Year),, • ]$INFO[Window.Property(RandomMovieMB3.3.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.3.Rating),   ● ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(RandomMovieMB3.3.Title))</visible>
 		</item>
-		<item id="4">
+		<item id="5">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomMovieMB3.4.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomMovieMB3.4.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomMovieMB3.4.Art(poster))]</property>
@@ -6367,8 +6541,19 @@
 			<label2>$INFO[Window.Property(RandomMovieMB3.4.Year),, • ]$INFO[Window.Property(RandomMovieMB3.4.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RandomMovieMB3.4.Rating),   ● ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),movie.mixed) + !IsEmpty(Window.Property(RandomMovieMB3.4.Title))</visible>
 		</item>
-		<!-- Recommended tv -->
+		<!-- random tv -->
 		<item id="1">
+			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisodeMB3.0.Path)])</onclick>
+			<icon>$INFO[Window.Property(RandomEpisodeMB3.0.Art(thumb))]</icon>
+			<property name="Poster">$INFO[Window.Property(RandomEpisodeMB3.0.Art(tvshow.poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(RandomEpisodeMB3.0.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(RandomEpisodeMB3.0.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(RandomEpisodeMB3.0.Art(tvshow.clearlogo))]</property>
+			<label>$INFO[Window.Property(RandomEpisodeMB3.0.ShowTitle)]</label>
+			<label2>$INFO[Window.Property(RandomEpisodeMB3.0.EpisodeTitle),, • ]$INFO[Window.Property(RandomEpisodeMB3.0.SeasonNo),S,]$INFO[Window.Property(RandomEpisodeMB3.0.EpisodeNo),E,]</label2>
+			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(RandomEpisodeMB3.0.EpisodeTitle))</visible>
+		</item>
+		<item id="2">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisodeMB3.1.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomEpisodeMB3.1.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisodeMB3.1.Art(tvshow.poster))]</property>
@@ -6379,7 +6564,7 @@
 			<label2>$INFO[Window.Property(RandomEpisodeMB3.1.EpisodeTitle),, • ]$INFO[Window.Property(RandomEpisodeMB3.1.SeasonNo),S,]$INFO[Window.Property(RandomEpisodeMB3.1.EpisodeNo),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(RandomEpisodeMB3.1.EpisodeTitle))</visible>
 		</item>
-		<item id="2">
+		<item id="3">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisodeMB3.2.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomEpisodeMB3.2.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisodeMB3.2.Art(tvshow.poster))]</property>
@@ -6390,7 +6575,7 @@
 			<label2>$INFO[Window.Property(RandomEpisodeMB3.2.EpisodeTitle),, • ]$INFO[Window.Property(RandomEpisodeMB3.2.SeasonNo),S,]$INFO[Window.Property(RandomEpisodeMB3.2.EpisodeNo),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(RandomEpisodeMB3.2.EpisodeTitle))</visible>
 		</item>
-		<item id="3">
+		<item id="4">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisodeMB3.3.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomEpisodeMB3.3.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisodeMB3.3.Art(tvshow.poster))]</property>
@@ -6401,7 +6586,7 @@
 			<label2>$INFO[Window.Property(RandomEpisodeMB3.3.EpisodeTitle),, • ]$INFO[Window.Property(RandomEpisodeMB3.3.SeasonNo),S,]$INFO[Window.Property(RandomEpisodeMB3.3.EpisodeNo),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(RandomEpisodeMB3.3.EpisodeTitle))</visible>
 		</item>
-		<item id="4">
+		<item id="5">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisodeMB3.4.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomEpisodeMB3.4.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisodeMB3.4.Art(tvshow.poster))]</property>
@@ -6412,7 +6597,7 @@
 			<label2>$INFO[Window.Property(RandomEpisodeMB3.4.EpisodeTitle),, • ]$INFO[Window.Property(RandomEpisodeMB3.4.SeasonNo),S,]$INFO[Window.Property(RandomEpisodeMB3.4.EpisodeNo),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(RandomEpisodeMB3.4.EpisodeTitle))</visible>
 		</item>
-		<item id="5">
+		<item id="6">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisodeMB3.5.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomEpisodeMB3.5.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisodeMB3.5.Art(tvshow.poster))]</property>
@@ -6423,7 +6608,7 @@
 			<label2>$INFO[Window.Property(RandomEpisodeMB3.5.EpisodeTitle),, • ]$INFO[Window.Property(RandomEpisodeMB3.5.SeasonNo),S,]$INFO[Window.Property(RandomEpisodeMB3.5.EpisodeNo),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(RandomEpisodeMB3.5.EpisodeTitle))</visible>
 		</item>
-		<item id="6">
+		<item id="7">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisodeMB3.6.Path)])</onclick>
 			<icon>$INFO[Window.Property(RandomEpisodeMB3.6.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RandomEpisodeMB3.6.Art(tvshow.poster))]</property>
@@ -6437,6 +6622,16 @@
 		<!-- Recommended album -->
 		<item id="1">
 			<onclick>SetFocus(525)</onclick>
+			<onclick>$INFO[Window.Property(LatestAlbumMB3.0.Play)]</onclick>
+			<icon>$INFO[Window.Property(LatestAlbumMB3.0.Art(fanart))]</icon>
+			<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.0.Art(poster))]</property>
+			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.0.Description)]</property>
+			<label>$INFO[Window.Property(LatestAlbumMB3.0.Artist)]</label>
+			<label2>$INFO[Window.Property(LatestAlbumMB3.0.Title)]$INFO[Window.Property(LatestAlbumMB3.0.Year), • ,]</label2>
+			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.0.Title))</visible>
+		</item>
+		<item id="2">
+			<onclick>SetFocus(525)</onclick>
 			<onclick>$INFO[Window.Property(LatestAlbumMB3.1.Play)]</onclick>
 			<icon>$INFO[Window.Property(LatestAlbumMB3.1.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.1.Art(poster))]</property>
@@ -6445,7 +6640,7 @@
 			<label2>$INFO[Window.Property(LatestAlbumMB3.1.Title)]$INFO[Window.Property(LatestAlbumMB3.1.Year), • ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.1.Title))</visible>
 		</item>
-		<item id="2">
+		<item id="3">
 			<onclick>SetFocus(525)</onclick>
 			<onclick>$INFO[Window.Property(LatestAlbumMB3.2.Play)]</onclick>
 			<icon>$INFO[Window.Property(LatestAlbumMB3.2.Art(fanart))]</icon>
@@ -6455,7 +6650,7 @@
 			<label2>$INFO[Window.Property(LatestAlbumMB3.2.Title)]$INFO[Window.Property(LatestAlbumMB3.2.Year), • ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.2.Title))</visible>
 		</item>
-		<item id="3">
+		<item id="4">
 			<onclick>SetFocus(525)</onclick>
 			<onclick>$INFO[Window.Property(LatestAlbumMB3.3.Play)]</onclick>
 			<icon>$INFO[Window.Property(LatestAlbumMB3.3.Art(fanart))]</icon>
@@ -6465,7 +6660,7 @@
 			<label2>$INFO[Window.Property(LatestAlbumMB3.3.Title)]$INFO[Window.Property(LatestAlbumMB3.3.Year), • ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.3.Title))</visible>
 		</item>
-		<item id="4">
+		<item id="5">
 			<onclick>SetFocus(525)</onclick>
 			<onclick>$INFO[Window.Property(LatestAlbumMB3.4.Play)]</onclick>
 			<icon>$INFO[Window.Property(LatestAlbumMB3.4.Art(fanart))]</icon>
@@ -6475,7 +6670,7 @@
 			<label2>$INFO[Window.Property(LatestAlbumMB3.4.Title)]$INFO[Window.Property(LatestAlbumMB3.4.Year), • ,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.4.Title))</visible>
 		</item>
-		<item id="5">
+		<item id="6">
 			<onclick>SetFocus(525)</onclick>
 			<onclick>$INFO[Window.Property(LatestAlbumMB3.5.Play)]</onclick>
 			<icon>$INFO[Window.Property(LatestAlbumMB3.5.Art(fanart))]</icon>
