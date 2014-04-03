@@ -667,8 +667,8 @@
 								<colordiffuse>$VAR[osd.text.normal]</colordiffuse>
 							</control>
 							<control type="label">
-								<posx>-70</posx>
-								<width>57</width>
+								<posx>-74</posx>
+								<width>65</width>
 								<height>24</height>
 								<label>$VAR[OSDAspectRatio]</label>
 								<align>center</align>
@@ -698,8 +698,8 @@
 								<colordiffuse>$VAR[osd.text.normal]</colordiffuse>
 							</control>
 							<control type="label">
-								<posx>-70</posx>
-								<width>57</width>
+								<posx>-74</posx>
+								<width>65</width>
 								<height>24</height>
 								<label>$INFO[VideoPlayer.AudioCodec]</label>
 								<align>center</align>
@@ -781,9 +781,9 @@
 							<control type="textbox">
 								<description>Plot</description>
 								<posx>0</posx>
-								<posy>80</posy>
+								<posy>60</posy>
 								<width>1280</width>
-								<height>105</height>
+								<height>135</height>
 								<label>$VAR[OSDPlot]</label>
 								<align>justify</align>
 								<textcolor>$VAR[osd.text.dark]</textcolor>

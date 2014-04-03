@@ -89,7 +89,7 @@
                                 <posy>17</posy>
                                 <width>62</width>
                                 <height>42</height>
-                                <texture>$INFO[ListItem.Thumb,dialogs/xbmcsubtitles/,.gif/flag.png]</texture>
+                                <texture>$INFO[ListItem.Thumb,dialogs/xbmcsubtitles/flags/,.gif/flag.png]</texture>
                             </control>
                             <control type="image">
                                 <posx>93</posx>
@@ -221,7 +221,7 @@
                                 <posy>17</posy>
                                 <width>62</width>
                                 <height>42</height>
-                                <texture>$INFO[ListItem.Thumb,dialogs/xbmcsubtitles/,.gif/flag.png]</texture>
+                                <texture>$INFO[ListItem.Thumb,dialogs/xbmcsubtitles/flags/,.gif/flag.png]</texture>
                             </control>
                             <control type="image">
                                 <posx>93</posx>
@@ -514,7 +514,7 @@
                     <onup>150</onup>
                     <ondown>150</ondown>
                     <scrolltime>0</scrolltime>
-                    <itemlayout width="378" height="76">                        
+                    <itemlayout width="378" height="76">
                         <control type="label">
                             <posx>35</posx>
                             <posy>0</posy>

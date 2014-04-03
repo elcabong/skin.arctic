@@ -133,14 +133,14 @@
 				</control>
 				<control type="image">
 					<posx>-17</posx>
-					<posy>100</posy>
+					<posy>63</posy>
 					<width>344</width>
 					<height>344</height>
 					<texture background="true">$INFO[ListItem.Art(discart)]</texture>
 					<aspectratio align="center">keep</aspectratio>
 					<visible>Container.Content(movies) + Skin.HasSetting(showdiscart)</visible>
-					<animation effect="slide" start="0" end="0,-375" time="600" delay="450" condition="Container.Content(movies) + Skin.HasSetting(showdiscart)">Focus</animation>
-					<animation effect="slide" end="0" start="0,-375" time="600" delay="0" condition="Container.Content(movies) + Skin.HasSetting(showdiscart)">UnFocus</animation>
+					<animation effect="slide" start="0" end="325,0" time="600" delay="450" condition="Container.Content(movies) + Skin.HasSetting(showdiscart)">Focus</animation>
+					<animation effect="slide" end="0" start="325,0" time="0" delay="0" condition="Container.Content(movies) + Skin.HasSetting(showdiscart)">UnFocus</animation>					
 					<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="20000" loop="true" condition="Skin.HasSetting(RotateDiscArt) + Container.Content(movies) + Skin.HasSetting(showdiscart)">Conditional</animation>
 				</control>
 				
@@ -194,7 +194,7 @@
 			<include condition="!Skin.HasSetting(viewtype.classicposterinfo.wrap)">Viewtype-ClassicInfo-Fixed</include>
             <include condition="Skin.HasSetting(viewtype.classicposterinfo.wrap)">Viewtype-ClassicInfo-Wrap</include>
             <control type="group">
-            	<posy>698</posy>
+            	<posy>680</posy>
             	<posx>502</posx>
             	<visible>![Container(59).OnNext | Container(59).OnPrevious]</visible>
             	<animation effect="fade" start="0" end="100" delay="450" time="250" reversible="false">Visible</animation>
@@ -224,9 +224,9 @@
 					<visible>!Container.Content(seasons)</visible>
 					<control type="textbox">
 						<posx>24</posx>
-						<posy>70</posy>
+						<posy>60</posy>
 						<width>1140</width>
-						<height>110</height>
+						<height>135</height>
 						<label>$VAR[ExtendedInfo.Plot]</label>
 						<font>Font-Alaska-S25-NC</font>
 						<textcolor>Mod_Tags</textcolor>
