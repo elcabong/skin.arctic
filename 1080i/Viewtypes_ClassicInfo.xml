@@ -88,6 +88,11 @@
 			</control>
 		</itemlayout>
 		<focusedlayout width="280">
+                	<!-- Set View to bannerlist for episodes -->
+                	<control type="button">
+					<onfocus condition="Container.Content(episodes)">Container.SetViewMode(54)</onfocus>
+					</control>		
+
 			<control type="group">
 				<posy>300</posy>
 				<animation condition="Container(59).OnNext | Container(59).OnPrevious" effect="zoom" start="60" end="100" delay="0" time="350" tween="sine" easing="out" center="155,452">Focus</animation>
