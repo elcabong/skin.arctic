@@ -1207,7 +1207,8 @@
 	</variable>
 	
 	<variable name="MainTitle">
-		<value condition="Container.Content(episodes) | Container.Content(tvshows)">$INFO[ListItem.Title]</value>
+		<!--<value condition="Container.Content(episodes)">s$INFO[ListItem.Season]e$INFO[ListItem.Title]</value>
+		--><value condition="Container.Content(tvshows) | Container.Content(episodes)">$INFO[ListItem.Title]</value>
 		<value condition="Container.Content(movies)">$INFO[ListItem.Label]</value>
 		<value condition="Container.Content(seasons) + !IsEmpty(ListItem.Season)">$LOCALIZE[20373]</value>
         <value condition="Container.Content(seasons) + IsEmpty(ListItem.Season) + SubString(ListItem.Label,$LOCALIZE[20366])">$LOCALIZE[20366]</value>
@@ -1234,8 +1235,8 @@
 	</variable>
 	
 	<variable name="EpisodeNumber">
-    	<value condition="Container.Content(episodes) + IntegerGreaterThan(ListItem.Episode,9) + !SubString(ListItem.Episode,S)">$INFO[ListItem.Episode]</value>
-    	<value condition="Container.Content(episodes) + !IntegerGreaterThan(ListItem.Episode,9) + !SubString(ListItem.Episode,S)">$INFO[ListItem.Episode,0,]</value>
+    	<value condition="Container.Content(episodes) + IntegerGreaterThan(ListItem.Episode,9) + !SubString(ListItem.Episode,S)">$INFO[ListItem.Season,0,]$INFO[ListItem.Episode]</value>
+    	<value condition="Container.Content(episodes) + !IntegerGreaterThan(ListItem.Episode,9) + !SubString(ListItem.Episode,S)">$INFO[ListItem.Season,0,]$INFO[ListItem.Episode,0,]</value>
     	<value condition="Container.Content(episodes) + SubString(ListItem.Episode,S) + [StringCompare(ListItem.Episode,S1) | StringCompare(ListItem.Episode,S2) | StringCompare(ListItem.Episode,S3) | StringCompare(ListItem.Episode,S4) | StringCompare(ListItem.Episode,S5) | StringCompare(ListItem.Episode,S6) | StringCompare(ListItem.Episode,S7) | StringCompare(ListItem.Episode,S8) | StringCompare(ListItem.Episode,S9)]">$INFO[ListItem.Episode]</value>
     	<value condition="Container.Content(episodes) + SubString(ListItem.Episode,S) + ![StringCompare(ListItem.Episode,S1) | StringCompare(ListItem.Episode,S2) | StringCompare(ListItem.Episode,S3) | StringCompare(ListItem.Episode,S4) | StringCompare(ListItem.Episode,S5) | StringCompare(ListItem.Episode,S6) | StringCompare(ListItem.Episode,S7) | StringCompare(ListItem.Episode,S8) | StringCompare(ListItem.Episode,S9)]">$INFO[ListItem.Episode]</value>
     	<value condition="Container.Content(seasons) + IntegerGreaterThan(ListItem.Season,9) + !IsEmpty(ListItem.Season)">$INFO[ListItem.Season]</value>
