@@ -255,7 +255,7 @@
 					<posy>666</posy>
 					<width>444</width>
 					<height>666</height>
-					<texture diffuse="views/posterview/diffuse-ref.png" flipy="true" background="true">$VAR[ListInfoPosterVar]</texture>
+					<texture diffuse="views/posterview/diffuse-ref.png" flipy="true" background="true">$VAR[PosterViewPosterAlt]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<fadetime>250</fadetime>
 					<visible>!Skin.HasSetting(HideCoverReflection)</visible>
@@ -291,7 +291,7 @@
 					<posy>0</posy>
 					<width>444</width>
 					<height>666</height>
-					<texture diffuse="arctic/covers/444.png" background="true">$VAR[ListInfoPosterVar]</texture>
+					<texture diffuse="arctic/covers/444.png" background="true">$VAR[PosterViewPosterAlt]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<fadetime>250</fadetime>
 				</control>
@@ -326,7 +326,7 @@
 					<posy>381</posy>
 					<width>254</width>
 					<height>381</height>
-					<texture diffuse="arctic/list/mediumposter-ref.png" background="true" flipy="true">$VAR[ListInfoPosterVar]</texture>
+					<texture diffuse="arctic/list/mediumposter-ref.png" background="true" flipy="true">$VAR[PosterViewPosterAlt]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<fadetime>250</fadetime>
 				</control>
@@ -335,7 +335,7 @@
 					<posy>0</posy>
 					<width>254</width>
 					<height>381</height>
-					<texture diffuse="arctic/list/mediumposter.png" background="true">$VAR[ListInfoPosterVar]</texture>
+					<texture diffuse="arctic/list/mediumposter.png" background="true">$VAR[PosterViewPosterAlt]</texture>
 					<aspectratio scalediffuse="false">stretch</aspectratio>
 					<fadetime>250</fadetime>
 				</control>
@@ -829,7 +829,7 @@
 					<posy>444</posy>
 					<width>444</width>
 					<height>444</height>
-					<texture diffuse="views/posterview/diffuse-ref.png" flipy="true" background="true">$VAR[ListInfoPosterVar]</texture>
+					<texture diffuse="views/posterview/diffuse-ref.png" flipy="true" background="true">$VAR[PosterViewPosterAlt]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 				</control>
@@ -856,7 +856,7 @@
 					<posy>0</posy>
 					<width>444</width>
 					<height>444</height>
-					<texture diffuse="arctic/covers/444.png" background="true">$VAR[ListInfoPosterVar]</texture>
+					<texture diffuse="arctic/covers/444.png" background="true">$VAR[PosterViewPosterAlt]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<fadetime>250</fadetime>
 				</control>
@@ -883,7 +883,7 @@
 					<posy>0</posy>
 					<width>381</width>
 					<height>381</height>
-					<texture diffuse="arctic/covers/444.png" background="true">$VAR[ListInfoPosterVar]</texture>
+					<texture diffuse="arctic/covers/444.png" background="true">$VAR[PosterViewPosterAlt]</texture>
 					<aspectratio scalediffuse="false">scale</aspectratio>
 					<fadetime>250</fadetime>
 				</control>

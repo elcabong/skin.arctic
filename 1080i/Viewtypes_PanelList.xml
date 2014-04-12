@@ -320,7 +320,7 @@
 						<posy>470</posy>
 						<width>309</width>
 						<height>464</height>
-						<texture background="true" diffuse="views/posterview/diffuse-ref.png" border="5" flipy="true">$VAR[ListInfoPosterVar]</texture>
+						<texture background="true" diffuse="views/posterview/diffuse-ref.png" border="5" flipy="true">$VAR[PosterViewPosterAlt]</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<fadetime>200</fadetime>
 						<visible>!Skin.HasSetting(HideCoverReflection) + !Skin.HasSetting(panellist.showpanel)</visible> 
@@ -340,7 +340,7 @@
 						<posy>6</posy>
 						<width>309</width>
 						<height>464</height>
-						<texture background="true" diffuse="arctic/panel/season-poster.png">$VAR[ListInfoPosterVar]</texture>
+						<texture background="true" diffuse="arctic/panel/season-poster.png">$VAR[PosterViewPosterAlt]</texture>
 						<aspectratio scalediffuse="false">stretch</aspectratio>
 						<fadetime>200</fadetime>
 					</control>
