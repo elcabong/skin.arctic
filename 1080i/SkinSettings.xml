@@ -302,6 +302,14 @@
 							<onup>1007</onup>
 							<ondown>1001</ondown>
 						</control>
+						<control type="radiobutton" id="1009">
+							<visible>System.HasAddon(plugin.video.xbmb3c)</visible>
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(xbmb3c)</selected>
+							<onclick>Skin.ToggleSetting(xbmb3c)</onclick>
+							<label>XBMB3C Addon</label>
+						</control>						
 					</control>
 			
 					<!-- ============= -->  
