@@ -309,7 +309,16 @@
 							<selected>Skin.HasSetting(xbmb3c)</selected>
 							<onclick>Skin.ToggleSetting(xbmb3c)</onclick>
 							<label>XBMB3C Addon</label>
-						</control>						
+						</control>			
+						<control type="radiobutton" id="1010">
+							<visible>System.HasAddon(plugin.video.xbmb3c)</visible>
+							<width>1210</width>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(xbmb3c-home-fanart)</selected>
+							<onclick>Skin.ToggleSetting(xbmb3c-home-fanart)</onclick>
+							<enable>Skin.HasSetting(xbmb3c)</enable>
+							<label>XBMB3C Home Fanart</label>
+						</control>							
 					</control>
 			
 					<!-- ============= -->  
