@@ -632,7 +632,7 @@ msgid "Home"
 msgstr ""
 
 msgctxt "#41525"
-msgid "search XBMC for"
+msgid "SEARCH"
 msgstr ""
 
 #empty strings from id 41526 to 41549

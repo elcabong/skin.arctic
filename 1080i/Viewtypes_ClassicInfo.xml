@@ -89,7 +89,11 @@
 		</itemlayout>
 		<focusedlayout width="280">
                 <control type="button">
-                	<!-- Set View to bannerlist for episodes -->
+                	<!-- Set View for music -->
+					<onfocus condition="Container.Content(artists) | Container.Content(albums)">Container.SetViewMode(252)</onfocus>
+					<!-- Set View for music -->
+					<onfocus condition="Container.Content(songs)">Container.SetViewMode(50)</onfocus>
+					<!-- Set View to bannerlist for episodes -->
 					<onfocus condition="Container.Content(episodes)">Container.SetViewMode(54)</onfocus>
 					<!-- Set View to biglist for everything except the following -->
 					<onfocus condition="!Container.Content(episodes) + !Container.Content(seasons) + !Container.Content(tvshows) + !Container.Content(movies) + !Container.Content(sets)">Container.SetViewMode(50)</onfocus>
