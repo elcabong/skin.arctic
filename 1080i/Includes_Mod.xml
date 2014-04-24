@@ -1952,7 +1952,7 @@
 		<!-- MOVIES CONTENT -->
 		<item id="0">
 			<label>$INFO[Window(home).Property(xbmb3c.std.movies.0.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.std.movies.0.path)])</onclick>
+			<onclick>$INFO[Window.Property(xbmb3c.std.movies.0.path)]</onclick>
 			<property name="Poster">$INFO[Skin.String(Home.Movies.Tile.1.Icon)]</property>
 			<property name="showlabel">$INFO[Skin.String(Home.Movies.Tile.1.ShowLabel)]</property>
 			<property name="path">$INFO[Skin.String(Home.Movies.Tile.1.Path)]</property>
@@ -1962,7 +1962,7 @@
 		</item>
 		<item id="1">
 			<label>$INFO[Window(home).Property(xbmb3c.std.movies.1.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.std.movies.1.path)])</onclick>
+			<onclick>$INFO[Window.Property(xbmb3c.std.movies.1.path)]</onclick>
 			<property name="Poster">$INFO[Skin.String(Home.Movies.Tile.2.Icon)]</property>
 			<property name="showlabel">$INFO[Skin.String(Home.Movies.Tile.2.ShowLabel)]</property>
 			<property name="path">$INFO[Skin.String(Home.Movies.Tile.2.Path)]</property>
@@ -1972,7 +1972,7 @@
 		</item>
 		<item id="2">
 			<label>$INFO[Window(home).Property(xbmb3c.std.movies.2.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.std.movies.2.path)])</onclick>
+			<onclick>$INFO[Window.Property(xbmb3c.std.movies.2.path)]</onclick>
 			<property name="Poster">$INFO[Skin.String(Home.Movies.Tile.6.Icon)]</property>
 			<property name="showlabel">$INFO[Skin.String(Home.Movies.Tile.3.ShowLabel)]</property>
 			<property name="path">$INFO[Skin.String(Home.Movies.Tile.3.Path)]</property>
@@ -1982,7 +1982,7 @@
 		</item>
 		<item id="3">
 			<label>$INFO[Window(home).Property(xbmb3c.std.movies.3.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.std.movies.3.path)])</onclick>
+			<onclick>$INFO[Window.Property(xbmb3c.std.movies.3.path)]</onclick>
 			<property name="Poster">$INFO[Skin.String(Home.Movies.Tile.5.Icon)]</property>
 			<property name="showlabel">$INFO[Skin.String(Home.Movies.Tile.5.ShowLabel)]</property>
 			<property name="path">$INFO[Skin.String(Home.Movies.Tile.5.Path)]</property>
@@ -1992,7 +1992,7 @@
 		</item>
 		<item id="4">
 			<label>$INFO[Window(home).Property(xbmb3c.std.movies.4.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.std.movies.4.path)])</onclick>
+			<onclick>$INFO[Window.Property(xbmb3c.std.movies.4.path)]</onclick>
 			<property name="Poster">$INFO[Skin.String(Home.Movies.Tile.3.Icon)]</property>
 			<property name="showlabel">$INFO[Skin.String(Home.Movies.Tile.6.ShowLabel)]</property>
 			<property name="path">$INFO[Skin.String(Home.Movies.Tile.6.Path)]</property>
@@ -2002,7 +2002,7 @@
 		</item>
 		<item id="5">
 			<label>$INFO[Window(home).Property(xbmb3c.std.movies.5.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.std.movies.5.path)])</onclick>
+			<onclick>$INFO[Window.Property(xbmb3c.std.movies.5.path)]</onclick>
 			<property name="Poster">$INFO[Skin.String(Home.Movies.Tile.9.Icon)]</property>
 			<property name="showlabel">$INFO[Skin.String(Home.Movies.Tile.7.ShowLabel)]</property>
 			<property name="path">$INFO[Skin.String(Home.Movies.Tile.7.Path)]</property>
@@ -2014,7 +2014,7 @@
 		<!--TVSHOW ITEMS-->
 		<item id="0">
 			<label>$INFO[Window(home).Property(xbmb3c.std.tvshows.0.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.std.tvshows.0.path)])</onclick>
+			<onclick>$INFO[Window.Property(xbmb3c.std.tvshows.0.path)]</onclick>
 			<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile.1.Icon)]</property>
 			<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile.1.ShowLabel)]</property>
 			<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.1.Path)]</property>
@@ -2024,7 +2024,7 @@
 		</item>
 		<item id="1">
 			<label>$INFO[Window(home).Property(xbmb3c.std.tvshows.1.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.std.tvshows.1.path)])</onclick>
+			<onclick>$INFO[Window.Property(xbmb3c.std.tvshows.1.path)]</onclick>
 			<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile.2.Icon)]</property>
 			<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile.1.ShowLabel)]</property>
 			<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.1.Path)]</property>
@@ -2034,7 +2034,7 @@
 		</item>
 		<item id="2">
 			<label>$INFO[Window(home).Property(xbmb3c.std.tvshows.2.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.std.tvshows.2.path)])</onclick>
+			<onclick>$INFO[Window.Property(xbmb3c.std.tvshows.2.path)]</onclick>
 			<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile.5.Icon)]</property>
 			<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile.2.ShowLabel)]</property>
 			<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.2.Path)]</property>
@@ -2044,7 +2044,7 @@
 		</item>
 		<item id="3">
 			<label>$INFO[Window(home).Property(xbmb3c.std.tvshows.3.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.std.tvshows.3.path)])</onclick>
+			<onclick>$INFO[Window.Property(xbmb3c.std.tvshows.3.path)]</onclick>
 			<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile.7.Icon)]</property>
 			<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile.4.ShowLabel)]</property>
 			<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.4.Path)]</property>
@@ -2054,7 +2054,7 @@
 		</item>
 		<item id="4">
 			<label>$INFO[Window(home).Property(xbmb3c.std.tvshows.4.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.std.tvshows.4.path)])</onclick>
+			<onclick>$INFO[Window.Property(xbmb3c.std.tvshows.4.path)]</onclick>
 			<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile.4.Icon)]</property>
 			<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile.5.ShowLabel)]</property>
 			<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.5.Path)]</property>
@@ -2064,7 +2064,7 @@
 		</item>
 		<item id="5">
 			<label>$INFO[Window(home).Property(xbmb3c.std.tvshows.5.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.std.tvshows.5.path)])</onclick>
+			<onclick>$INFO[Window.Property(xbmb3c.std.tvshows.5.path)]</onclick>
 			<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile.4.Icon)]</property>
 			<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile.5.ShowLabel)]</property>
 			<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.5.Path)]</property>
@@ -2074,7 +2074,7 @@
 		</item>
 		<item id="6">
 			<label>$INFO[Window(home).Property(xbmb3c.std.tvshows.6.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.std.tvshows.6.path)])</onclick>
+			<onclick>$INFO[Window.Property(xbmb3c.std.tvshows.6.path)]</onclick>
 			<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile.6.Icon)]</property>
 			<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile.6.ShowLabel)]</property>
 			<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.6.Path)]</property>
@@ -2087,7 +2087,7 @@
 		<!--MUSIC ITEMS-->
 		<item id="1">
 			<label>$INFO[Window(home).Property(xbmb3c.std.music.0.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.std.music.0.path)])</onclick>
+			<onclick>$INFO[Window.Property(xbmb3c.std.music.0.path)]</onclick>
 			<property name="Poster">$INFO[Skin.String(Home.Music.Tile.8.Icon)]</property>
 			<property name="showlabel">$INFO[Skin.String(Home.Music.Tile.1.ShowLabel)]</property>
 			<property name="path">$INFO[Skin.String(Home.Music.Tile.1.Path)]</property>
@@ -2097,7 +2097,7 @@
 		</item>
 		<item id="2">
 			<label>$INFO[Window(home).Property(xbmb3c.std.music.1.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.std.music.1.path)])</onclick>
+			<onclick>$INFO[Window.Property(xbmb3c.std.music.1.path)]</onclick>
 			<property name="Poster">$INFO[Skin.String(Home.Music.Tile.8.Icon)]</property>
 			<property name="showlabel">$INFO[Skin.String(Home.Music.Tile.1.ShowLabel)]</property>
 			<property name="path">$INFO[Skin.String(Home.Music.Tile.1.Path)]</property>
@@ -2107,7 +2107,7 @@
 		</item>			
 		<item id="3">
 			<label>$INFO[Window(home).Property(xbmb3c.std.music.2.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.std.music.2.path)])</onclick>
+			<onclick>$INFO[Window.Property(xbmb3c.std.music.2.path)]</onclick>
 			<property name="Poster">$INFO[Skin.String(Home.Music.Tile.6.Icon)]</property>
 			<property name="showlabel">$INFO[Skin.String(Home.Music.Tile.1.ShowLabel)]</property>
 			<property name="path">$INFO[Skin.String(Home.Music.Tile.1.Path)]</property>
@@ -2117,7 +2117,7 @@
 		</item>	
 		<item id="4">
 			<label>$INFO[Window(home).Property(xbmb3c.std.music.3.title)]</label>
-			<onclick>$INFO[Window.Property(xbmb3c.std.music.3.path)])</onclick>
+			<onclick>$INFO[Window.Property(xbmb3c.std.music.3.path)]</onclick>
 			<property name="Poster">$INFO[Skin.String(Home.Music.Tile.7.Icon)]</property>
 			<property name="showlabel">$INFO[Skin.String(Home.Music.Tile.1.ShowLabel)]</property>
 			<property name="path">$INFO[Skin.String(Home.Music.Tile.1.Path)]</property>
@@ -2128,7 +2128,7 @@
 		<!-- PICTURES ITEMS -->
 		<item id="1">
 			<label>$INFO[Window.Property(xbmb3c.std.photo.0.title)])</label>
-			<onclick>$INFO[Window.Property(xbmb3c.std.photo.0.path)])</onclick>
+			<onclick>$INFO[Window.Property(xbmb3c.std.photo.0.path)]</onclick>
 			<property name="Poster">$INFO[Skin.String(Home.Pictures.Tile.1.Icon)]</property>
 			<property name="showlabel">$INFO[Skin.String(Home.Pictures.Tile.1.ShowLabel)]</property>
 			<property name="path">$INFO[Skin.String(Home.Pictures.Tile.1.Path)]</property>
@@ -2136,172 +2136,8 @@
 			<property name="custom">1</property>
 			<visible>Skin.HasSetting(xbmb3c) + Container(525).HasFocus(5)</visible>
 		</item>
-
-		
 		
 		<!-- end edit section -->
-<!--
-		
-		<item id="1">
-			<label>$INFO[Skin.String(Home.Music.Tile.1.Label)]</label>
-			<onclick>SetFocus(525)</onclick>
-			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.1.Path))">SetProperty(edit_submenu,Home.Music.Tile.1,3061)</onclick>
-			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.1.Path))">ActivateWindow(3061)</onclick>
-			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.1.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.1.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.1.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.1.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.1.Path)])</onclick>
-			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.1.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.1.Path)],return)</onclick>
-			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.1.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.1.Path)],return)</onclick>
-			<onclick condition="[stringcompare(Skin.String(Home.Music.Tile.1.Type),6) | stringcompare(Skin.String(Home.Music.Tile.1.Type),7)]">$INFO[Skin.String(Home.Music.Tile.1.Path)]</onclick>
-			<property name="Poster">$INFO[Skin.String(Home.Music.Tile.1.Icon)]</property>
-			<property name="showlabel">$INFO[Skin.String(Home.Music.Tile.1.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(Home.Music.Tile.1.Path)]</property>
-			<property name="animate">$INFO[Skin.String(Home.Music.Tile.1.Animate)]</property>
-			<property name="custom">1</property>
-			<visible>Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3)</visible>
-		</item>
-		<item id="2">
-			<label>$INFO[Skin.String(Home.Music.Tile.2.Label)]</label>
-			<onclick>SetFocus(525)</onclick>
-			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.2.Path))">SetProperty(edit_submenu,Home.Music.Tile.2,3061)</onclick>
-			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.2.Path))">ActivateWindow(3061)</onclick>
-			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.2.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.2.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.2.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.2.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.2.Path)])</onclick>
-			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.2.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.2.Path)],return)</onclick>
-			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.2.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.2.Path)],return)</onclick>
-			<onclick condition="[stringcompare(Skin.String(Home.Music.Tile.2.Type),6) | stringcompare(Skin.String(Home.Music.Tile.2.Type),7)]">$INFO[Skin.String(Home.Music.Tile.2.Path)]</onclick>
-			<property name="Poster">$INFO[Skin.String(Home.Music.Tile.2.Icon)]</property>
-			<property name="showlabel">$INFO[Skin.String(Home.Music.Tile.2.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(Home.Music.Tile.2.Path)]</property>
-			<property name="animate">$INFO[Skin.String(Home.Music.Tile.2.Animate)]</property>
-			<property name="custom">1</property>
-			<visible>Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3)</visible>
-		</item>
-		<item id="3">
-			<label>$INFO[Skin.String(Home.Music.Tile.3.Label)]</label>
-			<onclick>SetFocus(525)</onclick>
-			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.3.Path))">SetProperty(edit_submenu,Home.Music.Tile.3,3061)</onclick>
-			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.3.Path))">ActivateWindow(3061)</onclick>
-			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.3.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.3.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.3.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.3.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.3.Path)])</onclick>
-			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.3.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.3.Path)],return)</onclick>
-			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.3.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.3.Path)],return)</onclick>
-			<onclick condition="[stringcompare(Skin.String(Home.Music.Tile.3.Type),6) | stringcompare(Skin.String(Home.Music.Tile.3.Type),7)]">$INFO[Skin.String(Home.Music.Tile.3.Path)]</onclick>
-			<property name="Poster">$INFO[Skin.String(Home.Music.Tile.3.Icon)]</property>
-			<property name="showlabel">$INFO[Skin.String(Home.Music.Tile.3.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(Home.Music.Tile.3.Path)]</property>
-			<property name="animate">$INFO[Skin.String(Home.Music.Tile.3.Animate)]</property>
-			<property name="custom">1</property>
-			<visible>Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3)</visible>
-		</item>
-		<item id="4">
-			<label>$INFO[Skin.String(Home.Music.Tile.4.Label)]</label>
-			<onclick>SetFocus(525)</onclick>
-			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.4.Path))">SetProperty(edit_submenu,Home.Music.Tile.4,3061)</onclick>
-			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.4.Path))">ActivateWindow(3061)</onclick>
-			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.4.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.4.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.4.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.4.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.4.Path)])</onclick>
-			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.4.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.4.Path)],return)</onclick>
-			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.4.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.4.Path)],return)</onclick>
-			<onclick condition="[stringcompare(Skin.String(Home.Music.Tile.4.Type),6) | stringcompare(Skin.String(Home.Music.Tile.4.Type),7)]">$INFO[Skin.String(Home.Music.Tile.4.Path)]</onclick>
-			<property name="Poster">$INFO[Skin.String(Home.Music.Tile.4.Icon)]</property>
-			<property name="showlabel">$INFO[Skin.String(Home.Music.Tile.4.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(Home.Music.Tile.4.Path)]</property>
-			<property name="animate">$INFO[Skin.String(Home.Music.Tile.4.Animate)]</property>
-			<property name="custom">1</property>
-			<visible>Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3)</visible>
-		</item>
-		<item id="5">
-			<label>$INFO[Skin.String(Home.Music.Tile.5.Label)]</label>
-			<onclick>SetFocus(525)</onclick>
-			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.5.Path))">SetProperty(edit_submenu,Home.Music.Tile.5,3061)</onclick>
-			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.5.Path))">ActivateWindow(3061)</onclick>
-			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.5.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.5.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.5.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.5.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.5.Path)])</onclick>
-			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.5.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.5.Path)],return)</onclick>
-			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.5.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.5.Path)],return)</onclick>
-			<onclick condition="[stringcompare(Skin.String(Home.Music.Tile.5.Type),6) | stringcompare(Skin.String(Home.Music.Tile.5.Type),7)]">$INFO[Skin.String(Home.Music.Tile.5.Path)]</onclick>
-			<property name="Poster">$INFO[Skin.String(Home.Music.Tile.5.Icon)]</property>
-			<property name="showlabel">$INFO[Skin.String(Home.Music.Tile.5.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(Home.Music.Tile.5.Path)]</property>
-			<property name="animate">$INFO[Skin.String(Home.Music.Tile.5.Animate)]</property>
-			<property name="custom">1</property>
-			<visible>Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3)</visible>
-		</item>
-		<item id="6">
-			<label>$INFO[Skin.String(Home.Music.Tile.6.Label)]</label>
-			<onclick>SetFocus(525)</onclick>
-			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.6.Path))">SetProperty(edit_submenu,Home.Music.Tile.6,3061)</onclick>
-			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.6.Path))">ActivateWindow(3061)</onclick>
-			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.6.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.6.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.6.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.6.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.6.Path)])</onclick>
-			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.6.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.6.Path)],return)</onclick>
-			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.6.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.6.Path)],return)</onclick>
-			<onclick condition="[stringcompare(Skin.String(Home.Music.Tile.6.Type),6) | stringcompare(Skin.String(Home.Music.Tile.6.Type),7)]">$INFO[Skin.String(Home.Music.Tile.6.Path)]</onclick>
-			<property name="Poster">$INFO[Skin.String(Home.Music.Tile.6.Icon)]</property>
-			<property name="showlabel">$INFO[Skin.String(Home.Music.Tile.6.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(Home.Music.Tile.6.Path)]</property>
-			<property name="animate">$INFO[Skin.String(Home.Music.Tile.6.Animate)]</property>
-			<property name="custom">1</property>
-			<visible>Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3)</visible>
-		</item>
-		<item id="7">
-			<label>$INFO[Skin.String(Home.Music.Tile.7.Label)]</label>
-			<onclick>SetFocus(525)</onclick>
-			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.7.Path))">SetProperty(edit_submenu,Home.Music.Tile.7,3061)</onclick>
-			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.7.Path))">ActivateWindow(3061)</onclick>
-			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.7.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.7.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.7.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.7.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.7.Path)])</onclick>
-			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.7.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.7.Path)],return)</onclick>
-			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.7.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.7.Path)],return)</onclick>
-			<onclick condition="[stringcompare(Skin.String(Home.Music.Tile.7.Type),6) | stringcompare(Skin.String(Home.Music.Tile.7.Type),7)]">$INFO[Skin.String(Home.Music.Tile.7.Path)]</onclick>
-			<property name="Poster">$INFO[Skin.String(Home.Music.Tile.7.Icon)]</property>
-			<property name="showlabel">$INFO[Skin.String(Home.Music.Tile.7.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(Home.Music.Tile.7.Path)]</property>
-			<property name="animate">$INFO[Skin.String(Home.Music.Tile.7.Animate)]</property>
-			<property name="custom">1</property>
-			<visible>Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3)</visible>
-		</item>
-		<item id="8">
-			<label>$INFO[Skin.String(Home.Music.Tile.8.Label)]</label>
-			<onclick>SetFocus(525)</onclick>
-			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.8.Path))">SetProperty(edit_submenu,Home.Music.Tile.8,3061)</onclick>
-			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.8.Path))">ActivateWindow(3061)</onclick>
-			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.8.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.8.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.8.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.8.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.8.Path)])</onclick>
-			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.8.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.8.Path)],return)</onclick>
-			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.8.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.8.Path)],return)</onclick>
-			<onclick condition="[stringcompare(Skin.String(Home.Music.Tile.8.Type),6) | stringcompare(Skin.String(Home.Music.Tile.8.Type),7)]">$INFO[Skin.String(Home.Music.Tile.8.Path)]</onclick>
-			<property name="Poster">$INFO[Skin.String(Home.Music.Tile.8.Icon)]</property>
-			<property name="showlabel">$INFO[Skin.String(Home.Music.Tile.8.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(Home.Music.Tile.8.Path)]</property>
-			<property name="animate">$INFO[Skin.String(Home.Music.Tile.8.Animate)]</property>
-			<property name="custom">1</property>
-			<visible>Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3)</visible>
-		</item>
-		<item id="9">
-			<label>$INFO[Skin.String(Home.Music.Tile.9.Label)]</label>
-			<onclick>SetFocus(525)</onclick>
-			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.9.Path))">SetProperty(edit_submenu,Home.Music.Tile.9,3061)</onclick>
-			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.9.Path))">ActivateWindow(3061)</onclick>
-			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.9.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.9.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.9.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.9.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.9.Path)])</onclick>
-			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.9.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.9.Path)],return)</onclick>
-			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.9.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.9.Path)],return)</onclick>
-			<onclick condition="[stringcompare(Skin.String(Home.Music.Tile.9.Type),6) | stringcompare(Skin.String(Home.Music.Tile.9.Type),7)]">$INFO[Skin.String(Home.Music.Tile.9.Path)]</onclick>
-			<property name="Poster">$INFO[Skin.String(Home.Music.Tile.9.Icon)]</property>
-			<property name="showlabel">$INFO[Skin.String(Home.Music.Tile.9.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(Home.Music.Tile.9.Path)]</property>
-			<property name="animate">$INFO[Skin.String(Home.Music.Tile.9.Animate)]</property>
-			<property name="custom">1</property>
-			<visible>Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3)</visible>
-		</item>
-		<item id="10">
-			<label>$INFO[Skin.String(Home.Music.Tile.10.Label)]</label>
-			<onclick>SetFocus(525)</onclick>
-			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.10.Path))">SetProperty(edit_submenu,Home.Music.Tile.10,3061)</onclick>
-			<onclick condition="IsEmpty(Skin.String(Home.Music.Tile.10.Path))">ActivateWindow(3061)</onclick>
-			<onclick condition="!stringcompare(Skin.String(Home.Music.Tile.10.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.10.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.10.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.10.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.10.Path)])</onclick>
-			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.10.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.10.Path)],return)</onclick>
-			<onclick condition="stringcompare(Skin.String(Home.Music.Tile.10.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.10.Path)],return)</onclick>
-			<onclick condition="[stringcompare(Skin.String(Home.Music.Tile.10.Type),6) | stringcompare(Skin.String(Home.Music.Tile.10.Type),7)]">$INFO[Skin.String(Home.Music.Tile.10.Path)]</onclick>
-			<property name="Poster">$INFO[Skin.String(Home.Music.Tile.10.Icon)]</property>
-			<property name="showlabel">$INFO[Skin.String(Home.Music.Tile.10.ShowLabel)]</property>
-			<property name="path">$INFO[Skin.String(Home.Music.Tile.10.Path)]</property>
-			<property name="animate">$INFO[Skin.String(Home.Music.Tile.10.Animate)]</property>
-			<property name="custom">1</property>
-			<visible>Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3)</visible>
-		</item>-->
 		
 		<!--PVR ITEMS-->
 		<item id="1">
