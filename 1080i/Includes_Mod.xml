@@ -9263,14 +9263,25 @@
 		<item id="9">
 			<label>5</label>
 			<visible>true</visible>
+			<visible>!Skin.HasSetting(xbmb3c-home-fanart)</visible>
 			<property name="single">$INFO[Skin.String(HomeSettingsSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeSettingsMultiImage)]</property>
 			<property name="widget">$INFO[Skin.String(settings.widget.type)]</property>
 			<onclick>SetFocus(83,0)</onclick>
 			<icon>special://skin/extras/icons/settings.png</icon>
 		</item>		
+		<item id="9">
+			<label>5</label>
+			<visible>Skin.HasSetting(xbmb3c) + Skin.HasSetting(xbmb3c-home-fanart)</visible>
+			<property name="single">$INFO[Window.Property(MB3.Background.Global.FanArt)]</property>
+			<property name="multi">$INFO[Window.Property(MB3.Background.Global.FanArt)]</property>
+			<property name="widget">$INFO[Skin.String(custom.widget.type)]</property>
+			<onclick>SetFocus(83,0)</onclick>
+			<icon>special://skin/extras/icons/settings.png</icon>
+		</item>	
 		<item id="11">
 			<label>341</label>
+			<visible>!Skin.HasSetting(xbmb3c-home-fanart)</visible>			
 			<property name="single">$INFO[Skin.String(HomeHomeSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeHomeMultiImage)]</property>
 			<onclick>SetFocus(525)</onclick>
@@ -9278,6 +9289,16 @@
 			<visible>System.HasMediaDVD</visible>
 			<icon>special://skin/extras/icons/dvd.png</icon>
 		</item>
+		<item id="11">
+			<label>341</label>
+			<visible>Skin.HasSetting(xbmb3c) + Skin.HasSetting(xbmb3c-home-fanart)</visible>
+			<property name="single">$INFO[Window.Property(MB3.Background.Movie.FanArt)]</property>
+			<property name="multi">$INFO[Window.Property(MB3.Background.Movie.FanArt)]</property>
+			<onclick>SetFocus(525)</onclick>
+			<onclick>PlayDVD</onclick>
+			<visible>System.HasMediaDVD</visible>
+			<icon>special://skin/extras/icons/dvd.png</icon>
+		</item>		
 		<item id="10">
 			<label>1036</label>
 			<property name="single">$INFO[Skin.String(HomeHomeSingleImage)]</property>
@@ -9299,7 +9320,7 @@
 		</item>
 		<item id="4">
 			<label>41220</label>
-			<visible>!Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled) + !StringCompare(Skin.String(homescreen.style),combo)</visible>
+			<visible>!Skin.HasSetting(xbmb3c) + !Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled) + !StringCompare(Skin.String(homescreen.style),combo)</visible>
 			<property name="single">$INFO[Skin.String(HomeLiveTVSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeLiveTVMultiImage)]</property>
 			<property name="widget">$INFO[Skin.String(pvr.widget.type)]</property>
@@ -9311,6 +9332,20 @@
 			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
 			<icon>special://skin/extras/icons/tvguide.png</icon>
 		</item>
+		<item id="4">
+			<label>41220</label>
+			<visible>Skin.HasSetting(xbmb3c) + Skin.HasSetting(xbmb3c-home-fanart) + !Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled) + !StringCompare(Skin.String(homescreen.style),combo)</visible>
+			<property name="single">$INFO[Window.Property(MB3.Background.TV.FanArt)]</property>
+			<property name="multi">$INFO[Window.Property(MB3.Background.TV.FanArt)]</property>
+			<property name="widget">$INFO[Skin.String(pvr.widget.type)]</property>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu)">ActivateWindow(PVR)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + !Skin.HasSetting(pvr.epgdefault)">SetFocus(32)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + !Skin.HasSetting(pvr.epgdefault)">SetFocus(11)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + Skin.HasSetting(pvr.epgdefault)">SetFocus(31)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + Skin.HasSetting(pvr.epgdefault)">SetFocus(10)</onclick>
+			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
+			<icon>special://skin/extras/icons/tvguide.png</icon>
+		</item>		
 		<item id="12">
 			<label>$LOCALIZE[41525]</label>
 			<visible>Skin.HasSetting(xbmb3c) + Skin.HasSetting(xbmb3c-search) + !Skin.HasSetting(xbmb3c-home-fanart)</visible>
