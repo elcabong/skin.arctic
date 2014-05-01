@@ -32,7 +32,7 @@
                 <viewtype label="537">list</viewtype>
                 <scrolltime tween="cubic" easing="out">500</scrolltime>
                 <preloaditems>2</preloaditems>
-                <itemlayout height="100" condition="substring(Container.FolderPath,plugin://,left) | [!Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)]">
+                <itemlayout height="100" condition="[!Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)]">
                     <control type="image">
                         <posx>0</posx>
                         <posy>1</posy>
@@ -128,7 +128,7 @@
                         <visible>Container.Content(genres)</visible>
                     </control>
                 </itemlayout>
-                <itemlayout height="100" condition="Container.Content(movies) + !substring(Container.FolderPath,plugin://,left)">
+                <itemlayout height="100" condition="Container.Content(movies)">
                     <control type="image">
                         <posx>0</posx>
                         <posy>1</posy>
@@ -216,7 +216,7 @@
                         <visible>!IsEmpty(ListItem.Title)</visible>
                     </control>
                 </itemlayout>
-                <itemlayout height="100" condition="Container.Content(tvshows) + !substring(Container.FolderPath,plugin://,left)">
+                <itemlayout height="100" condition="Container.Content(tvshows)">
                     <control type="image">
                         <description>Thumbnail</description>
                         <posx>20</posx>
@@ -293,7 +293,7 @@
                         </control>
                     </control>
                 </itemlayout>
-                <itemlayout height="100" condition="Container.Content(seasons) + !substring(Container.FolderPath,plugin://,left)">
+                <itemlayout height="100" condition="Container.Content(seasons)">
                     <control type="image">
                         <description>Thumbnail</description>
                         <posx>20</posx>
@@ -358,7 +358,7 @@
                         </control>
                     </control>
                 </itemlayout>
-                <itemlayout height="100" condition="Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)">
+                <itemlayout height="100" condition="Container.Content(episodes)">
                     <control type="image">
                         <posx>0</posx>
                         <posy>1</posy>
@@ -436,7 +436,7 @@
                         <visible>!IsEmpty(ListItem.Title)</visible>
                     </control>
                 </itemlayout>
-                <focusedlayout height="100" condition="substring(Container.FolderPath,plugin://,left) | [!Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)]">
+                <focusedlayout height="100" condition="[!Container.Content(movies) + !Container.Content(tvshows) + !Container.Content(seasons) + !Container.Content(episodes)]">
                     <control type="image">
                         <posx>0</posx>
                         <posy>1</posy>
@@ -570,7 +570,7 @@
                         </control>
                     </control>
                 </focusedlayout>
-                <focusedlayout height="100" condition="Container.Content(movies) + !substring(Container.FolderPath,plugin://,left)">
+                <focusedlayout height="100" condition="Container.Content(movies)">
                     <control type="image">
                         <posx>0</posx>
                         <posy>1</posy>
@@ -701,7 +701,7 @@
                         </control>
                     </control>
                 </focusedlayout>
-                <focusedlayout height="100" condition="Container.Content(tvshows) + !substring(Container.FolderPath,plugin://,left)">
+                <focusedlayout height="100" condition="Container.Content(tvshows)">
                     <control type="image">
                         <posx>0</posx>
                         <posy>0</posy>
@@ -803,7 +803,7 @@
                         </control>
                     </control>
                 </focusedlayout>
-                <focusedlayout height="100" condition="Container.Content(seasons) + !substring(Container.FolderPath,plugin://,left)">
+                <focusedlayout height="100" condition="Container.Content(seasons)">
 
                     <control type="image">
                         <posx>0</posx>
@@ -893,7 +893,7 @@
                         </control>
                     </control>
                 </focusedlayout>
-                <focusedlayout height="100" condition="Container.Content(episodes) + !substring(Container.FolderPath,plugin://,left)">
+                <focusedlayout height="100" condition="Container.Content(episodes)">
        
                     <control type="image">
                         <posx>0</posx>
