@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.arctic_xbmb3c" version="0.9.1" name="Arctic_xbmb3c" provider-name="jurialmunkey -- modded by elcabong">
+<addon id="skin.arctic_xbmb3c" version="0.9.3" name="Arctic_xbmb3c" provider-name="jurialmunkey -- modded by elcabong">
 	<requires>
-		<import addon="xbmc.gui" version="5.0.0" />
+		<import addon="xbmc.gui" version="4.0.0" />
 		<import addon="service.skin.widgets" version="0.0.25" />
 		<import addon="script.artwork.downloader" version="12.0.15" />
 		<import addon="script.tv.show.next.aired" version="5.0.7" />

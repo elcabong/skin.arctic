@@ -1,3 +1,9 @@
+[B]0.9.3[/B]
+xbmb3c feature update including rotating fanart
+
+[B]0.9.0[/B]
+updated by el_cabong for xbmb3c integration
+
 [B]0.6.6[/B]
 Fixed lyrics for Gotham
 Fixed weather icon colour
