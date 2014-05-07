@@ -319,10 +319,14 @@
     </variable>
     
     <variable name="extrafanart.path">
-    	<value condition="Skin.HasSetting(tvshows.use.extrafanart) + [Container.Content(tvshows) | Container.Content(seasons)]">$INFO[ListItem.Path,,extrafanart/]</value>
-    	<value condition="Skin.HasSetting(tvshows.use.extrafanart) + Container.Content(episodes)">$INFO[ListItem.Path,,../extrafanart/]</value>
-    	<value condition="Skin.HasSetting(music.use.extrafanart) + [Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]">$INFO[Skin.String(cdartlocation)]$INFO[ListItem.Artist,,extrafanart/]</value>
-    	<value condition="Skin.HasSetting(movies.use.extrafanart) + [Container.Content(movies)]">$INFO[ListItem.Path,,extrafanart/]</value>
+    	<value condition="!Skin.HasSetting(xbmb3c) + Skin.HasSetting(tvshows.use.extrafanart) + [Container.Content(tvshows) | Container.Content(seasons)]">$INFO[ListItem.Path,,extrafanart/]</value>
+    	<value condition="!Skin.HasSetting(xbmb3c) + Skin.HasSetting(tvshows.use.extrafanart) + Container.Content(episodes)">$INFO[ListItem.Path,,../extrafanart/]</value>
+    	<value condition="!Skin.HasSetting(xbmb3c) + Skin.HasSetting(music.use.extrafanart) + [Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]">$INFO[Skin.String(cdartlocation)]$INFO[ListItem.Artist,,extrafanart/]</value>
+    	<value condition="!Skin.HasSetting(xbmb3c) + Skin.HasSetting(movies.use.extrafanart) + [Container.Content(movies)]">$INFO[ListItem.Path,,extrafanart/]</value>
+    	<value condition="Skin.HasSetting(xbmb3c) + Skin.HasSetting(tvshows.use.extrafanart) + [Container.Content(tvshows) | Container.Content(seasons)]">$INFO[Window(Home).Property(MB3.Background.Item.FanArt)]</value>
+    	<value condition="Skin.HasSetting(xbmb3c) + Skin.HasSetting(tvshows.use.extrafanart) + Container.Content(episodes)">$INFO[Window(Home).Property(MB3.Background.Item.FanArt)]</value>
+    	<value condition="Skin.HasSetting(xbmb3c) + Skin.HasSetting(music.use.extrafanart) + [Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]">$INFO[Skin.String(cdartlocation)]$INFO[ListItem.Artist,,extrafanart/]</value>
+    	<value condition="Skin.HasSetting(xbmb3c) + Skin.HasSetting(movies.use.extrafanart) + Container.Content(movies)">$INFO[Window(Home).Property(MB3.Background.Item.FanArt)]</value>
     	<value>-</value>
     </variable>
     
@@ -361,7 +365,7 @@
             <imagepath background="true">$VAR[extrafanart.path]</imagepath>
             <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(Fanart.Animate)">Conditional</animation>
             <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(Fanart.Animate)">Conditional</animation>
-            <visible>!SubString(Container.FolderPath,plugin://,left) + !Skin.HasSetting(HideFanart) + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo] + !Window.IsActive(favourites)</visible>
+            <visible>!Skin.HasSetting(HideFanart) + ![Skin.HasSetting(BackgroundVideo) + Player.HasVideo] + !Window.IsActive(favourites)</visible>
             <visible>[Skin.HasSetting(tvshows.use.extrafanart) + [Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]] | [Skin.HasSetting(movies.use.extrafanart) + Container.Content(movies)] | [Skin.HasSetting(music.use.extrafanart) + [Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]]</visible>
         </control>
     </include>
