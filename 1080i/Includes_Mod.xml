@@ -5267,7 +5267,117 @@
 			<label>$INFO[Window.Property(NextUpEpisodeMB3.19.ShowTitle)]</label>
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.19.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.19.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.19.EpisodeNo),E,]</label2>
 			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.19.ShowTitle))</visible>
-		</item>		
+		</item>
+		<item id="21">
+			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.20.Path)])</onclick>
+			<icon>$INFO[Window.Property(NextUpEpisodeMB3.20.Thumb)]</icon>
+			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.20.Art(tvshow.poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(NextUpEpisodeMB3.20.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(NextUpEpisodeMB3.20.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(NextUpEpisodeMB3.20.Art(tvshow.clearlogo))]</property>
+			<label>$INFO[Window.Property(NextUpEpisodeMB3.20.ShowTitle)]</label>
+			<label2>$INFO[Window.Property(NextUpEpisodeMB3.20.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.20.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.20.EpisodeNo),E,]</label2>
+			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.20.ShowTitle))</visible>
+		</item>
+		<item id="22">
+			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.21.Path)])</onclick>
+			<icon>$INFO[Window.Property(NextUpEpisodeMB3.21.Thumb)]</icon>
+			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.21.Art(tvshow.poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(NextUpEpisodeMB3.21.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(NextUpEpisodeMB3.21.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(NextUpEpisodeMB3.21.Art(tvshow.clearlogo))]</property>
+			<label>$INFO[Window.Property(NextUpEpisodeMB3.21.ShowTitle)]</label>
+			<label2>$INFO[Window.Property(NextUpEpisodeMB3.21.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.21.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.21.EpisodeNo),E,]</label2>
+			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.21.ShowTitle))</visible>
+		</item>
+		<item id="23">
+			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.22.Path)])</onclick>
+			<icon>$INFO[Window.Property(NextUpEpisodeMB3.22.Thumb)]</icon>
+			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.22.Art(tvshow.poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(NextUpEpisodeMB3.22.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(NextUpEpisodeMB3.22.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(NextUpEpisodeMB3.22.Art(tvshow.clearlogo))]</property>
+			<label>$INFO[Window.Property(NextUpEpisodeMB3.22.ShowTitle)]</label>
+			<label2>$INFO[Window.Property(NextUpEpisodeMB3.22.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.22.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.22.EpisodeNo),E,]</label2>
+			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.22.ShowTitle))</visible>
+		</item>	
+		<item id="24">
+			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.23.Path)])</onclick>
+			<icon>$INFO[Window.Property(NextUpEpisodeMB3.23.Thumb)]</icon>
+			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.23.Art(tvshow.poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(NextUpEpisodeMB3.23.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(NextUpEpisodeMB3.23.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(NextUpEpisodeMB3.23.Art(tvshow.clearlogo))]</property>
+			<label>$INFO[Window.Property(NextUpEpisodeMB3.23.ShowTitle)]</label>
+			<label2>$INFO[Window.Property(NextUpEpisodeMB3.23.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.23.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.23.EpisodeNo),E,]</label2>
+			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.23.ShowTitle))</visible>
+		</item>
+		<item id="25">
+			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.24.Path)])</onclick>
+			<icon>$INFO[Window.Property(NextUpEpisodeMB3.24.Thumb)]</icon>
+			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.24.Art(tvshow.poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(NextUpEpisodeMB3.24.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(NextUpEpisodeMB3.24.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(NextUpEpisodeMB3.24.Art(tvshow.clearlogo))]</property>
+			<label>$INFO[Window.Property(NextUpEpisodeMB3.24.ShowTitle)]</label>
+			<label2>$INFO[Window.Property(NextUpEpisodeMB3.24.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.24.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.24.EpisodeNo),E,]</label2>
+			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.24.ShowTitle))</visible>
+		</item>
+		<item id="26">
+			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.25.Path)])</onclick>
+			<icon>$INFO[Window.Property(NextUpEpisodeMB3.25.Thumb)]</icon>
+			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.25.Art(tvshow.poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(NextUpEpisodeMB3.25.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(NextUpEpisodeMB3.25.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(NextUpEpisodeMB3.25.Art(tvshow.clearlogo))]</property>
+			<label>$INFO[Window.Property(NextUpEpisodeMB3.25.ShowTitle)]</label>
+			<label2>$INFO[Window.Property(NextUpEpisodeMB3.25.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.25.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.25.EpisodeNo),E,]</label2>
+			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.25.ShowTitle))</visible>
+		</item>	
+		<item id="27">
+			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.26.Path)])</onclick>
+			<icon>$INFO[Window.Property(NextUpEpisodeMB3.26.Thumb)]</icon>
+			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.26.Art(tvshow.poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(NextUpEpisodeMB3.26.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(NextUpEpisodeMB3.26.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(NextUpEpisodeMB3.26.Art(tvshow.clearlogo))]</property>
+			<label>$INFO[Window.Property(NextUpEpisodeMB3.26.ShowTitle)]</label>
+			<label2>$INFO[Window.Property(NextUpEpisodeMB3.26.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.26.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.26.EpisodeNo),E,]</label2>
+			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.26.ShowTitle))</visible>
+		</item>
+		<item id="28">
+			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.27.Path)])</onclick>
+			<icon>$INFO[Window.Property(NextUpEpisodeMB3.27.Thumb)]</icon>
+			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.27.Art(tvshow.poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(NextUpEpisodeMB3.27.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(NextUpEpisodeMB3.27.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(NextUpEpisodeMB3.27.Art(tvshow.clearlogo))]</property>
+			<label>$INFO[Window.Property(NextUpEpisodeMB3.27.ShowTitle)]</label>
+			<label2>$INFO[Window.Property(NextUpEpisodeMB3.27.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.27.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.27.EpisodeNo),E,]</label2>
+			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.27.ShowTitle))</visible>
+		</item>	
+		<item id="29">
+			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.28.Path)])</onclick>
+			<icon>$INFO[Window.Property(NextUpEpisodeMB3.28.Thumb)]</icon>
+			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.28.Art(tvshow.poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(NextUpEpisodeMB3.28.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(NextUpEpisodeMB3.28.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(NextUpEpisodeMB3.28.Art(tvshow.clearlogo))]</property>
+			<label>$INFO[Window.Property(NextUpEpisodeMB3.28.ShowTitle)]</label>
+			<label2>$INFO[Window.Property(NextUpEpisodeMB3.28.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.28.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.28.EpisodeNo),E,]</label2>
+			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.28.ShowTitle))</visible>
+		</item>	
+		<item id="30">
+			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.29.Path)])</onclick>
+			<icon>$INFO[Window.Property(NextUpEpisodeMB3.29.Thumb)]</icon>
+			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.29.Art(tvshow.poster))]</property>
+			<property name="Overlay">$INFO[Window.Property(NextUpEpisodeMB3.29.PercentPlayed)]</property>
+			<property name="Plot">$INFO[Window.Property(NextUpEpisodeMB3.29.Plot)]</property>
+			<property name="Logo">$INFO[Window.Property(NextUpEpisodeMB3.29.Art(tvshow.clearlogo))]</property>
+			<label>$INFO[Window.Property(NextUpEpisodeMB3.29.ShowTitle)]</label>
+			<label2>$INFO[Window.Property(NextUpEpisodeMB3.29.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.29.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.29.EpisodeNo),E,]</label2>
+			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.29.ShowTitle))</visible>
+		</item>
 		<!-- random tv -->
 		<item id="1">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RandomEpisode.1.File)])</onclick>
