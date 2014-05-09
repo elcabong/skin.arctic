@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="skin.arctic_xbmb3c" version="0.9.3" name="Arctic_xbmb3c" provider-name="jurialmunkey -- modded by elcabong">
 	<requires>
-		<import addon="xbmc.gui" version="4.0.0" />
+		<import addon="xbmc.gui" version="5.0.1" />
 		<import addon="service.skin.widgets" version="0.0.25" />
 		<import addon="script.artwork.downloader" version="12.0.15" />
 		<import addon="script.tv.show.next.aired" version="5.0.7" />
@@ -16,19 +16,6 @@
 	<extension point="xbmc.addon.metadata">
         <summary lang="en">Arctic is a light skin that focuses on simplicity</summary>
         <description lang="en">Arctic originally began as a modification seeking to bring an Alaska influence to Black's xperience1080 skin. It has since evolved into a skin of its own - focusing on simplicity, elegance and providing multiple view options.</description>
-        <disclaimer lang="de">Nur kompatibel mit XBMC 12.x "Frodo".</disclaimer>
-        <disclaimer lang="el">Συμβατό μόνο με την έκδοση XBMC 12.x "Frodo".</disclaimer>
-        <disclaimer lang="en">Compatible with XBMC 12.x "Frodo" only.</disclaimer>
-        <disclaimer lang="es">Solo compatible con XBMC 12.x "Frodo".</disclaimer>
-        <disclaimer lang="fr">Compatible avec XBMC 12.x "Frodo" uniquement.</disclaimer>
-        <disclaimer lang="gl">Solo compatible con XBMC 12.x "Frodo"</disclaimer>
-        <disclaimer lang="he">תומך בגירסת "פרודו" XMBC 12.x בלבד</disclaimer>
-        <disclaimer lang="hu">Csak az XBMC 12.x "Frodo"-val kompatibilis</disclaimer>
-        <disclaimer lang="it">Compatibile solo con XBMC 12.x "Frodo"</disclaimer>
-        <disclaimer lang="ko">XBMC 12.x "Frodo"에서만 사용할 수 있습니다.</disclaimer>
-        <disclaimer lang="nl">Alleen compatibel met XBMC 12.x "Frodo".</disclaimer>
-        <disclaimer lang="pl">Skóra kompatybilna wyłącznie z XBMC 12.x "Frodo".</disclaimer>
-        <disclaimer lang="ru">Совместим только с последними сборками XBMC 12.x "Frodo".</disclaimer>
         <platform>all</platform>
         <license>Creative Commons Attribution-Noncommercial-Share Alike 3.0</license>
         <forum>..</forum>
