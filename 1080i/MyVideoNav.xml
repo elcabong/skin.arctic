@@ -1,7 +1,7 @@
 <window>
     <defaultcontrol>54</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
-    <views>59,50,51,52,53,54,55,56,57,58,60,61,62,63,64,500,501,502</views>
+    <views>50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,500,501,502</views>
     <backgroundcolor>0</backgroundcolor>
     <onload condition="System.HasAddon(script.tvtunes) + Skin.HasSetting(TVTunes.Enabled) + !Player.HasMedia">RunScript(script.tvtunes,backend=True)</onload>
     <onload condition="System.HasAddon(script.tv.show.next.aired) + Library.HasContent(TVShows) + Skin.HasSetting(NextAired.Enabled)">RunScript(script.tv.show.next.aired,backend=True)</onload>
@@ -271,18 +271,6 @@
                     <onup>9223</onup>
                     <ondown>9223</ondown>
                     <include>ViewOptionsAnimations</include>
-                    <!-- Classic Info -->
-                    <control type="radiobutton" id="211">
-                        <include>ViewOptions.Button</include>
-                        <label>$LOCALIZE[42309]</label>
-                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
-                        <onclick>Container.SetViewMode(59)</onclick>
-                        <selected>Control.IsVisible(59)</selected>
-                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
-                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
-                        <radioposx>-19</radioposx>
-                        <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Sets) | Container.Content(seasons)</visible>
-                    </control>					
                     <!-- Big List -->
                     <control type="radiobutton" id="201">
                         <include>ViewOptions.Button</include>
@@ -401,6 +389,18 @@
                         <radioposx>-19</radioposx>
                         <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Seasons) | Container.Content(Sets) | Container.Content(Genres)</visible>
                     </control>
+                    <!-- Classic Info -->
+                    <control type="radiobutton" id="211">
+                        <include>ViewOptions.Button</include>
+                        <label>$LOCALIZE[42309]</label>
+                        <texturefocus>dialogs/options/buttons/default-fo.png</texturefocus>
+                        <onclick>Container.SetViewMode(59)</onclick>
+                        <selected>Control.IsVisible(59)</selected>
+                        <textureradiofocus>buttons/radio/options-radio-button-fo.png</textureradiofocus>
+                        <textureradionofocus>buttons/radio/options-radio-button-nf.png</textureradionofocus>
+                        <radioposx>-19</radioposx>
+                        <visible>Container.Content(Movies) | Container.Content(TVShows) | Container.Content(Sets) | Container.Content(seasons)</visible>
+                    </control>						
                     <!-- Info Poster -->
                     <control type="radiobutton" id="212">
                         <include>ViewOptions.Button</include>

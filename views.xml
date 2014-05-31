@@ -1,0 +1,20 @@
+﻿<views>
+    <view id="Big List" value="50" />
+    <view id="Info List" value="501" />
+    <view id="Medium List" value="51" />
+    <view id="Low List" value="52" />
+    <view id="Panel List" value="53" />
+    <view id="Banner List" value="54" />
+    <view id="Wide Banner" value="55" />    
+    <view id="Love Film" value="56" />    
+    <view id="Reel" value="57" />    
+    <view id="Classic Poster" value="58" />
+    <view id="Classic Info" value="59" />
+    <view id="Info Poster" value="60" />
+    <view id="Wall" value="61" />
+    <view id="Landscape" value="62" />
+    <view id="Info Wall" value="63" />
+	<view id="Poster Panel" value="64" />
+	<view id="Thumbnail" value="500" />
+	<view id="Info Strip" value="502" />
+</views>
