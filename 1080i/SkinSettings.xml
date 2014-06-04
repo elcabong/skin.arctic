@@ -6,7 +6,6 @@
     <onload condition="IsEmpty(Skin.String(rss.setting))">Skin.SetString(rss.setting,$LOCALIZE[1223])</onload>
     <onload condition="IsEmpty(Skin.String(UseRCB.name)) + Skin.HasSetting(UseRCB)">Skin.SetString(UseRCB.name,Rom Collection Browser)</onload>
     <onload condition="IsEmpty(Skin.String(UseRCB.name)) + !Skin.HasSetting(UseRCB)">Skin.SetString(UseRCB.name,Advanced Launcher)</onload>
-    <onload condition="System.HasAddon(plugin.video.xbmb3c) + IsEmpty(Skin.String(xbmb3c)) + !Skin.HasSetting(xbmb3c)">Skin.SetString(xbmb3c,true)</onload>
     <controls>
         <include>CommonSettingsItems</include>
         <include>SettingsHeader</include>
