@@ -6240,37 +6240,102 @@
 		<posx>35</posx>
 		
 		<control type="group">
-			<posy>84</posy>
+			<posy>0</posy>
 			<posx>572</posx>
 			<control type="image">
 				<posx>-5</posx>
 				<posy>-5</posy>
-				<width>204</width>
-				<height>199</height>
+				<width>234</width>
+				<height>284</height>
 				<texture border="35">views/newgloss/whitepanel-15.png</texture>
 				<colordiffuse>88eeeeee</colordiffuse>
 			</control>
 			<control type="image">
 				<posx>-5</posx>
-				<posy>164</posy>
-				<width>204</width>
-				<height>199</height>
+				<posy>248</posy>
+				<width>234</width>
+				<height>284</height>
 				<texture border="35" diffuse="views/posterview/diffuse-ref.png" flipy="true">views/newgloss/whitepanel-15.png</texture>
 				<colordiffuse>bbeeeeee</colordiffuse>
 				<visible>!Skin.HasSetting(HideCoverReflection)</visible>
 			</control>
 			<control type="image">
 				<posx>10</posx>
-				<posy>0</posy>
-				<width>169</width>
+				<posy>30</posy>
+				<width>204</width>
 				<height>169</height>
 				<texture>$INFO[Window(Weather).Property(Day0.FanartCode),weather/medium/,.png]</texture>
 				<aspectratio align="center">keep</aspectratio>
 				<colordiffuse>mod-infotags</colordiffuse>
 			</control>
 			<control type="label">
-				<posx>20</posx>
-				<posy>142</posy>
+				<posx>0</posx>
+				<posy>185</posy>
+				<height>40</height>
+				<width>214</width>
+				<font>Font-Condensed-S26-B</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[Window(Weather).Property(Day0.Outlook)]</label>
+				<scroll>false</scroll>
+				<textcolor>mod-infotags</textcolor>
+				<shadowcolor>mod-shadow</shadowcolor>
+				<wrapmultiline>true</wrapmultiline>
+			</control>				
+			<control type="grouplist">
+				<posx>25</posx>
+				<posy>224</posy>
+				<height>40</height>
+				<width>208</width>
+				<itemgap>0</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+				<orientation>horizontal</orientation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>8</posy>
+					<width>12</width>
+					<height>24</height>
+					<texture>weather/temp-high-small.png</texture>
+					<colordiffuse>mod-infotags</colordiffuse>
+				</control>
+				<control type="label">
+					<description>high temp</description>
+					<posx>4</posx>
+					<posy>0</posy>
+					<height>40</height>
+					<width min="0" max="80">auto</width>
+					<font>Font-Alaska-S28-L</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Window(Weather).Property(Day0.HighTemp)]$INFO[System.TemperatureUnits]</label>
+					<textcolor>mod-infotags</textcolor>
+					<shadowcolor>mod-shadow</shadowcolor>
+				</control>
+				<control type="image">
+					<posx>15</posx>
+					<posy>8</posy>
+					<width>12</width>
+					<height>24</height>
+					<texture>weather/temp-low-small.png</texture>
+					<colordiffuse>mod-infotags</colordiffuse>
+				</control>
+				<control type="label">
+					<description>low temp</description>
+					<posx>4</posx>
+					<posy>0</posy>
+					<height>40</height>
+					<width min="0" max="80">auto</width>
+					<font>Font-Alaska-S28-L</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Window(Weather).Property(Day0.LowTemp)]$INFO[System.TemperatureUnits]</label>
+					<textcolor>mod-infotags</textcolor>
+					<shadowcolor>mod-shadow</shadowcolor>
+				</control>
+			</control>
+			<control type="label">
+				<posx>35</posx>
+				<posy>20</posy>
 				<label>33006</label>
 				<align>center</align>
 				<font>Font-Alaska-S25-L</font>
@@ -6280,6 +6345,546 @@
 				<scroll>false</scroll>
 			</control>
 		</control>
+		
+		
+		<control type="group">
+			<posy>0</posy>
+			<posx>782</posx>
+			<control type="image">
+				<posx>-5</posx>
+				<posy>-5</posy>
+				<width>234</width>
+				<height>284</height>
+				<texture border="35">views/newgloss/whitepanel-15.png</texture>
+				<colordiffuse>88eeeeee</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>-5</posx>
+				<posy>248</posy>
+				<width>234</width>
+				<height>284</height>
+				<texture border="35" diffuse="views/posterview/diffuse-ref.png" flipy="true">views/newgloss/whitepanel-15.png</texture>
+				<colordiffuse>bbeeeeee</colordiffuse>
+				<visible>!Skin.HasSetting(HideCoverReflection)</visible>
+			</control>
+			<control type="image">
+				<posx>10</posx>
+				<posy>30</posy>
+				<width>204</width>
+				<height>169</height>
+				<texture>$INFO[Window(Weather).Property(Day1.FanartCode),weather/medium/,.png]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<colordiffuse>mod-infotags</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>185</posy>
+				<height>40</height>
+				<width>214</width>
+				<font>Font-Condensed-S26-B</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[Window(Weather).Property(Day1.Outlook)]</label>
+				<scroll>false</scroll>
+				<textcolor>mod-infotags</textcolor>
+				<shadowcolor>mod-shadow</shadowcolor>
+				<wrapmultiline>true</wrapmultiline>
+			</control>				
+			<control type="grouplist">
+				<posx>25</posx>
+				<posy>224</posy>
+				<height>40</height>
+				<width>208</width>
+				<itemgap>0</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+				<orientation>horizontal</orientation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>8</posy>
+					<width>12</width>
+					<height>24</height>
+					<texture>weather/temp-high-small.png</texture>
+					<colordiffuse>mod-infotags</colordiffuse>
+				</control>
+				<control type="label">
+					<description>high temp</description>
+					<posx>4</posx>
+					<posy>0</posy>
+					<height>40</height>
+					<width min="0" max="80">auto</width>
+					<font>Font-Alaska-S28-L</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Window(Weather).Property(Day1.HighTemp)]$INFO[System.TemperatureUnits]</label>
+					<textcolor>mod-infotags</textcolor>
+					<shadowcolor>mod-shadow</shadowcolor>
+				</control>
+				<control type="image">
+					<posx>15</posx>
+					<posy>8</posy>
+					<width>12</width>
+					<height>24</height>
+					<texture>weather/temp-low-small.png</texture>
+					<colordiffuse>mod-infotags</colordiffuse>
+				</control>
+				<control type="label">
+					<description>low temp</description>
+					<posx>4</posx>
+					<posy>0</posy>
+					<height>40</height>
+					<width min="0" max="80">auto</width>
+					<font>Font-Alaska-S28-L</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Window(Weather).Property(Day1.LowTemp)]$INFO[System.TemperatureUnits]</label>
+					<textcolor>mod-infotags</textcolor>
+					<shadowcolor>mod-shadow</shadowcolor>
+				</control>
+			</control>
+			<control type="label">
+				<posx>35</posx>
+				<posy>20</posy>
+				<label>$INFO[Window(Weather).Property(Day1.Title)]</label>
+				<align>center</align>
+				<font>Font-Alaska-S25-L</font>
+				<textcolor>mod-infotags</textcolor>
+				<shadowcolor>mod-shadow</shadowcolor>
+				<width>149</width>
+				<scroll>false</scroll>
+			</control>
+		</control>
+		
+
+		<control type="group">
+			<posy>0</posy>
+			<posx>992</posx>
+			<control type="image">
+				<posx>-5</posx>
+				<posy>-5</posy>
+				<width>234</width>
+				<height>284</height>
+				<texture border="35">views/newgloss/whitepanel-15.png</texture>
+				<colordiffuse>88eeeeee</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>-5</posx>
+				<posy>248</posy>
+				<width>234</width>
+				<height>284</height>
+				<texture border="35" diffuse="views/posterview/diffuse-ref.png" flipy="true">views/newgloss/whitepanel-15.png</texture>
+				<colordiffuse>bbeeeeee</colordiffuse>
+				<visible>!Skin.HasSetting(HideCoverReflection)</visible>
+			</control>
+			<control type="image">
+				<posx>10</posx>
+				<posy>30</posy>
+				<width>204</width>
+				<height>169</height>
+				<texture>$INFO[Window(Weather).Property(Day2.FanartCode),weather/medium/,.png]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<colordiffuse>mod-infotags</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>185</posy>
+				<height>40</height>
+				<width>214</width>
+				<font>Font-Condensed-S26-B</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[Window(Weather).Property(Day2.Outlook)]</label>
+				<scroll>false</scroll>
+				<textcolor>mod-infotags</textcolor>
+				<shadowcolor>mod-shadow</shadowcolor>
+				<wrapmultiline>true</wrapmultiline>
+			</control>				
+			<control type="grouplist">
+				<posx>25</posx>
+				<posy>224</posy>
+				<height>40</height>
+				<width>208</width>
+				<itemgap>0</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+				<orientation>horizontal</orientation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>8</posy>
+					<width>12</width>
+					<height>24</height>
+					<texture>weather/temp-high-small.png</texture>
+					<colordiffuse>mod-infotags</colordiffuse>
+				</control>
+				<control type="label">
+					<description>high temp</description>
+					<posx>4</posx>
+					<posy>0</posy>
+					<height>40</height>
+					<width min="0" max="80">auto</width>
+					<font>Font-Alaska-S28-L</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Window(Weather).Property(Day2.HighTemp)]$INFO[System.TemperatureUnits]</label>
+					<textcolor>mod-infotags</textcolor>
+					<shadowcolor>mod-shadow</shadowcolor>
+				</control>
+				<control type="image">
+					<posx>15</posx>
+					<posy>8</posy>
+					<width>12</width>
+					<height>24</height>
+					<texture>weather/temp-low-small.png</texture>
+					<colordiffuse>mod-infotags</colordiffuse>
+				</control>
+				<control type="label">
+					<description>low temp</description>
+					<posx>4</posx>
+					<posy>0</posy>
+					<height>40</height>
+					<width min="0" max="80">auto</width>
+					<font>Font-Alaska-S28-L</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Window(Weather).Property(Day2.LowTemp)]$INFO[System.TemperatureUnits]</label>
+					<textcolor>mod-infotags</textcolor>
+					<shadowcolor>mod-shadow</shadowcolor>
+				</control>
+			</control>
+			<control type="label">
+				<posx>35</posx>
+				<posy>20</posy>
+				<label>$INFO[Window(Weather).Property(Day2.Title)]</label>
+				<align>center</align>
+				<font>Font-Alaska-S25-L</font>
+				<textcolor>mod-infotags</textcolor>
+				<shadowcolor>mod-shadow</shadowcolor>
+				<width>149</width>
+				<scroll>false</scroll>
+			</control>
+		</control>
+		
+		<control type="group">
+			<posy>0</posy>
+			<posx>1202</posx>
+			<control type="image">
+				<posx>-5</posx>
+				<posy>-5</posy>
+				<width>234</width>
+				<height>284</height>
+				<texture border="35">views/newgloss/whitepanel-15.png</texture>
+				<colordiffuse>88eeeeee</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>-5</posx>
+				<posy>248</posy>
+				<width>234</width>
+				<height>284</height>
+				<texture border="35" diffuse="views/posterview/diffuse-ref.png" flipy="true">views/newgloss/whitepanel-15.png</texture>
+				<colordiffuse>bbeeeeee</colordiffuse>
+				<visible>!Skin.HasSetting(HideCoverReflection)</visible>
+			</control>
+			<control type="image">
+				<posx>10</posx>
+				<posy>30</posy>
+				<width>204</width>
+				<height>169</height>
+				<texture>$INFO[Window(Weather).Property(Day3.FanartCode),weather/medium/,.png]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<colordiffuse>mod-infotags</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>185</posy>
+				<height>40</height>
+				<width>214</width>
+				<font>Font-Condensed-S26-B</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[Window(Weather).Property(Day3.Outlook)]</label>
+				<scroll>false</scroll>
+				<textcolor>mod-infotags</textcolor>
+				<shadowcolor>mod-shadow</shadowcolor>
+				<wrapmultiline>true</wrapmultiline>
+			</control>				
+			<control type="grouplist">
+				<posx>25</posx>
+				<posy>224</posy>
+				<height>40</height>
+				<width>208</width>
+				<itemgap>0</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+				<orientation>horizontal</orientation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>8</posy>
+					<width>12</width>
+					<height>24</height>
+					<texture>weather/temp-high-small.png</texture>
+					<colordiffuse>mod-infotags</colordiffuse>
+				</control>
+				<control type="label">
+					<description>high temp</description>
+					<posx>4</posx>
+					<posy>0</posy>
+					<height>40</height>
+					<width min="0" max="80">auto</width>
+					<font>Font-Alaska-S28-L</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Window(Weather).Property(Day3.HighTemp)]$INFO[System.TemperatureUnits]</label>
+					<textcolor>mod-infotags</textcolor>
+					<shadowcolor>mod-shadow</shadowcolor>
+				</control>
+				<control type="image">
+					<posx>15</posx>
+					<posy>8</posy>
+					<width>12</width>
+					<height>24</height>
+					<texture>weather/temp-low-small.png</texture>
+					<colordiffuse>mod-infotags</colordiffuse>
+				</control>
+				<control type="label">
+					<description>low temp</description>
+					<posx>4</posx>
+					<posy>0</posy>
+					<height>40</height>
+					<width min="0" max="80">auto</width>
+					<font>Font-Alaska-S28-L</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Window(Weather).Property(Day3.LowTemp)]$INFO[System.TemperatureUnits]</label>
+					<textcolor>mod-infotags</textcolor>
+					<shadowcolor>mod-shadow</shadowcolor>
+				</control>
+			</control>
+			<control type="label">
+				<posx>35</posx>
+				<posy>20</posy>
+				<label>$INFO[Window(Weather).Property(Day3.Title)]</label>
+				<align>center</align>
+				<font>Font-Alaska-S25-L</font>
+				<textcolor>mod-infotags</textcolor>
+				<shadowcolor>mod-shadow</shadowcolor>
+				<width>149</width>
+				<scroll>false</scroll>
+			</control>
+		</control>
+		
+		<control type="group">
+			<posy>0</posy>
+			<posx>1412</posx>
+			<control type="image">
+				<posx>-5</posx>
+				<posy>-5</posy>
+				<width>234</width>
+				<height>284</height>
+				<texture border="35">views/newgloss/whitepanel-15.png</texture>
+				<colordiffuse>88eeeeee</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>-5</posx>
+				<posy>248</posy>
+				<width>234</width>
+				<height>284</height>
+				<texture border="35" diffuse="views/posterview/diffuse-ref.png" flipy="true">views/newgloss/whitepanel-15.png</texture>
+				<colordiffuse>bbeeeeee</colordiffuse>
+				<visible>!Skin.HasSetting(HideCoverReflection)</visible>
+			</control>
+			<control type="image">
+				<posx>10</posx>
+				<posy>30</posy>
+				<width>204</width>
+				<height>169</height>
+				<texture>$INFO[Window(Weather).Property(Day4.FanartCode),weather/medium/,.png]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<colordiffuse>mod-infotags</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>185</posy>
+				<height>40</height>
+				<width>214</width>
+				<font>Font-Condensed-S26-B</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[Window(Weather).Property(Day4.Outlook)]</label>
+				<scroll>false</scroll>
+				<textcolor>mod-infotags</textcolor>
+				<shadowcolor>mod-shadow</shadowcolor>
+				<wrapmultiline>true</wrapmultiline>
+			</control>				
+			<control type="grouplist">
+				<posx>25</posx>
+				<posy>224</posy>
+				<height>40</height>
+				<width>208</width>
+				<itemgap>0</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+				<orientation>horizontal</orientation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>8</posy>
+					<width>12</width>
+					<height>24</height>
+					<texture>weather/temp-high-small.png</texture>
+					<colordiffuse>mod-infotags</colordiffuse>
+				</control>
+				<control type="label">
+					<description>high temp</description>
+					<posx>4</posx>
+					<posy>0</posy>
+					<height>40</height>
+					<width min="0" max="80">auto</width>
+					<font>Font-Alaska-S28-L</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Window(Weather).Property(Day4.HighTemp)]$INFO[System.TemperatureUnits]</label>
+					<textcolor>mod-infotags</textcolor>
+					<shadowcolor>mod-shadow</shadowcolor>
+				</control>
+				<control type="image">
+					<posx>15</posx>
+					<posy>8</posy>
+					<width>12</width>
+					<height>24</height>
+					<texture>weather/temp-low-small.png</texture>
+					<colordiffuse>mod-infotags</colordiffuse>
+				</control>
+				<control type="label">
+					<description>low temp</description>
+					<posx>4</posx>
+					<posy>0</posy>
+					<height>40</height>
+					<width min="0" max="80">auto</width>
+					<font>Font-Alaska-S28-L</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Window(Weather).Property(Day4.LowTemp)]$INFO[System.TemperatureUnits]</label>
+					<textcolor>mod-infotags</textcolor>
+					<shadowcolor>mod-shadow</shadowcolor>
+				</control>
+			</control>
+			<control type="label">
+				<posx>35</posx>
+				<posy>20</posy>
+				<label>$INFO[Window(Weather).Property(Day4.Title)]</label>
+				<align>center</align>
+				<font>Font-Alaska-S25-L</font>
+				<textcolor>mod-infotags</textcolor>
+				<shadowcolor>mod-shadow</shadowcolor>
+				<width>149</width>
+				<scroll>false</scroll>
+			</control>
+		</control>
+
+		<control type="group">
+			<posy>0</posy>
+			<posx>1622</posx>
+			<control type="image">
+				<posx>-5</posx>
+				<posy>-5</posy>
+				<width>234</width>
+				<height>284</height>
+				<texture border="35">views/newgloss/whitepanel-15.png</texture>
+				<colordiffuse>88eeeeee</colordiffuse>
+			</control>
+			<control type="image">
+				<posx>-5</posx>
+				<posy>248</posy>
+				<width>234</width>
+				<height>284</height>
+				<texture border="35" diffuse="views/posterview/diffuse-ref.png" flipy="true">views/newgloss/whitepanel-15.png</texture>
+				<colordiffuse>bbeeeeee</colordiffuse>
+				<visible>!Skin.HasSetting(HideCoverReflection)</visible>
+			</control>
+			<control type="image">
+				<posx>10</posx>
+				<posy>30</posy>
+				<width>204</width>
+				<height>169</height>
+				<texture>$INFO[Window(Weather).Property(Day5.FanartCode),weather/medium/,.png]</texture>
+				<aspectratio align="center">keep</aspectratio>
+				<colordiffuse>mod-infotags</colordiffuse>
+			</control>
+			<control type="label">
+				<posx>0</posx>
+				<posy>185</posy>
+				<height>40</height>
+				<width>214</width>
+				<font>Font-Condensed-S26-B</font>
+				<align>center</align>
+				<aligny>center</aligny>
+				<label>$INFO[Window(Weather).Property(Day5.Outlook)]</label>
+				<scroll>false</scroll>
+				<textcolor>mod-infotags</textcolor>
+				<shadowcolor>mod-shadow</shadowcolor>
+				<wrapmultiline>true</wrapmultiline>
+			</control>				
+			<control type="grouplist">
+				<posx>25</posx>
+				<posy>224</posy>
+				<height>40</height>
+				<width>208</width>
+				<itemgap>0</itemgap>
+				<usecontrolcoords>true</usecontrolcoords>
+				<orientation>horizontal</orientation>
+				<control type="image">
+					<posx>0</posx>
+					<posy>8</posy>
+					<width>12</width>
+					<height>24</height>
+					<texture>weather/temp-high-small.png</texture>
+					<colordiffuse>mod-infotags</colordiffuse>
+				</control>
+				<control type="label">
+					<description>high temp</description>
+					<posx>4</posx>
+					<posy>0</posy>
+					<height>40</height>
+					<width min="0" max="80">auto</width>
+					<font>Font-Alaska-S28-L</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Window(Weather).Property(Day5.HighTemp)]$INFO[System.TemperatureUnits]</label>
+					<textcolor>mod-infotags</textcolor>
+					<shadowcolor>mod-shadow</shadowcolor>
+				</control>
+				<control type="image">
+					<posx>15</posx>
+					<posy>8</posy>
+					<width>12</width>
+					<height>24</height>
+					<texture>weather/temp-low-small.png</texture>
+					<colordiffuse>mod-infotags</colordiffuse>
+				</control>
+				<control type="label">
+					<description>low temp</description>
+					<posx>4</posx>
+					<posy>0</posy>
+					<height>40</height>
+					<width min="0" max="80">auto</width>
+					<font>Font-Alaska-S28-L</font>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[Window(Weather).Property(Day5.LowTemp)]$INFO[System.TemperatureUnits]</label>
+					<textcolor>mod-infotags</textcolor>
+					<shadowcolor>mod-shadow</shadowcolor>
+				</control>
+			</control>
+			<control type="label">
+				<posx>35</posx>
+				<posy>20</posy>
+				<label>$INFO[Window(Weather).Property(Day5.Title)]</label>
+				<align>center</align>
+				<font>Font-Alaska-S25-L</font>
+				<textcolor>mod-infotags</textcolor>
+				<shadowcolor>mod-shadow</shadowcolor>
+				<width>149</width>
+				<scroll>false</scroll>
+			</control>
+		</control>
+		
+		
+		<!--
 		<control type="group">
 			<posy>84</posy>
 			<posx>758</posx>
@@ -6610,7 +7215,7 @@
 					</control>
 				</control>
 			</control>
-		</control>
+		</control>-->
 		<control type="image">
 			<posx>10</posx>
 			<posy>10</posy>
@@ -6656,10 +7261,19 @@
 			<texture border="25">arctic/common/border.png</texture>
 			<colordiffuse>Mod_Border</colordiffuse>
 		</control>
-		
 		<control type="group">
+			<control type="label">
+				<description>current location</description>
+				<posx>0</posx>
+				<posy>-43</posy>
+				<width>550</width>
+				<height>30</height>
+				<font>Font-Alaska-S45</font>
+				<label>$INFO[Window(Weather).Property(Location)]</label>
+				<textcolor>ddwhite</textcolor>
+			</control>
 			<posx>25</posx>
-			<posy>110</posy>
+			<posy>65</posy>
 			<control type="label">
 				<description>current temp value</description>
 				<posx>0</posx>
@@ -6685,8 +7299,8 @@
 				<posy>-5</posy>
 				<control type="label">
 					<description>current feels like label</description>
-					<posx>0</posx>
-					<posy>0</posy>
+					<posx>-75</posx>
+					<posy>10</posy>
 					<width>450</width>
 					<height>30</height>
 					<align>right</align>
@@ -6697,7 +7311,7 @@
 				<control type="label">
 					<description>current feels like value</description>
 					<posx>0</posx>
-					<posy>40</posy>
+					<posy>10</posy>
 					<width>450</width>
 					<height>30</height>
 					<align>right</align>
@@ -6707,8 +7321,8 @@
 				</control>
 				<control type="label">
 					<description>current humidity label</description>
-					<posx>0</posx>
-					<posy>80</posy>
+					<posx>-75</posx>
+					<posy>50</posy>
 					<width>450</width>
 					<height>30</height>
 					<align>right</align>
@@ -6719,7 +7333,7 @@
 				<control type="label">
 					<description>current humidity value</description>
 					<posx>0</posx>
-					<posy>120</posy>
+					<posy>50</posy>
 					<width>450</width>
 					<height>30</height>
 					<align>right</align>
@@ -6727,32 +7341,63 @@
 					<label>$INFO[Window(Weather).Property(Current.Humidity)]</label>
 					<textcolor>ddwhite</textcolor>
 				</control>
+				<control type="label">
+					<description>current dew point label</description>
+					<posx>-75</posx>
+					<posy>90</posy>
+					<width>450</width>
+					<height>30</height>
+					<align>right</align>
+					<font>Font-Alaska-S33</font>
+					<label>$LOCALIZE[405]</label>
+					<textcolor>80FFFFFF</textcolor>
+				</control>
+				<control type="label">
+					<description>current dew point value</description>
+					<posx>0</posx>
+					<posy>90</posy>
+					<width>450</width>
+					<height>30</height>
+					<align>right</align>
+					<font>Font-Alaska-S33</font>
+					<label>$INFO[Window(Weather).Property(Current.DewPoint)]$INFO[System.TemperatureUnits]</label>
+					<textcolor>ddwhite</textcolor>
+				</control>
+				<control type="label">
+					<description>current uv label</description>
+					<posx>-75</posx>
+					<posy>130</posy>
+					<width>450</width>
+					<height>30</height>
+					<align>right</align>
+					<font>Font-Alaska-S33</font>
+					<label>$LOCALIZE[403]</label>
+					<textcolor>80FFFFFF</textcolor>
+				</control>
+				<control type="label">
+					<description>current uv value</description>
+					<posx>0</posx>
+					<posy>130</posy>
+					<width>450</width>
+					<height>30</height>
+					<align>right</align>
+					<font>Font-Alaska-S33</font>
+					<label>$INFO[Window(Weather).Property(Current.UVIndex)]</label>
+					<textcolor>ddwhite</textcolor>
+				</control>
 			</control>
+			<control type="label">
+				<description>current wind value</description>
+				<posx>0</posx>
+				<posy>160</posy>
+				<width>450</width>
+				<height>30</height>
+				<align>left</align>
+				<font>Font-Alaska-S33</font>
+				<label>$LOCALIZE[404] $INFO[Window(Weather).Property(Current.Wind)]</label>
+				<textcolor>ddwhite</textcolor>
+			</control>	
 		</control>						
-		<control type="grouplist">
-			<posx>585</posx>
-			<posy>18</posy>
-			<orientation>vertical</orientation>
-			<itemgap>1</itemgap>
-			<align>left</align>
-			<control type="label">
-				<label>[B]$INFO[Window(Weather).Property(Location)]  -  $INFO[System.Date(DDD d mmm yyyy)]:[/B]  $INFO[Window(Weather).Property(Day0.Outlook)] $INFO[Window(Weather).Property(Day0.LowTemp), (, - ]$INFO[Window(Weather).Property(Day0.HighTemp)]$INFO[System.TemperatureUnits,,)]</label>
-				<align>left</align>
-				<font>Font-Condensed-S28</font>
-				<textcolor>mod-infotags-l</textcolor>
-				<width>1250</width>
-				<scroll>false</scroll>
-			</control>
-		
-			<control type="label">
-				<label>[B]$LOCALIZE[401]:[/B] $INFO[Window(Weather).Property(Current.Temperature)]$INFO[System.TemperatureUnits]    [B]$LOCALIZE[402]:[/B] $INFO[Window(Weather).Property(Current.FeelsLike)]$INFO[System.TemperatureUnits]    [B]$LOCALIZE[406]:[/B] $INFO[Window(Weather).Property(Current.Humidity)]    [B]$LOCALIZE[405]:[/B] $INFO[Window(Weather).Property(Current.DewPoint)]$INFO[System.TemperatureUnits]    [B]$LOCALIZE[403]:[/B] $INFO[Window(Weather).Property(Current.UVIndex)]    [B]$LOCALIZE[404]:[/B] $INFO[Window(Weather).Property(Current.Wind)]</label>
-				<align>left</align>
-				<font>Font-Condensed-S28</font>
-				<textcolor>mod-infotags-l</textcolor>
-				<width>1250</width>
-				<scroll>false</scroll>
-			</control>
-		</control>
 	</include>
 	<include name="Mod_WidgetSlideshow">
 		<posx>35</posx>
