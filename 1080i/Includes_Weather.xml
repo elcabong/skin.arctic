@@ -119,6 +119,488 @@
                 <effect type="zoom" start="100" end="85" time="300" center="960,600" tween="sine" easing="out" />
             </animation>
             <visible>!Window.IsActive(favourites)</visible>
+			
+
+
+
+
+            <control type="group" id="300">
+                <width>950</width>
+                <height>620</height>
+                <posy>100</posy>
+				<posx>100</posx>
+                <animation type="WindowOpen">
+                    <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="575" delay="175" />
+                    <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="175" />
+                    <effect type="zoom" start="70" end="100" center="1522,438" tween="cubic" easing="out" time="400" delay="175" /> 
+                </animation>
+                <animation type="Visible">
+                    <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="575" delay="175" />
+                    <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="175" />
+                    <effect type="zoom" start="70" end="100" center="1522,438" tween="cubic" easing="out" time="400" delay="175" /> 
+                </animation>
+                <animation type="Hidden">
+                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
+                    <effect type="zoom" start="100" end="85" time="300" center="960,500" tween="sine" easing="out" />
+                </animation>
+                <visible>Weather.IsFetched + !IsEmpty(Window(Weather).Property(Hourly.IsFetched))</visible>
+                <control type="button" id="301">
+                    <posx>27</posx>
+                    <posy>-50</posy>
+                    <width>300</width>
+                    <height>40</height>
+                    <label>$LOCALIZE[41696]</label>
+                    <textcolor>Mod_Tags</textcolor>
+                    <focusedcolor>Mod_Tags_Dark</focusedcolor>
+                    <font>Font-Alaska-S32-BL</font>
+                    <onleft>201</onleft>
+                    <onright>101</onright>
+                    <onup>9111</onup>
+                    <ondown>310</ondown>
+                    <align>left</align>
+                    <animation effect="fade" start="100" end="30" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(301)">Conditional</animation>
+                </control>
+                <control type="image">
+                    <description>List Panel</description>
+                    <posx>14</posx>
+                    <posy>-3</posy>
+                    <width>1040</width>
+                    <height>575</height>
+                    <texture border="15">arctic/common/panel.png</texture>
+                    <animation effect="fade" start="100" end="75" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(310)">Conditional</animation>
+                </control>
+                <control type="image">
+                    <description>List Border</description>
+                    <posx>4</posx>
+                    <posy>-13</posy>
+                    <width>1060</width>
+                    <height>595</height>
+                    <texture border="25">arctic/common/border.png</texture>
+                    <animation effect="fade" start="100" end="75" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(310)">Conditional</animation>
+                </control>
+                <control type="list" id="310">
+                    <posx>16</posx>
+                    <posy>1</posy>
+                    <height>570</height>
+                    <width>1040</width>
+                    <pagecontrol>311</pagecontrol>
+                    <onleft>301</onleft>
+                    <onright>301</onright>
+                    <onup>301</onup>
+                    <ondown>310</ondown>
+                    <viewtype label="List">list</viewtype>
+                    <scrolltime tween="cubic" easing="out">500</scrolltime>
+                    <preloaditems>2</preloaditems>
+                    <animation effect="fade" start="100" end="75" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(310)">Conditional</animation>
+                    <itemlayout height="95">
+                        <control type="image">
+                            <description>List separator</description>
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>810</width>
+                            <height>96</height>
+                            <texture border="90,3,90,3">views/list/other/separator.png</texture>
+                        </control>
+                        <control type="label">
+                            <description>Label</description>
+                            <posx>25</posx>
+                            <posy>15</posy>
+                            <width>140</width>
+                            <height>32</height>
+                            <font>Font-Condensed-S32</font>
+                            <align>left</align>
+                            <label>[B]$INFO[ListItem.Label][/B]</label>
+                            <textcolor>aawhite</textcolor>
+                            <selectedcolor>aawhite</selectedcolor>
+                            <scroll>false</scroll>
+                        </control>
+                        <control type="label">
+                            <description>Label</description>
+                            <posx>25</posx>
+                            <posy>50</posy>
+                            <width>140</width>
+                            <height>32</height>
+                            <font>Font-Condensed-S32</font>
+                            <align>left</align>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <textcolor>77white</textcolor>
+                            <selectedcolor>77white</selectedcolor>
+                            <scroll>false</scroll>
+                        </control>
+                        <control type="image">
+                            <posx>160</posx>
+                            <posy>-3</posy>
+                            <width>100</width>
+                            <height>100</height>
+                            <texture>$INFO[ListItem.Icon]</texture>
+                            <colordiffuse>aawhite</colordiffuse>
+                        </control>
+                        <control type="label">
+                            <description>outlook label</description>
+                            <posx>260</posx>
+                            <posy>0</posy>
+                            <width>390</width>
+                            <height>95</height>
+                            <font>Font-Condensed-S36</font>
+                            <label>$INFO[ListItem.Property(outlook)]</label>
+                            <textcolor>77white</textcolor>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                        </control>
+                        <control type="image">
+                            <description>temp icon</description>
+                            <posx>665</posx>
+                            <posy>23</posy>
+                            <height>48</height>
+                            <width>24</width>
+                            <texture>weather/temp-mid.png</texture>
+                            <colordiffuse>77white</colordiffuse>
+                        </control>
+                        <control type="label">
+                            <description>temp value</description>
+                            <posx>650</posx>
+                            <posy>0</posy>
+                            <width>150</width>
+                            <height>95</height>
+                            <font>Font-Condensed-S42-B</font>
+                            <label>$INFO[ListItem.Property(temp)]</label>
+                            <textcolor>aawhite</textcolor>
+                            <align>right</align>
+                            <aligny>center</aligny>
+                        </control>
+						
+						
+                            <control type="image">
+                                <description>wind direction icon</description>
+                                <posx>710</posx>
+								<posy>20</posy>
+								<width>56</width>
+								<height>56</height>
+								<texture>$INFO[ListItem.Property(WindDegree)]</texture>
+                                <colordiffuse>aawhite</colordiffuse>
+                            </control>
+                            <control type="label">
+                                <description>wind speed label</description>
+                                <posx>770</posx>
+                                <posy>0</posy>
+                                <width min="0" max="250">auto</width>
+                                <height>95</height>
+                                <font>Font-Condensed-S36</font>
+                                <label>$INFO[ListItem.Property(WindSpeed)]</label>
+                                <textcolor>aawhite</textcolor>
+                            </control>						
+							<control type="image">
+								<posx>890</posx>
+								<posy>20</posy>
+								<width>56</width>
+								<height>56</height>
+								<colordiffuse>aawhite</colordiffuse>
+								<texture>weather/humidity.png</texture>
+							</control>
+							<control type="label">
+								<description>current feels like label</description>
+								<posx>940</posx>
+								<posy>0</posy>
+								<width>250</width>
+								<height>95</height>
+								<font>Font-Condensed-S34</font>
+								<label>$INFO[ListItem.Property(CurrentHumidity)]</label>
+								<textcolor>ddwhite</textcolor>
+								<aligny>center</aligny>
+							</control>								
+						
+                    </itemlayout>
+                    <focusedlayout height="95">
+                        <control type="image">
+                            <description>List separator</description>
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>1040</width>
+                            <height>96</height>
+                            <texture border="90,3,90,3">views/list/other/separator.png</texture>
+                        </control>
+                        <control type="image">
+                            <posx>0</posx>
+                            <posy>0</posy>
+                            <width>1040</width>
+                            <height>94</height>
+                            <texture border="150,1,150,1">views/other/focus.png</texture>
+                            <animation type="Focus" condition="Container(310).OnNext" reversible="false">
+                                <effect type="slide" start="0,-100" end="0,0" time="300" tween="back" easing="out" />
+                            </animation>
+                            <animation type="Focus" condition="Container(310).OnPrevious" reversible="false">
+                                <effect type="slide" start="0,100" end="0,0" time="300" tween="back" easing="out" />
+                            </animation>
+                            <include>visiblehidefadeinfo</include>
+                            <visible>Control.HasFocus(310)</visible>
+                        </control>
+                        <control type="group">
+                            <animation type="Focus" condition="Container(310).OnNext | Container(310).OnPrevious" reversible="false">
+                                <effect type="fade" start="64" end="100" time="500" tween="sine" easing="inout" />
+                            </animation>
+                            <animation effect="fade" start="100" end="64" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(310)">Conditional</animation>
+                            <control type="label">
+                                <description>Label</description>
+                                <posx>25</posx>
+                                <posy>15</posy>
+                                <width>140</width>
+                                <height>32</height>
+                                <font>Font-Condensed-S32</font>
+                                <align>left</align>
+                                <label>[B]$INFO[ListItem.Label][/B]</label>
+                                <textcolor>eewhite</textcolor>
+                                <selectedcolor>eewhite</selectedcolor>
+                                <scroll>false</scroll>
+                            </control>
+                            <control type="label">
+                                <description>Label</description>
+                                <posx>25</posx>
+                                <posy>50</posy>
+                                <width>140</width>
+                                <height>32</height>
+                                <font>Font-Condensed-S32</font>
+                                <align>left</align>
+                                <label>$INFO[ListItem.Label2]</label>
+                                <textcolor>aawhite</textcolor>
+                                <selectedcolor>aawhite</selectedcolor>
+                                <scroll>false</scroll>
+                            </control>
+                            <control type="image">
+                                <posx>160</posx>
+                                <posy>-3</posy>
+                                <width>100</width>
+                                <height>100</height>
+                                <texture>$INFO[ListItem.Icon]</texture>
+                                <colordiffuse>eewhite</colordiffuse>
+                            </control>
+                            <control type="label">
+                                <description>outlook label</description>
+                                <posx>260</posx>
+                                <posy>0</posy>
+                                <width>390</width>
+                                <height>95</height>
+                                <font>Font-Condensed-S36</font>
+                                <label>$INFO[ListItem.Property(outlook)]</label>
+                                <textcolor>aawhite</textcolor>
+                                <align>left</align>
+                                <aligny>center</aligny>
+                            </control>
+                            <control type="image">
+                                <description>temp icon</description>
+                                <posx>665</posx>
+                                <posy>23</posy>
+                                <height>48</height>
+                                <width>24</width>
+                                <texture>weather/temp-mid.png</texture>
+                                <colordiffuse>aawhite</colordiffuse>
+                            </control>
+                            <control type="label">
+                                <description>temp value</description>
+                                <posx>650</posx>
+                                <posy>0</posy>
+                                <width>150</width>
+                                <height>95</height>
+                                <font>Font-Condensed-S42-B</font>
+                                <label>$INFO[ListItem.Property(temp)]</label>
+                                <textcolor>eewhite</textcolor>
+                                <align>right</align>
+                                <aligny>center</aligny>
+                            </control>
+                            <control type="image">
+                                <description>wind direction icon</description>
+                                <posx>710</posx>
+								<posy>20</posy>
+								<width>56</width>
+								<height>56</height>
+                                <texture>$INFO[ListItem.Property(WindDegree)]</texture>
+                                <colordiffuse>aawhite</colordiffuse>
+                            </control>
+                            <control type="label">
+                                <description>wind speed label</description>
+                                <posx>770</posx>
+                                <posy>0</posy>
+                                <width min="0" max="250">auto</width>
+                                <height>95</height>
+                                <font>Font-Condensed-S36</font>
+                                <label>$INFO[ListItem.Property(WindSpeed)]</label>
+                                <textcolor>aawhite</textcolor>
+                            </control>
+							<control type="image">
+								<posx>890</posx>
+								<posy>20</posy>
+								<width>56</width>
+								<height>56</height>
+								<colordiffuse>aawhite</colordiffuse>
+								<texture>weather/humidity.png</texture>
+							</control>
+							<control type="label">
+								<description>current feels like label</description>
+								<posx>940</posx>
+								<posy>0</posy>
+								<width>250</width>
+								<height>95</height>
+								<font>Font-Condensed-S34</font>
+								<label>$INFO[ListItem.Property(CurrentHumidity)]</label>
+								<textcolor>ddwhite</textcolor>
+								<aligny>center</aligny>
+							</control>							
+                        </control>
+                    </focusedlayout>
+                    <content>
+                        <item>
+    						<icon>$LOCALIZE[31909]</icon>
+    						<onclick>noop</onclick>
+    						<visible>IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+    					</item>
+    					<item>
+    						<label>$INFO[Window.Property(Hourly.1.Time)]</label>
+    						<label2>$INFO[Window.Property(Hourly.1.ShortDate)]</label2>
+    						<icon>$INFO[Window.Property(Hourly.1.FanartCode),weather/small/,.png]</icon>
+    						<property name="temp">$INFO[Window.Property(Hourly.1.Temperature)]</property>
+    						<property name="outlook">$INFO[Window.Property(Hourly.1.Outlook)]</property>
+    						<property name="WindSpeed">$INFO[Window.Property(Hourly.1.WindSpeed)]</property>
+    						<property name="WindDegree">$INFO[Window.Property(Hourly.1.WindDegree),special://skin/extras/weather/directions/small/,.png]</property>
+    						<property name="CurrentHumidity">$INFO[Window.Property(Hourly.1.Humidity)]</property>
+							<onclick>noop</onclick>
+    						<visible>!IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+    					</item>
+    					<item>
+    						<label>$INFO[Window.Property(Hourly.2.Time)]</label>
+    						<label2>$INFO[Window.Property(Hourly.2.ShortDate)]</label2>
+    						<icon>$INFO[Window.Property(Hourly.2.FanartCode),weather/small/,.png]</icon>
+    						<property name="temp">$INFO[Window.Property(Hourly.2.Temperature)]</property>
+    						<property name="outlook">$INFO[Window.Property(Hourly.2.Outlook)]</property>
+    						<property name="WindSpeed">$INFO[Window.Property(Hourly.2.WindSpeed)]</property>
+    						<property name="WindDegree">$INFO[Window.Property(Hourly.2.WindDegree),special://skin/extras/weather/directions/small/,.png]</property>
+    						<property name="CurrentHumidity">$INFO[Window.Property(Hourly.2.Humidity)]</property>
+    						<onclick>noop</onclick>
+    						<visible>!IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+    					</item>
+    					<item>
+    						<label>$INFO[Window.Property(Hourly.3.Time)]</label>
+    						<label2>$INFO[Window.Property(Hourly.3.ShortDate)]</label2>
+    						<icon>$INFO[Window.Property(Hourly.3.FanartCode),weather/small/,.png]</icon>
+    						<property name="temp">$INFO[Window.Property(Hourly.3.Temperature)]</property>
+    						<property name="outlook">$INFO[Window.Property(Hourly.3.Outlook)]</property>
+    						<property name="WindSpeed">$INFO[Window.Property(Hourly.3.WindSpeed)]</property>
+    						<property name="WindDegree">$INFO[Window.Property(Hourly.3.WindDegree),special://skin/extras/weather/directions/small/,.png]</property>
+    						<property name="CurrentHumidity">$INFO[Window.Property(Hourly.3.Humidity)]</property>
+    						<onclick>noop</onclick>
+    						<visible>!IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+    					</item>
+    					<item>
+    						<label>$INFO[Window.Property(Hourly.4.Time)]</label>
+    						<label2>$INFO[Window.Property(Hourly.4.ShortDate)]</label2>
+    						<icon>$INFO[Window.Property(Hourly.4.FanartCode),weather/small/,.png]</icon>
+    						<property name="temp">$INFO[Window.Property(Hourly.4.Temperature)]</property>
+    						<property name="outlook">$INFO[Window.Property(Hourly.4.Outlook)]</property>
+    						<property name="WindSpeed">$INFO[Window.Property(Hourly.4.WindSpeed)]</property>
+    						<property name="WindDegree">$INFO[Window.Property(Hourly.4.WindDegree),special://skin/extras/weather/directions/small/,.png]</property>
+    						<property name="CurrentHumidity">$INFO[Window.Property(Hourly.4.Humidity)]</property>
+    						<onclick>noop</onclick>
+    						<visible>!IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+    					</item>
+    					<item>
+    						<label>$INFO[Window.Property(Hourly.5.Time)]</label>
+    						<label2>$INFO[Window.Property(Hourly.5.ShortDate)]</label2>
+    						<icon>$INFO[Window.Property(Hourly.5.FanartCode),weather/small/,.png]</icon>
+    						<property name="temp">$INFO[Window.Property(Hourly.5.Temperature)]</property>
+    						<property name="outlook">$INFO[Window.Property(Hourly.5.Outlook)]</property>
+    						<property name="WindSpeed">$INFO[Window.Property(Hourly.5.WindSpeed)]</property>
+    						<property name="WindDegree">$INFO[Window.Property(Hourly.5.WindDegree),special://skin/extras/weather/directions/small/,.png]</property>
+    						<property name="CurrentHumidity">$INFO[Window.Property(Hourly.5.Humidity)]</property>
+    						<onclick>noop</onclick>
+    						<visible>!IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+    					</item>
+    					<item>
+    						<label>$INFO[Window.Property(Hourly.6.Time)]</label>
+    						<label2>$INFO[Window.Property(Hourly.6.ShortDate)]</label2>
+    						<icon>$INFO[Window.Property(Hourly.6.FanartCode),weather/small/,.png]</icon>
+    						<property name="temp">$INFO[Window.Property(Hourly.6.Temperature)]</property>
+    						<property name="outlook">$INFO[Window.Property(Hourly.6.Outlook)]</property>
+    						<property name="WindSpeed">$INFO[Window.Property(Hourly.6.WindSpeed)]</property>
+    						<property name="WindDegree">$INFO[Window.Property(Hourly.6.WindDegree),special://skin/extras/weather/directions/small/,.png]</property>
+    						<property name="CurrentHumidity">$INFO[Window.Property(Hourly.6.Humidity)]</property>
+    						<onclick>noop</onclick>
+    						<visible>!IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+    					</item>
+    					<item>
+    						<label>$INFO[Window.Property(Hourly.7.Time)]</label>
+    						<label2>$INFO[Window.Property(Hourly.7.ShortDate)]</label2>
+    						<icon>$INFO[Window.Property(Hourly.7.FanartCode),weather/small/,.png]</icon>
+    						<property name="temp">$INFO[Window.Property(Hourly.7.Temperature)]</property>
+    						<property name="outlook">$INFO[Window.Property(Hourly.7.Outlook)]</property>
+    						<property name="WindSpeed">$INFO[Window.Property(Hourly.7.WindSpeed)]</property>
+    						<property name="WindDegree">$INFO[Window.Property(Hourly.7.WindDegree),special://skin/extras/weather/directions/small/,.png]</property>
+    						<property name="CurrentHumidity">$INFO[Window.Property(Hourly.7.Humidity)]</property>
+    						<onclick>noop</onclick>
+    						<visible>!IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+    					</item>
+    					<item>
+    						<label>$INFO[Window.Property(Hourly.8.Time)]</label>
+    						<label2>$INFO[Window.Property(Hourly.8.ShortDate)]</label2>
+    						<icon>$INFO[Window.Property(Hourly.8.FanartCode),weather/small/,.png]</icon>
+    						<property name="temp">$INFO[Window.Property(Hourly.8.Temperature)]</property>
+    						<property name="outlook">$INFO[Window.Property(Hourly.8.Outlook)]</property>
+    						<property name="WindSpeed">$INFO[Window.Property(Hourly.8.WindSpeed)]</property>
+    						<property name="WindDegree">$INFO[Window.Property(Hourly.8.WindDegree),special://skin/extras/weather/directions/small/,.png]</property>
+    						<property name="CurrentHumidity">$INFO[Window.Property(Hourly.8.Humidity)]</property>
+    						<onclick>noop</onclick>
+    						<visible>!IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+    					</item>
+    					<item>
+    						<label>$INFO[Window.Property(Hourly.9.Time)]</label>
+    						<label2>$INFO[Window.Property(Hourly.9.ShortDate)]</label2>
+    						<icon>$INFO[Window.Property(Hourly.9.FanartCode),weather/small/,.png]</icon>
+    						<property name="temp">$INFO[Window.Property(Hourly.9.Temperature)]</property>
+    						<property name="outlook">$INFO[Window.Property(Hourly.9.Outlook)]</property>
+    						<property name="WindSpeed">$INFO[Window.Property(Hourly.9.WindSpeed)]</property>
+    						<property name="WindDegree">$INFO[Window.Property(Hourly.9.WindDegree),special://skin/extras/weather/directions/small/,.png]</property>
+    						<property name="CurrentHumidity">$INFO[Window.Property(Hourly.9.Humidity)]</property>
+    						<onclick>noop</onclick>
+    						<visible>!IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+    					</item>
+    					<item>
+    						<label>$INFO[Window.Property(Hourly.10.Time)]</label>
+    						<label2>$INFO[Window.Property(Hourly.10.ShortDate)]</label2>
+    						<icon>$INFO[Window.Property(Hourly.10.FanartCode),weather/small/,.png]</icon>
+    						<property name="temp">$INFO[Window.Property(Hourly.10.Temperature)]</property>
+    						<property name="outlook">$INFO[Window.Property(Hourly.10.Outlook)]</property>
+    						<property name="WindSpeed">$INFO[Window.Property(Hourly.10.WindSpeed)]</property>
+    						<property name="WindDegree">$INFO[Window.Property(Hourly.10.WindDegree),special://skin/extras/weather/directions/small/,.png]</property>
+    						<property name="CurrentHumidity">$INFO[Window.Property(Hourly.10.Humidity)]</property>
+    						<onclick>noop</onclick>
+    						<visible>!IsEmpty(Window.Property(Hourly.IsFetched))</visible>
+    					</item>
+                    </content>
+                </control>
+                <control type="image" id="313">
+                    <animation effect="fade" start="100" end="0" time="0" delay="1500">WindowOpen</animation>
+                </control>
+                <control type="image" id="312">
+                    <animation effect="fade" start="0" end="100" time="0">Visible</animation>
+                    <animation effect="fade" start="100" end="0" time="0">Hidden</animation>
+                    <visible>Control.HasFocus(311) | !Control.IsVisible(313)</visible>
+                </control>
+                <control type="image" id="312">
+                    <animation effect="fade" start="0" end="100" time="0">Visible</animation>
+                    <animation effect="fade" start="100" end="0" time="0" delay="1500">Hidden</animation>
+                    <visible>!Control.HasFocus(311) + [Container(310).Scrolling | Container(310).OnScrollNext | Container(310).OnScrollPrevious]</visible>
+                </control>
+            </control>
+
+
+
+
+
+
+
+
+
+
+			
+			
+			
             <control type="group" id="100">
                 <posy>100</posy>
                 <width>633</width>
@@ -319,7 +801,7 @@
                 </control>
             </control>
             <control type="group" id="200">
-                <width>1116</width>
+                <width>1216</width>
                 <height>620</height>
                 <posy>100</posy>
                 <animation type="WindowOpen">
@@ -1934,360 +2416,7 @@
                     <visible allowhiddenfocus="true">ControlGroup(210).HasFocus | Control.HasFocus(230)</visible>
                 </control>
             </control>
-            <control type="group" id="300">
-                <width>772</width>
-                <height>620</height>
-                <posy>100</posy>
-                <animation type="WindowOpen">
-                    <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="575" delay="175" />
-                    <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="175" />
-                    <effect type="zoom" start="70" end="100" center="1522,438" tween="cubic" easing="out" time="400" delay="175" /> 
-                </animation>
-                <animation type="Visible">
-                    <effect type="slide" start="200" end="0" tween="cubic" easing="out" time="575" delay="175" />
-                    <effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" delay="175" />
-                    <effect type="zoom" start="70" end="100" center="1522,438" tween="cubic" easing="out" time="400" delay="175" /> 
-                </animation>
-                <animation type="Hidden">
-                    <effect type="fade" start="100" end="0" time="300" tween="sine" easing="out" />
-                    <effect type="zoom" start="100" end="85" time="300" center="960,500" tween="sine" easing="out" />
-                </animation>
-                <visible>Weather.IsFetched + !IsEmpty(Window(Weather).Property(Hourly.IsFetched))</visible>
-                <control type="button" id="301">
-                    <posx>27</posx>
-                    <posy>-50</posy>
-                    <width>300</width>
-                    <height>40</height>
-                    <label>$LOCALIZE[41696]</label>
-                    <textcolor>Mod_Tags</textcolor>
-                    <focusedcolor>Mod_Tags_Dark</focusedcolor>
-                    <font>Font-Alaska-S32-BL</font>
-                    <onleft>201</onleft>
-                    <onright>101</onright>
-                    <onup>9111</onup>
-                    <ondown>310</ondown>
-                    <align>left</align>
-                    <animation effect="fade" start="100" end="30" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(301)">Conditional</animation>
-                </control>
-                <control type="image">
-                    <description>List Panel</description>
-                    <posx>14</posx>
-                    <posy>-3</posy>
-                    <width>714</width>
-                    <height>575</height>
-                    <texture border="15">arctic/common/panel.png</texture>
-                    <animation effect="fade" start="100" end="75" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(310)">Conditional</animation>
-                </control>
-                <control type="image">
-                    <description>List Border</description>
-                    <posx>4</posx>
-                    <posy>-13</posy>
-                    <width>734</width>
-                    <height>595</height>
-                    <texture border="25">arctic/common/border.png</texture>
-                    <animation effect="fade" start="100" end="75" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(310)">Conditional</animation>
-                </control>
-                <control type="list" id="310">
-                    <posx>16</posx>
-                    <posy>1</posy>
-                    <height>570</height>
-                    <width>710</width>
-                    <pagecontrol>311</pagecontrol>
-                    <onleft>301</onleft>
-                    <onright>301</onright>
-                    <onup>301</onup>
-                    <ondown>310</ondown>
-                    <viewtype label="List">list</viewtype>
-                    <scrolltime tween="cubic" easing="out">500</scrolltime>
-                    <preloaditems>2</preloaditems>
-                    <animation effect="fade" start="100" end="75" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(310)">Conditional</animation>
-                    <itemlayout height="95">
-                        <control type="image">
-                            <description>List separator</description>
-                            <posx>0</posx>
-                            <posy>0</posy>
-                            <width>710</width>
-                            <height>96</height>
-                            <texture border="90,3,90,3">views/list/other/separator.png</texture>
-                        </control>
-                        <control type="label">
-                            <description>Label</description>
-                            <posx>25</posx>
-                            <posy>15</posy>
-                            <width>140</width>
-                            <height>32</height>
-                            <font>Font-Condensed-S32</font>
-                            <align>left</align>
-                            <label>[B]$INFO[ListItem.Label][/B]</label>
-                            <textcolor>aawhite</textcolor>
-                            <selectedcolor>aawhite</selectedcolor>
-                            <scroll>false</scroll>
-                        </control>
-                        <control type="label">
-                            <description>Label</description>
-                            <posx>25</posx>
-                            <posy>50</posy>
-                            <width>140</width>
-                            <height>32</height>
-                            <font>Font-Condensed-S32</font>
-                            <align>left</align>
-                            <label>$INFO[ListItem.Label2]</label>
-                            <textcolor>77white</textcolor>
-                            <selectedcolor>77white</selectedcolor>
-                            <scroll>false</scroll>
-                        </control>
-                        <control type="image">
-                            <posx>160</posx>
-                            <posy>-3</posy>
-                            <width>100</width>
-                            <height>100</height>
-                            <texture>$INFO[ListItem.Icon]</texture>
-                            <colordiffuse>aawhite</colordiffuse>
-                        </control>
-                        <control type="label">
-                            <description>outlook label</description>
-                            <posx>260</posx>
-                            <posy>0</posy>
-                            <width>390</width>
-                            <height>95</height>
-                            <font>Font-Condensed-S36</font>
-                            <label>$INFO[ListItem.Property(outlook)]</label>
-                            <textcolor>77white</textcolor>
-                            <align>left</align>
-                            <aligny>center</aligny>
-                        </control>
-                        <control type="image">
-                            <description>temp icon</description>
-                            <posx>665</posx>
-                            <posy>23</posy>
-                            <height>48</height>
-                            <width>24</width>
-                            <texture>weather/temp-mid.png</texture>
-                            <colordiffuse>77white</colordiffuse>
-                        </control>
-                        <control type="label">
-                            <description>temp value</description>
-                            <posx>650</posx>
-                            <posy>0</posy>
-                            <width>110</width>
-                            <height>95</height>
-                            <font>Font-Condensed-S42-B</font>
-                            <label>$INFO[ListItem.Property(temp)]</label>
-                            <textcolor>aawhite</textcolor>
-                            <align>right</align>
-                            <aligny>center</aligny>
-                        </control>
-                    </itemlayout>
-                    <focusedlayout height="95">
-                        <control type="image">
-                            <description>List separator</description>
-                            <posx>0</posx>
-                            <posy>0</posy>
-                            <width>710</width>
-                            <height>96</height>
-                            <texture border="90,3,90,3">views/list/other/separator.png</texture>
-                        </control>
-                        <control type="image">
-                            <posx>0</posx>
-                            <posy>0</posy>
-                            <width>710</width>
-                            <height>94</height>
-                            <texture border="150,1,150,1">views/other/focus.png</texture>
-                            <animation type="Focus" condition="Container(310).OnNext" reversible="false">
-                                <effect type="slide" start="0,-100" end="0,0" time="300" tween="back" easing="out" />
-                            </animation>
-                            <animation type="Focus" condition="Container(310).OnPrevious" reversible="false">
-                                <effect type="slide" start="0,100" end="0,0" time="300" tween="back" easing="out" />
-                            </animation>
-                            <include>visiblehidefadeinfo</include>
-                            <visible>Control.HasFocus(310)</visible>
-                        </control>
-                        <control type="group">
-                            <animation type="Focus" condition="Container(310).OnNext | Container(310).OnPrevious" reversible="false">
-                                <effect type="fade" start="64" end="100" time="500" tween="sine" easing="inout" />
-                            </animation>
-                            <animation effect="fade" start="100" end="64" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(310)">Conditional</animation>
-                            <control type="label">
-                                <description>Label</description>
-                                <posx>25</posx>
-                                <posy>15</posy>
-                                <width>140</width>
-                                <height>32</height>
-                                <font>Font-Condensed-S32</font>
-                                <align>left</align>
-                                <label>[B]$INFO[ListItem.Label][/B]</label>
-                                <textcolor>eewhite</textcolor>
-                                <selectedcolor>eewhite</selectedcolor>
-                                <scroll>false</scroll>
-                            </control>
-                            <control type="label">
-                                <description>Label</description>
-                                <posx>25</posx>
-                                <posy>50</posy>
-                                <width>140</width>
-                                <height>32</height>
-                                <font>Font-Condensed-S32</font>
-                                <align>left</align>
-                                <label>$INFO[ListItem.Label2]</label>
-                                <textcolor>aawhite</textcolor>
-                                <selectedcolor>aawhite</selectedcolor>
-                                <scroll>false</scroll>
-                            </control>
-                            <control type="image">
-                                <posx>160</posx>
-                                <posy>-3</posy>
-                                <width>100</width>
-                                <height>100</height>
-                                <texture>$INFO[ListItem.Icon]</texture>
-                                <colordiffuse>eewhite</colordiffuse>
-                            </control>
-                            <control type="label">
-                                <description>outlook label</description>
-                                <posx>260</posx>
-                                <posy>0</posy>
-                                <width>390</width>
-                                <height>95</height>
-                                <font>Font-Condensed-S36</font>
-                                <label>$INFO[ListItem.Property(outlook)]</label>
-                                <textcolor>aawhite</textcolor>
-                                <align>left</align>
-                                <aligny>center</aligny>
-                            </control>
-                            <control type="image">
-                                <description>temp icon</description>
-                                <posx>665</posx>
-                                <posy>23</posy>
-                                <height>48</height>
-                                <width>24</width>
-                                <texture>weather/temp-mid.png</texture>
-                                <colordiffuse>aawhite</colordiffuse>
-                            </control>
-                            <control type="label">
-                                <description>temp value</description>
-                                <posx>650</posx>
-                                <posy>0</posy>
-                                <width>110</width>
-                                <height>95</height>
-                                <font>Font-Condensed-S42-B</font>
-                                <label>$INFO[ListItem.Property(temp)]</label>
-                                <textcolor>eewhite</textcolor>
-                                <align>right</align>
-                                <aligny>center</aligny>
-                            </control>
-                        </control>
-                    </focusedlayout>
-                    <content>
-                        <item>
-    						<icon>$LOCALIZE[31909]</icon>
-    						<onclick>noop</onclick>
-    						<visible>IsEmpty(Window.Property(Hourly.IsFetched))</visible>
-    					</item>
-    					<item>
-    						<label>$INFO[Window.Property(Hourly.1.Time)]</label>
-    						<label2>$INFO[Window.Property(Hourly.1.ShortDate)]</label2>
-    						<icon>$INFO[Window.Property(Hourly.1.FanartCode),weather/small/,.png]</icon>
-    						<property name="temp">$INFO[Window.Property(Hourly.1.Temperature)]</property>
-    						<property name="outlook">$INFO[Window.Property(Hourly.1.Outlook)]</property>
-    						<onclick>noop</onclick>
-    						<visible>!IsEmpty(Window.Property(Hourly.IsFetched))</visible>
-    					</item>
-    					<item>
-    						<label>$INFO[Window.Property(Hourly.2.Time)]</label>
-    						<label2>$INFO[Window.Property(Hourly.2.ShortDate)]</label2>
-    						<icon>$INFO[Window.Property(Hourly.2.FanartCode),weather/small/,.png]</icon>
-    						<property name="temp">$INFO[Window.Property(Hourly.2.Temperature)]</property>
-    						<property name="outlook">$INFO[Window.Property(Hourly.2.Outlook)]</property>
-    						<onclick>noop</onclick>
-    						<visible>!IsEmpty(Window.Property(Hourly.IsFetched))</visible>
-    					</item>
-    					<item>
-    						<label>$INFO[Window.Property(Hourly.3.Time)]</label>
-    						<label2>$INFO[Window.Property(Hourly.3.ShortDate)]</label2>
-    						<icon>$INFO[Window.Property(Hourly.3.FanartCode),weather/small/,.png]</icon>
-    						<property name="temp">$INFO[Window.Property(Hourly.3.Temperature)]</property>
-    						<property name="outlook">$INFO[Window.Property(Hourly.3.Outlook)]</property>
-    						<onclick>noop</onclick>
-    						<visible>!IsEmpty(Window.Property(Hourly.IsFetched))</visible>
-    					</item>
-    					<item>
-    						<label>$INFO[Window.Property(Hourly.4.Time)]</label>
-    						<label2>$INFO[Window.Property(Hourly.4.ShortDate)]</label2>
-    						<icon>$INFO[Window.Property(Hourly.4.FanartCode),weather/small/,.png]</icon>
-    						<property name="temp">$INFO[Window.Property(Hourly.4.Temperature)]</property>
-    						<property name="outlook">$INFO[Window.Property(Hourly.4.Outlook)]</property>
-    						<onclick>noop</onclick>
-    						<visible>!IsEmpty(Window.Property(Hourly.IsFetched))</visible>
-    					</item>
-    					<item>
-    						<label>$INFO[Window.Property(Hourly.5.Time)]</label>
-    						<label2>$INFO[Window.Property(Hourly.5.ShortDate)]</label2>
-    						<icon>$INFO[Window.Property(Hourly.5.FanartCode),weather/small/,.png]</icon>
-    						<property name="temp">$INFO[Window.Property(Hourly.5.Temperature)]</property>
-    						<property name="outlook">$INFO[Window.Property(Hourly.5.Outlook)]</property>
-    						<onclick>noop</onclick>
-    						<visible>!IsEmpty(Window.Property(Hourly.IsFetched))</visible>
-    					</item>
-    					<item>
-    						<label>$INFO[Window.Property(Hourly.6.Time)]</label>
-    						<label2>$INFO[Window.Property(Hourly.6.ShortDate)]</label2>
-    						<icon>$INFO[Window.Property(Hourly.6.FanartCode),weather/small/,.png]</icon>
-    						<property name="temp">$INFO[Window.Property(Hourly.6.Temperature)]</property>
-    						<property name="outlook">$INFO[Window.Property(Hourly.6.Outlook)]</property>
-    						<onclick>noop</onclick>
-    						<visible>!IsEmpty(Window.Property(Hourly.IsFetched))</visible>
-    					</item>
-    					<item>
-    						<label>$INFO[Window.Property(Hourly.7.Time)]</label>
-    						<label2>$INFO[Window.Property(Hourly.7.ShortDate)]</label2>
-    						<icon>$INFO[Window.Property(Hourly.7.FanartCode),weather/small/,.png]</icon>
-    						<property name="temp">$INFO[Window.Property(Hourly.7.Temperature)]</property>
-    						<property name="outlook">$INFO[Window.Property(Hourly.7.Outlook)]</property>
-    						<onclick>noop</onclick>
-    						<visible>!IsEmpty(Window.Property(Hourly.IsFetched))</visible>
-    					</item>
-    					<item>
-    						<label>$INFO[Window.Property(Hourly.8.Time)]</label>
-    						<label2>$INFO[Window.Property(Hourly.8.ShortDate)]</label2>
-    						<icon>$INFO[Window.Property(Hourly.8.FanartCode),weather/small/,.png]</icon>
-    						<property name="temp">$INFO[Window.Property(Hourly.8.Temperature)]</property>
-    						<property name="outlook">$INFO[Window.Property(Hourly.8.Outlook)]</property>
-    						<onclick>noop</onclick>
-    						<visible>!IsEmpty(Window.Property(Hourly.IsFetched))</visible>
-    					</item>
-    					<item>
-    						<label>$INFO[Window.Property(Hourly.9.Time)]</label>
-    						<label2>$INFO[Window.Property(Hourly.9.ShortDate)]</label2>
-    						<icon>$INFO[Window.Property(Hourly.9.FanartCode),weather/small/,.png]</icon>
-    						<property name="temp">$INFO[Window.Property(Hourly.9.Temperature)]</property>
-    						<property name="outlook">$INFO[Window.Property(Hourly.9.Outlook)]</property>
-    						<onclick>noop</onclick>
-    						<visible>!IsEmpty(Window.Property(Hourly.IsFetched))</visible>
-    					</item>
-    					<item>
-    						<label>$INFO[Window.Property(Hourly.10.Time)]</label>
-    						<label2>$INFO[Window.Property(Hourly.10.ShortDate)]</label2>
-    						<icon>$INFO[Window.Property(Hourly.10.FanartCode),weather/small/,.png]</icon>
-    						<property name="temp">$INFO[Window.Property(Hourly.10.Temperature)]</property>
-    						<property name="outlook">$INFO[Window.Property(Hourly.10.Outlook)]</property>
-    						<onclick>noop</onclick>
-    						<visible>!IsEmpty(Window.Property(Hourly.IsFetched))</visible>
-    					</item>
-                    </content>
-                </control>
-                <control type="image" id="313">
-                    <animation effect="fade" start="100" end="0" time="0" delay="1500">WindowOpen</animation>
-                </control>
-                <control type="image" id="312">
-                    <animation effect="fade" start="0" end="100" time="0">Visible</animation>
-                    <animation effect="fade" start="100" end="0" time="0">Hidden</animation>
-                    <visible>Control.HasFocus(311) | !Control.IsVisible(313)</visible>
-                </control>
-                <control type="image" id="312">
-                    <animation effect="fade" start="0" end="100" time="0">Visible</animation>
-                    <animation effect="fade" start="100" end="0" time="0" delay="1500">Hidden</animation>
-                    <visible>!Control.HasFocus(311) + [Container(310).Scrolling | Container(310).OnScrollNext | Container(310).OnScrollPrevious]</visible>
-                </control>
-            </control>
+
         </control>
     </include>
 </includes>
