@@ -502,6 +502,29 @@
 			<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetString(movie.widget.type,movie.recent)</onfocus>
 			<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetString(tvshow.widget.type,tvshow.recommended)</onfocus>
 			<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetString(music.widget.type,music.mixed)</onfocus>
+			<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetString(settings.widget.type,info.weather)</onfocus>
+			<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetString(programs.widget.type,info.weather)</onfocus>
+			<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetString(custom.widget.type,info.weather)</onfocus>
+			<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetString(Home.Movies.Tile-xbmb3c.0.Icon,special://skin/extras/icons/video.png)</onfocus>
+			<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetString(Home.Movies.Tile-xbmb3c.1.Icon,special://skin/extras/icons/newmovies.png)</onfocus>
+			<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetString(Home.Movies.Tile-xbmb3c.2.Icon,special://skin/extras/icons/film.png)</onfocus>
+			<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetString(Home.Movies.Tile-xbmb3c.3.Icon,special://skin/extras/icons/star.png)</onfocus>
+			<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetString(Home.Movies.Tile-xbmb3c.4.Icon,special://skin/extras/icons/videoplaylist.png)</onfocus>
+			<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetString(Home.Movies.Tile-xbmb3c.5.Icon,special://skin/extras/icons/appletrailers.png)</onfocus>
+			<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetString(Home.Tvshows.Tile-xbmb3c.0.Icon,special://skin/extras/icons/tv2.png)</onfocus>
+			<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetString(Home.Tvshows.Tile-xbmb3c.1.Icon,special://skin/extras/icons/newepisodes.png)</onfocus>
+			<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetString(Home.Tvshows.Tile-xbmb3c.2.Icon,special://skin/extras/icons/film.png)</onfocus>
+			<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetString(Home.Tvshows.Tile-xbmb3c.3.Icon,special://skin/extras/icons/next.png)</onfocus>
+			<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetString(Home.Tvshows.Tile-xbmb3c.4.Icon,special://skin/extras/icons/star.png)</onfocus>
+			<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetString(Home.Tvshows.Tile-xbmb3c.5.Icon,special://skin/extras/icons/star.png)</onfocus>			
+			<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetString(Home.Tvshows.Tile-xbmb3c.6.Icon,special://skin/extras/icons/appletrailers.png)</onfocus>			
+			<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetString(Home.Music.Tile-xbmb3c.0.Icon,special://skin/extras/icons/music.png)</onfocus>
+			<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetString(Home.Music.Tile-xbmb3c.1.Icon,special://skin/extras/icons/newmusic.png)</onfocus>
+			<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetString(Home.Music.Tile-xbmb3c.2.Icon,special://skin/extras/icons/star.png)</onfocus>
+			<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetString(Home.Music.Tile-xbmb3c.3.Icon,special://skin/extras/icons/ipod.png)</onfocus>			
+
+			<onfocus condition="!Skin.HasSetting(Skin.Initialization.Items)">Skin.SetString(Home.Pictures.Tile-xbmb3c.0.Icon,special://skin/extras/icons/pictures.png)</onfocus>	
+			
             <onfocus>SetFocus(11)</onfocus>
         </control>
         <control type="button" id="14">

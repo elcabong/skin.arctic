@@ -406,7 +406,7 @@
 						<property name="path">$INFO[Skin.String(Home.Movies.Tile.1.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Movies.Tile.1.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(1)</visible>
+						<visible>Container(3).HasFocus(1) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="1">
 						<label>$INFO[Skin.String(Home.Movies.Tile.2.Label)]</label>
@@ -417,7 +417,7 @@
 						<property name="path">$INFO[Skin.String(Home.Movies.Tile.2.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Movies.Tile.2.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(1)</visible>
+						<visible>Container(3).HasFocus(1) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="2">
 						<label>$INFO[Skin.String(Home.Movies.Tile.3.Label)]</label>
@@ -428,7 +428,7 @@
 						<property name="path">$INFO[Skin.String(Home.Movies.Tile.3.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Movies.Tile.3.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(1)</visible>
+						<visible>Container(3).HasFocus(1) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="3">
 						<label>$INFO[Skin.String(Home.Movies.Tile.4.Label)]</label>
@@ -439,7 +439,7 @@
 						<property name="path">$INFO[Skin.String(Home.Movies.Tile.4.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Movies.Tile.4.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(1)</visible>
+						<visible>Container(3).HasFocus(1) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="4">
 						<label>$INFO[Skin.String(Home.Movies.Tile.5.Label)]</label>
@@ -450,7 +450,7 @@
 						<property name="path">$INFO[Skin.String(Home.Movies.Tile.5.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Movies.Tile.5.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(1)</visible>
+						<visible>Container(3).HasFocus(1) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="5">
 						<label>$INFO[Skin.String(Home.Movies.Tile.6.Label)]</label>
@@ -461,7 +461,7 @@
 						<property name="path">$INFO[Skin.String(Home.Movies.Tile.6.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Movies.Tile.6.Animate)]</property>
 						<property name="custom">1</property>  
-						<visible>Container(3).HasFocus(1)</visible>
+						<visible>Container(3).HasFocus(1) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="6">
 						<label>$INFO[Skin.String(Home.Movies.Tile.7.Label)]</label>
@@ -472,7 +472,7 @@
 						<property name="path">$INFO[Skin.String(Home.Movies.Tile.7.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Movies.Tile.7.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(1)</visible>
+						<visible>Container(3).HasFocus(1) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="7">
 						<label>$INFO[Skin.String(Home.Movies.Tile.8.Label)]</label>
@@ -483,7 +483,7 @@
 						<property name="path">$INFO[Skin.String(Home.Movies.Tile.8.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Movies.Tile.8.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(1)</visible>
+						<visible>Container(3).HasFocus(1) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="8">
 						<label>$INFO[Skin.String(Home.Movies.Tile.9.Label)]</label>
@@ -494,7 +494,7 @@
 						<property name="path">$INFO[Skin.String(Home.Movies.Tile.9.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Movies.Tile.9.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(1)</visible>
+						<visible>Container(3).HasFocus(1) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="9">
 						<label>$INFO[Skin.String(Home.Movies.Tile.10.Label)]</label>
@@ -505,8 +505,117 @@
 						<property name="path">$INFO[Skin.String(Home.Movies.Tile.10.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Movies.Tile.10.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(1)</visible>
+						<visible>Container(3).HasFocus(1) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
+
+
+
+					<item id="0">
+						<label>$INFO[Window(home).Property(xbmb3c.std.movies.0.title)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Movies.Tile-xbmb3c.1,3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.0.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.0.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.0.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.0.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(1) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+					<item id="1">
+						<label>$INFO[Window(home).Property(xbmb3c.std.movies.1.title)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Movies.Tile-xbmb3c.1,3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.1.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.1.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.1.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.1.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(1) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+					<item id="2">
+						<label>$INFO[Window(home).Property(xbmb3c.std.movies.2.title)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Movies.Tile-xbmb3c.2,3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.2.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.2.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.2.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.2.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(1) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+					<item id="3">
+						<label>$INFO[Window(home).Property(xbmb3c.std.movies.3.title)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Movies.Tile-xbmb3c.3,3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.3.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.3.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.3.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.3.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(1) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+					<item id="4">
+						<label>$INFO[Window(home).Property(xbmb3c.std.movies.4.title)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Movies.Tile-xbmb3c.4,3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.4.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.4.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.4.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.4.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(1) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+					<item id="5">
+						<label>$INFO[Window(home).Property(xbmb3c.std.movies.5.title)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Movies.Tile-xbmb3c.5,3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.5.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.5.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.5.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.5.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(1) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+					<item id="6">
+						<label>$INFO[Skin.String(Home.Movies.Tile-xbmb3c.6.Label)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Movies.Tile-xbmb3c.6,3061)</onclick>
+						<onclick>ActivateWindow(3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.6.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.6.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.6.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.6.Animate)]</property>
+						<property name="custom">1</property>  
+						<visible>Container(3).HasFocus(1) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+					<item id="7">
+						<label>$INFO[Skin.String(Home.Movies.Tile-xbmb3c.7.Label)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Movies.Tile-xbmb3c.7,3061)</onclick>
+						<onclick>ActivateWindow(3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.7.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.7.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.7.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.7.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(1) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+					<item id="8">
+						<label>$INFO[Skin.String(Home.Movies.Tile-xbmb3c.8.Label)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Movies.Tile-xbmb3c.8,3061)</onclick>
+						<onclick>ActivateWindow(3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.8.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.8.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.8.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.8.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(1) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+					<item id="9">
+						<label>$INFO[Skin.String(Home.Movies.Tile-xbmb3c.9.Label)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Movies.Tile-xbmb3c.9,3061)</onclick>
+						<onclick>ActivateWindow(3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.9.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.9.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.9.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Movies.Tile-xbmb3c.9.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(1) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+	
+	
 	
 					<!--TVSHOW ITEMS-->
 					<item id="0">
@@ -518,7 +627,7 @@
 						<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.1.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.1.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(2)</visible>
+						<visible>Container(3).HasFocus(2) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="1">
 						<label>$INFO[Skin.String(Home.Tvshows.Tile.2.Label)]</label>
@@ -529,7 +638,7 @@
 						<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.2.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.2.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(2)</visible>
+						<visible>Container(3).HasFocus(2) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="2">
 						<label>$INFO[Skin.String(Home.Tvshows.Tile.3.Label)]</label>
@@ -540,7 +649,7 @@
 						<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.3.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.3.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(2)</visible>
+						<visible>Container(3).HasFocus(2) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="3">
 						<label>$INFO[Skin.String(Home.Tvshows.Tile.4.Label)]</label>
@@ -551,7 +660,7 @@
 						<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.4.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.4.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(2)</visible>
+						<visible>Container(3).HasFocus(2) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="4">
 						<label>$INFO[Skin.String(Home.Tvshows.Tile.5.Label)]</label>
@@ -562,7 +671,7 @@
 						<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.5.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.5.Animate)]</property>
 						<property name="custom">1</property>  
-						<visible>Container(3).HasFocus(2)</visible>
+						<visible>Container(3).HasFocus(2) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="5">
 						<label>$INFO[Skin.String(Home.Tvshows.Tile.6.Label)]</label>
@@ -573,7 +682,7 @@
 						<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.6.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.6.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(2)</visible>
+						<visible>Container(3).HasFocus(2) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="6">
 						<label>$INFO[Skin.String(Home.Tvshows.Tile.7.Label)]</label>
@@ -584,7 +693,7 @@
 						<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.7.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.7.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(2)</visible>
+						<visible>Container(3).HasFocus(2) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="7">
 						<label>$INFO[Skin.String(Home.Tvshows.Tile.8.Label)]</label>
@@ -595,7 +704,7 @@
 						<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.8.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.8.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(2)</visible>
+						<visible>Container(3).HasFocus(2) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="8">
 						<label>$INFO[Skin.String(Home.Tvshows.Tile.9.Label)]</label>
@@ -606,7 +715,7 @@
 						<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.9.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.9.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(2)</visible>
+						<visible>Container(3).HasFocus(2) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="9">
 						<label>$INFO[Skin.String(Home.Tvshows.Tile.10.Label)]</label>
@@ -617,9 +726,118 @@
 						<property name="path">$INFO[Skin.String(Home.Tvshows.Tile.10.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile.10.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(2)</visible>
+						<visible>Container(3).HasFocus(2) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
-	
+
+
+					<item id="0">
+						<label>$INFO[Window(home).Property(xbmb3c.std.tvshows.0.title)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Tvshows.Tile-xbmb3c.1,3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.0.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.0.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.0.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.0.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(2) + Skin.HasSetting(xbmb3c)</visible>
+					</item>					
+					<item id="1">
+						<label>$INFO[Window(home).Property(xbmb3c.std.tvshows.1.title)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Tvshows.Tile-xbmb3c.1,3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.1.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.1.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.1.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.1.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(2) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+					<item id="2">
+						<label>$INFO[Window(home).Property(xbmb3c.std.tvshows.2.title)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Tvshows.Tile-xbmb3c.2,3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.2.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.2.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.2.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.2.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(2) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+					<item id="3">
+						<label>$INFO[Window(home).Property(xbmb3c.std.tvshows.3.title)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Tvshows.Tile-xbmb3c.3,3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.3.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.3.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.3.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.3.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(2) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+					<item id="4">
+						<label>$INFO[Window(home).Property(xbmb3c.std.tvshows.4.title)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Tvshows.Tile-xbmb3c.4,3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.4.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.4.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.4.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.4.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(2) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+					<item id="5">
+						<label>$INFO[Window(home).Property(xbmb3c.std.tvshows.5.title)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Tvshows.Tile-xbmb3c.5,3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.5.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.5.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.5.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.5.Animate)]</property>
+						<property name="custom">1</property>  
+						<visible>Container(3).HasFocus(2) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+					<item id="6">
+						<label>$INFO[Window(home).Property(xbmb3c.std.tvshows.6.title)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Tvshows.Tile-xbmb3c.6,3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.6.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.6.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.6.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.6.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(2) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+					<item id="7">
+						<label>$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.7.Label)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Tvshows.Tile-xbmb3c.7,3061)</onclick>
+						<onclick>ActivateWindow(3061)</onclick>						
+						<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.7.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.7.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.7.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.7.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(2) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+					<item id="8">
+						<label>$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.8.Label)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Tvshows.Tile-xbmb3c.8,3061)</onclick>
+						<onclick>ActivateWindow(3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.8.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.8.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.8.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.8.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(2) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+					<item id="9">
+						<label>$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.9.Label)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Tvshows.Tile-xbmb3c.9,3061)</onclick>
+						<onclick>ActivateWindow(3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.9.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.9.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.9.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Tvshows.Tile-xbmb3c.9.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(2) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+
+
+
+
+					
 					<!--MUSIC ITEMS-->
 					<item id="1">
 						<label>$INFO[Skin.String(Home.Music.Tile.1.Label)]</label>
@@ -630,7 +848,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile.1.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile.1.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3)</visible>
+						<visible>Container(3).HasFocus(3) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="2">
 						<label>$INFO[Skin.String(Home.Music.Tile.2.Label)]</label>
@@ -641,7 +859,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile.2.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile.2.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3)</visible>
+						<visible>Container(3).HasFocus(3) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="3">
 						<label>$INFO[Skin.String(Home.Music.Tile.3.Label)]</label>
@@ -652,7 +870,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile.3.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile.3.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3)</visible>
+						<visible>Container(3).HasFocus(3) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="4">
 						<label>$INFO[Skin.String(Home.Music.Tile.4.Label)]</label>
@@ -663,7 +881,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile.4.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile.4.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3)</visible>
+						<visible>Container(3).HasFocus(3) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="5">
 						<label>$INFO[Skin.String(Home.Music.Tile.5.Label)]</label>
@@ -674,7 +892,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile.5.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile.5.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3)</visible>
+						<visible>Container(3).HasFocus(3) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="6">
 						<label>$INFO[Skin.String(Home.Music.Tile.6.Label)]</label>
@@ -685,7 +903,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile.6.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile.6.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3)</visible>
+						<visible>Container(3).HasFocus(3) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="7">
 						<label>$INFO[Skin.String(Home.Music.Tile.7.Label)]</label>
@@ -696,7 +914,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile.7.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile.7.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3)</visible>
+						<visible>Container(3).HasFocus(3) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="8">
 						<label>$INFO[Skin.String(Home.Music.Tile.8.Label)]</label>
@@ -707,7 +925,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile.8.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile.8.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3)</visible>
+						<visible>Container(3).HasFocus(3) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="9">
 						<label>$INFO[Skin.String(Home.Music.Tile.9.Label)]</label>
@@ -718,7 +936,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile.9.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile.9.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3)</visible>
+						<visible>Container(3).HasFocus(3) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="10">
 						<label>$INFO[Skin.String(Home.Music.Tile.10.Label)]</label>
@@ -729,10 +947,130 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile.10.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile.10.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3)</visible>
+						<visible>Container(3).HasFocus(3) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
+					
+					<item id="0">
+						<label>$INFO[Window(home).Property(xbmb3c.std.music.0.title)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Music.Tile-xbmb3c.0,3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Music.Tile-xbmb3c.0.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Music.Tile-xbmb3c.0.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.0.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.0.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c)</visible>
+					</item>					
+					<item id="1">
+						<label>$INFO[Window(home).Property(xbmb3c.std.music.1.title)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Music.Tile-xbmb3c.1,3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Music.Tile-xbmb3c.1.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Music.Tile-xbmb3c.1.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.1.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.1.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+					<item id="2">
+						<label>$INFO[Window(home).Property(xbmb3c.std.music.2.title)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Music.Tile-xbmb3c.2,3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Music.Tile-xbmb3c.2.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Music.Tile-xbmb3c.2.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.2.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.2.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+					<item id="3">
+						<label>$INFO[Window(home).Property(xbmb3c.std.music.3.title)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Music.Tile-xbmb3c.3,3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Music.Tile-xbmb3c.3.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Music.Tile-xbmb3c.3.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.3.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.3.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+					<item id="4">
+						<label>$INFO[Skin.String(Home.Music.Tile-xbmb3c.4.Label)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Music.Tile-xbmb3c.4,3061)</onclick>
+						<onclick>ActivateWindow(3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Music.Tile-xbmb3c.4.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Music.Tile-xbmb3c.4.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.4.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.4.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+					<item id="5">
+						<label>$INFO[Skin.String(Home.Music.Tile-xbmb3c.5.Label)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Music.Tile-xbmb3c.5,3061)</onclick>
+						<onclick>ActivateWindow(3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Music.Tile-xbmb3c.5.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Music.Tile-xbmb3c.5.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.5.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.5.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+					<item id="6">
+						<label>$INFO[Skin.String(Home.Music.Tile-xbmb3c.6.Label)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Music.Tile-xbmb3c.6,3061)</onclick>
+						<onclick>ActivateWindow(3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Music.Tile-xbmb3c.6.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Music.Tile-xbmb3c.6.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.6.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.6.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+					<item id="7">
+						<label>$INFO[Skin.String(Home.Music.Tile-xbmb3c.7.Label)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Music.Tile-xbmb3c.7,3061)</onclick>
+						<onclick>ActivateWindow(3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Music.Tile-xbmb3c.7.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Music.Tile-xbmb3c.7.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.7.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.7.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+					<item id="8">
+						<label>$INFO[Skin.String(Home.Music.Tile-xbmb3c.8.Label)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Music.Tile-xbmb3c.8,3061)</onclick>
+						<onclick>ActivateWindow(3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Music.Tile-xbmb3c.8.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Music.Tile-xbmb3c.8.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.8.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.8.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+					<item id="9">
+						<label>$INFO[Skin.String(Home.Music.Tile-xbmb3c.9.Label)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Music.Tile-xbmb3c.9,3061)</onclick>
+						<onclick>ActivateWindow(3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Music.Tile-xbmb3c.9.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Music.Tile-xbmb3c.9.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.9.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.9.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c)</visible>
+					</item>					
+					
+					
 	
 					<!-- PICTURES ITEMS -->
+					<item id="1">
+						<label>$INFO[Window(home).Property(xbmb3c.std.photo.0.title)]</label>
+						<onclick>SetProperty(edit_submenu,Home.Pictures.Tile.1,3061)</onclick>
+						<property name="Poster">$INFO[Skin.String(Home.Pictures.Tile-xbmb3c.0.Icon)]</property>
+						<property name="showlabel">$INFO[Skin.String(Home.Pictures.Tile-xbmb3c.0.ShowLabel)]</property>
+						<property name="path">$INFO[Skin.String(Home.Pictures.Tile-xbmb3c.0.Path)]</property>
+						<property name="animate">$INFO[Skin.String(Home.Pictures.Tile-xbmb3c.0.Animate)]</property>
+						<property name="custom">1</property>
+						<visible>Container(3).HasFocus(5) + Skin.HasSetting(xbmb3c)</visible>
+					</item>
+
 					<item id="1">
 						<label>$INFO[Skin.String(Home.Pictures.Tile.1.Label)]</label>
 						<onclick>SetProperty(edit_submenu,Home.Pictures.Tile.1,3061)</onclick>
@@ -742,7 +1080,7 @@
 						<property name="path">$INFO[Skin.String(Home.Pictures.Tile.1.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Pictures.Tile.1.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(5)</visible>
+						<visible>Container(3).HasFocus(5) + !Skin.HasSetting(xbmb3c)</visible>
 					</item>
 					<item id="5">
 						<label>$INFO[Skin.String(Home.Pictures.Tile.2.Label)]</label>
@@ -843,6 +1181,7 @@
 						<property name="custom">1</property>
 						<visible>Container(3).HasFocus(5)</visible>
 					</item>
+
 					<!--PROGRAMS ITEMS-->
 					<item id="1">
 						<label>$INFO[Skin.String(Home.Programs.Tile.1.Label)]</label>
