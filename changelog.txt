@@ -1,3 +1,7 @@
+[B]0.9.6[/B]
+Customizable home sub menu items and integrated xbmb3c mode into the home menu settings
+Updated weather widget and full weather screen
+
 [B]0.9.3[/B]
 xbmb3c feature update including rotating fanart
 
