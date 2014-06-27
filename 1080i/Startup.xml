@@ -4,14 +4,13 @@
     <backgroundcolor>0</backgroundcolor>
     
     <onload>SetProperty(SkinInitStarted,1,home)</onload>
-    <onunload condition="!Skin.HasSetting(Skin.Init.Complete)">Skin.SetBool(Skin.Init.Complete)</onunload>
 	<onunload condition="!Skin.HasSetting(Skin.Init.Complete)">Skin.SetBool(xbmb3c,true)</onunload>
-	
 	<onunload condition="!Skin.HasSetting(Skin.Init.Complete)">Skin.SetBool(movies.use.extrafanart,true)</onunload>
 	<onunload condition="!Skin.HasSetting(Skin.Init.Complete)">Skin.SetBool(tvshows.use.extrafanart,true)</onunload>
 	<onunload condition="!Skin.HasSetting(Skin.Init.Complete)">Skin.SetBool(showdiscart,true)</onunload>
 	<onunload condition="!Skin.HasSetting(Skin.Init.Complete)">Skin.SetBool(panellist.showplot,true)</onunload>
 	<onunload condition="!Skin.HasSetting(Skin.Init.Complete)">Skin.SetBool(bannerlist.showplot,true)</onunload>
+    <onunload condition="!Skin.HasSetting(Skin.Init.Complete)">Skin.SetBool(Skin.Init.Complete)</onunload>	
     <controls>
         <include>CommonSettingsItems</include>
         <include>Common-Info-NoOptions</include>
