@@ -556,6 +556,7 @@
 					<width>1010</width>
 					<height>140</height>
 					<autoscroll delay="13000" time="3000" repeat="13000" />
+					<visible>!Container(82).ListItem.Property(Overlay) + system.getbool(videolibrary.showunwatchedplots)</visible>					
 				</control>
 				<control type="textbox">
 					<posx>448</posx>
@@ -567,7 +568,7 @@
 					<width>1010</width>
 					<height>140</height>
 					<autoscroll delay="13000" time="3000" repeat="13000" />
-					<visible>!Skin.HasSetting(xbmb3c) + !Container(82).ListItem.Property(Overlay) + !system.getbool(videolibrary.showunwatchedplots)</visible>
+					<visible>!Container(82).ListItem.Property(Overlay) + !system.getbool(videolibrary.showunwatchedplots)</visible>
 				</control>
 			</control>
 			<control type="group">
@@ -602,19 +603,7 @@
 					<width>1268</width>
 					<height>135</height>
 					<autoscroll delay="13000" time="3000" repeat="13000" />
-					<visible>system.getbool(videolibrary.showunPercentPlayedplots) | [!system.getbool(videolibrary.showunPercentPlayedplots) + Container(82).ListItem.Property(Overlay)]</visible>
-				</control>
-				<control type="textbox">
-					<posx>187</posx>
-					<posy>86</posy>
-					<label>$LOCALIZE[20370]</label>
-					<align>justify</align>
-					<font>Font-Condensed-S28</font>
-					<textcolor>eebbbbbb</textcolor>
-					<width>1268</width>
-					<height>135</height>
-					<autoscroll delay="13000" time="3000" repeat="13000" />
-					<visible>!Container(82).ListItem.Property(Overlay) + !system.getbool(videolibrary.showunPercentPlayedplots)</visible>
+					<visible>!Container(82).ListItem.Property(Overlay) + system.getbool(videolibrary.showunwatchedplots)</visible>					
 				</control>
 			</control>
 		</control>
