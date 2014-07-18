@@ -2565,6 +2565,14 @@
 			<visible>Container(525).HasFocus(5) + [!IsEmpty(Skin.String(Home.Pictures.Tile.9.Path)) | !IsEmpty(Skin.String(Home.Pictures.Tile.10.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<!--PROGRAMS ITEMS-->
+		<item id="0">
+			<label>$INFO[Window.Property(xbmb3c.std.channels.0.title)]</label>
+			<onclick>SetFocus(525)</onclick>
+			<onclick>$INFO[Window.Property(xbmb3c.std.channels.0.path)]</onclick>
+			<property name="Poster">special://skin/media/DefaultAddonWebSkin.png</property>
+			<property name="custom">1</property>		
+			<visible>Container(525).HasFocus(7) + Skin.HasSetting(xbmb3c)</visible>
+		</item>
 		<item id="1">
 			<label>$INFO[Skin.String(Home.Programs.Tile.1.Label)]</label>
 			<onclick>SetFocus(525)</onclick>
