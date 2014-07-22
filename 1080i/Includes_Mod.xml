@@ -10290,7 +10290,7 @@
 		</item>
 		<item id="4">
 			<label>41220</label>
-			<visible>!Skin.HasSetting(xbmb3c) + !Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled) + !StringCompare(Skin.String(homescreen.style),combo)</visible>
+			<visible>!Skin.HasSetting(xbmb3c-home-fanart) + !Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled) + !StringCompare(Skin.String(homescreen.style),combo)</visible>
 			<property name="single">$INFO[Skin.String(HomeLiveTVSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeLiveTVMultiImage)]</property>
 			<property name="widget">$INFO[Skin.String(pvr.widget.type)]</property>
