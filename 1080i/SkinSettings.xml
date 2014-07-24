@@ -308,9 +308,27 @@
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>Skin.HasSetting(xbmb3c)</selected>
 							<onclick>Skin.ToggleSetting(xbmb3c)</onclick>
-							<label>XBMB3C Addon</label>
-						</control>			
-						<control type="radiobutton" id="1010">
+							<label>XBMB3C Mode - Connect to MB3 Server</label>
+						</control>
+						<control type="button" id="1010">
+							<visible>System.HasAddon(plugin.video.xbmb3c)</visible>
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<onclick>Addon.OpenSettings(plugin.video.xbmb3c)</onclick>
+							<enable>Skin.HasSetting(xbmb3c)</enable>
+							<label>XBMB3C Settings</label>
+							<label2>›››   </label2>
+						</control>
+						<control type="button" id="1011">
+							<visible>System.HasAddon(plugin.video.xbmb3c)</visible>
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
+							<onclick>RunAddon(plugin.video.xbmb3c,"?mode=3&url=http%3a%2f%2fSETVIEWSSETVIEWS")</onclick>
+							<enable>Skin.HasSetting(xbmb3c)</enable>
+							<label>Set Default Views</label>
+							<label2>›››   </label2>
+						</control>								
+						<control type="radiobutton" id="1012">
 							<visible>System.HasAddon(plugin.video.xbmb3c)</visible>
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
@@ -319,7 +337,7 @@
 							<enable>Skin.HasSetting(xbmb3c)</enable>
 							<label>XBMB3C Home Fanart</label>
 						</control>
-						<control type="radiobutton" id="1011">
+						<control type="radiobutton" id="1013">
 							<visible>System.HasAddon(plugin.video.xbmb3c)</visible>
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
@@ -327,7 +345,7 @@
 							<onclick>Skin.ToggleSetting(xbmb3c-search)</onclick>
 							<enable>Skin.HasSetting(xbmb3c)</enable>
 							<label>XBMB3C Search</label>
-						</control>							
+						</control>
 					</control>
 			
 					<!-- ============= -->  

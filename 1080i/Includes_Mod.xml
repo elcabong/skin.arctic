@@ -10288,6 +10288,24 @@
 			<visible>!Skin.HasSetting(disable.favourites) + !Skin.HasSetting(disable.homepowermenu)</visible>
 			<icon>special://skin/extras/icons/favourites.png</icon>
 		</item>
+		<item id="12">
+			<label>$LOCALIZE[41525]</label>
+			<visible>Skin.HasSetting(xbmb3c) + Skin.HasSetting(xbmb3c-search) + !Skin.HasSetting(xbmb3c-home-fanart)</visible>
+			<property name="single">$INFO[Skin.String(HomeSettingsSingleImage)]</property>
+			<property name="multi">$INFO[Skin.String(HomeSettingsMultiImage)]</property>
+			<property name="widget">$INFO[Skin.String(custom.widget.type)]</property>
+			<onclick>$INFO[Window.Property(xbmb3c.std.search.0.path)],return)</onclick>
+			<icon>special://skin/media/windows/home/icons/search.png</icon>
+		</item>
+		<item id="12">
+			<label>$LOCALIZE[41525]</label>
+			<visible>Skin.HasSetting(xbmb3c) + Skin.HasSetting(xbmb3c-search) + Skin.HasSetting(xbmb3c-home-fanart)</visible>
+			<property name="single">$INFO[Window.Property(MB3.Background.Global.FanArt)]</property>
+			<property name="multi">$INFO[Window.Property(MB3.Background.Global.FanArt)]</property>
+			<property name="widget">$INFO[Skin.String(custom.widget.type)]</property>
+			<onclick>$INFO[Window.Property(xbmb3c.std.search.0.path)],return)</onclick>
+			<icon>special://skin/media/windows/home/icons/search.png</icon>
+		</item>
 		<item id="4">
 			<label>41220</label>
 			<visible>!Skin.HasSetting(xbmb3c-home-fanart) + !Skin.HasSetting(disable.pvr) + System.GetBool(pvrmanager.enabled) + !StringCompare(Skin.String(homescreen.style),combo)</visible>
@@ -10315,24 +10333,6 @@
 			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + Skin.HasSetting(pvr.epgdefault)">SetFocus(10)</onclick>
 			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
 			<icon>special://skin/extras/icons/tvguide.png</icon>
-		</item>		
-		<item id="12">
-			<label>$LOCALIZE[41525]</label>
-			<visible>Skin.HasSetting(xbmb3c) + Skin.HasSetting(xbmb3c-search) + !Skin.HasSetting(xbmb3c-home-fanart)</visible>
-			<property name="single">$INFO[Skin.String(HomeSettingsSingleImage)]</property>
-			<property name="multi">$INFO[Skin.String(HomeSettingsMultiImage)]</property>
-			<property name="widget">$INFO[Skin.String(custom.widget.type)]</property>
-			<onclick>$INFO[Window.Property(xbmb3c.std.search.0.path)])</onclick>
-			<icon>special://skin/media/windows/home/icons/search.png</icon>
-		</item>
-		<item id="12">
-			<label>$LOCALIZE[41525]</label>
-			<visible>Skin.HasSetting(xbmb3c) + Skin.HasSetting(xbmb3c-search) + Skin.HasSetting(xbmb3c-home-fanart)</visible>
-			<property name="single">$INFO[Window.Property(MB3.Background.Global.FanArt)]</property>
-			<property name="multi">$INFO[Window.Property(MB3.Background.Global.FanArt)]</property>
-			<property name="widget">$INFO[Skin.String(custom.widget.type)]</property>
-			<onclick>$INFO[Window.Property(xbmb3c.std.search.0.path)])</onclick>
-			<icon>special://skin/media/windows/home/icons/search.png</icon>
 		</item>
 	</include>
 	
