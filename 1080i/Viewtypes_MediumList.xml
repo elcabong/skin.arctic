@@ -134,7 +134,7 @@
 							<posx>0</posx>
 							<posy>22</posy>
 							<width>150</width>
-							<label>$VAR[EpisodeNumber]</label>
+							<label>$VAR[SeasonNumber]</label>
 							<font>Font-Episode-Large</font>
 							<textcolor>77white</textcolor>
 							<scroll>false</scroll>
@@ -199,7 +199,7 @@
 								<posx>0</posx>
 								<posy>22</posy>
 								<width>150</width>
-								<label>$VAR[EpisodeNumber]</label>
+								<label>$VAR[SeasonNumber]</label>
 								<font>Font-Episode-Large</font>
 								<textcolor>mod-infotags-alt</textcolor>
 								<scroll>false</scroll>

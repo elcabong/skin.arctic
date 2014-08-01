@@ -1749,7 +1749,7 @@
             	<shadowcolor>20FFFFFF</shadowcolor>
             	<pagecontrol>60</pagecontrol>
             	<autoscroll delay="10000" time="3000" repeat="6000">!Control.HasFocus(60)</autoscroll>
-            	<label fallback="161">$INFO[ListItem.Plot]</label>
+            	<label fallback="161">$VAR[ExtendedInfo.Plot]</label>
             </control>
             <control type="scrollbar" id="60">
                 <posx>1346</posx>
@@ -1974,7 +1974,7 @@
             	<textcolor>$VAR[osd.text.normal]</textcolor>
             	<pagecontrol>60</pagecontrol>
             	<autoscroll delay="10000" time="3000" repeat="6000">!Control.HasFocus(60)</autoscroll>
-            	<label fallback="161">$INFO[ListItem.Plot]</label>
+            	<label fallback="161">$VAR[ExtendedInfo.Plot]</label>
             </control>
             <control type="scrollbar" id="60">
                 <description>Scrollbar</description>

@@ -201,7 +201,7 @@
 								<posy>72</posy>
 								<width>790</width>
 								<height>175</height>
-								<label>$INFO[ListItem.Plot]</label>
+								<label>$VAR[ExtendedInfo.Plot]</label>
 								<font>Font-Alaska-S25-NC</font>
 								<textcolor>Mod_Tags</textcolor>
 								<align>justify</align>

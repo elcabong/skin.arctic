@@ -1,3 +1,17 @@
+[B]0.9.9[/B]
+Added placeholder for In-Progress Movies and TV so the homescreen widget doesnt get stuck when there is no content
+made separate MediaBrowser tab in skin settings
+updated cdart position for now playing info dialog
+added on demand plot loading, can disable
+
+[B]0.9.8[/B]
+added link to xbmb3c view settings and view settings from main skin settings
+fixed an issue when home screen search is enabled and live tv at the same time which messed up menu order
+
+[B]0.9.7[/B]
+Live TV menu fix
+added channels link under Programs main menu item
+
 [B]0.9.6[/B]
 Customizable home sub menu items and integrated xbmb3c mode into the home menu settings
 Updated weather widget and full weather screen

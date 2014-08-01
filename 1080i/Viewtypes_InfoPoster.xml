@@ -141,7 +141,7 @@
 						<posy>82</posy>
 						<width>1038</width>
 						<height>170</height>
-						<label>$INFO[ListItem.Plot]</label>
+						<label>$VAR[ExtendedInfo.Plot]</label>
 						<align>justify</align>
 						<textcolor>mod-infotags-alt2</textcolor>
 						<autoscroll delay="13000" time="3000" repeat="13000" />

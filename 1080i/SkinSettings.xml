@@ -156,43 +156,49 @@
 							<icon>special://skin/extras/icons/config.png</icon>
                         </item>
                         <item id="32">
+                            <description>xbmb3c Settings</description>
+                            <label>MediaBrowser</label>
+                            <onclick>noop</onclick>
+							<icon>special://skin/extras/icons/addons.png</icon>
+                        </item>
+                        <item id="33">
                             <description>Home Settings</description>
                             <label>$LOCALIZE[41130]</label>
                             <onclick>noop</onclick>
 							<icon>special://skin/extras/icons/settings.png</icon>
                         </item>
-                        <item id="35">
+                        <item id="36">
                             <description>Furniture Settings</description>
                             <label>$LOCALIZE[42465]</label>
                             <onclick>noop</onclick>
                             <icon>special://skin/extras/icons/photos2.png</icon>
                         </item>
-                        <item id="37">
+                        <item id="38">
                             <description>Video Info</description>
                             <label>$LOCALIZE[42131]</label>
                             <onclick>noop</onclick>
                             <icon>special://skin/extras/icons/info.png</icon>
                         </item>
-                        <item id="34">
+                        <item id="35">
                             <description>Audio OSD</description>
                             <label>$LOCALIZE[292] $LOCALIZE[478]</label>
                             <onclick>noop</onclick>
 							<icon>special://skin/extras/icons/music.png</icon>
                         </item>
-                        <item id="33">
+                        <item id="34">
                             <description>Video OSD</description>
                             <label>$LOCALIZE[291] $LOCALIZE[478]</label>
                             <onclick>noop</onclick>
 							<icon>special://skin/extras/icons/video.png</icon>
                         </item>
          
-                        <item id="36">
+                        <item id="37">
                             <description>Quick Nav menu Settings</description>
                             <label>$LOCALIZE[41441]</label>
                             <onclick>noop</onclick>
 							<icon>special://skin/extras/icons/tvcatchup.png</icon>
                         </item>
-                        <item id="38">
+                        <item id="39">
                             <description>Add-on Settings</description>
                             <label>$LOCALIZE[41280]</label>
                             <onclick>noop</onclick>
@@ -302,6 +308,17 @@
 							<onup>1007</onup>
 							<ondown>1001</ondown>
 						</control>
+					</control>
+			
+			
+			
+					<!-- =============== -->    
+					<!-- MediaBroser Settings -->
+					<!-- =============== -->
+					<control type="grouplist" id="5">
+						<visible>Container(30).HasFocus(32)</visible>
+						<onleft>30</onleft>
+						<include>SettingsCategoryGrouplistVars</include>
 						<control type="radiobutton" id="1009">
 							<visible>System.HasAddon(plugin.video.xbmb3c)</visible>
 							<width>1210</width>
@@ -316,7 +333,7 @@
 							<include>SettingsCategoryDefaultButtonVars</include>
 							<onclick>Addon.OpenSettings(plugin.video.xbmb3c)</onclick>
 							<enable>Skin.HasSetting(xbmb3c)</enable>
-							<label>XBMB3C Settings</label>
+							<label>XBMB3C Addon Settings</label>
 							<label2>›››   </label2>
 						</control>
 						<control type="button" id="1011">
@@ -346,13 +363,14 @@
 							<enable>Skin.HasSetting(xbmb3c)</enable>
 							<label>XBMB3C Search</label>
 						</control>
-					</control>
+					</control>			
+			
 			
 					<!-- ============= -->  
 					<!-- Home Settings -->
 					<!-- ============= -->
 					<control type="grouplist" id="5">
-						<visible>Container(30).HasFocus(32)</visible>
+						<visible>Container(30).HasFocus(33)</visible>
 						<onleft>30</onleft>
 						<include>SettingsCategoryGrouplistVars</include>
 						<control type="button" id="2000">
@@ -452,7 +470,7 @@
 					<control type="grouplist" id="5">
 						<onleft>30</onleft>
 						<include>SettingsCategoryGrouplistVars</include>
-						<visible>Container(30).HasFocus(37)</visible>
+						<visible>Container(30).HasFocus(38)</visible>
 						<control type="button" id="4001">
 							<width>1210</width>
 							<include>SettingsCategoryDefaultButtonVars</include>
@@ -516,7 +534,7 @@
 					<control type="grouplist" id="5">
 						<onleft>30</onleft>
 						<include>SettingsCategoryGrouplistVars</include>
-						<visible>Container(30).HasFocus(35)</visible>
+						<visible>Container(30).HasFocus(36)</visible>
 						<control type="radiobutton" id="5000">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
@@ -603,7 +621,7 @@
 					<control type="grouplist" id="5">
 						<onleft>30</onleft>
 						<include>SettingsCategoryGrouplistVars</include>
-						<visible>Container(30).HasFocus(34)</visible>
+						<visible>Container(30).HasFocus(35)</visible>
 						<control type="button" id="8001">
 							<width>1210</width>
 							<include>SettingsCategoryDefaultButtonVars</include>
@@ -682,7 +700,7 @@
 					<control type="grouplist" id="5">
 						<onleft>30</onleft>
 						<include>SettingsCategoryGrouplistVars</include>
-						<visible>Container(30).HasFocus(33)</visible>
+						<visible>Container(30).HasFocus(34)</visible>
 						<control type="button" id="3001">
 							<width>1210</width>
 							<include>SettingsCategoryDefaultButtonVars</include>
@@ -756,7 +774,7 @@
 					<control type="grouplist" id="5">
 						<onleft>30</onleft>
 						<include>SettingsCategoryGrouplistVars</include>
-						<visible>Container(30).HasFocus(36)</visible>
+						<visible>Container(30).HasFocus(37)</visible>
 						<control type="radiobutton" id="6001">
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
@@ -852,7 +870,7 @@
 					<control type="grouplist" id="5">
 						<onleft>30</onleft>
 						<include>SettingsCategoryGrouplistVars</include>
-						<visible>Container(30).HasFocus(38)</visible>
+						<visible>Container(30).HasFocus(39)</visible>
 						<control type="button" id="7001">
 							<width>1210</width>
 							<include>SettingsCategoryDefaultButtonVars</include>

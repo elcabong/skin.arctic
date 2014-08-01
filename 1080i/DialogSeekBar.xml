@@ -97,7 +97,7 @@
 						<posx>196</posx>
 						<posy>-4</posy>
 						<control type="image">
-							<posx>-85</posx>
+							<posx>-135</posx>
 							<posy>10</posy>
 							<width>165</width>
 							<height>165</height>
@@ -105,7 +105,7 @@
 							<aspectratio align="center">keep</aspectratio>
 							<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="7500" loop="true" condition="Player.Playing">Conditional</animation>
 							<animation effect="slide" start="395" end="0" time="350">Visible</animation>
-							<visible>Skin.HasSetting(CDArt.Enabled) + !IsEmpty(Player.Art(discart)) + !VideoPlayer.Content(LiveTV) + [!Skin.HasSetting(videoosd.clearlogo) | [IsEmpty(Player.Art(tvshow.clearlogo)) + IsEmpty(Player.Art(clearlogo))]]</visible>
+							<visible>Skin.HasSetting(CDArt.Enabled) + !IsEmpty(Player.Art(discart)) + !VideoPlayer.Content(LiveTV) + !VideoPlayer.Content(Episodes) + [!Skin.HasSetting(videoosd.clearlogo) | [IsEmpty(Player.Art(tvshow.clearlogo)) + IsEmpty(Player.Art(clearlogo))]]</visible>
 						</control>
 						<control type="image">
 							<description>Poster</description>
@@ -591,15 +591,15 @@
 						<posx>196</posx>
 						<posy>-4</posy>
 						<control type="image">
-							<posx>15</posx>
-							<posy>-135</posy>
-							<width>184</width>
-							<height>184</height>
+							<posx>-160</posx>
+							<posy>20</posy>
+							<width>194</width>
+							<height>194</height>
 							<texture background="true" fallback="osd/fullscreen/cd.png">$INFO[Player.Art(discart)]</texture>
 							<aspectratio align="center">keep</aspectratio>
 							<animation effect="rotate" center="auto" reversible="false" start="360" end="0" time="15000" loop="true" condition="Player.Playing">Conditional</animation>
 							<animation effect="slide" start="395" end="0" time="350">Visible</animation>
-							<visible>Skin.HasSetting(CDArt.Enabled) + !IsEmpty(Player.Art(discart)) + !VideoPlayer.Content(LiveTV) + [!Skin.HasSetting(videoosd.clearlogo) | [IsEmpty(Player.Art(tvshow.clearlogo)) + IsEmpty(Player.Art(clearlogo))]]</visible>
+							<visible>Skin.HasSetting(CDArt.Enabled) + !IsEmpty(Player.Art(discart)) + !VideoPlayer.Content(LiveTV) + !VideoPlayer.Content(Episodes) + [!Skin.HasSetting(videoosd.clearlogo) | [IsEmpty(Player.Art(tvshow.clearlogo)) + IsEmpty(Player.Art(clearlogo))]]</visible>
 						</control>
 						<control type="image">
 							<description>Poster</description>

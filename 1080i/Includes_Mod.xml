@@ -4393,6 +4393,18 @@
 			</item>
 		<!-- recommended movies -->
 		<item id="1">
+			<onclick>None</onclick>
+			<icon>views/fallbacks/DefaultVideo.png/landscape.png</icon>
+			<property name="Poster">views/fallbacks/DefaultVideo.png/medium.png</property>
+			<property name="Overlay">none</property>
+			<property name="Rating">none</property>
+			<property name="Plot">none</property>
+			<property name="Logo">none</property>
+			<label>Start Watching Movies</label>
+			<label2>0 In-Progress Movies</label2>
+			<visible>!Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + IsEmpty(Window.Property(RecommendedMovie.1.Title))</visible>
+		</item>
+		<item id="1">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedMovie.1.File)])</onclick>
 			<icon>$INFO[Window.Property(RecommendedMovie.1.Art(fanart))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedMovie.1.Art(poster))]</property>
@@ -4511,18 +4523,18 @@
 			<label>$INFO[Window.Property(RecommendedMovie.10.Title)]</label>
 			<label2>$INFO[Window.Property(RecommendedMovie.10.Year),, • ]$INFO[Window.Property(RecommendedMovie.10.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(RecommendedMovie.10.Rating),   ● ,]</label2>
 			<visible>!Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(RecommendedMovie.10.Title))</visible>
-		</item>		
+		</item>
 		<item id="1">
-			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.0.Path)])</onclick>
-			<icon>$INFO[Window.Property(InProgressMovieMB3.0.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(InProgressMovieMB3.0.Art(poster))]</property>
-			<property name="Overlay">$INFO[Window.Property(InProgressMovieMB3.0.PercentPlayed)]</property>
-			<property name="Rating">$INFO[Window.Property(InProgressMovieMB3.0.Rating)]</property>
-			<property name="Plot">$INFO[Window.Property(InProgressMovieMB3.0.Plot)]</property>
-			<property name="Logo">$INFO[Window.Property(InProgressMovieMB3.0.Art(clearlogo))]</property>
-			<label>$INFO[Window.Property(InProgressMovieMB3.0.Title)]</label>
-			<label2>$INFO[Window.Property(InProgressMovieMB3.0.Year),, • ]$INFO[Window.Property(InProgressMovieMB3.0.Runtime),, $LOCALIZE[12391]]$INFO[Window.Property(InProgressMovieMB3.0.Rating),   ● ,]</label2>
-			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + !IsEmpty(Window.Property(InProgressMovieMB3.0.Title))</visible>
+			<onclick>None</onclick>
+			<icon>views/fallbacks/DefaultVideo.png/landscape.png</icon>
+			<property name="Poster">views/fallbacks/DefaultVideo.png/medium.png</property>
+			<property name="Overlay">none</property>
+			<property name="Rating">none</property>
+			<property name="Plot">none</property>
+			<property name="Logo">none</property>
+			<label>Start Watching Movies</label>
+			<label2>0 In-Progress Movies</label2>
+			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),movie.recommended) + IsEmpty(Window.Property(InProgressMovieMB3.1.Title))</visible>
 		</item>
 		<item id="2">
 			<onclick>PlayMedia($ESCINFO[Window.Property(InProgressMovieMB3.1.Path)])</onclick>
@@ -5142,6 +5154,18 @@
 		</item>
 		<!-- recommended tv -->
 		<item id="1">
+			<onclick>None</onclick>
+			<icon>views/fallbacks/DefaultVideo.png/landscape.png</icon>
+			<property name="Poster">views/fallbacks/DefaultVideo.png/medium.png</property>
+			<property name="Overlay">none</property>
+			<property name="Rating">none</property>
+			<property name="Plot">none</property>
+			<property name="Logo">none</property>
+			<label>Start Watching TV</label>
+			<label2>0 In-Progress TV Series</label2>
+			<visible>!Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + IsEmpty(Window.Property(RecommendedEpisode.1.Title))</visible>
+		</item>				
+		<item id="1">
 			<onclick>PlayMedia($ESCINFO[Window.Property(RecommendedEpisode.1.File)])</onclick>
 			<icon>$INFO[Window.Property(RecommendedEpisode.1.Art(thumb))]</icon>
 			<property name="Poster">$INFO[Window.Property(RecommendedEpisode.1.Art(tvshow.poster))]</property>
@@ -5250,17 +5274,18 @@
 			<label>$INFO[Window.Property(RecommendedEpisode.10.TVshowTitle)]</label>
 			<label2>$INFO[Window.Property(RecommendedEpisode.10.Title),, • ]$INFO[Window.Property(RecommendedEpisode.10.Season),S,]$INFO[Window.Property(RecommendedEpisode.10.Episode),E,]</label2>
 			<visible>!Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(RecommendedEpisode.10.Title))</visible>
-		</item>		
+		</item>
 		<item id="1">
-			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.0.Path)])</onclick>
-			<icon>$INFO[Window.Property(NextUpEpisodeMB3.0.Thumb)]</icon>
-			<property name="Poster">$INFO[Window.Property(NextUpEpisodeMB3.0.Art(tvshow.poster))]</property>
-			<property name="Overlay">$INFO[Window.Property(NextUpEpisodeMB3.0.PercentPlayed)]</property>
-			<property name="Plot">$INFO[Window.Property(NextUpEpisodeMB3.0.Plot)]</property>
-			<property name="Logo">$INFO[Window.Property(NextUpEpisodeMB3.0.Art(tvshow.clearlogo))]</property>
-			<label>$INFO[Window.Property(NextUpEpisodeMB3.0.ShowTitle)]</label>
-			<label2>$INFO[Window.Property(NextUpEpisodeMB3.0.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.0.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.0.EpisodeNo),E,]</label2>
-			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + !IsEmpty(Window.Property(NextUpEpisodeMB3.0.ShowTitle))</visible>
+			<onclick>None</onclick>
+			<icon>views/fallbacks/DefaultVideo.png/landscape.png</icon>
+			<property name="Poster">views/fallbacks/DefaultVideo.png/medium.png</property>
+			<property name="Overlay">none</property>
+			<property name="Rating">none</property>
+			<property name="Plot">none</property>
+			<property name="Logo">none</property>
+			<label>Start Watching TV</label>
+			<label2>0 In-Progress TV Series</label2>
+			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),tvshow.recommended) + IsEmpty(Window.Property(NextUpEpisodeMB3.1.ShowTitle))</visible>
 		</item>		
 		<item id="2">
 			<onclick>PlayMedia($ESCINFO[Window.Property(NextUpEpisodeMB3.1.Path)])</onclick>
