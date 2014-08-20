@@ -50,7 +50,21 @@ msgctxt "#41107"
 msgid "Enable CDArt"
 msgstr ""
 
-#empty strings from id 41108 to 41111
+msgctxt "#41108"
+msgid "MediaBrowser"
+msgstr ""
+
+msgctxt "#41109"
+msgid "Mode"
+msgstr ""
+
+msgctxt "#41110"
+msgid "Addon Settings"
+msgstr ""
+
+msgctxt "#41111"
+msgid "Set Default Views"
+msgstr ""
 
 msgctxt "#41112"
 msgid "Invert spin control"
@@ -64,7 +78,19 @@ msgctxt "#41114"
 msgid "Bottom"
 msgstr ""
 
-#empty strings from id 41115 to 41129
+msgctxt "#41115"
+msgid "Background Fanart"
+msgstr ""
+
+msgctxt "#41116"
+msgid "Home Search Button"
+msgstr ""
+
+msgctxt "#41117"
+msgid "Use Kodi Music Library"
+msgstr ""
+
+#empty strings from id 41118 to 41129
 #Home
 
 msgctxt "#41130"

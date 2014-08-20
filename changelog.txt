@@ -1,8 +1,12 @@
+[B]0.9.10[/B]
+Added option to use default xbmc/kodi music library
+moved mediabrowser text to english strings file
+
 [B]0.9.9[/B]
 Added placeholder for In-Progress Movies and TV so the homescreen widget doesnt get stuck when there is no content
 made separate MediaBrowser tab in skin settings
 updated cdart position for now playing info dialog
-added on demand plot loading, can disable
+added on demand plot loading, can disable plot loading in xbmb3c settings for quicker load time.
 
 [B]0.9.8[/B]
 added link to xbmb3c view settings and view settings from main skin settings

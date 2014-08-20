@@ -156,8 +156,8 @@
 							<icon>special://skin/extras/icons/config.png</icon>
                         </item>
                         <item id="32">
-                            <description>xbmb3c Settings</description>
-                            <label>MediaBrowser</label>
+                            <description>MediaBrowser mb3 Settings</description>
+                            <label>$LOCALIZE[41108] </label>
                             <onclick>noop</onclick>
 							<icon>special://skin/extras/icons/addons.png</icon>
                         </item>
@@ -313,7 +313,7 @@
 			
 			
 					<!-- =============== -->    
-					<!-- MediaBroser Settings -->
+					<!-- MediaBrowser Settings -->
 					<!-- =============== -->
 					<control type="grouplist" id="5">
 						<visible>Container(30).HasFocus(32)</visible>
@@ -325,43 +325,52 @@
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>Skin.HasSetting(xbmb3c)</selected>
 							<onclick>Skin.ToggleSetting(xbmb3c)</onclick>
-							<label>XBMB3C Mode - Connect to MB3 Server</label>
+							<label>$LOCALIZE[41108] $LOCALIZE[41109]</label>
 						</control>
-						<control type="button" id="1010">
+						<control type="radiobutton" id="1010">
 							<visible>System.HasAddon(plugin.video.xbmb3c)</visible>
 							<width>1210</width>
-							<include>SettingsCategoryDefaultButtonVars</include>
-							<onclick>Addon.OpenSettings(plugin.video.xbmb3c)</onclick>
+							<include>SettingsCategoryRadioButtonVars</include>
+							<selected>Skin.HasSetting(xbmb3c-usekodimusic)</selected>
+							<onclick>Skin.ToggleSetting(xbmb3c-usekodimusic)</onclick>
 							<enable>Skin.HasSetting(xbmb3c)</enable>
-							<label>XBMB3C Addon Settings</label>
-							<label2>›››   </label2>
+							<label>$LOCALIZE[41117]</label>
 						</control>
 						<control type="button" id="1011">
 							<visible>System.HasAddon(plugin.video.xbmb3c)</visible>
 							<width>1210</width>
 							<include>SettingsCategoryDefaultButtonVars</include>
+							<onclick>Addon.OpenSettings(plugin.video.xbmb3c)</onclick>
+							<enable>Skin.HasSetting(xbmb3c)</enable>
+							<label>$LOCALIZE[41108] $LOCALIZE[41110]</label>
+							<label2>›››   </label2>
+						</control>
+						<control type="button" id="1012">
+							<visible>System.HasAddon(plugin.video.xbmb3c)</visible>
+							<width>1210</width>
+							<include>SettingsCategoryDefaultButtonVars</include>
 							<onclick>RunAddon(plugin.video.xbmb3c,"?mode=3&url=http%3a%2f%2fSETVIEWSSETVIEWS")</onclick>
 							<enable>Skin.HasSetting(xbmb3c)</enable>
-							<label>Set Default Views</label>
+							<label>$LOCALIZE[41111]</label>
 							<label2>›››   </label2>
 						</control>								
-						<control type="radiobutton" id="1012">
+						<control type="radiobutton" id="1013">
 							<visible>System.HasAddon(plugin.video.xbmb3c)</visible>
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>Skin.HasSetting(xbmb3c-home-fanart)</selected>
 							<onclick>Skin.ToggleSetting(xbmb3c-home-fanart)</onclick>
 							<enable>Skin.HasSetting(xbmb3c)</enable>
-							<label>XBMB3C Home Fanart</label>
+							<label>$LOCALIZE[41108] $LOCALIZE[41115]</label>
 						</control>
-						<control type="radiobutton" id="1013">
+						<control type="radiobutton" id="1014">
 							<visible>System.HasAddon(plugin.video.xbmb3c)</visible>
 							<width>1210</width>
 							<include>SettingsCategoryRadioButtonVars</include>
 							<selected>Skin.HasSetting(xbmb3c-search)</selected>
 							<onclick>Skin.ToggleSetting(xbmb3c-search)</onclick>
 							<enable>Skin.HasSetting(xbmb3c)</enable>
-							<label>XBMB3C Search</label>
+							<label>$LOCALIZE[41108] $LOCALIZE[41116]</label>
 						</control>
 					</control>			
 			

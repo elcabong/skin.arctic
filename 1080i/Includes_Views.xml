@@ -1230,9 +1230,9 @@
 		<value condition="substring(ListItem.Path,videodb://1/7,left) | substring(ListItem.Path,videodb://movies/sets,left)">$INFO[Window(home).Property(Set.Movies.ExtendedPlot)]</value>
 		<value condition="!IsEmpty(ListItem.Property(Addon.Description))">$INFO[ListItem.Property(Addon.Description)]</value>
 		<value condition="!IsEmpty(ListItem.Property(Addon.Summary))">$INFO[ListItem.Property(Addon.Summary)]</value>
-		<value condition="!IsEmpty(ListItem.Plot) + !Skin.HasSetting(xbmb3c)">$INFO[ListItem.Plot]</value>
-		<value condition="Skin.HasSetting(xbmb3c)">$INFO[Window(Home).Property(MB3.Plot)]</value>
-		<value>$VAR[MusicPlotBox]</value>
+		<value condition="!IsEmpty(ListItem.Plot)">$INFO[ListItem.Plot]</value>
+		<value condition="Skin.HasSetting(xbmb3c)">$INFO[ListItem.Plot]$INFO[Window(Home).Property(MB3.Plot)]</value>
+		<value></value>
 	</variable>
 	
 	<variable name="SeasonNumber">

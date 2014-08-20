@@ -848,7 +848,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile.1.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile.1.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3) + !Skin.HasSetting(xbmb3c)</visible>
+						<visible>Container(3).HasFocus(3) + [!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)]</visible>
 					</item>
 					<item id="2">
 						<label>$INFO[Skin.String(Home.Music.Tile.2.Label)]</label>
@@ -859,7 +859,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile.2.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile.2.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3) + !Skin.HasSetting(xbmb3c)</visible>
+						<visible>Container(3).HasFocus(3) + [!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)]</visible>
 					</item>
 					<item id="3">
 						<label>$INFO[Skin.String(Home.Music.Tile.3.Label)]</label>
@@ -870,7 +870,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile.3.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile.3.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3) + !Skin.HasSetting(xbmb3c)</visible>
+						<visible>Container(3).HasFocus(3) + [!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)]</visible>
 					</item>
 					<item id="4">
 						<label>$INFO[Skin.String(Home.Music.Tile.4.Label)]</label>
@@ -881,7 +881,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile.4.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile.4.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3) + !Skin.HasSetting(xbmb3c)</visible>
+						<visible>Container(3).HasFocus(3) + [!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)]</visible>
 					</item>
 					<item id="5">
 						<label>$INFO[Skin.String(Home.Music.Tile.5.Label)]</label>
@@ -892,7 +892,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile.5.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile.5.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3) + !Skin.HasSetting(xbmb3c)</visible>
+						<visible>Container(3).HasFocus(3) + [!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)]</visible>
 					</item>
 					<item id="6">
 						<label>$INFO[Skin.String(Home.Music.Tile.6.Label)]</label>
@@ -903,7 +903,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile.6.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile.6.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3) + !Skin.HasSetting(xbmb3c)</visible>
+						<visible>Container(3).HasFocus(3) + [!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)]</visible>
 					</item>
 					<item id="7">
 						<label>$INFO[Skin.String(Home.Music.Tile.7.Label)]</label>
@@ -914,7 +914,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile.7.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile.7.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3) + !Skin.HasSetting(xbmb3c)</visible>
+						<visible>Container(3).HasFocus(3) + [!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)]</visible>
 					</item>
 					<item id="8">
 						<label>$INFO[Skin.String(Home.Music.Tile.8.Label)]</label>
@@ -925,7 +925,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile.8.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile.8.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3) + !Skin.HasSetting(xbmb3c)</visible>
+						<visible>Container(3).HasFocus(3) + [!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)]</visible>
 					</item>
 					<item id="9">
 						<label>$INFO[Skin.String(Home.Music.Tile.9.Label)]</label>
@@ -936,7 +936,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile.9.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile.9.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3) + !Skin.HasSetting(xbmb3c)</visible>
+						<visible>Container(3).HasFocus(3) + [!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)]</visible>
 					</item>
 					<item id="10">
 						<label>$INFO[Skin.String(Home.Music.Tile.10.Label)]</label>
@@ -947,7 +947,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile.10.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile.10.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3) + !Skin.HasSetting(xbmb3c)</visible>
+						<visible>Container(3).HasFocus(3) + [!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)]</visible>
 					</item>
 					
 					<item id="0">
@@ -958,7 +958,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.0.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.0.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c)</visible>
+						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic)</visible>
 					</item>					
 					<item id="1">
 						<label>$INFO[Window(home).Property(xbmb3c.std.music.1.title)]</label>
@@ -968,7 +968,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.1.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.1.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c)</visible>
+						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic)</visible>
 					</item>
 					<item id="2">
 						<label>$INFO[Window(home).Property(xbmb3c.std.music.2.title)]</label>
@@ -978,7 +978,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.2.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.2.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c)</visible>
+						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic)</visible>
 					</item>
 					<item id="3">
 						<label>$INFO[Window(home).Property(xbmb3c.std.music.3.title)]</label>
@@ -988,7 +988,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.3.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.3.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c)</visible>
+						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic)</visible>
 					</item>
 					<item id="4">
 						<label>$INFO[Skin.String(Home.Music.Tile-xbmb3c.4.Label)]</label>
@@ -999,7 +999,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.4.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.4.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c)</visible>
+						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic)</visible>
 					</item>
 					<item id="5">
 						<label>$INFO[Skin.String(Home.Music.Tile-xbmb3c.5.Label)]</label>
@@ -1010,7 +1010,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.5.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.5.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c)</visible>
+						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic)</visible>
 					</item>
 					<item id="6">
 						<label>$INFO[Skin.String(Home.Music.Tile-xbmb3c.6.Label)]</label>
@@ -1021,7 +1021,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.6.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.6.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c)</visible>
+						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic)</visible>
 					</item>
 					<item id="7">
 						<label>$INFO[Skin.String(Home.Music.Tile-xbmb3c.7.Label)]</label>
@@ -1032,7 +1032,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.7.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.7.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c)</visible>
+						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic)</visible>
 					</item>
 					<item id="8">
 						<label>$INFO[Skin.String(Home.Music.Tile-xbmb3c.8.Label)]</label>
@@ -1043,7 +1043,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.8.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.8.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c)</visible>
+						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic)</visible>
 					</item>
 					<item id="9">
 						<label>$INFO[Skin.String(Home.Music.Tile-xbmb3c.9.Label)]</label>
@@ -1054,7 +1054,7 @@
 						<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.9.Path)]</property>
 						<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.9.Animate)]</property>
 						<property name="custom">1</property>
-						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c)</visible>
+						<visible>Container(3).HasFocus(3) + Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic)</visible>
 					</item>					
 					
 					

@@ -75,8 +75,14 @@
 					<posy>70</posy>
 					<include>HomeProfileInfoLabel</include>
 					<label>$INFO[Window(Home).Property(MB3TotalMusicAlbums),, $LOCALIZE[132]]$INFO[Window(Home).Property(MB3TotalMusicSongs), - , $LOCALIZE[134]]</label>
-					<visible>Container(525).HasFocus(3)</visible>
+					<visible>Container(525).HasFocus(3) + !Skin.HasSetting(xbmb3c-usekodimusic)</visible>
 				</control>
+				<control type="label">
+					<posy>70</posy>
+					<include>HomeProfileInfoLabel</include>
+					<label>$INFO[Window.Property(Music.AlbumsCount),, $LOCALIZE[132]] - $INFO[Window.Property(Music.SongsCount),, $LOCALIZE[134]]</label>
+					<visible>Container(525).HasFocus(3) + Skin.HasSetting(xbmb3c-usekodimusic)</visible>
+				</control>				
 			</control>
 			<control type="group">
 				<visible>!Skin.HasSetting(xbmb3c)</visible>
@@ -836,6 +842,7 @@
 			<content>
 				<include condition="!Skin.HasSetting(xbmb3c)">Mod_87Content</include>
 				<include condition="Skin.HasSetting(xbmb3c)">Mod_87Content-xbmb3c</include>
+				<include>Mod_87Content-Music</include>
 			</content>
 		</control>
 		<!-- 86 Image -->
@@ -1012,6 +1019,7 @@
 			<content>
 				<include condition="!Skin.HasSetting(xbmb3c)">Mod_86Content</include>
 				<include condition="Skin.HasSetting(xbmb3c)">Mod_86Content-xbmb3c</include>
+				<include>Mod_86Content-Music</include>
 			</content>
 		</control>
 		<!-- 90 Labels -->
@@ -1152,6 +1160,7 @@
 			<content>
 				<include condition="!Skin.HasSetting(xbmb3c)">Mod_90Content</include>
 				<include condition="Skin.HasSetting(xbmb3c)">Mod_90Content-xbmb3c</include>				
+				<include>Mod_90Content-Music</include>				
 			</content>
 		</control>
 		<control type="list" id="90">
@@ -1176,6 +1185,7 @@
 			<content>
 				<include condition="!Skin.HasSetting(xbmb3c)">Mod_90Content</include>
 				<include condition="Skin.HasSetting(xbmb3c)">Mod_90Content-xbmb3c</include>				
+				<include>Mod_90Content-Music</include>				
 			</content>
 		</control>
 	</include>
@@ -1790,7 +1800,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile.1.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile.1.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>!Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3)</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + Container(525).HasFocus(3)</visible>
 		</item>
 		<item id="2">
 			<label>$INFO[Skin.String(Home.Music.Tile.2.Label)]</label>
@@ -1806,7 +1816,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile.2.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile.2.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>!Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.1.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.2.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.1.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.2.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="3">
 			<label>$INFO[Skin.String(Home.Music.Tile.3.Label)]</label>
@@ -1822,7 +1832,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile.3.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile.3.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>!Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.2.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.3.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.2.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.3.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="4">
 			<label>$INFO[Skin.String(Home.Music.Tile.4.Label)]</label>
@@ -1838,7 +1848,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile.4.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile.4.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>!Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.3.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.4.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.3.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.4.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="5">
 			<label>$INFO[Skin.String(Home.Music.Tile.5.Label)]</label>
@@ -1854,7 +1864,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile.5.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile.5.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>!Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.4.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.5.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.4.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.5.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="6">
 			<label>$INFO[Skin.String(Home.Music.Tile.6.Label)]</label>
@@ -1870,7 +1880,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile.6.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile.6.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>!Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.5.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.6.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.5.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.6.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="7">
 			<label>$INFO[Skin.String(Home.Music.Tile.7.Label)]</label>
@@ -1886,7 +1896,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile.7.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile.7.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>!Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.6.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.7.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.6.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.7.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="8">
 			<label>$INFO[Skin.String(Home.Music.Tile.8.Label)]</label>
@@ -1902,7 +1912,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile.8.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile.8.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>!Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.7.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.8.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.7.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.8.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="9">
 			<label>$INFO[Skin.String(Home.Music.Tile.9.Label)]</label>
@@ -1918,7 +1928,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile.9.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile.9.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>!Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.8.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.9.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.8.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.9.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="10">
 			<label>$INFO[Skin.String(Home.Music.Tile.10.Label)]</label>
@@ -1934,7 +1944,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile.10.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile.10.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>!Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.9.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.10.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile.9.Path)) | !IsEmpty(Skin.String(Home.Music.Tile.10.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 
 	<!-- end orig content -->
@@ -2189,7 +2199,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.0.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.0.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3)</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + Container(525).HasFocus(3)</visible>
 		</item>
 		<item id="1">
 			<label>$INFO[Window(home).Property(xbmb3c.std.music.1.title)]</label>
@@ -2199,7 +2209,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.1.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.1.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3)</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + Container(525).HasFocus(3)</visible>
 		</item>			
 		<item id="2">
 			<label>$INFO[Window(home).Property(xbmb3c.std.music.2.title)]</label>
@@ -2209,7 +2219,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.2.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.2.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3)</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + Container(525).HasFocus(3)</visible>
 		</item>	
 		<item id="3">
 			<label>$INFO[Window(home).Property(xbmb3c.std.music.3.title)]</label>
@@ -2219,7 +2229,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.3.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.3.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3)</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + Container(525).HasFocus(3)</visible>
 		</item>
 		<item id="4">
 			<label>$INFO[Skin.String(Home.Music.Tile-xbmb3c.4.Label)]</label>
@@ -2235,7 +2245,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.4.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.4.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile-xbmb3c.4.Path)) | !IsEmpty(Skin.String(Home.Music.Tile-xbmb3c.4.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile-xbmb3c.4.Path)) | !IsEmpty(Skin.String(Home.Music.Tile-xbmb3c.4.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="5">
 			<label>$INFO[Skin.String(Home.Music.Tile-xbmb3c.5.Label)]</label>
@@ -2251,7 +2261,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.5.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.5.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile-xbmb3c.5.Path)) | !IsEmpty(Skin.String(Home.Music.Tile-xbmb3c.5.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile-xbmb3c.5.Path)) | !IsEmpty(Skin.String(Home.Music.Tile-xbmb3c.5.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="6">
 			<label>$INFO[Skin.String(Home.Music.Tile-xbmb3c.6.Label)]</label>
@@ -2267,7 +2277,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.6.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.6.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile-xbmb3c.6.Path)) | !IsEmpty(Skin.String(Home.Music.Tile-xbmb3c.6.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile-xbmb3c.6.Path)) | !IsEmpty(Skin.String(Home.Music.Tile-xbmb3c.6.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="7">
 			<label>$INFO[Skin.String(Home.Music.Tile-xbmb3c.7.Label)]</label>
@@ -2283,7 +2293,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.7.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.7.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile-xbmb3c.7.Path)) | !IsEmpty(Skin.String(Home.Music.Tile-xbmb3c.7.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile-xbmb3c.7.Path)) | !IsEmpty(Skin.String(Home.Music.Tile-xbmb3c.7.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="8">
 			<label>$INFO[Skin.String(Home.Music.Tile-xbmb3c.8.Label)]</label>
@@ -2299,7 +2309,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.8.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.8.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile-xbmb3c.8.Path)) | !IsEmpty(Skin.String(Home.Music.Tile-xbmb3c.8.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile-xbmb3c.8.Path)) | !IsEmpty(Skin.String(Home.Music.Tile-xbmb3c.8.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		<item id="9">
 			<label>$INFO[Skin.String(Home.Music.Tile-xbmb3c.9.Label)]</label>
@@ -2315,7 +2325,7 @@
 			<property name="path">$INFO[Skin.String(Home.Music.Tile-xbmb3c.9.Path)]</property>
 			<property name="animate">$INFO[Skin.String(Home.Music.Tile-xbmb3c.9.Animate)]</property>
 			<property name="custom">1</property>
-			<visible>Skin.HasSetting(xbmb3c) + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile-xbmb3c.9.Path)) | !IsEmpty(Skin.String(Home.Music.Tile-xbmb3c.9.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + Container(525).HasFocus(3) + [!IsEmpty(Skin.String(Home.Music.Tile-xbmb3c.9.Path)) | !IsEmpty(Skin.String(Home.Music.Tile-xbmb3c.9.Path)) | StringCompare(Skin.String(homescreen.style),combo)]</visible>
 		</item>
 		
 		
@@ -5847,7 +5857,7 @@
 			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.1.Description)]</property>
 			<label>$INFO[Window.Property(RecommendedAlbum.1.Artist)]</label>
 			<label2>$INFO[Window.Property(RecommendedAlbum.1.Title)]$INFO[Window.Property(RecommendedAlbum.1.Year), • ,]</label2>
-			<visible>!Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(RecommendedAlbum.1.Title))</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(RecommendedAlbum.1.Title))</visible>
 		</item>
 		<item id="2">
 			<onclick>SetFocus(525)</onclick>
@@ -5857,7 +5867,7 @@
 			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.2.Description)]</property>
 			<label>$INFO[Window.Property(RecommendedAlbum.2.Artist)]</label>
 			<label2>$INFO[Window.Property(RecommendedAlbum.2.Title)]$INFO[Window.Property(RecommendedAlbum.2.Year), • ,]</label2>
-			<visible>!Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(RecommendedAlbum.2.Title))</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(RecommendedAlbum.2.Title))</visible>
 		</item>
 		<item id="3">
 			<onclick>SetFocus(525)</onclick>
@@ -5867,7 +5877,7 @@
 			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.3.Description)]</property>
 			<label>$INFO[Window.Property(RecommendedAlbum.3.Artist)]</label>
 			<label2>$INFO[Window.Property(RecommendedAlbum.3.Title)]$INFO[Window.Property(RecommendedAlbum.3.Year), • ,]</label2>
-			<visible>!Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(RecommendedAlbum.3.Title))</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(RecommendedAlbum.3.Title))</visible>
 		</item>
 		<item id="4">
 			<onclick>SetFocus(525)</onclick>
@@ -5877,7 +5887,7 @@
 			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.4.Description)]</property>
 			<label>$INFO[Window.Property(RecommendedAlbum.4.Artist)]</label>
 			<label2>$INFO[Window.Property(RecommendedAlbum.4.Title)]$INFO[Window.Property(RecommendedAlbum.4.Year), • ,]</label2>
-			<visible>!Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(RecommendedAlbum.4.Title))</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(RecommendedAlbum.4.Title))</visible>
 		</item>
 		<item id="5">
 			<onclick>SetFocus(525)</onclick>
@@ -5887,7 +5897,7 @@
 			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.5.Description)]</property>
 			<label>$INFO[Window.Property(RecommendedAlbum.5.Artist)]</label>
 			<label2>$INFO[Window.Property(RecommendedAlbum.5.Title)]$INFO[Window.Property(RecommendedAlbum.5.Year), • ,]</label2>
-			<visible>!Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(RecommendedAlbum.5.Title))</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(RecommendedAlbum.5.Title))</visible>
 		</item>
 		<item id="6">
 			<onclick>SetFocus(525)</onclick>
@@ -5897,7 +5907,7 @@
 			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.6.Description)]</property>
 			<label>$INFO[Window.Property(RecommendedAlbum.6.Artist)]</label>
 			<label2>$INFO[Window.Property(RecommendedAlbum.6.Title)]$INFO[Window.Property(RecommendedAlbum.6.Year), • ,]</label2>
-			<visible>!Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(RecommendedAlbum.6.Title))</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(RecommendedAlbum.6.Title))</visible>
 		</item>
 		<item id="7">
 			<onclick>SetFocus(525)</onclick>
@@ -5907,7 +5917,7 @@
 			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.7.Description)]</property>
 			<label>$INFO[Window.Property(RecommendedAlbum.7.Artist)]</label>
 			<label2>$INFO[Window.Property(RecommendedAlbum.7.Title)]$INFO[Window.Property(RecommendedAlbum.7.Year), • ,]</label2>
-			<visible>!Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(RecommendedAlbum.7.Title))</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(RecommendedAlbum.7.Title))</visible>
 		</item>		
 		<item id="1">
 			<onclick>SetFocus(525)</onclick>
@@ -5917,7 +5927,7 @@
 			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.0.Description)]</property>
 			<label>$INFO[Window.Property(LatestAlbumMB3.0.Artist)]</label>
 			<label2>$INFO[Window.Property(LatestAlbumMB3.0.Title)]$INFO[Window.Property(LatestAlbumMB3.0.Year), • ,]</label2>
-			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(LatestAlbumMB3.0.Title))</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(LatestAlbumMB3.0.Title))</visible>
 		</item>
 		<item id="2">
 			<onclick>SetFocus(525)</onclick>
@@ -5927,7 +5937,7 @@
 			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.1.Description)]</property>
 			<label>$INFO[Window.Property(LatestAlbumMB3.1.Artist)]</label>
 			<label2>$INFO[Window.Property(LatestAlbumMB3.1.Title)]$INFO[Window.Property(LatestAlbumMB3.1.Year), • ,]</label2>
-			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(LatestAlbumMB3.1.Title))</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(LatestAlbumMB3.1.Title))</visible>
 		</item>
 		<item id="3">
 			<onclick>SetFocus(525)</onclick>
@@ -5937,7 +5947,7 @@
 			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.2.Description)]</property>
 			<label>$INFO[Window.Property(LatestAlbumMB3.2.Artist)]</label>
 			<label2>$INFO[Window.Property(LatestAlbumMB3.2.Title)]$INFO[Window.Property(LatestAlbumMB3.2.Year), • ,]</label2>
-			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(LatestAlbumMB3.2.Title))</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(LatestAlbumMB3.2.Title))</visible>
 		</item>
 		<item id="4">
 			<onclick>SetFocus(525)</onclick>
@@ -5947,7 +5957,7 @@
 			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.3.Description)]</property>
 			<label>$INFO[Window.Property(LatestAlbumMB3.3.Artist)]</label>
 			<label2>$INFO[Window.Property(LatestAlbumMB3.3.Title)]$INFO[Window.Property(LatestAlbumMB3.3.Year), • ,]</label2>
-			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(LatestAlbumMB3.3.Title))</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(LatestAlbumMB3.3.Title))</visible>
 		</item>
 		<item id="5">
 			<onclick>SetFocus(525)</onclick>
@@ -5957,7 +5967,7 @@
 			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.4.Description)]</property>
 			<label>$INFO[Window.Property(LatestAlbumMB3.4.Artist)]</label>
 			<label2>$INFO[Window.Property(LatestAlbumMB3.4.Title)]$INFO[Window.Property(LatestAlbumMB3.4.Year), • ,]</label2>
-			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(LatestAlbumMB3.4.Title))</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(LatestAlbumMB3.4.Title))</visible>
 		</item>
 		<item id="6">
 			<onclick>SetFocus(525)</onclick>
@@ -5967,7 +5977,7 @@
 			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.5.Description)]</property>
 			<label>$INFO[Window.Property(LatestAlbumMB3.5.Artist)]</label>
 			<label2>$INFO[Window.Property(LatestAlbumMB3.5.Title)]$INFO[Window.Property(LatestAlbumMB3.5.Year), • ,]</label2>
-			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(LatestAlbumMB3.5.Title))</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(LatestAlbumMB3.5.Title))</visible>
 		</item>
 		<item id="7">
 			<onclick>SetFocus(525)</onclick>
@@ -5977,7 +5987,7 @@
 			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.6.Description)]</property>
 			<label>$INFO[Window.Property(LatestAlbumMB3.6.Artist)]</label>
 			<label2>$INFO[Window.Property(LatestAlbumMB3.6.Title)]$INFO[Window.Property(LatestAlbumMB3.6.Year), • ,]</label2>
-			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(LatestAlbumMB3.6.Title))</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(LatestAlbumMB3.6.Title))</visible>
 		</item>
 		<item id="8">
 			<onclick>SetFocus(525)</onclick>
@@ -5987,7 +5997,7 @@
 			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.7.Description)]</property>
 			<label>$INFO[Window.Property(LatestAlbumMB3.7.Artist)]</label>
 			<label2>$INFO[Window.Property(LatestAlbumMB3.7.Title)]$INFO[Window.Property(LatestAlbumMB3.7.Year), • ,]</label2>
-			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(LatestAlbumMB3.7.Title))</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + StringCompare(Container(525).ListItem.Property(widget),music.recommended) + !IsEmpty(Window.Property(LatestAlbumMB3.7.Title))</visible>
 		</item>
 		<!-- recent album -->
 		<item id="1">
@@ -5998,7 +6008,7 @@
 			<property name="Plot">$INFO[Window.Property(RecentAlbum.1.Description)]</property>
 			<label>$INFO[Window.Property(RecentAlbum.1.Artist)]</label>
 			<label2>$INFO[Window.Property(RecentAlbum.1.Title)]$INFO[Window.Property(RecentAlbum.1.Year), • ,]</label2>
-			<visible>!Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(RecentAlbum.1.Title))</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(RecentAlbum.1.Title))</visible>
 		</item>
 		<item id="2">
 			<onclick>SetFocus(525)</onclick>
@@ -6008,7 +6018,7 @@
 			<property name="Plot">$INFO[Window.Property(RecentAlbum.2.Description)]</property>
 			<label>$INFO[Window.Property(RecentAlbum.2.Artist)]</label>
 			<label2>$INFO[Window.Property(RecentAlbum.2.Title)]$INFO[Window.Property(RecentAlbum.2.Year), • ,]</label2>
-			<visible>!Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(RecentAlbum.2.Title))</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(RecentAlbum.2.Title))</visible>
 		</item>
 		<item id="3">
 			<onclick>SetFocus(525)</onclick>
@@ -6018,7 +6028,7 @@
 			<property name="Plot">$INFO[Window.Property(RecentAlbum.3.Description)]</property>
 			<label>$INFO[Window.Property(RecentAlbum.3.Artist)]</label>
 			<label2>$INFO[Window.Property(RecentAlbum.3.Title)]$INFO[Window.Property(RecentAlbum.3.Year), • ,]</label2>
-			<visible>!Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(RecentAlbum.3.Title))</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(RecentAlbum.3.Title))</visible>
 		</item>
 		<item id="4">
 			<onclick>SetFocus(525)</onclick>
@@ -6028,7 +6038,7 @@
 			<property name="Plot">$INFO[Window.Property(RecentAlbum.4.Description)]</property>
 			<label>$INFO[Window.Property(RecentAlbum.4.Artist)]</label>
 			<label2>$INFO[Window.Property(RecentAlbum.4.Title)]$INFO[Window.Property(RecentAlbum.4.Year), • ,]</label2>
-			<visible>!Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(RecentAlbum.4.Title))</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(RecentAlbum.4.Title))</visible>
 		</item>
 		<item id="5">
 			<onclick>SetFocus(525)</onclick>
@@ -6038,7 +6048,7 @@
 			<property name="Plot">$INFO[Window.Property(RecentAlbum.5.Description)]</property>
 			<label>$INFO[Window.Property(RecentAlbum.5.Artist)]</label>
 			<label2>$INFO[Window.Property(RecentAlbum.5.Title)]$INFO[Window.Property(RecentAlbum.5.Year), • ,]</label2>
-			<visible>!Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(RecentAlbum.5.Title))</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(RecentAlbum.5.Title))</visible>
 		</item>
 		<item id="6">
 			<onclick>SetFocus(525)</onclick>
@@ -6048,7 +6058,7 @@
 			<property name="Plot">$INFO[Window.Property(RecentAlbum.6.Description)]</property>
 			<label>$INFO[Window.Property(RecentAlbum.6.Artist)]</label>
 			<label2>$INFO[Window.Property(RecentAlbum.6.Title)]$INFO[Window.Property(RecentAlbum.6.Year), • ,]</label2>
-			<visible>!Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(RecentAlbum.6.Title))</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(RecentAlbum.6.Title))</visible>
 		</item>
 		<item id="7">
 			<onclick>SetFocus(525)</onclick>
@@ -6058,7 +6068,7 @@
 			<property name="Plot">$INFO[Window.Property(RecentAlbum.7.Description)]</property>
 			<label>$INFO[Window.Property(RecentAlbum.7.Artist)]</label>
 			<label2>$INFO[Window.Property(RecentAlbum.7.Title)]$INFO[Window.Property(RecentAlbum.7.Year), • ,]</label2>
-			<visible>!Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(RecentAlbum.7.Title))</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(RecentAlbum.7.Title))</visible>
 		</item>		
 		<item id="1">
 			<onclick>SetFocus(525)</onclick>
@@ -6068,7 +6078,7 @@
 			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.0.Description)]</property>
 			<label>$INFO[Window.Property(LatestAlbumMB3.0.Artist)]</label>
 			<label2>$INFO[Window.Property(LatestAlbumMB3.0.Title)]$INFO[Window.Property(LatestAlbumMB3.0.Year), • ,]</label2>
-			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(LatestAlbumMB3.0.Title))</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(LatestAlbumMB3.0.Title))</visible>
 		</item>
 		<item id="2">
 			<onclick>SetFocus(525)</onclick>
@@ -6078,7 +6088,7 @@
 			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.1.Description)]</property>
 			<label>$INFO[Window.Property(LatestAlbumMB3.1.Artist)]</label>
 			<label2>$INFO[Window.Property(LatestAlbumMB3.1.Title)]$INFO[Window.Property(LatestAlbumMB3.1.Year), • ,]</label2>
-			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(LatestAlbumMB3.1.Title))</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(LatestAlbumMB3.1.Title))</visible>
 		</item>
 		<item id="3">
 			<onclick>SetFocus(525)</onclick>
@@ -6088,7 +6098,7 @@
 			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.2.Description)]</property>
 			<label>$INFO[Window.Property(LatestAlbumMB3.2.Artist)]</label>
 			<label2>$INFO[Window.Property(LatestAlbumMB3.2.Title)]$INFO[Window.Property(LatestAlbumMB3.2.Year), • ,]</label2>
-			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(LatestAlbumMB3.2.Title))</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(LatestAlbumMB3.2.Title))</visible>
 		</item>
 		<item id="4">
 			<onclick>SetFocus(525)</onclick>
@@ -6098,7 +6108,7 @@
 			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.3.Description)]</property>
 			<label>$INFO[Window.Property(LatestAlbumMB3.3.Artist)]</label>
 			<label2>$INFO[Window.Property(LatestAlbumMB3.3.Title)]$INFO[Window.Property(LatestAlbumMB3.3.Year), • ,]</label2>
-			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(LatestAlbumMB3.3.Title))</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(LatestAlbumMB3.3.Title))</visible>
 		</item>
 		<item id="5">
 			<onclick>SetFocus(525)</onclick>
@@ -6108,7 +6118,7 @@
 			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.4.Description)]</property>
 			<label>$INFO[Window.Property(LatestAlbumMB3.4.Artist)]</label>
 			<label2>$INFO[Window.Property(LatestAlbumMB3.4.Title)]$INFO[Window.Property(LatestAlbumMB3.4.Year), • ,]</label2>
-			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(LatestAlbumMB3.4.Title))</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(LatestAlbumMB3.4.Title))</visible>
 		</item>
 		<item id="6">
 			<onclick>SetFocus(525)</onclick>
@@ -6118,7 +6128,7 @@
 			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.5.Description)]</property>
 			<label>$INFO[Window.Property(LatestAlbumMB3.5.Artist)]</label>
 			<label2>$INFO[Window.Property(LatestAlbumMB3.5.Title)]$INFO[Window.Property(LatestAlbumMB3.5.Year), • ,]</label2>
-			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(LatestAlbumMB3.5.Title))</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(LatestAlbumMB3.5.Title))</visible>
 		</item>
 		<item id="7">
 			<onclick>SetFocus(525)</onclick>
@@ -6128,7 +6138,7 @@
 			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.6.Description)]</property>
 			<label>$INFO[Window.Property(LatestAlbumMB3.6.Artist)]</label>
 			<label2>$INFO[Window.Property(LatestAlbumMB3.6.Title)]$INFO[Window.Property(LatestAlbumMB3.6.Year), • ,]</label2>
-			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(LatestAlbumMB3.6.Title))</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(LatestAlbumMB3.6.Title))</visible>
 		</item>
 		<item id="8">
 			<onclick>SetFocus(525)</onclick>
@@ -6138,7 +6148,7 @@
 			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.7.Description)]</property>
 			<label>$INFO[Window.Property(LatestAlbumMB3.7.Artist)]</label>
 			<label2>$INFO[Window.Property(LatestAlbumMB3.7.Title)]$INFO[Window.Property(LatestAlbumMB3.7.Year), • ,]</label2>
-			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(LatestAlbumMB3.7.Title))</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + StringCompare(Container(525).ListItem.Property(widget),music.recent) + !IsEmpty(Window.Property(LatestAlbumMB3.7.Title))</visible>
 		</item>
 		<!-- random album -->
 		<item id="1">
@@ -6149,7 +6159,7 @@
 			<property name="Plot">$INFO[Window.Property(RandomAlbum.1.Description)]</property>
 			<label>$INFO[Window.Property(RandomAlbum.1.Artist)]</label>
 			<label2>$INFO[Window.Property(RandomAlbum.1.Title)]$INFO[Window.Property(RandomAlbum.1.Year), • ,]</label2>
-			<visible>!Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbum.1.Title))</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbum.1.Title))</visible>
 		</item>
 		<item id="2">
 			<onclick>SetFocus(525)</onclick>
@@ -6159,7 +6169,7 @@
 			<property name="Plot">$INFO[Window.Property(RandomAlbum.2.Description)]</property>
 			<label>$INFO[Window.Property(RandomAlbum.2.Artist)]</label>
 			<label2>$INFO[Window.Property(RandomAlbum.2.Title)]$INFO[Window.Property(RandomAlbum.2.Year), • ,]</label2>
-			<visible>!Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbum.2.Title))</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbum.2.Title))</visible>
 		</item>
 		<item id="3">
 			<onclick>SetFocus(525)</onclick>
@@ -6169,7 +6179,7 @@
 			<property name="Plot">$INFO[Window.Property(RandomAlbum.3.Description)]</property>
 			<label>$INFO[Window.Property(RandomAlbum.3.Artist)]</label>
 			<label2>$INFO[Window.Property(RandomAlbum.3.Title)]$INFO[Window.Property(RandomAlbum.3.Year), • ,]</label2>
-			<visible>!Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbum.3.Title))</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbum.3.Title))</visible>
 		</item>
 		<item id="4">
 			<onclick>SetFocus(525)</onclick>
@@ -6179,7 +6189,7 @@
 			<property name="Plot">$INFO[Window.Property(RandomAlbum.4.Description)]</property>
 			<label>$INFO[Window.Property(RandomAlbum.4.Artist)]</label>
 			<label2>$INFO[Window.Property(RandomAlbum.4.Title)]$INFO[Window.Property(RandomAlbum.4.Year), • ,]</label2>
-			<visible>!Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbum.4.Title))</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbum.4.Title))</visible>
 		</item>
 		<item id="5">
 			<onclick>SetFocus(525)</onclick>
@@ -6189,7 +6199,7 @@
 			<property name="Plot">$INFO[Window.Property(RandomAlbum.5.Description)]</property>
 			<label>$INFO[Window.Property(RandomAlbum.5.Artist)]</label>
 			<label2>$INFO[Window.Property(RandomAlbum.5.Title)]$INFO[Window.Property(RandomAlbum.5.Year), • ,]</label2>
-			<visible>!Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbum.5.Title))</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbum.5.Title))</visible>
 		</item>
 		<item id="6">
 			<onclick>SetFocus(525)</onclick>
@@ -6199,7 +6209,7 @@
 			<property name="Plot">$INFO[Window.Property(RandomAlbum.6.Description)]</property>
 			<label>$INFO[Window.Property(RandomAlbum.6.Artist)]</label>
 			<label2>$INFO[Window.Property(RandomAlbum.6.Title)]$INFO[Window.Property(RandomAlbum.6.Year), • ,]</label2>
-			<visible>!Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbum.6.Title))</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbum.6.Title))</visible>
 		</item>
 		<item id="7">
 			<onclick>SetFocus(525)</onclick>
@@ -6209,7 +6219,7 @@
 			<property name="Plot">$INFO[Window.Property(RandomAlbum.7.Description)]</property>
 			<label>$INFO[Window.Property(RandomAlbum.7.Artist)]</label>
 			<label2>$INFO[Window.Property(RandomAlbum.7.Title)]$INFO[Window.Property(RandomAlbum.7.Year), • ,]</label2>
-			<visible>!Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbum.7.Title))</visible>
+			<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbum.7.Title))</visible>
 		</item>		
 		<item id="1">
 			<onclick>SetFocus(525)</onclick>
@@ -6219,7 +6229,7 @@
 			<property name="Plot">$INFO[Window.Property(RandomAlbumMB3.0.Description)]</property>
 			<label>$INFO[Window.Property(RandomAlbumMB3.0.Artist)]</label>
 			<label2>$INFO[Window.Property(RandomAlbumMB3.0.Title)]$INFO[Window.Property(RandomAlbumMB3.0.Year), • ,]</label2>
-			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbumMB3.0.Title))</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbumMB3.0.Title))</visible>
 		</item>
 		<item id="2">
 			<onclick>SetFocus(525)</onclick>
@@ -6229,7 +6239,7 @@
 			<property name="Plot">$INFO[Window.Property(RandomAlbumMB3.1.Description)]</property>
 			<label>$INFO[Window.Property(RandomAlbumMB3.1.Artist)]</label>
 			<label2>$INFO[Window.Property(RandomAlbumMB3.1.Title)]$INFO[Window.Property(RandomAlbumMB3.1.Year), • ,]</label2>
-			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbumMB3.1.Title))</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbumMB3.1.Title))</visible>
 		</item>
 		<item id="3">
 			<onclick>SetFocus(525)</onclick>
@@ -6239,7 +6249,7 @@
 			<property name="Plot">$INFO[Window.Property(RandomAlbumMB3.2.Description)]</property>
 			<label>$INFO[Window.Property(RandomAlbumMB3.2.Artist)]</label>
 			<label2>$INFO[Window.Property(RandomAlbumMB3.2.Title)]$INFO[Window.Property(RandomAlbumMB3.2.Year), • ,]</label2>
-			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbumMB3.2.Title))</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbumMB3.2.Title))</visible>
 		</item>
 		<item id="4">
 			<onclick>SetFocus(525)</onclick>
@@ -6249,7 +6259,7 @@
 			<property name="Plot">$INFO[Window.Property(RandomAlbumMB3.3.Description)]</property>
 			<label>$INFO[Window.Property(RandomAlbumMB3.3.Artist)]</label>
 			<label2>$INFO[Window.Property(RandomAlbumMB3.3.Title)]$INFO[Window.Property(RandomAlbumMB3.3.Year), • ,]</label2>
-			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbumMB3.3.Title))</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbumMB3.3.Title))</visible>
 		</item>
 		<item id="5">
 			<onclick>SetFocus(525)</onclick>
@@ -6259,7 +6269,7 @@
 			<property name="Plot">$INFO[Window.Property(RandomAlbumMB3.4.Description)]</property>
 			<label>$INFO[Window.Property(RandomAlbumMB3.4.Artist)]</label>
 			<label2>$INFO[Window.Property(RandomAlbumMB3.4.Title)]$INFO[Window.Property(RandomAlbumMB3.4.Year), • ,]</label2>
-			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbumMB3.4.Title))</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbumMB3.4.Title))</visible>
 		</item>
 		<item id="6">
 			<onclick>SetFocus(525)</onclick>
@@ -6269,7 +6279,7 @@
 			<property name="Plot">$INFO[Window.Property(RandomAlbumMB3.5.Description)]</property>
 			<label>$INFO[Window.Property(RandomAlbumMB3.5.Artist)]</label>
 			<label2>$INFO[Window.Property(RandomAlbumMB3.5.Title)]$INFO[Window.Property(RandomAlbumMB3.5.Year), • ,]</label2>
-			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbumMB3.5.Title))</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbumMB3.5.Title))</visible>
 		</item>
 		<item id="7">
 			<onclick>SetFocus(525)</onclick>
@@ -6279,7 +6289,7 @@
 			<property name="Plot">$INFO[Window.Property(RandomAlbumMB3.6.Description)]</property>
 			<label>$INFO[Window.Property(RandomAlbumMB3.6.Artist)]</label>
 			<label2>$INFO[Window.Property(RandomAlbumMB3.6.Title)]$INFO[Window.Property(RandomAlbumMB3.6.Year), • ,]</label2>
-			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbumMB3.6.Title))</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbumMB3.6.Title))</visible>
 		</item>
 		<item id="8">
 			<onclick>SetFocus(525)</onclick>
@@ -6289,7 +6299,7 @@
 			<property name="Plot">$INFO[Window.Property(RandomAlbumMB3.7.Description)]</property>
 			<label>$INFO[Window.Property(RandomAlbumMB3.7.Artist)]</label>
 			<label2>$INFO[Window.Property(RandomAlbumMB3.7.Title)]$INFO[Window.Property(RandomAlbumMB3.7.Year), • ,]</label2>
-			<visible>Skin.HasSetting(xbmb3c) + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbumMB3.7.Title))</visible>
+			<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + StringCompare(Container(525).ListItem.Property(widget),music.random) + !IsEmpty(Window.Property(RandomAlbumMB3.7.Title))</visible>
 		</item>
 		<!-- Addons -->
 		<item id="1">
@@ -8185,78 +8195,161 @@
 			<label2>$INFO[Window.Property(RecommendedEpisode.10.Title),, • ]$INFO[Window.Property(RecommendedEpisode.10.Season),S,]$INFO[Window.Property(RecommendedEpisode.10.Episode),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(RecommendedEpisode.10.Title))</visible>
 		</item>
+	</include>
+	<include name="Mod_87Content-Music">
 		<!-- recent album -->
-		<item id="1">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(RecentAlbum.1.Play)]</property>
-			<icon>$INFO[Window.Property(RecentAlbum.1.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RecentAlbum.1.Art(thumb))]</property>
-			<property name="Plot">$INFO[Window.Property(RecentAlbum.1.Description)]</property>
-			<label>$INFO[Window.Property(RecentAlbum.1.Artist)]</label>
-			<label2>$INFO[Window.Property(RecentAlbum.1.Title)]$INFO[Window.Property(RecentAlbum.1.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RecentAlbum.1.Title))</visible>
-		</item>
-		<item id="2">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(RecentAlbum.2.Play)]</property>
-			<icon>$INFO[Window.Property(RecentAlbum.2.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RecentAlbum.2.Art(thumb))]</property>
-			<property name="Plot">$INFO[Window.Property(RecentAlbum.2.Description)]</property>
-			<label>$INFO[Window.Property(RecentAlbum.2.Artist)]</label>
-			<label2>$INFO[Window.Property(RecentAlbum.2.Title)]$INFO[Window.Property(RecentAlbum.2.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RecentAlbum.2.Title))</visible>
-		</item>
-		<item id="3">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(RecentAlbum.3.Play)]</property>
-			<icon>$INFO[Window.Property(RecentAlbum.3.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RecentAlbum.3.Art(thumb))]</property>
-			<property name="Plot">$INFO[Window.Property(RecentAlbum.3.Description)]</property>
-			<label>$INFO[Window.Property(RecentAlbum.3.Artist)]</label>
-			<label2>$INFO[Window.Property(RecentAlbum.3.Title)]$INFO[Window.Property(RecentAlbum.3.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RecentAlbum.3.Title))</visible>
-		</item>
-		<item id="4">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(RecentAlbum.4.Play)]</property>
-			<icon>$INFO[Window.Property(RecentAlbum.4.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RecentAlbum.4.Art(thumb))]</property>
-			<property name="Plot">$INFO[Window.Property(RecentAlbum.4.Description)]</property>
-			<label>$INFO[Window.Property(RecentAlbum.4.Artist)]</label>
-			<label2>$INFO[Window.Property(RecentAlbum.4.Title)]$INFO[Window.Property(RecentAlbum.4.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RecentAlbum.4.Title))</visible>
-		</item>
-		<item id="5">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(RecentAlbum.5.Play)]</property>
-			<icon>$INFO[Window.Property(RecentAlbum.5.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RecentAlbum.5.Art(thumb))]</property>
-			<property name="Plot">$INFO[Window.Property(RecentAlbum.5.Description)]</property>
-			<label>$INFO[Window.Property(RecentAlbum.5.Artist)]</label>
-			<label2>$INFO[Window.Property(RecentAlbum.5.Title)]$INFO[Window.Property(RecentAlbum.5.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RecentAlbum.5.Title))</visible>
-		</item>
-		<item id="6">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(RecentAlbum.6.Play)]</property>
-			<icon>$INFO[Window.Property(RecentAlbum.6.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RecentAlbum.6.Art(thumb))]</property>
-			<property name="Plot">$INFO[Window.Property(RecentAlbum.6.Description)]</property>
-			<label>$INFO[Window.Property(RecentAlbum.6.Artist)]</label>
-			<label2>$INFO[Window.Property(RecentAlbum.6.Title)]$INFO[Window.Property(RecentAlbum.6.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RecentAlbum.6.Title))</visible>
-		</item>
-		<item id="7">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(RecentAlbum.7.Play)]</property>
-			<icon>$INFO[Window.Property(RecentAlbum.7.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RecentAlbum.7.Art(thumb))]</property>
-			<property name="Plot">$INFO[Window.Property(RecentAlbum.7.Description)]</property>
-			<label>$INFO[Window.Property(RecentAlbum.7.Artist)]</label>
-			<label2>$INFO[Window.Property(RecentAlbum.7.Title)]$INFO[Window.Property(RecentAlbum.7.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RecentAlbum.7.Title))</visible>
-		</item>
-	</include>	
+			<item id="1">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(RecentAlbum.1.Play)]</property>
+				<icon>$INFO[Window.Property(RecentAlbum.1.Art(fanart))]</icon>
+				<property name="Poster">$INFO[Window.Property(RecentAlbum.1.Art(thumb))]</property>
+				<property name="Plot">$INFO[Window.Property(RecentAlbum.1.Description)]</property>
+				<label>$INFO[Window.Property(RecentAlbum.1.Artist)]</label>
+				<label2>$INFO[Window.Property(RecentAlbum.1.Title)]$INFO[Window.Property(RecentAlbum.1.Year), • ,]</label2>
+				<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RecentAlbum.1.Title))</visible>
+			</item>
+			<item id="2">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(RecentAlbum.2.Play)]</property>
+				<icon>$INFO[Window.Property(RecentAlbum.2.Art(fanart))]</icon>
+				<property name="Poster">$INFO[Window.Property(RecentAlbum.2.Art(thumb))]</property>
+				<property name="Plot">$INFO[Window.Property(RecentAlbum.2.Description)]</property>
+				<label>$INFO[Window.Property(RecentAlbum.2.Artist)]</label>
+				<label2>$INFO[Window.Property(RecentAlbum.2.Title)]$INFO[Window.Property(RecentAlbum.2.Year), • ,]</label2>
+				<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RecentAlbum.2.Title))</visible>
+			</item>
+			<item id="3">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(RecentAlbum.3.Play)]</property>
+				<icon>$INFO[Window.Property(RecentAlbum.3.Art(fanart))]</icon>
+				<property name="Poster">$INFO[Window.Property(RecentAlbum.3.Art(thumb))]</property>
+				<property name="Plot">$INFO[Window.Property(RecentAlbum.3.Description)]</property>
+				<label>$INFO[Window.Property(RecentAlbum.3.Artist)]</label>
+				<label2>$INFO[Window.Property(RecentAlbum.3.Title)]$INFO[Window.Property(RecentAlbum.3.Year), • ,]</label2>
+				<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RecentAlbum.3.Title))</visible>
+			</item>
+			<item id="4">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(RecentAlbum.4.Play)]</property>
+				<icon>$INFO[Window.Property(RecentAlbum.4.Art(fanart))]</icon>
+				<property name="Poster">$INFO[Window.Property(RecentAlbum.4.Art(thumb))]</property>
+				<property name="Plot">$INFO[Window.Property(RecentAlbum.4.Description)]</property>
+				<label>$INFO[Window.Property(RecentAlbum.4.Artist)]</label>
+				<label2>$INFO[Window.Property(RecentAlbum.4.Title)]$INFO[Window.Property(RecentAlbum.4.Year), • ,]</label2>
+				<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RecentAlbum.4.Title))</visible>
+			</item>
+			<item id="5">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(RecentAlbum.5.Play)]</property>
+				<icon>$INFO[Window.Property(RecentAlbum.5.Art(fanart))]</icon>
+				<property name="Poster">$INFO[Window.Property(RecentAlbum.5.Art(thumb))]</property>
+				<property name="Plot">$INFO[Window.Property(RecentAlbum.5.Description)]</property>
+				<label>$INFO[Window.Property(RecentAlbum.5.Artist)]</label>
+				<label2>$INFO[Window.Property(RecentAlbum.5.Title)]$INFO[Window.Property(RecentAlbum.5.Year), • ,]</label2>
+				<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RecentAlbum.5.Title))</visible>
+			</item>
+			<item id="6">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(RecentAlbum.6.Play)]</property>
+				<icon>$INFO[Window.Property(RecentAlbum.6.Art(fanart))]</icon>
+				<property name="Poster">$INFO[Window.Property(RecentAlbum.6.Art(thumb))]</property>
+				<property name="Plot">$INFO[Window.Property(RecentAlbum.6.Description)]</property>
+				<label>$INFO[Window.Property(RecentAlbum.6.Artist)]</label>
+				<label2>$INFO[Window.Property(RecentAlbum.6.Title)]$INFO[Window.Property(RecentAlbum.6.Year), • ,]</label2>
+				<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RecentAlbum.6.Title))</visible>
+			</item>
+			<item id="7">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(RecentAlbum.7.Play)]</property>
+				<icon>$INFO[Window.Property(RecentAlbum.7.Art(fanart))]</icon>
+				<property name="Poster">$INFO[Window.Property(RecentAlbum.7.Art(thumb))]</property>
+				<property name="Plot">$INFO[Window.Property(RecentAlbum.7.Description)]</property>
+				<label>$INFO[Window.Property(RecentAlbum.7.Artist)]</label>
+				<label2>$INFO[Window.Property(RecentAlbum.7.Title)]$INFO[Window.Property(RecentAlbum.7.Year), • ,]</label2>
+				<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RecentAlbum.7.Title))</visible>
+			</item>
+		<!-- recent album -->
+			<item id="1">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(LatestAlbumMB3.0.Play)]</property>
+				<icon>$INFO[Window.Property(LatestAlbumMB3.0.Art(poster))]</icon>
+				<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.0.Art(poster))]</property>
+				<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.0.Description)]</property>
+				<label>$INFO[Window.Property(LatestAlbumMB3.0.Artist)]</label>
+				<label2>$INFO[Window.Property(LatestAlbumMB3.0.Title)]$INFO[Window.Property(LatestAlbumMB3.0.Year), • ,]</label2>
+				<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.0.Title))</visible>
+			</item>
+			<item id="2">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(LatestAlbumMB3.1.Play)]</property>
+				<icon>$INFO[Window.Property(LatestAlbumMB3.1.Art(poster))]</icon>
+				<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.1.Art(poster))]</property>
+				<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.1.Description)]</property>
+				<label>$INFO[Window.Property(LatestAlbumMB3.1.Artist)]</label>
+				<label2>$INFO[Window.Property(LatestAlbumMB3.1.Title)]$INFO[Window.Property(LatestAlbumMB3.1.Year), • ,]</label2>
+				<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.1.Title))</visible>
+			</item>
+			<item id="3">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(LatestAlbumMB3.2.Play)]</property>
+				<icon>$INFO[Window.Property(LatestAlbumMB3.2.Art(poster))]</icon>
+				<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.2.Art(poster))]</property>
+				<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.2.Description)]</property>
+				<label>$INFO[Window.Property(LatestAlbumMB3.2.Artist)]</label>
+				<label2>$INFO[Window.Property(LatestAlbumMB3.2.Title)]$INFO[Window.Property(LatestAlbumMB3.2.Year), • ,]</label2>
+				<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.2.Title))</visible>
+			</item>
+			<item id="4">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(LatestAlbumMB3.3.Play)]</property>
+				<icon>$INFO[Window.Property(LatestAlbumMB3.3.Art(poster))]</icon>
+				<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.3.Art(poster))]</property>
+				<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.3.Description)]</property>
+				<label>$INFO[Window.Property(LatestAlbumMB3.3.Artist)]</label>
+				<label2>$INFO[Window.Property(LatestAlbumMB3.3.Title)]$INFO[Window.Property(LatestAlbumMB3.3.Year), • ,]</label2>
+				<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.3.Title))</visible>
+			</item>
+			<item id="5">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(LatestAlbumMB3.4.Play)]</property>
+				<icon>$INFO[Window.Property(LatestAlbumMB3.4.Art(poster))]</icon>
+				<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.4.Art(poster))]</property>
+				<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.4.Description)]</property>
+				<label>$INFO[Window.Property(LatestAlbumMB3.4.Artist)]</label>
+				<label2>$INFO[Window.Property(LatestAlbumMB3.4.Title)]$INFO[Window.Property(LatestAlbumMB3.4.Year), • ,]</label2>
+				<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.4.Title))</visible>
+			</item>
+			<item id="6">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(LatestAlbumMB3.5.Play)]</property>
+				<icon>$INFO[Window.Property(LatestAlbumMB3.5.Art(poster))]</icon>
+				<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.5.Art(poster))]</property>
+				<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.5.Description)]</property>
+				<label>$INFO[Window.Property(LatestAlbumMB3.5.Artist)]</label>
+				<label2>$INFO[Window.Property(LatestAlbumMB3.5.Title)]$INFO[Window.Property(LatestAlbumMB3.5.Year), • ,]</label2>
+				<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.5.Title))</visible>
+			</item>
+			<item id="7">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(LatestAlbumMB3.6.Play)]</property>
+				<icon>$INFO[Window.Property(LatestAlbumMB3.6.Art(poster))]</icon>
+				<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.6.Art(poster))]</property>
+				<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.6.Description)]</property>
+				<label>$INFO[Window.Property(LatestAlbumMB3.6.Artist)]</label>
+				<label2>$INFO[Window.Property(LatestAlbumMB3.6.Title)]$INFO[Window.Property(LatestAlbumMB3.6.Year), • ,]</label2>
+				<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.6.Title))</visible>
+			</item>
+			<item id="8">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(LatestAlbumMB3.7.Play)]</property>
+				<icon>$INFO[Window.Property(LatestAlbumMB3.7.Art(poster))]</icon>
+				<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.7.Art(poster))]</property>
+				<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.7.Description)]</property>
+				<label>$INFO[Window.Property(LatestAlbumMB3.7.Artist)]</label>
+				<label2>$INFO[Window.Property(LatestAlbumMB3.7.Title)]$INFO[Window.Property(LatestAlbumMB3.7.Year), • ,]</label2>
+				<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.7.Title))</visible>
+			</item>
+	</include>
 	<include name="Mod_87Content-xbmb3c">
 		<!-- Random movies -->
 		<item id="1">
@@ -8557,87 +8650,6 @@
 			<label2>$INFO[Window.Property(NextUpEpisodeMB3.10.EpisodeTitle),, • ]$INFO[Window.Property(NextUpEpisodeMB3.10.SeasonNo),S,]$INFO[Window.Property(NextUpEpisodeMB3.10.EpisodeNo),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(NextUpEpisodeMB3.10.EpisodeTitle))</visible>
 		</item>
-		<!-- recent album -->
-		<item id="1">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(LatestAlbumMB3.0.Play)]</property>
-			<icon>$INFO[Window.Property(LatestAlbumMB3.0.Art(poster))]</icon>
-			<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.0.Art(poster))]</property>
-			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.0.Description)]</property>
-			<label>$INFO[Window.Property(LatestAlbumMB3.0.Artist)]</label>
-			<label2>$INFO[Window.Property(LatestAlbumMB3.0.Title)]$INFO[Window.Property(LatestAlbumMB3.0.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.0.Title))</visible>
-		</item>
-		<item id="2">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(LatestAlbumMB3.1.Play)]</property>
-			<icon>$INFO[Window.Property(LatestAlbumMB3.1.Art(poster))]</icon>
-			<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.1.Art(poster))]</property>
-			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.1.Description)]</property>
-			<label>$INFO[Window.Property(LatestAlbumMB3.1.Artist)]</label>
-			<label2>$INFO[Window.Property(LatestAlbumMB3.1.Title)]$INFO[Window.Property(LatestAlbumMB3.1.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.1.Title))</visible>
-		</item>
-		<item id="3">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(LatestAlbumMB3.2.Play)]</property>
-			<icon>$INFO[Window.Property(LatestAlbumMB3.2.Art(poster))]</icon>
-			<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.2.Art(poster))]</property>
-			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.2.Description)]</property>
-			<label>$INFO[Window.Property(LatestAlbumMB3.2.Artist)]</label>
-			<label2>$INFO[Window.Property(LatestAlbumMB3.2.Title)]$INFO[Window.Property(LatestAlbumMB3.2.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.2.Title))</visible>
-		</item>
-		<item id="4">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(LatestAlbumMB3.3.Play)]</property>
-			<icon>$INFO[Window.Property(LatestAlbumMB3.3.Art(poster))]</icon>
-			<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.3.Art(poster))]</property>
-			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.3.Description)]</property>
-			<label>$INFO[Window.Property(LatestAlbumMB3.3.Artist)]</label>
-			<label2>$INFO[Window.Property(LatestAlbumMB3.3.Title)]$INFO[Window.Property(LatestAlbumMB3.3.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.3.Title))</visible>
-		</item>
-		<item id="5">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(LatestAlbumMB3.4.Play)]</property>
-			<icon>$INFO[Window.Property(LatestAlbumMB3.4.Art(poster))]</icon>
-			<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.4.Art(poster))]</property>
-			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.4.Description)]</property>
-			<label>$INFO[Window.Property(LatestAlbumMB3.4.Artist)]</label>
-			<label2>$INFO[Window.Property(LatestAlbumMB3.4.Title)]$INFO[Window.Property(LatestAlbumMB3.4.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.4.Title))</visible>
-		</item>
-		<item id="6">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(LatestAlbumMB3.5.Play)]</property>
-			<icon>$INFO[Window.Property(LatestAlbumMB3.5.Art(poster))]</icon>
-			<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.5.Art(poster))]</property>
-			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.5.Description)]</property>
-			<label>$INFO[Window.Property(LatestAlbumMB3.5.Artist)]</label>
-			<label2>$INFO[Window.Property(LatestAlbumMB3.5.Title)]$INFO[Window.Property(LatestAlbumMB3.5.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.5.Title))</visible>
-		</item>
-		<item id="7">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(LatestAlbumMB3.6.Play)]</property>
-			<icon>$INFO[Window.Property(LatestAlbumMB3.6.Art(poster))]</icon>
-			<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.6.Art(poster))]</property>
-			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.6.Description)]</property>
-			<label>$INFO[Window.Property(LatestAlbumMB3.6.Artist)]</label>
-			<label2>$INFO[Window.Property(LatestAlbumMB3.6.Title)]$INFO[Window.Property(LatestAlbumMB3.6.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.6.Title))</visible>
-		</item>
-		<item id="8">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(LatestAlbumMB3.7.Play)]</property>
-			<icon>$INFO[Window.Property(LatestAlbumMB3.7.Art(poster))]</icon>
-			<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.7.Art(poster))]</property>
-			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.7.Description)]</property>
-			<label>$INFO[Window.Property(LatestAlbumMB3.7.Artist)]</label>
-			<label2>$INFO[Window.Property(LatestAlbumMB3.7.Title)]$INFO[Window.Property(LatestAlbumMB3.7.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.7.Title))</visible>
-		</item>
 	</include>
 	<include name="Mod_86Content">
 		<!-- Recent movies -->
@@ -8912,78 +8924,161 @@
 			<label2>$INFO[Window.Property(RecentEpisode.10.Title),, • ]$INFO[Window.Property(RecentEpisode.10.Season),S,]$INFO[Window.Property(RecentEpisode.10.Episode),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(RecentEpisode.10.Title))</visible>
 		</item>
+	</include>
+	<include name="Mod_86Content-Music">
 		<!-- Random Album -->
-		<item id="1">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(RandomAlbum.1.Play)]</property>
-			<icon>$INFO[Window.Property(RandomAlbum.1.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomAlbum.1.Art(thumb))]</property>
-			<property name="Plot">$INFO[Window.Property(RandomAlbum.1.Description)]</property>
-			<label>$INFO[Window.Property(RandomAlbum.1.Artist)]</label>
-			<label2>$INFO[Window.Property(RandomAlbum.1.Title)]$INFO[Window.Property(RandomAlbum.1.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbum.1.Title))</visible>
-		</item>
-		<item id="2">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(RandomAlbum.2.Play)]</property>
-			<icon>$INFO[Window.Property(RandomAlbum.2.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomAlbum.2.Art(thumb))]</property>
-			<property name="Plot">$INFO[Window.Property(RandomAlbum.2.Description)]</property>
-			<label>$INFO[Window.Property(RandomAlbum.2.Artist)]</label>
-			<label2>$INFO[Window.Property(RandomAlbum.2.Title)]$INFO[Window.Property(RandomAlbum.2.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbum.2.Title))</visible>
-		</item>
-		<item id="3">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(RandomAlbum.3.Play)]</property>
-			<icon>$INFO[Window.Property(RandomAlbum.3.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomAlbum.3.Art(thumb))]</property>
-			<property name="Plot">$INFO[Window.Property(RandomAlbum.3.Description)]</property>
-			<label>$INFO[Window.Property(RandomAlbum.3.Artist)]</label>
-			<label2>$INFO[Window.Property(RandomAlbum.3.Title)]$INFO[Window.Property(RandomAlbum.3.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbum.3.Title))</visible>
-		</item>
-		<item id="4">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(RandomAlbum.4.Play)]</property>
-			<icon>$INFO[Window.Property(RandomAlbum.4.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomAlbum.4.Art(thumb))]</property>
-			<property name="Plot">$INFO[Window.Property(RandomAlbum.4.Description)]</property>
-			<label>$INFO[Window.Property(RandomAlbum.4.Artist)]</label>
-			<label2>$INFO[Window.Property(RandomAlbum.4.Title)]$INFO[Window.Property(RandomAlbum.4.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbum.4.Title))</visible>
-		</item>
-		<item id="5">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(RandomAlbum.5.Play)]</property>
-			<icon>$INFO[Window.Property(RandomAlbum.5.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomAlbum.5.Art(thumb))]</property>
-			<property name="Plot">$INFO[Window.Property(RandomAlbum.5.Description)]</property>
-			<label>$INFO[Window.Property(RandomAlbum.5.Artist)]</label>
-			<label2>$INFO[Window.Property(RandomAlbum.5.Title)]$INFO[Window.Property(RandomAlbum.5.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbum.5.Title))</visible>
-		</item>
-		<item id="6">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(RandomAlbum.6.Play)]</property>
-			<icon>$INFO[Window.Property(RandomAlbum.6.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomAlbum.6.Art(thumb))]</property>
-			<property name="Plot">$INFO[Window.Property(RandomAlbum.6.Description)]</property>
-			<label>$INFO[Window.Property(RandomAlbum.6.Artist)]</label>
-			<label2>$INFO[Window.Property(RandomAlbum.6.Title)]$INFO[Window.Property(RandomAlbum.6.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbum.6.Title))</visible>
-		</item>
-		<item id="7">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(RandomAlbum.7.Play)]</property>
-			<icon>$INFO[Window.Property(RandomAlbum.7.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomAlbum.7.Art(thumb))]</property>
-			<property name="Plot">$INFO[Window.Property(RandomAlbum.7.Description)]</property>
-			<label>$INFO[Window.Property(RandomAlbum.7.Artist)]</label>
-			<label2>$INFO[Window.Property(RandomAlbum.7.Title)]$INFO[Window.Property(RandomAlbum.7.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbum.7.Title))</visible>
-		</item>
-	</include>	
+			<item id="1">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(RandomAlbum.1.Play)]</property>
+				<icon>$INFO[Window.Property(RandomAlbum.1.Art(fanart))]</icon>
+				<property name="Poster">$INFO[Window.Property(RandomAlbum.1.Art(thumb))]</property>
+				<property name="Plot">$INFO[Window.Property(RandomAlbum.1.Description)]</property>
+				<label>$INFO[Window.Property(RandomAlbum.1.Artist)]</label>
+				<label2>$INFO[Window.Property(RandomAlbum.1.Title)]$INFO[Window.Property(RandomAlbum.1.Year), • ,]</label2>
+				<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbum.1.Title))</visible>
+			</item>
+			<item id="2">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(RandomAlbum.2.Play)]</property>
+				<icon>$INFO[Window.Property(RandomAlbum.2.Art(fanart))]</icon>
+				<property name="Poster">$INFO[Window.Property(RandomAlbum.2.Art(thumb))]</property>
+				<property name="Plot">$INFO[Window.Property(RandomAlbum.2.Description)]</property>
+				<label>$INFO[Window.Property(RandomAlbum.2.Artist)]</label>
+				<label2>$INFO[Window.Property(RandomAlbum.2.Title)]$INFO[Window.Property(RandomAlbum.2.Year), • ,]</label2>
+				<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbum.2.Title))</visible>
+			</item>
+			<item id="3">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(RandomAlbum.3.Play)]</property>
+				<icon>$INFO[Window.Property(RandomAlbum.3.Art(fanart))]</icon>
+				<property name="Poster">$INFO[Window.Property(RandomAlbum.3.Art(thumb))]</property>
+				<property name="Plot">$INFO[Window.Property(RandomAlbum.3.Description)]</property>
+				<label>$INFO[Window.Property(RandomAlbum.3.Artist)]</label>
+				<label2>$INFO[Window.Property(RandomAlbum.3.Title)]$INFO[Window.Property(RandomAlbum.3.Year), • ,]</label2>
+				<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbum.3.Title))</visible>
+			</item>
+			<item id="4">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(RandomAlbum.4.Play)]</property>
+				<icon>$INFO[Window.Property(RandomAlbum.4.Art(fanart))]</icon>
+				<property name="Poster">$INFO[Window.Property(RandomAlbum.4.Art(thumb))]</property>
+				<property name="Plot">$INFO[Window.Property(RandomAlbum.4.Description)]</property>
+				<label>$INFO[Window.Property(RandomAlbum.4.Artist)]</label>
+				<label2>$INFO[Window.Property(RandomAlbum.4.Title)]$INFO[Window.Property(RandomAlbum.4.Year), • ,]</label2>
+				<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbum.4.Title))</visible>
+			</item>
+			<item id="5">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(RandomAlbum.5.Play)]</property>
+				<icon>$INFO[Window.Property(RandomAlbum.5.Art(fanart))]</icon>
+				<property name="Poster">$INFO[Window.Property(RandomAlbum.5.Art(thumb))]</property>
+				<property name="Plot">$INFO[Window.Property(RandomAlbum.5.Description)]</property>
+				<label>$INFO[Window.Property(RandomAlbum.5.Artist)]</label>
+				<label2>$INFO[Window.Property(RandomAlbum.5.Title)]$INFO[Window.Property(RandomAlbum.5.Year), • ,]</label2>
+				<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbum.5.Title))</visible>
+			</item>
+			<item id="6">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(RandomAlbum.6.Play)]</property>
+				<icon>$INFO[Window.Property(RandomAlbum.6.Art(fanart))]</icon>
+				<property name="Poster">$INFO[Window.Property(RandomAlbum.6.Art(thumb))]</property>
+				<property name="Plot">$INFO[Window.Property(RandomAlbum.6.Description)]</property>
+				<label>$INFO[Window.Property(RandomAlbum.6.Artist)]</label>
+				<label2>$INFO[Window.Property(RandomAlbum.6.Title)]$INFO[Window.Property(RandomAlbum.6.Year), • ,]</label2>
+				<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbum.6.Title))</visible>
+			</item>
+			<item id="7">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(RandomAlbum.7.Play)]</property>
+				<icon>$INFO[Window.Property(RandomAlbum.7.Art(fanart))]</icon>
+				<property name="Poster">$INFO[Window.Property(RandomAlbum.7.Art(thumb))]</property>
+				<property name="Plot">$INFO[Window.Property(RandomAlbum.7.Description)]</property>
+				<label>$INFO[Window.Property(RandomAlbum.7.Artist)]</label>
+				<label2>$INFO[Window.Property(RandomAlbum.7.Title)]$INFO[Window.Property(RandomAlbum.7.Year), • ,]</label2>
+				<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbum.7.Title))</visible>
+			</item>
+		<!-- Random Album -->
+			<item id="1">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(RandomAlbumMB3.0.Play)]</property>
+				<icon>$INFO[Window.Property(RandomAlbumMB3.0.Art(poster))]</icon>
+				<property name="Poster">$INFO[Window.Property(RandomAlbumMB3.0.Art(poster))]</property>
+				<property name="Plot">$INFO[Window.Property(RandomAlbumMB3.0.Description)]</property>
+				<label>$INFO[Window.Property(RandomAlbumMB3.0.Artist)]</label>
+				<label2>$INFO[Window.Property(RandomAlbumMB3.0.Title)]$INFO[Window.Property(RandomAlbumMB3.0.Year), • ,]</label2>
+				<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbumMB3.0.Title))</visible>
+			</item>
+			<item id="2">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(RandomAlbumMB3.1.Play)]</property>
+				<icon>$INFO[Window.Property(RandomAlbumMB3.1.Art(poster))]</icon>
+				<property name="Poster">$INFO[Window.Property(RandomAlbumMB3.1.Art(poster))]</property>
+				<property name="Plot">$INFO[Window.Property(RandomAlbumMB3.1.Description)]</property>
+				<label>$INFO[Window.Property(RandomAlbumMB3.1.Artist)]</label>
+				<label2>$INFO[Window.Property(RandomAlbumMB3.1.Title)]$INFO[Window.Property(RandomAlbumMB3.1.Year), • ,]</label2>
+				<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbumMB3.1.Title))</visible>
+			</item>
+			<item id="3">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(RandomAlbumMB3.2.Play)]</property>
+				<icon>$INFO[Window.Property(RandomAlbumMB3.2.Art(poster))]</icon>
+				<property name="Poster">$INFO[Window.Property(RandomAlbumMB3.2.Art(poster))]</property>
+				<property name="Plot">$INFO[Window.Property(RandomAlbumMB3.2.Description)]</property>
+				<label>$INFO[Window.Property(RandomAlbumMB3.2.Artist)]</label>
+				<label2>$INFO[Window.Property(RandomAlbumMB3.2.Title)]$INFO[Window.Property(RandomAlbumMB3.2.Year), • ,]</label2>
+				<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbumMB3.2.Title))</visible>
+			</item>
+			<item id="4">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(RandomAlbumMB3.3.Play)]</property>
+				<icon>$INFO[Window.Property(RandomAlbumMB3.3.Art(poster))]</icon>
+				<property name="Poster">$INFO[Window.Property(RandomAlbumMB3.3.Art(poster))]</property>
+				<property name="Plot">$INFO[Window.Property(RandomAlbumMB3.3.Description)]</property>
+				<label>$INFO[Window.Property(RandomAlbumMB3.3.Artist)]</label>
+				<label2>$INFO[Window.Property(RandomAlbumMB3.3.Title)]$INFO[Window.Property(RandomAlbumMB3.3.Year), • ,]</label2>
+				<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbumMB3.3.Title))</visible>
+			</item>
+			<item id="5">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(RandomAlbumMB3.4.Play)]</property>
+				<icon>$INFO[Window.Property(RandomAlbumMB3.4.Art(poster))]</icon>
+				<property name="Poster">$INFO[Window.Property(RandomAlbumMB3.4.Art(poster))]</property>
+				<property name="Plot">$INFO[Window.Property(RandomAlbumMB3.4.Description)]</property>
+				<label>$INFO[Window.Property(RandomAlbumMB3.4.Artist)]</label>
+				<label2>$INFO[Window.Property(RandomAlbumMB3.4.Title)]$INFO[Window.Property(RandomAlbumMB3.4.Year), • ,]</label2>
+				<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbumMB3.4.Title))</visible>
+			</item>
+			<item id="6">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(RandomAlbumMB3.5.Play)]</property>
+				<icon>$INFO[Window.Property(RandomAlbumMB3.5.Art(poster))]</icon>
+				<property name="Poster">$INFO[Window.Property(RandomAlbumMB3.5.Art(poster))]</property>
+				<property name="Plot">$INFO[Window.Property(RandomAlbumMB3.5.Description)]</property>
+				<label>$INFO[Window.Property(RandomAlbumMB3.5.Artist)]</label>
+				<label2>$INFO[Window.Property(RandomAlbumMB3.5.Title)]$INFO[Window.Property(RandomAlbumMB3.5.Year), • ,]</label2>
+				<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbumMB3.5.Title))</visible>
+			</item>
+			<item id="7">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(RandomAlbumMB3.6.Play)]</property>
+				<icon>$INFO[Window.Property(RandomAlbumMB3.6.Art(poster))]</icon>
+				<property name="Poster">$INFO[Window.Property(RandomAlbumMB3.6.Art(poster))]</property>
+				<property name="Plot">$INFO[Window.Property(RandomAlbumMB3.6.Description)]</property>
+				<label>$INFO[Window.Property(RandomAlbumMB3.6.Artist)]</label>
+				<label2>$INFO[Window.Property(RandomAlbumMB3.6.Title)]$INFO[Window.Property(RandomAlbumMB3.6.Year), • ,]</label2>
+				<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbumMB3.6.Title))</visible>
+			</item>
+			<item id="8">
+				<onclick>noop</onclick>
+				<property name="Play">$INFO[Window.Property(RandomAlbumMB3.7.Play)]</property>
+				<icon>$INFO[Window.Property(RandomAlbumMB3.7.Art(poster))]</icon>
+				<property name="Poster">$INFO[Window.Property(RandomAlbumMB3.7.Art(poster))]</property>
+				<property name="Plot">$INFO[Window.Property(RandomAlbumMB3.7.Description)]</property>
+				<label>$INFO[Window.Property(RandomAlbumMB3.7.Artist)]</label>
+				<label2>$INFO[Window.Property(RandomAlbumMB3.7.Title)]$INFO[Window.Property(RandomAlbumMB3.7.Year), • ,]</label2>
+				<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbumMB3.7.Title))</visible>
+			</item>
+	</include>
 	<include name="Mod_86Content-xbmb3c">
 		<!-- Recent movies -->
 		<item id="1">
@@ -9284,87 +9379,6 @@
 			<label2>$INFO[Window.Property(LatestEpisodeMB3.10.EpisodeTitle),, • ]$INFO[Window.Property(LatestEpisodeMB3.10.SeasonNo),S,]$INFO[Window.Property(LatestEpisodeMB3.10.EpisodeNo),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(LatestEpisodeMB3.10.EpisodeTitle))</visible>
 		</item>
-		<!-- Random Album -->
-		<item id="1">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(RandomAlbumMB3.0.Play)]</property>
-			<icon>$INFO[Window.Property(RandomAlbumMB3.0.Art(poster))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomAlbumMB3.0.Art(poster))]</property>
-			<property name="Plot">$INFO[Window.Property(RandomAlbumMB3.0.Description)]</property>
-			<label>$INFO[Window.Property(RandomAlbumMB3.0.Artist)]</label>
-			<label2>$INFO[Window.Property(RandomAlbumMB3.0.Title)]$INFO[Window.Property(RandomAlbumMB3.0.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbumMB3.0.Title))</visible>
-		</item>
-		<item id="2">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(RandomAlbumMB3.1.Play)]</property>
-			<icon>$INFO[Window.Property(RandomAlbumMB3.1.Art(poster))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomAlbumMB3.1.Art(poster))]</property>
-			<property name="Plot">$INFO[Window.Property(RandomAlbumMB3.1.Description)]</property>
-			<label>$INFO[Window.Property(RandomAlbumMB3.1.Artist)]</label>
-			<label2>$INFO[Window.Property(RandomAlbumMB3.1.Title)]$INFO[Window.Property(RandomAlbumMB3.1.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbumMB3.1.Title))</visible>
-		</item>
-		<item id="3">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(RandomAlbumMB3.2.Play)]</property>
-			<icon>$INFO[Window.Property(RandomAlbumMB3.2.Art(poster))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomAlbumMB3.2.Art(poster))]</property>
-			<property name="Plot">$INFO[Window.Property(RandomAlbumMB3.2.Description)]</property>
-			<label>$INFO[Window.Property(RandomAlbumMB3.2.Artist)]</label>
-			<label2>$INFO[Window.Property(RandomAlbumMB3.2.Title)]$INFO[Window.Property(RandomAlbumMB3.2.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbumMB3.2.Title))</visible>
-		</item>
-		<item id="4">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(RandomAlbumMB3.3.Play)]</property>
-			<icon>$INFO[Window.Property(RandomAlbumMB3.3.Art(poster))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomAlbumMB3.3.Art(poster))]</property>
-			<property name="Plot">$INFO[Window.Property(RandomAlbumMB3.3.Description)]</property>
-			<label>$INFO[Window.Property(RandomAlbumMB3.3.Artist)]</label>
-			<label2>$INFO[Window.Property(RandomAlbumMB3.3.Title)]$INFO[Window.Property(RandomAlbumMB3.3.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbumMB3.3.Title))</visible>
-		</item>
-		<item id="5">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(RandomAlbumMB3.4.Play)]</property>
-			<icon>$INFO[Window.Property(RandomAlbumMB3.4.Art(poster))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomAlbumMB3.4.Art(poster))]</property>
-			<property name="Plot">$INFO[Window.Property(RandomAlbumMB3.4.Description)]</property>
-			<label>$INFO[Window.Property(RandomAlbumMB3.4.Artist)]</label>
-			<label2>$INFO[Window.Property(RandomAlbumMB3.4.Title)]$INFO[Window.Property(RandomAlbumMB3.4.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbumMB3.4.Title))</visible>
-		</item>
-		<item id="6">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(RandomAlbumMB3.5.Play)]</property>
-			<icon>$INFO[Window.Property(RandomAlbumMB3.5.Art(poster))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomAlbumMB3.5.Art(poster))]</property>
-			<property name="Plot">$INFO[Window.Property(RandomAlbumMB3.5.Description)]</property>
-			<label>$INFO[Window.Property(RandomAlbumMB3.5.Artist)]</label>
-			<label2>$INFO[Window.Property(RandomAlbumMB3.5.Title)]$INFO[Window.Property(RandomAlbumMB3.5.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbumMB3.5.Title))</visible>
-		</item>
-		<item id="7">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(RandomAlbumMB3.6.Play)]</property>
-			<icon>$INFO[Window.Property(RandomAlbumMB3.6.Art(poster))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomAlbumMB3.6.Art(poster))]</property>
-			<property name="Plot">$INFO[Window.Property(RandomAlbumMB3.6.Description)]</property>
-			<label>$INFO[Window.Property(RandomAlbumMB3.6.Artist)]</label>
-			<label2>$INFO[Window.Property(RandomAlbumMB3.6.Title)]$INFO[Window.Property(RandomAlbumMB3.6.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbumMB3.6.Title))</visible>
-		</item>
-		<item id="8">
-			<onclick>noop</onclick>
-			<property name="Play">$INFO[Window.Property(RandomAlbumMB3.7.Play)]</property>
-			<icon>$INFO[Window.Property(RandomAlbumMB3.7.Art(poster))]</icon>
-			<property name="Poster">$INFO[Window.Property(RandomAlbumMB3.7.Art(poster))]</property>
-			<property name="Plot">$INFO[Window.Property(RandomAlbumMB3.7.Description)]</property>
-			<label>$INFO[Window.Property(RandomAlbumMB3.7.Artist)]</label>
-			<label2>$INFO[Window.Property(RandomAlbumMB3.7.Title)]$INFO[Window.Property(RandomAlbumMB3.7.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RandomAlbumMB3.7.Title))</visible>
-		</item>
 	</include>
 	<include name="Mod_90Content">
 		<!-- Recommended movies -->
@@ -9461,58 +9475,121 @@
 			<label2>$INFO[Window.Property(RandomEpisode.4.Title),, • ]$INFO[Window.Property(RandomEpisode.4.Season),S,]$INFO[Window.Property(RandomEpisode.4.Episode),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(RandomEpisode.4.Title))</visible>
 		</item>	
+	</include>
+	<include name="Mod_90Content-Music">
 		<!-- Recommended album -->
-		<item id="1">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedAlbum.1.Play)]</onclick>
-			<icon>$INFO[Window.Property(RecommendedAlbum.1.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RecommendedAlbum.1.Art(thumb))]</property>
-			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.1.Description)]</property>
-			<label>$INFO[Window.Property(RecommendedAlbum.1.Artist)]</label>
-			<label2>$INFO[Window.Property(RecommendedAlbum.1.Title)]$INFO[Window.Property(RecommendedAlbum.1.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RecommendedAlbum.1.Title))</visible>
-		</item>
-		<item id="2">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedAlbum.2.Play)]</onclick>
-			<icon>$INFO[Window.Property(RecommendedAlbum.2.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RecommendedAlbum.2.Art(thumb))]</property>
-			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.2.Description)]</property>
-			<label>$INFO[Window.Property(RecommendedAlbum.2.Artist)]</label>
-			<label2>$INFO[Window.Property(RecommendedAlbum.2.Title)]$INFO[Window.Property(RecommendedAlbum.2.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RecommendedAlbum.2.Title))</visible>
-		</item>
-		<item id="3">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedAlbum.3.Play)]</onclick>
-			<icon>$INFO[Window.Property(RecommendedAlbum.3.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RecommendedAlbum.3.Art(thumb))]</property>
-			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.3.Description)]</property>
-			<label>$INFO[Window.Property(RecommendedAlbum.3.Artist)]</label>
-			<label2>$INFO[Window.Property(RecommendedAlbum.3.Title)]$INFO[Window.Property(RecommendedAlbum.3.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RecommendedAlbum.3.Title))</visible>
-		</item>
-		<item id="4">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedAlbum.4.Play)]</onclick>
-			<icon>$INFO[Window.Property(RecommendedAlbum.4.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RecommendedAlbum.4.Art(thumb))]</property>
-			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.4.Description)]</property>
-			<label>$INFO[Window.Property(RecommendedAlbum.4.Artist)]</label>
-			<label2>$INFO[Window.Property(RecommendedAlbum.4.Title)]$INFO[Window.Property(RecommendedAlbum.4.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RecommendedAlbum.4.Title))</visible>
-		</item>
-		<item id="5">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(RecommendedAlbum.5.Play)]</onclick>
-			<icon>$INFO[Window.Property(RecommendedAlbum.5.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(RecommendedAlbum.5.Art(thumb))]</property>
-			<property name="Plot">$INFO[Window.Property(RecommendedAlbum.5.Description)]</property>
-			<label>$INFO[Window.Property(RecommendedAlbum.5.Artist)]</label>
-			<label2>$INFO[Window.Property(RecommendedAlbum.5.Title)]$INFO[Window.Property(RecommendedAlbum.5.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RecommendedAlbum.5.Title))</visible>
-		</item>
-	</include>	
+			<item id="1">
+				<onclick>SetFocus(525)</onclick>
+				<onclick>$INFO[Window.Property(RecommendedAlbum.1.Play)]</onclick>
+				<icon>$INFO[Window.Property(RecommendedAlbum.1.Art(fanart))]</icon>
+				<property name="Poster">$INFO[Window.Property(RecommendedAlbum.1.Art(thumb))]</property>
+				<property name="Plot">$INFO[Window.Property(RecommendedAlbum.1.Description)]</property>
+				<label>$INFO[Window.Property(RecommendedAlbum.1.Artist)]</label>
+				<label2>$INFO[Window.Property(RecommendedAlbum.1.Title)]$INFO[Window.Property(RecommendedAlbum.1.Year), • ,]</label2>
+				<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RecommendedAlbum.1.Title))</visible>
+			</item>
+			<item id="2">
+				<onclick>SetFocus(525)</onclick>
+				<onclick>$INFO[Window.Property(RecommendedAlbum.2.Play)]</onclick>
+				<icon>$INFO[Window.Property(RecommendedAlbum.2.Art(fanart))]</icon>
+				<property name="Poster">$INFO[Window.Property(RecommendedAlbum.2.Art(thumb))]</property>
+				<property name="Plot">$INFO[Window.Property(RecommendedAlbum.2.Description)]</property>
+				<label>$INFO[Window.Property(RecommendedAlbum.2.Artist)]</label>
+				<label2>$INFO[Window.Property(RecommendedAlbum.2.Title)]$INFO[Window.Property(RecommendedAlbum.2.Year), • ,]</label2>
+				<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RecommendedAlbum.2.Title))</visible>
+			</item>
+			<item id="3">
+				<onclick>SetFocus(525)</onclick>
+				<onclick>$INFO[Window.Property(RecommendedAlbum.3.Play)]</onclick>
+				<icon>$INFO[Window.Property(RecommendedAlbum.3.Art(fanart))]</icon>
+				<property name="Poster">$INFO[Window.Property(RecommendedAlbum.3.Art(thumb))]</property>
+				<property name="Plot">$INFO[Window.Property(RecommendedAlbum.3.Description)]</property>
+				<label>$INFO[Window.Property(RecommendedAlbum.3.Artist)]</label>
+				<label2>$INFO[Window.Property(RecommendedAlbum.3.Title)]$INFO[Window.Property(RecommendedAlbum.3.Year), • ,]</label2>
+				<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RecommendedAlbum.3.Title))</visible>
+			</item>
+			<item id="4">
+				<onclick>SetFocus(525)</onclick>
+				<onclick>$INFO[Window.Property(RecommendedAlbum.4.Play)]</onclick>
+				<icon>$INFO[Window.Property(RecommendedAlbum.4.Art(fanart))]</icon>
+				<property name="Poster">$INFO[Window.Property(RecommendedAlbum.4.Art(thumb))]</property>
+				<property name="Plot">$INFO[Window.Property(RecommendedAlbum.4.Description)]</property>
+				<label>$INFO[Window.Property(RecommendedAlbum.4.Artist)]</label>
+				<label2>$INFO[Window.Property(RecommendedAlbum.4.Title)]$INFO[Window.Property(RecommendedAlbum.4.Year), • ,]</label2>
+				<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RecommendedAlbum.4.Title))</visible>
+			</item>
+			<item id="5">
+				<onclick>SetFocus(525)</onclick>
+				<onclick>$INFO[Window.Property(RecommendedAlbum.5.Play)]</onclick>
+				<icon>$INFO[Window.Property(RecommendedAlbum.5.Art(fanart))]</icon>
+				<property name="Poster">$INFO[Window.Property(RecommendedAlbum.5.Art(thumb))]</property>
+				<property name="Plot">$INFO[Window.Property(RecommendedAlbum.5.Description)]</property>
+				<label>$INFO[Window.Property(RecommendedAlbum.5.Artist)]</label>
+				<label2>$INFO[Window.Property(RecommendedAlbum.5.Title)]$INFO[Window.Property(RecommendedAlbum.5.Year), • ,]</label2>
+				<visible>[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(RecommendedAlbum.5.Title))</visible>
+			</item>
+		<!-- Recommended album -->
+			<item id="1">
+				<onclick>SetFocus(525)</onclick>
+				<onclick>$INFO[Window.Property(LatestAlbumMB3.0.Play)]</onclick>
+				<icon>$INFO[Window.Property(LatestAlbumMB3.0.Art(fanart))]</icon>
+				<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.0.Art(poster))]</property>
+				<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.0.Description)]</property>
+				<label>$INFO[Window.Property(LatestAlbumMB3.0.Artist)]</label>
+				<label2>$INFO[Window.Property(LatestAlbumMB3.0.Title)]$INFO[Window.Property(LatestAlbumMB3.0.Year), • ,]</label2>
+				<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.0.Title))</visible>
+			</item>
+			<item id="2">
+				<onclick>SetFocus(525)</onclick>
+				<onclick>$INFO[Window.Property(LatestAlbumMB3.1.Play)]</onclick>
+				<icon>$INFO[Window.Property(LatestAlbumMB3.1.Art(fanart))]</icon>
+				<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.1.Art(poster))]</property>
+				<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.1.Description)]</property>
+				<label>$INFO[Window.Property(LatestAlbumMB3.1.Artist)]</label>
+				<label2>$INFO[Window.Property(LatestAlbumMB3.1.Title)]$INFO[Window.Property(LatestAlbumMB3.1.Year), • ,]</label2>
+				<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.1.Title))</visible>
+			</item>
+			<item id="3">
+				<onclick>SetFocus(525)</onclick>
+				<onclick>$INFO[Window.Property(LatestAlbumMB3.2.Play)]</onclick>
+				<icon>$INFO[Window.Property(LatestAlbumMB3.2.Art(fanart))]</icon>
+				<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.2.Art(poster))]</property>
+				<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.2.Description)]</property>
+				<label>$INFO[Window.Property(LatestAlbumMB3.2.Artist)]</label>
+				<label2>$INFO[Window.Property(LatestAlbumMB3.2.Title)]$INFO[Window.Property(LatestAlbumMB3.2.Year), • ,]</label2>
+				<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.2.Title))</visible>
+			</item>
+			<item id="4">
+				<onclick>SetFocus(525)</onclick>
+				<onclick>$INFO[Window.Property(LatestAlbumMB3.3.Play)]</onclick>
+				<icon>$INFO[Window.Property(LatestAlbumMB3.3.Art(fanart))]</icon>
+				<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.3.Art(poster))]</property>
+				<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.3.Description)]</property>
+				<label>$INFO[Window.Property(LatestAlbumMB3.3.Artist)]</label>
+				<label2>$INFO[Window.Property(LatestAlbumMB3.3.Title)]$INFO[Window.Property(LatestAlbumMB3.3.Year), • ,]</label2>
+				<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.3.Title))</visible>
+			</item>
+			<item id="5">
+				<onclick>SetFocus(525)</onclick>
+				<onclick>$INFO[Window.Property(LatestAlbumMB3.4.Play)]</onclick>
+				<icon>$INFO[Window.Property(LatestAlbumMB3.4.Art(fanart))]</icon>
+				<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.4.Art(poster))]</property>
+				<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.4.Description)]</property>
+				<label>$INFO[Window.Property(LatestAlbumMB3.4.Artist)]</label>
+				<label2>$INFO[Window.Property(LatestAlbumMB3.4.Title)]$INFO[Window.Property(LatestAlbumMB3.4.Year), • ,]</label2>
+				<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.4.Title))</visible>
+			</item>
+			<item id="6">
+				<onclick>SetFocus(525)</onclick>
+				<onclick>$INFO[Window.Property(LatestAlbumMB3.5.Play)]</onclick>
+				<icon>$INFO[Window.Property(LatestAlbumMB3.5.Art(fanart))]</icon>
+				<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.5.Art(poster))]</property>
+				<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.5.Description)]</property>
+				<label>$INFO[Window.Property(LatestAlbumMB3.5.Artist)]</label>
+				<label2>$INFO[Window.Property(LatestAlbumMB3.5.Title)]$INFO[Window.Property(LatestAlbumMB3.5.Year), • ,]</label2>
+				<visible>Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.5.Title))</visible>
+			</item>
+	</include>
 	<include name="Mod_90Content-xbmb3c">
 		<!-- Recommended movies -->
 		<item id="1">
@@ -9653,67 +9730,6 @@
 			<label2>$INFO[Window.Property(RandomEpisodeMB3.6.EpisodeTitle),, • ]$INFO[Window.Property(RandomEpisodeMB3.6.SeasonNo),S,]$INFO[Window.Property(RandomEpisodeMB3.6.EpisodeNo),E,]</label2>
 			<visible>stringcompare(Container(525).ListItem.Property(widget),tvshow.mixed) + !IsEmpty(Window.Property(RandomEpisodeMB3.6.EpisodeTitle))</visible>
 		</item>		
-		<!-- Recommended album -->
-		<item id="1">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(LatestAlbumMB3.0.Play)]</onclick>
-			<icon>$INFO[Window.Property(LatestAlbumMB3.0.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.0.Art(poster))]</property>
-			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.0.Description)]</property>
-			<label>$INFO[Window.Property(LatestAlbumMB3.0.Artist)]</label>
-			<label2>$INFO[Window.Property(LatestAlbumMB3.0.Title)]$INFO[Window.Property(LatestAlbumMB3.0.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.0.Title))</visible>
-		</item>
-		<item id="2">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(LatestAlbumMB3.1.Play)]</onclick>
-			<icon>$INFO[Window.Property(LatestAlbumMB3.1.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.1.Art(poster))]</property>
-			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.1.Description)]</property>
-			<label>$INFO[Window.Property(LatestAlbumMB3.1.Artist)]</label>
-			<label2>$INFO[Window.Property(LatestAlbumMB3.1.Title)]$INFO[Window.Property(LatestAlbumMB3.1.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.1.Title))</visible>
-		</item>
-		<item id="3">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(LatestAlbumMB3.2.Play)]</onclick>
-			<icon>$INFO[Window.Property(LatestAlbumMB3.2.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.2.Art(poster))]</property>
-			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.2.Description)]</property>
-			<label>$INFO[Window.Property(LatestAlbumMB3.2.Artist)]</label>
-			<label2>$INFO[Window.Property(LatestAlbumMB3.2.Title)]$INFO[Window.Property(LatestAlbumMB3.2.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.2.Title))</visible>
-		</item>
-		<item id="4">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(LatestAlbumMB3.3.Play)]</onclick>
-			<icon>$INFO[Window.Property(LatestAlbumMB3.3.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.3.Art(poster))]</property>
-			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.3.Description)]</property>
-			<label>$INFO[Window.Property(LatestAlbumMB3.3.Artist)]</label>
-			<label2>$INFO[Window.Property(LatestAlbumMB3.3.Title)]$INFO[Window.Property(LatestAlbumMB3.3.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.3.Title))</visible>
-		</item>
-		<item id="5">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(LatestAlbumMB3.4.Play)]</onclick>
-			<icon>$INFO[Window.Property(LatestAlbumMB3.4.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.4.Art(poster))]</property>
-			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.4.Description)]</property>
-			<label>$INFO[Window.Property(LatestAlbumMB3.4.Artist)]</label>
-			<label2>$INFO[Window.Property(LatestAlbumMB3.4.Title)]$INFO[Window.Property(LatestAlbumMB3.4.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.4.Title))</visible>
-		</item>
-		<item id="6">
-			<onclick>SetFocus(525)</onclick>
-			<onclick>$INFO[Window.Property(LatestAlbumMB3.5.Play)]</onclick>
-			<icon>$INFO[Window.Property(LatestAlbumMB3.5.Art(fanart))]</icon>
-			<property name="Poster">$INFO[Window.Property(LatestAlbumMB3.5.Art(poster))]</property>
-			<property name="Plot">$INFO[Window.Property(LatestAlbumMB3.5.Description)]</property>
-			<label>$INFO[Window.Property(LatestAlbumMB3.5.Artist)]</label>
-			<label2>$INFO[Window.Property(LatestAlbumMB3.5.Title)]$INFO[Window.Property(LatestAlbumMB3.5.Year), • ,]</label2>
-			<visible>stringcompare(Container(525).ListItem.Property(widget),music.mixed) + !IsEmpty(Window.Property(LatestAlbumMB3.5.Title))</visible>
-		</item>
 	</include>
 	<include name="Mod_90Layout">
 		<itemlayout width="184" condition="!Container(525).HasFocus(3)">
@@ -10163,29 +10179,30 @@
 		</item>		
 		<item id="3">
 			<label>$INFO[Skin.String(Home.Music.Tile.0.Label)]</label>
-			<visible>!Skin.HasSetting(disable.music) + !Skin.HasSetting(xbmb3c-home-fanart)</visible>
+			<visible>!Skin.HasSetting(disable.music) + [[Skin.HasSetting(xbmb3c) + [!Skin.HasSetting(xbmb3c-home-fanart) | Skin.HasSetting(xbmb3c-usekodimusic)]] | !Skin.HasSetting(xbmb3c)]</visible>
 			<property name="single">$INFO[Skin.String(HomeMusicSingleImage)]</property>
 			<property name="multi">$INFO[Skin.String(HomeMusicMultiImage)]</property>
 			<property name="widget">$INFO[Skin.String(music.widget.type)]</property>
-			<onclick condition="Skin.HasSetting(xbmb3c) + !Skin.HasSetting(HomeClicksSubmenu)">$INFO[Window.Property(xbmb3c.std.music.0.path)]</onclick>
-			<onclick condition="!Skin.HasSetting(xbmb3c) + !Skin.HasSetting(HomeClicksSubmenu) + !stringcompare(Skin.String(Home.Music.Tile.0.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.0.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.0.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.0.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.0.Path)])</onclick>
-			<onclick condition="!Skin.HasSetting(xbmb3c) + !Skin.HasSetting(HomeClicksSubmenu) + stringcompare(Skin.String(Home.Music.Tile.0.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.0.Path)],return)</onclick>
-			<onclick condition="!Skin.HasSetting(xbmb3c) + !Skin.HasSetting(HomeClicksSubmenu) + stringcompare(Skin.String(Home.Music.Tile.0.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.0.Path)],return)</onclick>
-			<onclick condition="!Skin.HasSetting(xbmb3c) + !Skin.HasSetting(HomeClicksSubmenu) + [stringcompare(Skin.String(Home.Music.Tile.0.Type),6) | stringcompare(Skin.String(Home.Music.Tile.0.Type),7)]">$INFO[Skin.String(Home.Music.Tile.0.Path)]</onclick>
+			<onclick condition="Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + !Skin.HasSetting(HomeClicksSubmenu)">$INFO[Window.Property(xbmb3c.std.music.0.path)]</onclick>
+			<onclick condition="[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + !Skin.HasSetting(HomeClicksSubmenu) + !stringcompare(Skin.String(Home.Music.Tile.0.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.0.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.0.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.0.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.0.Path)])</onclick>
+			<onclick condition="[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + !Skin.HasSetting(HomeClicksSubmenu) + stringcompare(Skin.String(Home.Music.Tile.0.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.0.Path)],return)</onclick>
+			<onclick condition="[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + !Skin.HasSetting(HomeClicksSubmenu) + stringcompare(Skin.String(Home.Music.Tile.0.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.0.Path)],return)</onclick>
+			<onclick condition="[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + !Skin.HasSetting(HomeClicksSubmenu) + [stringcompare(Skin.String(Home.Music.Tile.0.Type),6) | stringcompare(Skin.String(Home.Music.Tile.0.Type),7)]">$INFO[Skin.String(Home.Music.Tile.0.Path)]</onclick>
 			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
+			<onclick condition="!Skin.HasSetting(HomeClicksSubmenu) + Skin.HasSetting(xbmb3c-usekodimusic)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.0.Path)],return)</onclick>
 			<icon>$INFO[Skin.String(Home.Music.Tile.0.Icon)]</icon>
 		</item>
 		<item id="3">
 			<label>$INFO[Skin.String(Home.Music.Tile.0.Label)]</label>
-			<visible>!Skin.HasSetting(disable.music) + Skin.HasSetting(xbmb3c) + Skin.HasSetting(xbmb3c-home-fanart)</visible>
+			<visible>!Skin.HasSetting(disable.music) + Skin.HasSetting(xbmb3c) + Skin.HasSetting(xbmb3c-home-fanart) + !Skin.HasSetting(xbmb3c-usekodimusic)</visible>
 			<property name="single">$INFO[Window.Property(MB3.Background.Music.FanArt)]</property>
 			<property name="multi">$INFO[Window.Property(MB3.Background.Music.FanArt)]</property>
 			<property name="widget">$INFO[Skin.String(music.widget.type)]</property>
-			<onclick condition="Skin.HasSetting(xbmb3c) + !Skin.HasSetting(HomeClicksSubmenu)">$INFO[Window.Property(xbmb3c.std.music.0.path)]</onclick>
-			<onclick condition="!Skin.HasSetting(xbmb3c) + !Skin.HasSetting(HomeClicksSubmenu) + !stringcompare(Skin.String(Home.Music.Tile.0.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.0.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.0.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.0.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.0.Path)])</onclick>
-			<onclick condition="!Skin.HasSetting(xbmb3c) + !Skin.HasSetting(HomeClicksSubmenu) + stringcompare(Skin.String(Home.Music.Tile.0.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.0.Path)],return)</onclick>
-			<onclick condition="!Skin.HasSetting(xbmb3c) + !Skin.HasSetting(HomeClicksSubmenu) + stringcompare(Skin.String(Home.Music.Tile.0.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.0.Path)],return)</onclick>
-			<onclick condition="!Skin.HasSetting(xbmb3c) + !Skin.HasSetting(HomeClicksSubmenu) + [stringcompare(Skin.String(Home.Music.Tile.0.Type),6) | stringcompare(Skin.String(Home.Music.Tile.0.Type),7)]">$INFO[Skin.String(Home.Music.Tile.0.Path)]</onclick>
+			<onclick condition="Skin.HasSetting(xbmb3c) + !Skin.HasSetting(xbmb3c-usekodimusic) + !Skin.HasSetting(HomeClicksSubmenu)">$INFO[Window.Property(xbmb3c.std.music.0.path)]</onclick>
+			<onclick condition="[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + !Skin.HasSetting(HomeClicksSubmenu) + !stringcompare(Skin.String(Home.Music.Tile.0.Type),4) + !stringcompare(Skin.String(Home.Music.Tile.0.Type),5) + !stringcompare(Skin.String(Home.Music.Tile.0.Type),6) + !stringcompare(Skin.String(Home.Music.Tile.0.Type),7)">RunAddon($INFO[Skin.String(Home.Music.Tile.0.Path)])</onclick>
+			<onclick condition="[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + !Skin.HasSetting(HomeClicksSubmenu) + stringcompare(Skin.String(Home.Music.Tile.0.Type),4)">ActivateWindow(Videos,$INFO[Skin.String(Home.Music.Tile.0.Path)],return)</onclick>
+			<onclick condition="[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + !Skin.HasSetting(HomeClicksSubmenu) + stringcompare(Skin.String(Home.Music.Tile.0.Type),5)">ActivateWindow(MusicLibrary,$INFO[Skin.String(Home.Music.Tile.0.Path)],return)</onclick>
+			<onclick condition="[!Skin.HasSetting(xbmb3c) | Skin.HasSetting(xbmb3c-usekodimusic)] + !Skin.HasSetting(HomeClicksSubmenu) + [stringcompare(Skin.String(Home.Music.Tile.0.Type),6) | stringcompare(Skin.String(Home.Music.Tile.0.Type),7)]">$INFO[Skin.String(Home.Music.Tile.0.Path)]</onclick>
 			<onclick condition="Skin.HasSetting(HomeClicksSubmenu)">SetFocus(83,0)</onclick>
 			<icon>$INFO[Skin.String(Home.Music.Tile.0.Icon)]</icon>
 		</item>		
