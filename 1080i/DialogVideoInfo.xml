@@ -493,11 +493,12 @@
 								</item>
 								<item id="2">
 									<label>$LOCALIZE[20410]</label>
-									<onclick condition="!Skin.HasSetting(PlayTrailer.Minimized)">PreviousMenu</onclick>
-									<onclick condition="!Skin.HasSetting(PlayTrailer.Minimized)">PlayMedia($INFO[ListItem.Trailer])</onclick>
-									<onclick condition="Skin.HasSetting(PlayTrailer.Minimized)">SetFocus(9336)</onclick>
-									<onclick condition="Skin.HasSetting(PlayTrailer.Minimized)">PlayMedia($INFO[ListItem.Trailer],false,1)</onclick>
-									<visible>!IsEmpty(ListItem.Trailer) + Container.Content(movies) + !SubString(Container.FolderPath,plugin)</visible>
+									<onclick condition="Skin.HasSetting(xbmb3c)">$INFO[Window(home).Property("MB3.TrailerAction")]</onclick>
+									<onclick condition="!Skin.HasSetting(PlayTrailer.Minimized) +!Skin.HasSetting(xbmb3c)">PreviousMenu</onclick>
+									<onclick condition="!Skin.HasSetting(PlayTrailer.Minimized) +!Skin.HasSetting(xbmb3c)">PlayMedia($INFO[ListItem.Trailer])</onclick>
+									<onclick condition="Skin.HasSetting(PlayTrailer.Minimized) +!Skin.HasSetting(xbmb3c)">SetFocus(9336)</onclick>
+									<onclick condition="Skin.HasSetting(PlayTrailer.Minimized) +!Skin.HasSetting(xbmb3c)">PlayMedia($INFO[ListItem.Trailer],false,1)</onclick>
+									<visible>[!IsEmpty(ListItem.Trailer) + Container.Content(movies) + !SubString(Container.FolderPath,plugin)] | [Skin.HasSetting(xbmb3c) + !IsEmpty(Window(home).Property("MB3.TrailerAction")) + stringcompare(ListItem.Property(ItemType),Movie)]</visible>
 									<icon>aeonflags/addition/OSDVideoNF.png</icon>
 									<thumb>aeonflags/addition/OSDVideoFO.png</thumb>
 								</item>
@@ -514,7 +515,7 @@
 									<onclick>ActivateWindow(3004)</onclick>
 									<icon>aeonflags/addition/OSDInfoNF.png</icon>
 									<thumb>aeonflags/addition/OSDInfoFO.png</thumb>
-									<visible>!Skin.HasSetting(KioskMode) + [Container.Content(movies) | Container.Content(tvshows)] + !Container.Content(musicvideos)</visible>
+									<visible>!Skin.HasSetting(xbmb3c) + !Skin.HasSetting(KioskMode) + [Container.Content(movies) | Container.Content(tvshows)] + !Container.Content(musicvideos)</visible>
 								</item>
 								<item id="3">
 									<description>Get Artwork</description>
@@ -523,7 +524,7 @@
 									<onclick>SendClick(2003,10)</onclick>
 									<icon>aeonflags/addition/OSDInfoNF.png</icon>
 									<thumb>aeonflags/addition/OSDInfoFO.png</thumb>
-									<visible>[Container.Content(musicvideos) | Container.Content(episodes)] + !Skin.HasSetting(KioskMode)</visible>
+									<visible>[Container.Content(musicvideos) | Container.Content(episodes)] + !Skin.HasSetting(KioskMode) + !Skin.HasSetting(xbmb3c)</visible>
 								</item>
 								<item id="4">
 									<description>Get theme</description>
@@ -538,7 +539,7 @@
 									<onclick>SendClick(2003,6)</onclick>
 									<icon>aeonflags/addition/OSDSkinNF.png</icon>
 									<thumb>aeonflags/addition/OSDSkinFO.png</thumb>
-									<visible>!Skin.HasSetting(KioskMode)</visible>
+									<visible>!Skin.HasSetting(KioskMode) + !Skin.HasSetting(xbmb3c)</visible>
 								</item>
 							</content>
 						</control>

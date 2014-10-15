@@ -38,7 +38,16 @@
 				<width>60</width>
 				<height>60</height>
 				<texture>$INFO[System.ProfileThumb]</texture>
+				<visible>!Skin.HasSetting(xbmb3c)</visible>				
 			</control>
+			<control type="image">
+				<posx>25</posx>
+				<posy>52</posy>
+				<width>60</width>
+				<height>60</height>
+				<texture>$INFO[Window.Property(MB3UserImage)]</texture>
+				<visible>Skin.HasSetting(xbmb3c)</visible>				
+			</control>			
 			<control type="image">
 				<posx>13</posx>
 				<posy>40</posy>
@@ -56,7 +65,20 @@
 				<scroll>false</scroll>
 				<align>left</align>
 				<label>$INFO[System.ProfileName]</label>
+				<visible>!Skin.HasSetting(xbmb3c)</visible>
 			</control>
+			<control type="label">
+				<posx>110</posx>
+				<posy>32</posy>
+				<width>600</width>
+				<height>60</height>
+				<font>Font-Alaska-S36-BL</font>
+				<textcolor>$VAR[HomeProfileColorDark]</textcolor>
+				<scroll>false</scroll>
+				<align>left</align>
+				<label>$INFO[Window.Property(MB3UserName)]</label>
+				<visible>Skin.HasSetting(xbmb3c)</visible>
+			</control>			
 			<control type="group">
 				<visible>Skin.HasSetting(xbmb3c)</visible>
 				<control type="label">

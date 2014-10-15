@@ -67,7 +67,7 @@
                 <aligny>top</aligny>
                 <scroll>false</scroll>
             </control>
-            <control type="textbox">
+            <!--<control type="textbox">
                 <posx>100</posx>
                 <posy>170</posy>
                 <width>495</width>
@@ -78,7 +78,7 @@
                 <align>justify</align>
                 <scroll>false</scroll>
                 <visible>!Container.Content(artists) + !Container.Content(albums)</visible>
-            </control>
+            </control>-->
             <control type="textbox">
                 <posx>100</posx>
                 <posy>170</posy>
@@ -158,8 +158,21 @@
                     <include>Viewtype-LoveFilm-Content</include>
                 </focusedlayout>
             </control>
+	        <control type="textbox">
+                <posx>100</posx>
+                <posy>370</posy>
+                <width>495</width>
+                <height>460</height>
+                <label>$VAR[ExtendedInfo.Plot]</label>
+                <textcolor>mod-infotags-alt</textcolor>
+                <font>Font-Alaska-S25-NC</font>
+                <align>justify</align>
+                <scroll>false</scroll>
+				<animation effect="fade" start="0" end="100" delay="450" time="250" reversible="false">Visible</animation>
+                <visible>![Container(56).OnNext | Container(56).OnPrevious]</visible>
+            </control>			
         </control>
-        <!--Scrollbar-->            
+        <!--Scrollbar-->
         <control type="scrollbar" id="70">
             <description>Scrollbar</description>
             <width>1920</width>

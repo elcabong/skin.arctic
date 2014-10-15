@@ -196,7 +196,7 @@
 								<scroll>false</scroll>
 								<align>left</align>
 							</control>
-							<control type="textbox">
+							<!--<control type="textbox">
 								<posx>28</posx>
 								<posy>72</posy>
 								<width>790</width>
@@ -207,7 +207,7 @@
 								<align>justify</align>
 								<autoscroll delay="13000" time="3000" repeat="13000" />
 								<visible>!Container.Content(artists)</visible>
-							</control>
+							</control>-->
 							<control type="textbox">
 								<posx>28</posx>
 								<posy>72</posy>
@@ -224,7 +224,19 @@
 					</control>
                 </focusedlayout>
             </control>
-        </control>
+			<control type="textbox">
+				<posx>128</posx>
+				<posy>540</posy>
+				<width>790</width>
+				<height>175</height>
+				<label>$VAR[ExtendedInfo.Plot]</label>
+				<font>Font-Alaska-S25-NC</font>
+				<textcolor>Mod_Tags</textcolor>
+				<align>justify</align>
+				<animation effect="fade" start="0" end="100" delay="450" time="250" reversible="false">Visible</animation>
+                <visible>![Container(57).OnNext | Container(57).OnPrevious]</visible>
+			</control>
+		</control>
         <!--Scrollbar-->			
 		<control type="scrollbar" id="70">
 			<description>Scrollbar</description>
