@@ -477,7 +477,9 @@
 							<content>
 								<item id="1">
 									<label>$LOCALIZE[41315]</label>
-									<onclick>SendClick(2003,8)</onclick>
+									<onclick condition="!Skin.HasSetting(xbmb3c)">SendClick(2003,8)</onclick>
+									<onclick condition="Skin.HasSetting(xbmb3c)">PreviousMenu</onclick>
+									<onclick condition="Skin.HasSetting(xbmb3c)">$INFO[Window(home).Property("MB3.Action")]</onclick>
 									<icon>aeonflags/addition/OSDPlayNF.png</icon>
 									<thumb>aeonflags/addition/OSDPlayFO.png</thumb>
 									<visible>[[System.HasAddon(script.cinema.experience) + IsEmpty(Window(movieinformation).Property(videoinfo.cinemaexperience)) + Container.Content(movies) + !SubString(Container.FolderPath,plugin)] | !System.HasAddon(script.cinema.experience) | !Container.Content(movies) | SubString(Container.FolderPath,plugin)]</visible>
@@ -494,10 +496,10 @@
 								<item id="2">
 									<label>$LOCALIZE[20410]</label>
 									<onclick condition="Skin.HasSetting(xbmb3c)">$INFO[Window(home).Property("MB3.TrailerAction")]</onclick>
-									<onclick condition="!Skin.HasSetting(PlayTrailer.Minimized) +!Skin.HasSetting(xbmb3c)">PreviousMenu</onclick>
-									<onclick condition="!Skin.HasSetting(PlayTrailer.Minimized) +!Skin.HasSetting(xbmb3c)">PlayMedia($INFO[ListItem.Trailer])</onclick>
-									<onclick condition="Skin.HasSetting(PlayTrailer.Minimized) +!Skin.HasSetting(xbmb3c)">SetFocus(9336)</onclick>
-									<onclick condition="Skin.HasSetting(PlayTrailer.Minimized) +!Skin.HasSetting(xbmb3c)">PlayMedia($INFO[ListItem.Trailer],false,1)</onclick>
+									<onclick condition="!Skin.HasSetting(PlayTrailer.Minimized) + !Skin.HasSetting(xbmb3c)">PreviousMenu</onclick>
+									<onclick condition="!Skin.HasSetting(PlayTrailer.Minimized) + !Skin.HasSetting(xbmb3c)">PlayMedia($INFO[ListItem.Trailer])</onclick>
+									<onclick condition="Skin.HasSetting(PlayTrailer.Minimized) + !Skin.HasSetting(xbmb3c)">SetFocus(9336)</onclick>
+									<onclick condition="Skin.HasSetting(PlayTrailer.Minimized) + !Skin.HasSetting(xbmb3c)">PlayMedia($INFO[ListItem.Trailer],false,1)</onclick>
 									<visible>[!IsEmpty(ListItem.Trailer) + Container.Content(movies) + !SubString(Container.FolderPath,plugin)] | [Skin.HasSetting(xbmb3c) + !IsEmpty(Window(home).Property("MB3.TrailerAction")) + stringcompare(ListItem.Property(ItemType),Movie)]</visible>
 									<icon>aeonflags/addition/OSDVideoNF.png</icon>
 									<thumb>aeonflags/addition/OSDVideoFO.png</thumb>
