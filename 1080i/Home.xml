@@ -1,4 +1,5 @@
 <window>
+	<onload>SetProperty(SkinIsCompatible,true)</onload>
     <defaultcontrol always="true">525</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
     <backgroundcolor>0</backgroundcolor>
